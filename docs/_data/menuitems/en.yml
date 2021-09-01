@@ -1,0 +1,14 @@
+---
+title: "Home Page of Atsushi Ohori"
+
+url: /en/
+
+menu:
+- text: overview
+  url: /en/
+
+super:
+- text: English/
+  url: /en/
+- text: 日本語 (Japanese)/
+  url: /ja/

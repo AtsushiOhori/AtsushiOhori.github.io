@@ -1,0 +1,14 @@
+---
+title: "教科書"
+
+url: /ja/texts/
+
+menu:
+- text: 教科書一覧
+  url: /ja/texts/
+
+
+super:
+- text: 大堀淳ホーム/
+  url: /ja/
+

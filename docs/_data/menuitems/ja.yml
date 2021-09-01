@@ -1,0 +1,17 @@
+---
+title: "大堀 淳のホームページ"
+
+url: /ja/
+
+menu:
+- text: 教科書一覧
+  url: /ja/texts/
+- text: ビデオ教材
+  url: /ja/videos/
+
+super:
+- text: English/
+  url: /en/
+- text: 日本語/
+  url: /ja/
+

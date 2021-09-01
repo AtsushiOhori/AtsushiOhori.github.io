@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: "ja" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ site.data.menuitems[page.menuScope].title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html', '' }}">
+    {{ page.head }}
+  </head>
+  <body>
+    <header id="page_header">
+      <h1><a href="{{ site.data.menuitems[page.menuScope].url }}">{{ site.data.menuitems[page.menuScope].title }}</a></h1>
+      <nav>
+        <ul>
+          {% for item in site.data.menuitems[page.menuScope].menu %}
+            {% if page.url == item.url %}
+              <li class="selected"><a href="{{ item.url }}">{{ item.text }}</a></li>
+            {% else %}
+              <li><a href="{{ item.url }}">{{ item.text }}</a></li>
+            {% endif %}
+          {% endfor %}
+       <span>
+          {% for item in site.data.menuitems[page.menuScope].super %}
+              <li><a href="{{ item.url }}">{{ item.text }}</a></li>
+          {% endfor %}
+       </span>
+      </ul>
+      </nav>
+    </header>
+    <div id="main">
+    {% if page.title != null %} 
+     <h2>{{ page.title }}</h2>
+    {% endif %}
+      {{ content }}
+    </div>
+    <hr class="sep">
+    <footer id="page_footer">
+     <p>{{ site.data.locales[page.lang].credits }}</p>
+    </footer>
+  </body>
+</html>

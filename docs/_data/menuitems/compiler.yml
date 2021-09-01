@@ -1,0 +1,26 @@
+---
+title: "コンパイラ ー 原理と構造"
+
+url: /ja/texts/compiler/
+
+menu:
+- text: 概要
+  url: /ja/texts/compiler/
+- text: 目次・内容
+  url: /ja/texts/compiler/contents/
+- text: コード
+  url: /ja/texts/compiler/codes/
+- text: 各章の補足説明
+  url: /ja/texts/compiler/supplementary/
+- text: 正誤表
+  url: /ja/texts/compiler/errata/
+
+super:
+- text: 大堀淳ホーム/
+  url: /ja/
+- text: 教科書/
+  url: /ja/texts/
+
+
+
+

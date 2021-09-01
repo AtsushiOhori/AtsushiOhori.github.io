@@ -1,0 +1,17 @@
+---
+title: "コンピュータサイエンス入門１ アルゴリズムとプログラミング言語"
+
+url: /ja/texts/csnyumon/
+
+menu:
+- text: 概要
+  url: /ja/texts/csnyumon/
+
+super:
+- text: 大堀淳ホーム/
+  url: /ja/
+- text: 教科書/
+  url: /ja/texts/
+
+
+

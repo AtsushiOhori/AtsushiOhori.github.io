@@ -1,0 +1,97 @@
+$headerBgColor: #45a;
+$headerFgColor: #eee;
+$headerHoverBgColor: #469;
+$headerHoverFgColor: #fff;
+$headerSelectedFgColor: #fff;
+$headerShadowColor: #333;
+$linkColor: #45a;
+$codeColor: #eee;
+
+html {
+  line-height: 1.6;
+}
+
+body {
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+a {
+  color: $linkColor;
+  text-decoration: underline;
+}
+
+hr.sep {
+  display: none;
+}
+
+header#page_header, header nav {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+header#page_header {
+  margin-bottom: 2em;
+}
+header#page_header h1 {
+  display: block;
+  margin: 10px 10px 10px 18px;
+  padding: 0;
+}
+header#page_header h1 a {
+  display: inline-block;
+  margin: 0;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 32px;
+  color: #333;
+  white-space: nowrap;
+}
+header#page_header span {
+ float: right;
+  margin-right: 1em;
+  margin-left: 0em;
+}
+header#page_header nav ul {
+  display: block;
+  margin-top: 0em;
+  margin-left: 0em;
+  padding-left: 0em;
+  background-color: $headerBgColor;
+}
+header#page_header nav ul li {
+  display: inline-block;
+  margin-left: 1em;
+}
+header#page_header nav ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: $headerFgColor;
+  font-size: 16px;
+  line-height: 1.0;
+}
+header#page_header nav ul li.selected a {
+  font-weight: bold;
+  text-shadow: 0 0 2px $headerShadowColor;
+  color: $headerSelectedFgColor;
+}
+header#page_header nav ul li a:hover {
+  background-color: $headerHoverBgColor;
+  color: $headerHoverFgColor;
+}
+
+div#main {
+  margin: 0 1em;
+}
+
+footer#page_footer {
+  display: block;
+  padding: 0;
+  text-align: right;
+  font-size: 12px;
+  line-height: 1.0;
+}
+footer#page_footer p {
+  display: inline-block;
+  margin: 0 12px;
+}
+

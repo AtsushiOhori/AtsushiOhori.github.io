@@ -1,0 +1,12 @@
+---
+title: "ビデオ教材"
+
+url: /ja/videos/
+
+menu:
+- text: 概要
+  url: /ja/videos/
+
+super:
+- text: 大堀淳ホーム/
+  url: /ja/

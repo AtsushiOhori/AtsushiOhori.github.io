@@ -1,3 +1,3 @@
-# AtsushiOhori.github.io
-This is the top page of AtsushiOhori github page.
-Updated.
+# Atsushi Ohori's home page
+
+Atsushi Ohori's home page

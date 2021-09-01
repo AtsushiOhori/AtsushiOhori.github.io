@@ -1,0 +1,69 @@
+url: https://localhost:4000
+permalink: pretty
+highlighter: rouge
+relative_links:
+  enabled: true
+  collections: true
+sass:
+  style: compressed
+defaults:
+  -
+    scope:
+      path: en
+    values:
+      menuScope: en
+      lang: en
+  -
+    scope:
+      path: ja
+    values:
+      menuScope: ja
+      lang: ja
+  -
+    scope:
+      path: ja/texts
+    values:
+      menuScope: texts
+      lang: ja
+  -
+    scope:
+      path: ja/texts/compiler
+    values:
+      menuScope: compiler
+      lang: ja
+  -
+    scope:
+      path: ja/texts/standard-ml
+    values:
+      menuScope: standard-ml
+      lang: ja
+  -
+    scope:
+      path: ja/texts/ml-practice
+    values:
+      menuScope: ml-practice
+      lang: ja
+  -
+    scope:
+      path: ja/texts/kisoriron
+    values:
+      menuScope: kisoriron
+      lang: ja
+  -
+    scope:
+      path: ja/texts/keisankigairon
+    values:
+      menuScope: keisankigairon
+      lang: ja
+  -
+    scope:
+      path: ja/texts/csnyumon
+    values:
+      menuScope: csnyumon
+      lang: ja
+  -
+    scope:
+      path: ja/videos
+    values:
+      menuScope: videos
+      lang: ja
