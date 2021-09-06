@@ -53,10 +53,7 @@ header#page_header span {
 }
 header#page_header nav ul {
   display: block;
-  margin-top: 0em;
-  margin-left: 0em;
-  padding-left: 1.5em;
-  padding-right: 1em;
+  padding: 8px 0px 8px 1.5em;
   background-color: $headerBgColor;
 }
 header#page_header nav ul li {
