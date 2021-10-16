@@ -2,11 +2,9 @@
 title: "教科書"
 
 url: /ja/texts/
+menuText: 教科書一覧
 
-menu:
-- text: 教科書一覧
-  url: /ja/texts/
-
+menu: []
 
 super:
 - text: ホーム/

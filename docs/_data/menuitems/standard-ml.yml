@@ -2,11 +2,9 @@
 title: "改訂版 プログラミング言語Standard ML入門"
 
 url: /ja/texts/standard-ml/
+menuText: 概要
 
-
-menu:
-- text: 概要
-  url: /ja/texts/standard-ml/
+menu: []
 
 super:
 - text: ホーム/

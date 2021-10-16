@@ -2,10 +2,9 @@
 title: "Home Page of Atsushi Ohori"
 
 url: /en/
+menuText: overview
 
-menu:
-- text: overview
-  url: /en/
+menu: []
 
 super:
 - text: English/

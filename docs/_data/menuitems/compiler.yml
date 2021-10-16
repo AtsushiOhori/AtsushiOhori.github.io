@@ -2,10 +2,9 @@
 title: "コンパイラ ー 原理と構造"
 
 url: /ja/texts/compiler/
+menuText: 概要
 
 menu:
-- text: 概要
-  url: /ja/texts/compiler/
 - text: 目次・内容
   url: /ja/texts/compiler/contents/
 - text: コード

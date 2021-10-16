@@ -2,10 +2,9 @@
 title: "新装版 プログラミング言語の基礎理論"
 
 url: /ja/texts/kisoriron/
+menuText: 概要
 
-menu:
-- text: 概要
-  url: /ja/texts/kisoriron/
+menu: []
 
 super:
 - text: ホーム/

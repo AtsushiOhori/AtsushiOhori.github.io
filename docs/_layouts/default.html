@@ -13,13 +13,21 @@
       <h1><a href="{{ site.data.menuitems[page.menuScope].url }}">{{ site.data.menuitems[page.menuScope].title }}</a></h1>
       <nav>
         <ul>
+           {% if page.url == site.data.menuitems[page.menuScope].url %}
+             <li class="selected"><a href="{{ site.data.menuitems[page.menuScope].url}}">
+                {{ site.data.menuitems[page.menuScope].menuText }}</a></li>
+           {% else %}
+             <li> <a href="{{ site.data.menuitems[page.menuScope].url}}">
+                {{ site.data.menuitems[page.menuScope].menuText }}</a></li>
+          {% endif %}
           {% for item in site.data.menuitems[page.menuScope].menu %}
-            {% if page.url == item.url %}
+            {% if page.url contains item.url  %}
               <li class="selected"><a href="{{ item.url }}">{{ item.text }}</a></li>
             {% else %}
               <li><a href="{{ item.url }}">{{ item.text }}</a></li>
             {% endif %}
           {% endfor %}
+
        <span>
           {% for item in site.data.menuitems[page.menuScope].super %}
               <li><a href="{{ item.url }}">{{ item.text }}</a></li>
