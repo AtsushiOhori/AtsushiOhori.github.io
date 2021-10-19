@@ -1,0 +1,273 @@
+---
+layout: default
+permalink: /ja/texts/compiler/supplementary/Ch6.html
+translated: true
+lang: ja
+head: |
+ <!--Generated on Tue Oct 19 20:56:19 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Document created on October 19, 2021.-->
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="LaTeXML.css" type="text/css">
+ <link rel="stylesheet" href="ltx-book.css" type="text/css">
+ <link rel="stylesheet" href="ltx-ulem.css" type="text/css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+ <link rel="up" href="./" title="コンパイラ – 原理と構造 – 補足説明">
+ <link rel="start" href="./" title="コンパイラ – 原理と構造 – 補足説明">
+ <link rel="prev" href="./" title="コンパイラ – 原理と構造 – 補足説明">
+---
+{% raw %}
+<div class="ltx_page_main">
+<header class="ltx_page_header"><div class="ltx_document_title">コンパイラ – 原理と構造 – 補足説明</div>
+<div>
+<a href="./" title="コンパイラ – 原理と構造 – 補足説明" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title">コンパイラ – 原理と構造 – 補足説明<span class="ltx_text"> </span></span></a><a href="./" title="コンパイラ – 原理と構造 – 補足説明" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title">コンパイラ – 原理と構造 – 補足説明<span class="ltx_text"> </span></span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_chapter ltx_authors_1line">
+<h1 class="ltx_title ltx_title_chapter">
+<span class="ltx_tag ltx_tag_chapter">第 6 章 </span>型の解析と型推論</h1>
+
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">型代入の考え方</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">6.5.3項での説明の通り，型推論アルゴリズム<math id="Sx1.p1.m1" class="ltx_Math" alttext="{\cal W}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒲</mi></math>は
+与えられた型環境<math id="Sx1.p1.m2" class="ltx_Math" alttext="\Gamma" display="inline"><mi mathvariant="normal">Γ</mi></math>と式<math id="Sx1.p1.m3" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math>を受け取り，
+型<math id="Sx1.p1.m4" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math>と型代入<math id="Sx1.p1.m5" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>の組を返す</p>
+<table id="Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ex1.m1" class="ltx_Math" alttext="{\cal W}(\Gamma,e)=(S,\tau)" display="block"><mrow><mi class="ltx_font_mathcaligraphic">𝒲</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo>,</mo><mi>e</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mi>τ</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">の形の関数である．
+この<math id="Sx1.p1.m6" class="ltx_Math" alttext="{\cal W}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒲</mi></math>の内部構造を理解し，さらに，新たな式の定義を考える
+上での鍵は，型代入<math id="Sx1.p1.m7" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>の役割の理解にある．
+型代入が複数でてきて分かりにくいと思えたら，</p>
+<blockquote class="ltx_quote">
+<p class="ltx_p"><span class="ltx_text" style="color:#0000FF;">型代入の作成は，型の制約が成り立つ「新しい世界」に作る操作</span>
+</p>
+</blockquote>
+<p class="ltx_p">と考えるてみよう．
+前の世界の型<math id="Sx1.p1.m8" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math>や型環境<math id="Sx1.p1.m9" class="ltx_Math" alttext="\Gamma" display="inline"><mi mathvariant="normal">Γ</mi></math>は，新しい世界では<math id="Sx1.p1.m10" class="ltx_Math" alttext="S(\tau)" display="inline"><mrow><mi>S</mi><mo stretchy="false">(</mo><mi>τ</mi><mo stretchy="false">)</mo></mrow></math>および
+<math id="Sx1.p1.m11" class="ltx_Math" alttext="S(\Gamma)" display="inline"><mrow><mi>S</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo stretchy="false">)</mo></mrow></math>となる．
+この考え方の下では，関数適用のケース</p>
+</div>
+<div id="Sx1.p2" class="ltx_para">
+<table class="ltx_tabular">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><math id="Sx1.p2.m1" class="ltx_Math" alttext="{\cal W}(\Gamma,e_{1}\ e_{2})=" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒲</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo>,</mo><mi>e</mi><msub><mi></mi><mn>1</mn></msub><mspace width="5.0pt"></mspace><mi>e</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo>=</mo></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">   let <math id="Sx1.p2.m2" class="ltx_Math" alttext="(S_{1},\tau_{1})={\cal W}(\Gamma,e_{1})" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi>τ</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒲</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo>,</mo><mi>e</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></math>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">        <math id="Sx1.p2.m3" class="ltx_Math" alttext="(S_{2},\tau_{2})={\cal W}(S_{1}(\Gamma),e_{2})" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mo>,</mo><mi>τ</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒲</mi><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo stretchy="false">)</mo><mo>,</mo><mi>e</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></math>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">        <math id="Sx1.p2.m4" class="ltx_Math" alttext="S_{3}={\cal U}(\{(S_{2}(\tau_{1}),\tau_{2}\rightarrow t)\})" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>3</mn></msub><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo stretchy="false">(</mo><mo stretchy="false">{</mo><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">(</mo><mi>τ</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo>,</mo><mi>τ</mi><msub><mi></mi><mn>2</mn></msub><mo>→</mo><mi>t</mi><mo stretchy="false">)</mo><mo stretchy="false">}</mo><mo stretchy="false">)</mo></mrow></math>
+  (<math id="Sx1.p2.m5" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> fresh)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">   in <math id="Sx1.p2.m6" class="ltx_Math" alttext="(S_{3}S_{2}S_{1},S_{3}(t))" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>3</mn></msub><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi>S</mi><msub><mi></mi><mn>3</mn></msub><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow></math>
+</td>
+</tr>
+</table>
+</div>
+<div id="Sx1.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">は以下の計算を行っている，と理解できる．</p>
+<ol id="Sx1.I1" class="ltx_enumerate">
+<li id="Sx1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="Sx1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">式<span class="ltx_text ltx_markedasmath"><math id="Sx1.I1.i1.p1.m1.m1" class="ltx_Math" alttext="e_{1}" display="inline"><mrow><mi>e</mi><msub><mi></mi><mn>1</mn></msub></mrow></math><span class="ltx_text ltx_font_typewriter"> <math id="Sx1.I1.i1.p1.m1.m2" class="ltx_Math" alttext="e_{2}" display="inline"><mrow><mi>e</mi><msub><mi></mi><mn mathvariant="normal">2</mn></msub></mrow></math></span></span>の制約解消されていない世界の<math id="Sx1.I1.i1.p1.m2" class="ltx_Math" alttext="\Gamma" display="inline"><mi mathvariant="normal">Γ</mi></math>が与えられている．</p>
+</div>
+</li>
+<li id="Sx1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="Sx1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx1.I1.i2.p1.m1" class="ltx_Math" alttext="e_{1}" display="inline"><mrow><mi>e</mi><msub><mi></mi><mn>1</mn></msub></mrow></math>の制約を満たす世界を表す型代入<math id="Sx1.I1.i2.p1.m2" class="ltx_Math" alttext="S_{1}" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>1</mn></msub></mrow></math>とその世界での<math id="Sx1.I1.i2.p1.m3" class="ltx_Math" alttext="\Gamma" display="inline"><mi mathvariant="normal">Γ</mi></math>つまり
+（<math id="Sx1.I1.i2.p1.m4" class="ltx_Math" alttext="S_{1}(\Gamma)" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo stretchy="false">)</mo></mrow></math>）の下での<math id="Sx1.I1.i2.p1.m5" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math>の型<math id="Sx1.I1.i2.p1.m6" class="ltx_Math" alttext="\tau_{1}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>1</mn></msub></mrow></math>を求める．</p>
+<table id="Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ex2.m1" class="ltx_Math" alttext="(S_{1},\tau_{1})={\cal W}(\Gamma,e_{1})" display="block"><mrow><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi>τ</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒲</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo>,</mo><mi>e</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="Sx1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="Sx1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">さらに，<math id="Sx1.I1.i3.p1.m1" class="ltx_Math" alttext="e_{2}" display="inline"><mrow><mi>e</mi><msub><mi></mi><mn>2</mn></msub></mrow></math>の制約を満たす新しい世界を表す<math id="Sx1.I1.i3.p1.m2" class="ltx_Math" alttext="S_{2}" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>2</mn></msub></mrow></math>と，
+その世界での型環境<math id="Sx1.I1.i3.p1.m3" class="ltx_Math" alttext="S_{1}(\Gamma)" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo stretchy="false">)</mo></mrow></math>の下での<math id="Sx1.I1.i3.p1.m4" class="ltx_Math" alttext="e_{2}" display="inline"><mrow><mi>e</mi><msub><mi></mi><mn>2</mn></msub></mrow></math>の型<math id="Sx1.I1.i3.p1.m5" class="ltx_Math" alttext="\tau_{2}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>2</mn></msub></mrow></math>を求める．</p>
+<table id="Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ex3.m1" class="ltx_Math" alttext="(S_{2},\tau_{2})={\cal W}(S_{1}(\Gamma),e_{2})" display="block"><mrow><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mo>,</mo><mi>τ</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒲</mi><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo stretchy="false">)</mo><mo>,</mo><mi>e</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="Sx1.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="Sx1.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">この世界で，<math id="Sx1.I1.i4.p1.m1" class="ltx_Math" alttext="e_{1}\ e_{2}" display="inline"><mrow><mi>e</mi><msub><mi></mi><mn>1</mn></msub><mspace width="5.0pt"></mspace><mi>e</mi><msub><mi></mi><mn>2</mn></msub></mrow></math>の型を表す新しい型変数<math id="Sx1.I1.i4.p1.m2" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>を作る．
+この世界では，<math id="Sx1.I1.i4.p1.m3" class="ltx_Math" alttext="\tau_{1}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>1</mn></msub></mrow></math>は<math id="Sx1.I1.i4.p1.m4" class="ltx_Math" alttext="S_{2}(\tau_{1})" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">(</mo><mi>τ</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></math>であるから，
+型規則が要求する等式は</p>
+<table id="Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ex4.m1" class="ltx_Math" alttext="S_{2}(\tau_{1})=\tau_{2}\rightarrow t" display="block"><mrow><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">(</mo><mi>τ</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo>=</mo><mi>τ</mi><msub><mi></mi><mn>2</mn></msub><mo>→</mo><mi>t</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">である．
+この等式を満たす世界を表す型代入<math id="Sx1.I1.i4.p1.m5" class="ltx_Math" alttext="S_{3}" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>3</mn></msub></mrow></math>を求める．</p>
+<table id="Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ex5.m1" class="ltx_Math" alttext="S_{3}={\cal U}(\{(S_{2}(\tau_{1}),\tau_{2}\rightarrow t)\})" display="block"><mrow><mi>S</mi><msub><mi></mi><mn>3</mn></msub><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo stretchy="false">(</mo><mo stretchy="false">{</mo><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">(</mo><mi>τ</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo>,</mo><mi>τ</mi><msub><mi></mi><mn>2</mn></msub><mo>→</mo><mi>t</mi><mo stretchy="false">)</mo><mo stretchy="false">}</mo><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">この新しい世界では<math id="Sx1.I1.i4.p1.m6" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>は<math id="Sx1.I1.i4.p1.m7" class="ltx_Math" alttext="S_{3}(t)" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>3</mn></msub><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></math>である．</p>
+</div>
+</li>
+<li id="Sx1.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="Sx1.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">最初に与えられた世界の型をこの世界に送る
+型代入は<math id="Sx1.I1.i5.p1.m1" class="ltx_Math" alttext="S_{3}S_{2}S_{1}" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>3</mn></msub><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mi>S</mi><msub><mi></mi><mn>1</mn></msub></mrow></math>であるから，返すべき値は
+<math id="Sx1.I1.i5.p1.m2" class="ltx_Math" alttext="(S_{3}S_{2}S_{1},S_{3}(t))" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>3</mn></msub><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi>S</mi><msub><mi></mi><mn>3</mn></msub><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow></math>である．</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="Sx1.p4" class="ltx_para">
+<p class="ltx_p">この考え方を会得すれば，種々の新しい構文に対する型推論手順を
+書くことができるはずである．
+例として，7.3節で解説するfix式の型規則
+
+<br class="ltx_break">    <span class="ltx_text ltx_align_right" style="width:30.1pt;">(fix)  </span>
+<span class="ltx_tabular ltx_align_middle">
+<span class="ltx_tbody">
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_center"><math id="Sx1.p4.m1" class="ltx_Math" alttext="\Gamma\{f:\tau_{1}\rightarrow\tau_{2},x:\tau_{1}\}\vdash e:\tau_{2}" display="inline"><mrow><mi mathvariant="normal">Γ</mi><mo stretchy="false">{</mo><mi>f</mi><mo>:</mo><mi>τ</mi><msub><mi></mi><mn>1</mn></msub><mo>→</mo><mi>τ</mi><msub><mi></mi><mn>2</mn></msub><mo>,</mo><mi>x</mi><mo>:</mo><mi>τ</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">}</mo><mo>⊢</mo><mi>e</mi><mo>:</mo><mi>τ</mi><msub><mi></mi><mn>2</mn></msub></mrow></math></span></span>
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_center ltx_border_t"><math id="Sx1.p4.m2" class="ltx_Math" alttext="\Gamma\vdash\mbox{{\tt fix $f$($x$) =&gt; $e$}}:\tau_{1}\rightarrow\tau_{2}" display="inline"><mrow><mi mathvariant="normal">Γ</mi><mo>⊢</mo><mrow><mtext mathvariant="monospace">fix </mtext><mi>f</mi><mtext mathvariant="monospace">(</mtext><mi>x</mi><mtext mathvariant="monospace">) =&gt; </mtext><mi>e</mi></mrow><mo>:</mo><mi>τ</mi><msub><mi></mi><mn>1</mn></msub><mo>→</mo><mi>τ</mi><msub><mi></mi><mn>2</mn></msub></mrow></math></span></span>
+</span>
+</span>
+
+<br class="ltx_break">の定義を書いてみよう．
+考え方を以下の通りである．</p>
+<ol id="Sx1.I2" class="ltx_enumerate">
+<li id="Sx1.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="Sx1.I2.i1.p1" class="ltx_para">
+<p class="ltx_p">式<span class="ltx_text ltx_font_typewriter">fix <math id="Sx1.I2.i1.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>(<math id="Sx1.I2.i1.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>) =&gt; <math id="Sx1.I2.i1.p1.m3" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math></span>の制約が解消されていない世界の
+<math id="Sx1.I2.i1.p1.m4" class="ltx_Math" alttext="\Gamma" display="inline"><mi mathvariant="normal">Γ</mi></math>が与えられている．</p>
+</div>
+</li>
+<li id="Sx1.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="Sx1.I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx1.I2.i2.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>と<math id="Sx1.I2.i2.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>の型を表現するために，この世界で新しい型変数<math id="Sx1.I2.i2.p1.m3" class="ltx_Math" alttext="t_{1}" display="inline"><mrow><mi>t</mi><msub><mi></mi><mn>1</mn></msub></mrow></math>と<math id="Sx1.I2.i2.p1.m4" class="ltx_Math" alttext="t_{2}" display="inline"><mrow><mi>t</mi><msub><mi></mi><mn>2</mn></msub></mrow></math>を作成し，
+<math id="Sx1.I2.i2.p1.m5" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math>の制約を満たす世界を表す<math id="Sx1.I2.i2.p1.m6" class="ltx_Math" alttext="S_{1}" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>1</mn></msub></mrow></math>と，その世界での型環境<math id="Sx1.I2.i2.p1.m7" class="ltx_Math" alttext="\Gamma\{f:t_{1}\rightarrow t_{2},x:t_{1}\}" display="inline"><mrow><mi mathvariant="normal">Γ</mi><mo stretchy="false">{</mo><mi>f</mi><mo>:</mo><mi>t</mi><msub><mi></mi><mn>1</mn></msub><mo>→</mo><mi>t</mi><msub><mi></mi><mn>2</mn></msub><mo>,</mo><mi>x</mi><mo>:</mo><mi>t</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">}</mo></mrow></math>の
+下での<math id="Sx1.I2.i2.p1.m8" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math>の型<math id="Sx1.I2.i2.p1.m9" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math>を求める．</p>
+<table id="Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ex6.m1" class="ltx_Math" alttext="(S_{1},\tau)={\cal W}(\Gamma\{f:t_{1}\rightarrow t_{2},x:t_{1}\},e)" display="block"><mrow><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi>τ</mi><mo stretchy="false">)</mo><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒲</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo stretchy="false">{</mo><mi>f</mi><mo>:</mo><mi>t</mi><msub><mi></mi><mn>1</mn></msub><mo>→</mo><mi>t</mi><msub><mi></mi><mn>2</mn></msub><mo>,</mo><mi>x</mi><mo>:</mo><mi>t</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">}</mo><mo>,</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="Sx1.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="Sx1.I2.i3.p1" class="ltx_para">
+<p class="ltx_p">この新しい世界では，<math id="Sx1.I2.i3.p1.m1" class="ltx_Math" alttext="t_{2}" display="inline"><mrow><mi>t</mi><msub><mi></mi><mn>2</mn></msub></mrow></math>は<math id="Sx1.I2.i3.p1.m2" class="ltx_Math" alttext="S_{1}(t_{2})" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi>t</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></math>であるから，型規則の制約を表す等式は</p>
+<table id="Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ex7.m1" class="ltx_Math" alttext="S_{1}(t_{2})=\tau" display="block"><mrow><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi>t</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo>=</mo><mi>τ</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">である．
+この等式を満たす世界を表す型代入<math id="Sx1.I2.i3.p1.m3" class="ltx_Math" alttext="S_{2}" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>2</mn></msub></mrow></math>を求める．</p>
+<table id="Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ex8.m1" class="ltx_Math" alttext="S_{2}={\cal U}(\{(S(t_{2}),\tau)\})" display="block"><mrow><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo stretchy="false">(</mo><mo stretchy="false">{</mo><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">(</mo><mi>t</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo>,</mo><mi>τ</mi><mo stretchy="false">)</mo><mo stretchy="false">}</mo><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="Sx1.I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="Sx1.I2.i4.p1" class="ltx_para">
+<p class="ltx_p">この世界では，<math id="Sx1.I2.i4.p1.m1" class="ltx_Math" alttext="t_{1}\rightarrow t_{2}" display="inline"><mrow><mi>t</mi><msub><mi></mi><mn>1</mn></msub><mo>→</mo><mi>t</mi><msub><mi></mi><mn>2</mn></msub></mrow></math>は<math id="Sx1.I2.i4.p1.m2" class="ltx_Math" alttext="S_{2}S_{1}(t_{1}\rightarrow t_{2})" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi>t</mi><msub><mi></mi><mn>1</mn></msub><mo>→</mo><mi>t</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></math>であり，もとの世界を
+この世界に移す代入は<math id="Sx1.I2.i4.p1.m3" class="ltx_Math" alttext="S_{2}S_{1}" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mi>S</mi><msub><mi></mi><mn>1</mn></msub></mrow></math>であるから，求める解は</p>
+<table id="Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ex9.m1" class="ltx_Math" alttext="(S_{2}S_{1},S_{2}S_{1}(t_{1}\rightarrow t_{2}))" display="block"><mrow><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi>t</mi><msub><mi></mi><mn>1</mn></msub><mo>→</mo><mi>t</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">である．
+</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">以上から，<math id="Sx1.p4.m3" class="ltx_Math" alttext="{\cal W}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒲</mi></math>の定義は，</p>
+</div>
+<div id="Sx1.p5" class="ltx_para">
+<table class="ltx_tabular">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><math id="Sx1.p5.m1" class="ltx_Math" alttext="{\cal W}(\Gamma,\mbox{{\tt fix $f$($x$) =&gt; $e$}})=" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒲</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo>,</mo><mrow><mtext mathvariant="monospace">fix </mtext><mi>f</mi><mtext mathvariant="monospace">(</mtext><mi>x</mi><mtext mathvariant="monospace">) =&gt; </mtext><mi>e</mi></mrow><mo stretchy="false">)</mo><mo>=</mo></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">   let <math id="Sx1.p5.m2" class="ltx_Math" alttext="(S_{1},\tau)={\cal W}(\Gamma\{f:t_{1}\rightarrow t_{2},x:t_{1}\},e)" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi>τ</mi><mo stretchy="false">)</mo><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒲</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo stretchy="false">{</mo><mi>f</mi><mo>:</mo><mi>t</mi><msub><mi></mi><mn>1</mn></msub><mo>→</mo><mi>t</mi><msub><mi></mi><mn>2</mn></msub><mo>,</mo><mi>x</mi><mo>:</mo><mi>t</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">}</mo><mo>,</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></math>  (<math id="Sx1.p5.m3" class="ltx_Math" alttext="t_{1}" display="inline"><mrow><mi>t</mi><msub><mi></mi><mn>1</mn></msub></mrow></math>, <math id="Sx1.p5.m4" class="ltx_Math" alttext="t_{2}" display="inline"><mrow><mi>t</mi><msub><mi></mi><mn>2</mn></msub></mrow></math> fresh)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">         <math id="Sx1.p5.m5" class="ltx_Math" alttext="S_{2}={\cal U}(\{(S_{1}(t_{2}),\tau)\})" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo stretchy="false">(</mo><mo stretchy="false">{</mo><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi>t</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo>,</mo><mi>τ</mi><mo stretchy="false">)</mo><mo stretchy="false">}</mo><mo stretchy="false">)</mo></mrow></math>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">   in <math id="Sx1.p5.m6" class="ltx_Math" alttext="(S_{2}S_{1},S_{2}S_{1}(t_{1}\rightarrow t_{2}))" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi>t</mi><msub><mi></mi><mn>1</mn></msub><mo>→</mo><mi>t</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow></math>
+</td>
+</tr>
+</table>
+</div>
+<div id="Sx1.p6" class="ltx_para ltx_noindent">
+<p class="ltx_p">となる．
+</p>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="./" title="コンパイラ – 原理と構造 – 補足説明" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title">コンパイラ – 原理と構造 – 補足説明<span class="ltx_text"> </span></span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Tue Oct 19 20:56:19 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+{% endraw %}
