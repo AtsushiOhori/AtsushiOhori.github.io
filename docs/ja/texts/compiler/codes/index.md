@@ -11,7 +11,7 @@ githubレポジトリは以下の手順で利用できる．
 - URLの右側のコピーボタンを左クリックし，URLをクリップボードにコピーし，shellコマンド`git clone <URL>`を実行
 - Download ZIPをクリックしZIPファイルをダウンロード
 
-githubレポジトリは，以下の内容が含まれます．
+githubレポジトリは，以下の内容が含まれる．
 - `README.md` 簡単な説明
 - examples/chap2/ 〜 examples/chap8/ の各ディレクトリ．
 
