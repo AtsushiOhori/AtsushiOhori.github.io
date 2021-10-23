@@ -3,9 +3,9 @@ translated: true
 ---
 教科書の主なコードを
 [本書サポートgithubレポジトリ](https://github.com/AtsushiOhori/compiler-text)
-にて提供します．
+にて提供する．
 
-githubレポジトリは以下の手順で利用できます．
+githubレポジトリは以下の手順で利用できる．
 1. [本書サポートgithubレポジトリ](https://github.com/AtsushiOhori/compiler-text)をブラウザでアクセス
 2. 「Code」ボタンを左クリックすると現れるCloneメニュのHTTPSを選択し，以下の何れかを実行
 - URLの右側のコピーボタンを左クリックし，URLをクリップボードにコピーし，shellコマンド`git clone <URL>`を実行
