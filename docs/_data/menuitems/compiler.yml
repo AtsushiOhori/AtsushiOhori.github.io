@@ -13,6 +13,8 @@ menu:
   url: /ja/texts/compiler/supplementary/
 - text: 正誤表
   url: /ja/texts/compiler/errata/
+- text: 練習問題の解答例
+  url: /ja/texts/compiler/answers/
 
 super:
 - text: ホーム/
