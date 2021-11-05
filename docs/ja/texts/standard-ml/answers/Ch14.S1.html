@@ -1,0 +1,472 @@
+---
+layout: default
+permalink: /ja/texts/standard-ml/answers//Ch14.S1.html
+translated: true
+lang: ja
+head: |
+ <!--Generated on Sat Nov  6 00:44:26 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Document created on 2021年11月5日.-->
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="LaTeXML.css" type="text/css">
+ <link rel="stylesheet" href="ltx-book.css" type="text/css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+ <link rel="up" href="Ch14.html" title="第 14 章 システム時計の利用 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up up" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="start" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="prev" href="Ch14.html" title="第 14 章 システム時計の利用 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="next" href="Ch15.html" title="第 15 章 入出力処理 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch12.html" title="第 12 章 基本ライブラリの利用法 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch13.html" title="第 13 章 配列を用いたプログラミング ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch14.html" title="第 14 章 システム時計の利用 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch15.html" title="第 15 章 入出力処理 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch16.html" title="第 16 章 データのフォーマッティング ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch17.html" title="第 17 章 OSとのインターフェイス ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <meta name="keywords" lang="en" content=", ">
+---
+{% raw %}
+<div class="ltx_page_main">
+<header class="ltx_page_header"><div class="ltx_document_title">プログラミング言語 Standard ML 入門 (問題の解答例)</div>
+<div>
+<a href="Ch14.html" title="第 14 章 システム時計の利用 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">14 </span>システム時計の利用</span></a><a href="Ch14.html" title="第 14 章 システム時計の利用 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">14 </span>システム時計の利用</span></a><a href="Ch15.html" title="第 15 章 入出力処理 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">15 </span>入出力処理</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">14.1 </span><span class="ltx_text ltx_font_typewriter">Time</span> と <span class="ltx_text ltx_font_typewriter">Timer</span> ストラクチャ</h1>
+
+<div id="Ch14.Thmex1" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 14.1</span></span></h6>
+<div id="Ch14.Thmex1.p1" class="ltx_para">
+<p class="ltx_p">日時の表現と操作は <span class="ltx_text ltx_font_typewriter">DATE</span> シグネチャを持つ
+<span class="ltx_text ltx_font_typewriter">Date</span> ストラクチャで提供されている．
+<span class="ltx_text ltx_font_typewriter">DATE</span> シグネチャはその型から容易にその機能を推定できる．
+必要なら <span class="ltx_text ltx_font_typewriter">Date</span> ストラクチャを使い，現在の日時と時刻を表す文字列
+を返す関数
+<br class="ltx_break">
+<span class="ltx_tabular">
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">currentTime : unit -&gt; string</span></span></span>
+</span> 
+<br class="ltx_break">を定義せよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+以下に定義と実行の例を示す。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # fun currentTime () = Date.toString (Date.fromTimeLocal (Time.now()));
+   val currentTime = fn : unit -&gt; string
+   # currentTime ();
+   val it = "Sun Jul 19 10:17:42 2020" : string
+</pre>
+</div>
+<div id="Ch14.Thmex2" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 14.2</span></span></h6>
+<div id="Ch14.Thmex2.p1" class="ltx_para">
+<p class="ltx_p">関数 <span class="ltx_text ltx_font_typewriter">nlogn : int -&gt; real</span> と <span class="ltx_text ltx_font_typewriter">intcomp : int*int -&gt; order</span> を定義
+し，<span class="ltx_text ltx_font_typewriter">checkTime</span> 関数を完成させよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p2" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+以下に例を示す。
+以下では、<span class="ltx_text ltx_font_typewriter">intcomp</span>は、<span class="ltx_text ltx_font_typewriter">Int</span>ストラクチャに定義されている
+<span class="ltx_text ltx_font_typewriter">compare</span>関数を使用している。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun log2 x = Math.log10 x / (Math.log10 2.0)
+   fun nlogn n = ((Real.fromInt n) * (log2 (Real.fromInt n)))
+   fun checkTime n =
+       let
+         val array = genArray n
+         val tm = timeRun ArrayQuickSort.sort (array,Int.compare)
+         val nlognRatio = tm / (nlogn n)
+       in
+         (n, tm div 1000, nlognRatio)
+       end
+</pre>
+</div>
+<div id="Ch14.Thmex3" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 14.3</span></span></h6>
+<div id="Ch14.Thmex3.p1" class="ltx_para">
+<p class="ltx_p">関数 <span class="ltx_text ltx_font_typewriter">printResult : int * int * real -&gt; unit</span> は，
+<math id="Ch14.Thmex3.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>の値，時間，時間と<math id="Ch14.Thmex3.p1.m2" class="ltx_Math" alttext="n/n\log(n)" display="inline"><mrow><mi>n</mi><mo>/</mo><mi>n</mi><mi>log</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></math>との比の値を受け取り，
+
+<span class="ltx_tabular">
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">size=10000, milli-secs=40, micro-secs/n log(n)=0.30103000</span></span></span>
+</span>
+の形式でプリントする関数である．
+<span class="ltx_text ltx_font_typewriter">printResult</span> 関数を定義し，
+<span class="ltx_text ltx_font_typewriter">checkTime</span> 関数を完成させ，
+前節で作成したソートプログラムの評価を行え．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p3" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+文脈から、完成させるべき関数は、<span class="ltx_text ltx_font_typewriter">checkTime</span>ではなく、<span class="ltx_text ltx_font_typewriter">testSort</span>関数である。
+ここでは、SML#の動的型付け機構を使って定義されている以下の型の汎用の
+清書関数</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # Dynamic.pp;
+   val it = fn : [’a#reify. ’a -&gt; unit]
+</pre>
+<p class="ltx_p">を使った定義例を以下に示す。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun printResult (n, tm, ratio) =
+       Dynamic.pp
+        {"size" = n, "milli-secs" = tm, "micro-secs/n long(n)" = ratio}
+   fun testSort n = printResult (checkTime n)
+</pre>
+<p class="ltx_p">以下は、SML#の対話型環境下での実行結果である。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # app testSort [1000, 10000, 1000000, 10000000];
+   {"micro-secs/n long(n)" = 0.0, "milli-secs" = 0, size = 1000}
+   {"micro-secs/n long(n)" = 0.0602059991328, "milli-secs" = 8, size = 10000}
+   {"micro-secs/n long(n)" = 0.0834856521308, "milli-secs" = 1664, size = 1000000}
+   {
+     "micro-secs/n long(n)" = 0.0822069913873,
+     "milli-secs" = 19116,
+     size = 10000000
+   }
+   val it = () : unit
+</pre>
+</div>
+<div id="Ch14.Thmex4" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 14.4</span></span></h6>
+<div id="Ch14.Thmex4.p1" class="ltx_para">
+<p class="ltx_p">配列の大きさ<math id="Ch14.Thmex4.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>のリストを受け取り，各<math id="Ch14.Thmex4.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>について
+<math id="Ch14.Thmex4.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>の値，計算時間，<math id="Ch14.Thmex4.p1.m4" class="ltx_Math" alttext="n\log_{2}(n)" display="inline"><mrow><mi>n</mi><mi>log</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></math>の値との比を</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+    - evalSort [10000,100000,1000000,10000000];
+              array size          milli-sec.      micro s./n log(n)
+                   10000                  30          0.22577250
+                  100000                 460          0.27694760
+                 1000000                5740          0.28798536
+                10000000               66630          0.28653755
+    ------------------------------------------------------------
+                                     avarage          0.26931075
+</pre>
+<p class="ltx_p">のような形式で表示する関数 <span class="ltx_text ltx_font_typewriter">evalSort</span> を以下の手順で作成せよ．</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">20文字以下の大きさの文字列を受け取り，その前に空白文字を
+付け加え，20文字の大きさの文字列を返す関数
+
+<span class="ltx_tabular">
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">padString : string -&gt; string</span></span></span>
+</span>
+を定義せよ．</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">padString</span> を使って，2つの整数と1つの実数を受け取り，以下のよう
+な形式でプリントする関数 <span class="ltx_text ltx_font_typewriter">printLine</span> を定義せよ．
+
+<span class="ltx_tabular">
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">- printLine;</span></span></span>
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_italic">val it = fn : int * int * real <span class="ltx_text ltx_font_typewriter ltx_font_upright">-&gt;</span> unit</span></span></span>
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">- printLine (10000,30,0.22577250);</span></span></span>
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">10000                  30          0.22577250</code></span></span>
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_italic">val it = <span class="ltx_text ltx_font_upright">()</span> : unit</span></span></span>
+</span></p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">以上を使って <span class="ltx_text ltx_font_typewriter">evalSort</span> を定義せよ．</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p4" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+<span class="ltx_text ltx_font_typewriter">evalSort</span>の定義例を以下に示す。
+この例では、<span class="ltx_text ltx_font_typewriter">padString</span>を定義する代わりに、<span class="ltx_text ltx_font_typewriter">StringCvt</span>ストラクチャの
+<span class="ltx_text ltx_font_typewriter">padLeft</span>関数を使用している。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+    fun evalSort L =
+        let
+          val L’ = map checkTime L
+          val av = (foldr (fn ((_,_,x),y) =&gt; y+x) 0.0 L’)/(Real.fromInt (List.length L’))
+          val title = (StringCvt.padLeft #" " 20 "array size")
+                      ^ (StringCvt.padLeft #" " 20 "milli-sec.")
+                      ^ (StringCvt.padLeft #" " 20 "micro s./nlogn")
+                      ^ "\n"
+          fun formatReal a = StringCvt.padLeft #" " 20 (Real.fmt (StringCvt.FIX (SOME 8)) a)
+          fun printLine (n,a,c) =
+              let
+                val ns =  StringCvt.padLeft #" " 20 (Int.toString n)
+                val sa =  StringCvt.padLeft #" " 20 (Int.toString a)
+                val sc = formatReal c
+              in
+                print (ns ^ sa ^ sc ^ "\n")
+              end
+        in
+          (print title;
+           map printLine L’;
+           print "------------------------------------------------------------\n";
+           print ("                                 avarage" ^ (formatReal av));
+           print "\n")
+        end
+</pre>
+<p class="ltx_p">以下は、SML#の対話型環境下での実行結果である。
+現在の実行環境では、大きさ10000の配列では短時間に終了し、誤差が大きくなるとため、
+100000、1000000, 10000000、67108863（最大配列サイズ）のテスト行っている。
+</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # evalSort [100000, 1000000, 10000000, Array.maxLen div 4];
+             array size          milli-sec.      micro s./nlogn
+                 100000                 152          0.09151312
+                1000000                1784          0.08950625
+               10000000               20300          0.08729870
+               67108863              144932          0.08306366
+   ------------------------------------------------------------
+                                    avarage          0.08784543
+   val it = () : unit
+</pre>
+</div>
+<div id="Ch14.Thmex5" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 14.5</span></span></h6>
+<div id="Ch14.Thmex5.p1" class="ltx_para">
+<p class="ltx_p">関数 <span class="ltx_text ltx_font_typewriter">checkTime</span> を一般化し，汎用のテスト
+関数</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+    eval : {prog:’a-&gt;’b, input:’a, size:’a-&gt; int, base:int -&gt; real}
+           -&gt; int * real * real
+</pre>
+<p class="ltx_p">を定義せよ．
+ただし，引数レコードの各フィールドの意味は以下のとおりとする．
+</p>
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_border_r ltx_border_t">フィールド</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_border_t">値の意味</th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><span class="ltx_text ltx_font_typewriter">prog</span></td>
+<td class="ltx_td ltx_align_left ltx_border_t">評価すべきプログラム</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_typewriter">input</span></td>
+<td class="ltx_td ltx_align_left">プログラムへの入力</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_typewriter">size</span></td>
+<td class="ltx_td ltx_align_left">入力の大きさを返す関数</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r"><span class="ltx_text ltx_font_typewriter">base</span></td>
+<td class="ltx_td ltx_align_left ltx_border_b">評価の基準となる関数</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p">結果の型の意味は <span class="ltx_text ltx_font_typewriter">checkTime</span> の場合と同様である．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p5" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+<span class="ltx_text ltx_font_typewriter">checkTime</span>と同様であれば、結果の型は<span class="ltx_text ltx_font_typewriter">int * int * real</span>である。
+以下は定義例である。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun eval {prog, input, size, base} =
+       let
+         val tm = timeRun prog input
+         val n = size input
+         val ratio = Real.fromInt tm / base n
+       in
+         (n, tm div 1000, ratio)
+       end
+</pre>
+</div>
+<div id="Ch14.Thmex6" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 14.6</span></span></h6>
+<div id="Ch14.Thmex6.p1" class="ltx_para">
+<p class="ltx_p">自然数のリストを受け取り，各要素<math id="Ch14.Thmex6.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>に対して，大きさ<math id="Ch14.Thmex6.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>の乱数配列
+を生成し，上記のような<math id="Ch14.Thmex6.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>回の比較を行い，処理時間およびその<math id="Ch14.Thmex6.p1.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>との比を</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+    - evalCompare [500000,1000000,5000000];
+              array size          milli-sec.          micro s./n
+                  500000                  40          0.08000000
+                 1000000                  70          0.07000000
+                 5000000                 370          0.07400000
+    ------------------------------------------------------------
+                                     avarage          0.07466667
+</pre>
+<p class="ltx_p">のような形式で表示する関数 <span class="ltx_text ltx_font_typewriter">evalCompare</span> を，<span class="ltx_text ltx_font_typewriter">eval</span> を使って定義せよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p6" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+以下に定義例を示す。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun evalCompare L =
+       let
+         fun comp array =
+             let
+               val n = Array.length array
+               val p = Array.sub(array, 0)
+               val m = n div 2
+               fun  loop x = if x &lt;= m then ()
+                             else (Int.compare (Array.sub(array, n - x), p);
+                                   Int.compare (Array.sub(array, x - 1), p);
+                                   loop (x -1))
+             in
+               loop n
+             end
+         fun evalN n = eval {prog = comp, input = genArray n, size = Array.length, base = real}
+         val L’ = map evalN L
+         val av = (foldr (fn ((_,_,x),y) =&gt; y+x) 0.0 L’)/(Real.fromInt (List.length L’))
+         val title = (StringCvt.padLeft #" " 20 "array size")
+                     ^ (StringCvt.padLeft #" " 20 "milli-sec.")
+                     ^ (StringCvt.padLeft #" " 20 "micro s./n")
+                     ^ "\n"
+         fun formatReal a = StringCvt.padLeft #" " 20 (Real.fmt (StringCvt.FIX (SOME 8)) a)
+         fun printLine (n,a,c) =
+             let
+               val ns =  StringCvt.padLeft #" " 20 (Int.toString n)
+               val sa =  StringCvt.padLeft #" " 20 (Int.toString a)
+               val sc = formatReal c
+             in
+               print (ns ^ sa ^ sc ^ "\n")
+             end
+       in
+         (print title;
+          map printLine L’;
+          print "------------------------------------------------------------\n";
+          print ("                                 avarage" ^ (formatReal av));
+          print "\n")
+       end
+</pre>
+<p class="ltx_p">以下にSML#でのテスト例を示す。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # evalCompare [1000000, 10000000, Array.maxLen div 4];
+             array size          milli-sec.          micro s./n
+                1000000                   8          0.00800000
+               10000000                  80          0.00800000
+               67108863                 564          0.00840426
+   ------------------------------------------------------------
+                                 avarage          0.00813475
+   val it = () : unit
+</pre>
+</div>
+<div id="Ch14.Thmex7" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 14.7</span></span></h6>
+<div id="Ch14.Thmex7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">evalSort</span> と <span class="ltx_text ltx_font_typewriter">evalCompare</span> を組み合わせ，ソート関数の処理性能を</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   - normalEvalSort [500000,1000000,5000000,10000000];
+             array size       time in cunit             T/n log(n)
+                 500000                2740          3.75926754
+                1000000                5860          3.81825925
+                5000000               33270          3.88323623
+               10000000               68970          3.85195525
+   ------------------------------------------------------------
+                                    avarage          3.82817957
+   The estimated sort time function: T(n) = 3.8 n log(n).
+</pre>
+<p class="ltx_p">のような形式で表示をする関数 <span class="ltx_text ltx_font_typewriter">normalEvalSort</span> を定義せよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p7" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+以下に定義例を示す。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun evalCompare L =
+       let
+         fun comp array =
+             let
+               val n = Array.length array
+               val p = Array.sub(array, 0)
+               val m = n div 2
+               fun  loop x = if x &lt;= m then ()
+                             else (Int.compare (Array.sub(array, n - x), p);
+                                   Int.compare (Array.sub(array, x - 1), p);
+                                   loop (x -1))
+             in
+               loop n
+             end
+         fun evalN n =
+             let val array = genArray n
+             in eval {prog = comp, input = array, size = Array.length, base = real} end
+         val L’ = map evalN L
+         val av = (foldr (fn ((_,_,x),y) =&gt; y+x) 0.0 L’)/(Real.fromInt (List.length L’))
+       in
+         av
+       end
+   fun evalSortN c L =
+       let
+         fun sort array = ArrayQuickSort.sort (array, Int.compare)
+         fun base n = c * nlogn n
+         fun evalN n = eval {prog = sort, input = genArray n, size = Array.length, base = base}
+         val L’ = map evalN L
+         val av = (foldr (fn ((_,_,x),y) =&gt; y+x) 0.0 L’) / (Real.fromInt (List.length L’))
+         val title = (StringCvt.padLeft #" " 20 "array size")
+                     ^ (StringCvt.padLeft #" " 20 "time in cunit")
+                  ^ (StringCvt.padLeft #" " 20 "C/nlogn")
+                  ^ "\n"
+         fun formatReal a = StringCvt.padLeft #" " 20 (Real.fmt (StringCvt.FIX (SOME 8)) a)
+         fun printLine (n,a,c) =
+          let
+            val ns =  StringCvt.padLeft #" " 20 (Int.toString n)
+            val sa =  StringCvt.padLeft #" " 20 (Int.toString (Real.floor (real a * 1000.0/ c)))
+            val sc = formatReal c
+          in
+            print (ns ^ sa ^ sc ^ "\n")
+          end
+         val C = Real.fmt (StringCvt.FIX (SOME 2)) av
+       in
+         (print title;
+          map printLine L’;
+          print "------------------------------------------------------------\n";
+          print ("                                 avarage" ^ (formatReal av) ^ "\n");
+          print ("The estimated sort time function: T(n) = " ^ C ^ " n log(n)\n"))
+       end
+   fun normalEvalSort L = evalSortN (evalCompare L) L
+</pre>
+<p class="ltx_p">以下にSML#でのテスト例を示す。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # normalEvalSort [1000000, 10000000, Array.maxLen div 4];
+             array size       time in cunit             C/nlogn
+                1000000              236268          7.43223684
+               10000000             2756460          7.62717282
+               67108863            20683151          7.75259017
+   ------------------------------------------------------------
+                                    avarage          7.60399994
+   The estimated sort time function: T(n) = 7.60 n log(n)
+   val it = () : unit
+</pre>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="Ch14.html" title="第 14 章 システム時計の利用 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">14 </span>システム時計の利用</span></a><a href="Ch15.html" title="第 15 章 入出力処理 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">15 </span>入出力処理</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Nov  6 00:44:26 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+{% endraw %}

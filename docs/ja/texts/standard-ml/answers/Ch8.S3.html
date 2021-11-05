@@ -1,0 +1,278 @@
+---
+layout: default
+permalink: /ja/texts/standard-ml/answers//Ch8.S3.html
+translated: true
+lang: ja
+head: |
+ <!--Generated on Sat Nov  6 00:44:26 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Document created on 2021年11月5日.-->
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="LaTeXML.css" type="text/css">
+ <link rel="stylesheet" href="ltx-book.css" type="text/css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+ <link rel="up" href="Ch8.html" title="第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up up" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="start" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="prev" href="Ch8.S2.html" title="8.2 履歴に依存するプログラム ‣ 第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="next" href="Ch8.S6.html" title="8.6 SML#のランク1多相性 ‣ 第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch8.S1.html" title="8.1 参照型（eqtype τ ref）と逐次評価 ‣ 第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch8.S2.html" title="8.2 履歴に依存するプログラム ‣ 第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch8.S6.html" title="8.6 SML#のランク1多相性 ‣ 第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch1.html" title="第 1 章 MLプログラミングの基本 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch2.html" title="第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch3.html" title="第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch4.html" title="第 4 章 MLの基本データ型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch5.html" title="第 5 章 レコード ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch6.html" title="第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch7.html" title="第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch8.html" title="第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch9.html" title="第 9 章 例外処理 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch10.html" title="第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+---
+{% raw %}
+<div class="ltx_page_main">
+<header class="ltx_page_header"><div class="ltx_document_title">プログラミング言語 Standard ML 入門 (問題の解答例)</div>
+<div>
+<a href="Ch8.html" title="第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8 </span>参照型</span></a><a href="Ch8.S2.html" title="8.2 履歴に依存するプログラム ‣ 第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8.2 </span>履歴に依存するプログラム</span></a><a href="Ch8.S6.html" title="8.6 SML#のランク1多相性 ‣ 第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8.6 </span>SML#のランク1多相性</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">8.3 </span>変更可能なデータ構造</h1>
+
+<div id="Ch8.Thmex6" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 8.6</span></span></h6>
+<div id="Ch8.Thmex6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">dataDlist</span>，
+<span class="ltx_text ltx_font_typewriter">rightDlist</span>，
+<span class="ltx_text ltx_font_typewriter">leftDlist</span>を定義せよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span></p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun dataDlist (ref (CELL{data,...})) = data
+   fun rightDlist (ref (CELL{right,...})) = right
+   fun leftDlist (ref (CELL{left,...})) = left
+</pre>
+</div>
+<div id="Ch8.Thmex7" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 8.7</span></span></h6>
+<div id="Ch8.Thmex7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">deleteDlist</span> と <span class="ltx_text ltx_font_typewriter">fromListToDlist</span> を定義せよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p2" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span></p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun deleteDlist dlist =
+       case dlist of
+         ref NIL =&gt; ()
+       | ref (CELL{left=l1 as ref (CELL{right=r2,left=l2,...}),
+                   right=r1 as ref (CELL{right=r3,left=l3,...}),
+                   ...}) =&gt;
+           if l1 = l2 then dlist := NIL
+           else (dlist := !r1; r2 := !r1; l3 := !l1)
+
+   fun fromListToDlist L = foldl (fn (x,y) =&gt; (insertDlist x y;y)) (ref NIL) (rev L)
+</pre>
+</div>
+<div id="p3" class="ltx_para">
+<blockquote class="ltx_quote">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">補足</span>:
+<span class="ltx_text ltx_font_typewriter">fromListToDlist</span>は、リストの末尾から循環リストに追加してい
+く関数である。
+<span class="ltx_text ltx_font_typewriter">foldr</span>は末尾再帰の実装が困難なため、</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun fromListToDlist L = foldr (fn (x,y) =&gt; (insertDlist x y;y)) (ref NIL) L
+</pre>
+<p class="ltx_p">よりスタックオーバフローなどの危険も少なく効率がよい。
+
+<br class="ltx_break">
+この観点から、リストを生成する関数、例えば<span class="ltx_text ltx_font_typewriter">toList</span>なども以
+下のような実装が望ましい。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+  fun toList L =
+    let
+      fun loop (l,A) visited =
+        if member l visited then rev A
+        else loop (rightDlist l, dataDlist l::A) (l::visited)
+    in loop (rightDlist (leftDlist L), nil) nil
+    end
+</pre>
+<p class="ltx_p">さらに、循環リストは、リストの末尾からも辿ることができるので、
+以下のより効率よい自然なコードが可能である。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+  fun toList L =
+    let
+      fun loop (l,A) visited =
+        if member l visited then A
+        else loop (leftDlist l, dataDlist l::A) (l::visited)
+    in loop (leftDlist L, nil) nil
+    end
+</pre>
+<p class="ltx_p">また、循環リストのリスト表現を逆順のリストとする定義すると、
+以下の関数となる。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+  fun toListL L =
+    let
+      fun loop (l,A) visited =
+        if member l visited then A
+        else loop (rightDlist l, dataDlist l::A) (l::visited)
+    in loop (rightDlist (leftDlist L), nil) nil
+    end
+</pre>
+<p class="ltx_p">対応する循環リストへの変換は、</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun fromListToDlistL L = foldl (fn (x,y) =&gt; (insert x y;y)) (ref NIL) L
+</pre>
+<br class="ltx_break">
+</blockquote>
+</div>
+<div id="Ch8.Thmex8" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 8.8</span></span></h6>
+<div id="Ch8.Thmex8.p1" class="ltx_para">
+<p class="ltx_p">2つの循環2重リストを連結する関数</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   concatDlist : ’a dlist -&gt; ’a dlsit -&gt; unit
+</pre>
+<p class="ltx_p">を定義せよ．ただし，連結の結果は，どちらのリストから見ても，セルを右にたど
+ると，以前のセルの後に他の循環2重リストのセルが付け加えられているようにせ
+よ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p4" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+以下にコード例を示す。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun concatDlist D1 D2 =
+       case (D1, D2) of
+         (ref NIL, _) =&gt; D1 := !D2
+        | (_, ref NIL) =&gt; D2 := !D1
+        | (ref (CELL{left=d1l as ref (CELL{right=d1lr,...}),...}),
+           ref (CELL{left=d2l as ref (CELL{right=d2lr,...}),...})) =&gt;
+           let
+             val d1lCell = !d1l
+             val d1lrCell = !d1lr
+           in
+             (d1l := !d2l;
+              d1lr := !d2lr;
+              d2l := d1lCell;
+              d2lr := d1lrCell)
+           end
+</pre>
+</div>
+<div id="Ch8.Thmex9" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 8.9</span></span></h6>
+<div id="Ch8.Thmex9.p1" class="ltx_para">
+<p class="ltx_p">以下の関数を定義せよ．</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">循環2重リンクリストをコピーする関数 <span class="ltx_text ltx_font_typewriter">copyDlist</span>．</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">与えられた関数を循環2重リンクリストの各要素に適用して得られる値を要素
+とする，新しい循環2重リンクリストを生成する関数 <span class="ltx_text ltx_font_typewriter">mapDlist</span>．</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">リストの <span class="ltx_text ltx_font_typewriter">foldr</span> および <span class="ltx_text ltx_font_typewriter">foldl</span> に相当する関数 <span class="ltx_text ltx_font_typewriter">foldrDlist</span> および <span class="ltx_text ltx_font_typewriter">foldlDlist</span>．</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p5" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+これら関数の適切な定義には、以下の点を含む種々の注意深い考察が必要である。</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">循環構造を辿る際の終了条件の適切な判定</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">left</span>および<span class="ltx_text ltx_font_typewriter">right</span>フィールドをたどると自分自身に戻ってくる
+<span class="ltx_text ltx_font_typewriter">CELL</span>への参照型データの作成</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">以下に、これら２点を考慮したコード例を示す。なお、<span class="ltx_text ltx_font_typewriter">copyDlist</span>は
+<span class="ltx_text ltx_font_typewriter">mapDlist</span>とほぼ同様なコードであり、後者を使って定義している。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun mapDlist f d =
+       let
+         fun newElem x nil = NONE
+           | newElem x ((h,newH)::t) =
+             if x = h then SOME newH
+             else newElem x t
+         fun copy l copied =
+             case l of
+               ref NIL =&gt; ref NIL
+             | ref (CELL{left, right, data}) =&gt;
+               (case newElem l copied of
+                  NONE =&gt;
+                  let
+                    val newL = ref NIL
+                    val copied = (l, newL)::copied
+                    val l = copy left copied
+                    val r = copy right copied
+                  in
+                    (newL := CELL{left = l, right = r, data = f data};
+                     newL)
+                  end
+                | SOME newL =&gt; newL
+               )
+       in
+         copy (rightDlist (leftDlist d)) nil
+       end
+
+   fun copyDlist d = mapDlist (fn x =&gt; x) d
+
+   fun foldrDlist F z d =
+       let
+         fun member x nil = false
+           | member x (h::t) = x = h orelse member x t
+         fun f d z visited =
+             if member d visited then z
+             else F (dataDlist d, f (rightDlist d) z (d::visited))
+       in f (rightDlist (leftDlist d)) z nil
+       end
+
+   fun foldlDlist F z d =
+       let
+         fun member x nil = false
+           | member x (h::t) = x = h orelse member x t
+         fun f d z visited =
+             if member d visited then z
+             else f (rightDlist d) (F (dataDlist d, z)) (d::visited)
+       in f (rightDlist (leftDlist d)) z nil
+       end
+</pre>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="Ch8.S2.html" title="8.2 履歴に依存するプログラム ‣ 第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8.2 </span>履歴に依存するプログラム</span></a><a href="Ch8.S6.html" title="8.6 SML#のランク1多相性 ‣ 第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8.6 </span>SML#のランク1多相性</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Nov  6 00:44:26 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+{% endraw %}

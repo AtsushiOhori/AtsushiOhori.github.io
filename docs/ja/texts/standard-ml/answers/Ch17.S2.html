@@ -1,0 +1,143 @@
+---
+layout: default
+permalink: /ja/texts/standard-ml/answers//Ch17.S2.html
+translated: true
+lang: ja
+head: |
+ <!--Generated on Sat Nov  6 00:44:26 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Document created on 2021年11月5日.-->
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="LaTeXML.css" type="text/css">
+ <link rel="stylesheet" href="ltx-book.css" type="text/css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+ <link rel="up" href="Ch17.html" title="第 17 章 OSとのインターフェイス ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up up" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="start" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="prev" href="Ch17.html" title="第 17 章 OSとのインターフェイス ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch12.html" title="第 12 章 基本ライブラリの利用法 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch13.html" title="第 13 章 配列を用いたプログラミング ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch14.html" title="第 14 章 システム時計の利用 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch15.html" title="第 15 章 入出力処理 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch16.html" title="第 16 章 データのフォーマッティング ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch17.html" title="第 17 章 OSとのインターフェイス ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+---
+{% raw %}
+<div class="ltx_page_main">
+<header class="ltx_page_header"><div class="ltx_document_title">プログラミング言語 Standard ML 入門 (問題の解答例)</div>
+<div>
+<a href="Ch17.html" title="第 17 章 OSとのインターフェイス ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">17 </span>OSとのインターフェイス</span></a><a href="Ch17.html" title="第 17 章 OSとのインターフェイス ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">17 </span>OSとのインターフェイス</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">17.2 </span>ディレクトリとファイルの操作</h1>
+
+<div id="Ch17.Thmex1" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 17.1</span></span></h6>
+<div id="Ch17.Thmex1.p1" class="ltx_para">
+<p class="ltx_p">上記の <span class="ltx_text ltx_font_typewriter">ls</span> 関数を改良し，各ファイルごとに，
+ファイルの種類（ディレクトリ，リンク，通常ファイル），ファイルのアクセス
+（読み出し可，書き込み可，実行可），最終更新年月日，ファイルサイズを以下の
+ような形式で表示するようにせよ．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   - ls();
+   dlrwx            file size       last modified            file name
+   d-rwx                 4096        Mar 19 10:50             examples
+   --rw-                18666        Apr  8 09:39               ml.tex
+   --rw-               257094        Mar 18 16:40            part1.tex
+   --rw-               186111        Apr 16 10:58            part2.tex
+</pre>
+<p class="ltx_p">先頭の <span class="ltx_text ltx_font_typewriter">dlrwx</span> はそれぞれ，ディレクトリ，リンク，読み込み可，書き込み可，
+実行可を表す．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span></p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun ls () =
+       let
+         val d = F.openDir (F.getDir())
+         fun printRest () =
+             case F.readDir d of
+               NONE =&gt; F.closeDir d
+             | SOME f =&gt;
+               let
+              val size = F.fileSize f
+              val time = Date.toString (Date.fromTimeLocal (F.modTime f))
+                 val modString = implode
+                                   [if F.isDir f then #"d" else #"-",
+                                    if F.isLink f then #"l" else #"-",
+                                    if F.access (f, [F.A_READ]) then #"r" else #"-",
+                                    if F.access (f, [F.A_WRITE]) then #"w" else #"-",
+                                    if F.access (f, [F.A_EXEC]) then #"x" else #"-"]
+            in
+                 (Format.printf
+                    "%10s%15d%30s%30s\n"
+                    [Format.S modString,
+                     Format.I size,
+                     Format.S time,
+                     Format.S f
+                    ];
+               printRest())
+            end
+       in
+         (Format.printf
+            "%10s%15s%30s%30s\n"
+            [Format.S "dlrwx",
+             Format.S "file size",
+             Format.S "last modified",
+             Format.S "file name"
+            ];
+          printRest()
+         )
+       end
+</pre>
+</div>
+<div id="Ch17.Thmex2" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 17.2</span></span></h6>
+<div id="Ch17.Thmex2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">copy</span> 関数が，ファイルおよびディレクトリの更新日付を保存する
+ように変更せよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p2" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+<span class="ltx_text ltx_font_typewriter">copy</span>関数に<span class="ltx_text ltx_font_typewriter">F.setTime</span>コマンドを追加すればよい。
+変更例を以下に示す。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun copy a b =
+       if not (F.isDir a) then
+         (copyFile a b;
+          F.setTime (b,SOME (F.modTime a)))
+       else
+         let val d = F.openDir a
+             fun copyDirStream d b =
+                 case F.readDir d of
+                   NONE =&gt; F.closeDir d
+                 | SOME item =&gt;
+                   let val from = P.concat (a,item)
+                       val to = P.concat (b,item)
+                   in (copy from to;copyDirStream d b)
+                   end
+         in
+           (F.mkDir b;
+            copyDirStream d b;
+            F.setTime (b,SOME (F.modTime a)))
+         end
+</pre>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="Ch17.html" title="第 17 章 OSとのインターフェイス ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">17 </span>OSとのインターフェイス</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Nov  6 00:44:26 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+{% endraw %}

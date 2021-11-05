@@ -1,0 +1,379 @@
+---
+layout: default
+permalink: /ja/texts/standard-ml/answers//Ch6.S5.html
+translated: true
+lang: ja
+head: |
+ <!--Generated on Sat Nov  6 00:44:26 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Document created on 2021年11月5日.-->
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="LaTeXML.css" type="text/css">
+ <link rel="stylesheet" href="ltx-book.css" type="text/css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+ <link rel="up" href="Ch6.html" title="第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up up" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="start" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="prev" href="Ch6.S4.html" title="6.4 リスト処理の基本関数 ‣ 第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="next" href="Ch7.html" title="第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch6.S1.html" title="6.1 リスト構造 ‣ 第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch6.S2.html" title="6.2 リスト型（ τ list） ‣ 第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch6.S3.html" title="6.3 パターンマッチングによるリストの分解 ‣ 第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch6.S4.html" title="6.4 リスト処理の基本関数 ‣ 第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch1.html" title="第 1 章 MLプログラミングの基本 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch2.html" title="第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch3.html" title="第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch4.html" title="第 4 章 MLの基本データ型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch5.html" title="第 5 章 レコード ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch6.html" title="第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch7.html" title="第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch8.html" title="第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch9.html" title="第 9 章 例外処理 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch10.html" title="第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+---
+{% raw %}
+<div class="ltx_page_main">
+<header class="ltx_page_header"><div class="ltx_document_title">プログラミング言語 Standard ML 入門 (問題の解答例)</div>
+<div>
+<a href="Ch6.html" title="第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>リスト</span></a><a href="Ch6.S4.html" title="6.4 リスト処理の基本関数 ‣ 第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.4 </span>リスト処理の基本関数</span></a><a href="Ch7.html" title="第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>データ構造の定義と利用</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6.5 </span>リスト処理の一般構造と汎用のリスト処理関数</h1>
+
+<div id="Ch6.Thmex8" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 6.8</span></span></h6>
+<div id="Ch6.Thmex8.p1" class="ltx_para">
+<p class="ltx_p">以下の各関数が行う処理に関して上記の分析を行い，対応する<math id="Ch6.Thmex8.p1.m1" class="ltx_Math" alttext="Z" display="inline"><mi>Z</mi></math>と<math id="Ch6.Thmex8.p1.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>を
+MLの式として定義せよ．</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">map</span></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">@</span></p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">flatten</span></p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">filter</span></p>
+</div>
+</li>
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">permutations</span></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span></p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">map <math id="I2.i1.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> <math id="I2.i1.p1.m2" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>
+<br class="ltx_break"></span>リストが<span class="ltx_text ltx_font_typewriter">nil</span>の時は<span class="ltx_text ltx_font_typewriter">nil</span>、
+リストが <math id="I2.i1.p1.m3" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math><span class="ltx_text ltx_font_typewriter">::<math id="I2.i1.p1.m4" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math></span> の形なら，
+部分リスト<math id="I2.i1.p1.m5" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>に対する値<math id="I2.i1.p1.m6" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>を計算すると、
+<math id="I2.i1.p1.m7" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>は、<math id="I2.i1.p1.m8" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>に<math id="I2.i1.p1.m9" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>を<span class="ltx_text ltx_font_typewriter">map</span>した結果であるから、
+全体の結果は<span class="ltx_text ltx_font_typewriter">f h :: <math id="I2.i1.p1.m10" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math></span>である。
+従って、<math id="I2.i1.p1.m11" class="ltx_Math" alttext="Z=\mbox{\tt nil}" display="inline"><mrow><mi>Z</mi><mo>=</mo><mtext>𝚗𝚒𝚕</mtext></mrow></math>、
+<math id="I2.i1.p1.m12" class="ltx_Math" alttext="f=\mbox{\tt fn (h,R) =&gt; f h :: R}" display="inline"><mrow><mi>f</mi><mo>=</mo><mtext mathvariant="monospace">fn (h,R) =&gt; f h :: R</mtext></mrow></math>
+である。</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i2.p1.m1" class="ltx_Math" alttext="L1" display="inline"><mrow><mi>L</mi><mn>1</mn></mrow></math><span class="ltx_text ltx_font_typewriter"> @ <math id="I2.i2.p1.m2" class="ltx_Math" alttext="L2" display="inline"><mrow><mi>L</mi><mn mathvariant="normal">2</mn></mrow></math>
+<br class="ltx_break"></span>第一要素<span class="ltx_text ltx_font_typewriter">L1</span>で<span class="ltx_text ltx_font_typewriter">fold</span>する。
+<span class="ltx_text ltx_font_typewriter">L1</span>が<span class="ltx_text ltx_font_typewriter">nil</span>の時は第２要素<span class="ltx_text ltx_font_typewriter">L2</span>、
+<span class="ltx_text ltx_font_typewriter">L1</span>が <math id="I2.i2.p1.m3" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math><span class="ltx_text ltx_font_typewriter">::<math id="I2.i2.p1.m4" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math></span> の形なら，
+<math id="I2.i2.p1.m5" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>は<span class="ltx_text ltx_font_typewriter">t</span>と<span class="ltx_text ltx_font_typewriter">L2</span>の連結結果のはずであるから、
+全体の結果は<span class="ltx_text ltx_font_typewriter">h :: <math id="I2.i2.p1.m6" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math></span>である。
+従って、
+<math id="I2.i2.p1.m7" class="ltx_Math" alttext="Z=\mbox{\tt L2}" display="inline"><mrow><mi>Z</mi><mo>=</mo><mtext>𝙻𝟸</mtext></mrow></math>、
+<math id="I2.i2.p1.m8" class="ltx_Math" alttext="f=\mbox{\tt fn (h,R) =&gt; h :: R}" display="inline"><mrow><mi>f</mi><mo>=</mo><mtext mathvariant="monospace">fn (h,R) =&gt; h :: R</mtext></mrow></math>
+である。</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">flatten L
+<br class="ltx_break"></span>リストが<span class="ltx_text ltx_font_typewriter">nil</span>の時は<span class="ltx_text ltx_font_typewriter">nil</span>、
+リストが <math id="I2.i3.p1.m1" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math><span class="ltx_text ltx_font_typewriter">::<math id="I2.i3.p1.m2" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math></span> の形なら，
+部分リスト<math id="I2.i3.p1.m3" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>に対する値<math id="I2.i3.p1.m4" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>を計算すると、
+<math id="I2.i3.p1.m5" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math>はリスト、<math id="I2.i3.p1.m6" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>は<math id="I2.i3.p1.m7" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>を<span class="ltx_text ltx_font_typewriter">flatten</span>した結果のはずであるから、
+全体の結果は<span class="ltx_text ltx_font_typewriter">h @ <math id="I2.i3.p1.m8" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math></span>である。
+従って、<math id="I2.i3.p1.m9" class="ltx_Math" alttext="Z=\mbox{\tt nil}" display="inline"><mrow><mi>Z</mi><mo>=</mo><mtext>𝚗𝚒𝚕</mtext></mrow></math>、
+<math id="I2.i3.p1.m10" class="ltx_Math" alttext="f=\mbox{\tt fn (h,R) =&gt; h @ R}" display="inline"><mrow><mi>f</mi><mo>=</mo><mtext mathvariant="monospace">fn (h,R) =&gt; h @ R</mtext></mrow></math>
+である。</p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">filter P L
+<br class="ltx_break"></span>リストが<span class="ltx_text ltx_font_typewriter">nil</span>の時は<span class="ltx_text ltx_font_typewriter">nil</span>、
+リストが <math id="I2.i4.p1.m1" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math><span class="ltx_text ltx_font_typewriter">::<math id="I2.i4.p1.m2" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math></span> の形なら，
+部分リスト<math id="I2.i4.p1.m3" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>に対する値<math id="I2.i4.p1.m4" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>を計算すると、
+<math id="I2.i4.p1.m5" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>は<math id="I2.i4.p1.m6" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>を<span class="ltx_text ltx_font_typewriter">filter</span>した結果のはずであるから、
+全体の結果は、もし<math id="I2.i4.p1.m7" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math><span class="ltx_text ltx_font_typewriter"> h</span>が<span class="ltx_text ltx_font_typewriter">true</span>なら<span class="ltx_text ltx_font_typewriter">h @ <math id="I2.i4.p1.m8" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math></span>、<span class="ltx_text ltx_font_typewriter">folse</span>なら<math id="I2.i4.p1.m9" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>である。
+従って、<math id="I2.i4.p1.m10" class="ltx_Math" alttext="Z=\mbox{\tt nil}" display="inline"><mrow><mi>Z</mi><mo>=</mo><mtext>𝚗𝚒𝚕</mtext></mrow></math>、
+<math id="I2.i4.p1.m11" class="ltx_Math" alttext="f=\mbox{\tt fn (h,R) =&gt; if P h then h::R else R}" display="inline"><mrow><mi>f</mi><mo>=</mo><mtext mathvariant="monospace">fn (h,R) =&gt; if P h then h::R else R</mtext></mrow></math>
+である。</p>
+</div>
+</li>
+<li id="I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">permutations
+<br class="ltx_break"></span>リストが<span class="ltx_text ltx_font_typewriter">nil</span>の時は<span class="ltx_text ltx_font_typewriter">[nil]</span>、
+リストが <math id="I2.i5.p1.m1" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math><span class="ltx_text ltx_font_typewriter">::<math id="I2.i5.p1.m2" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math></span> の形なら，
+部分リスト<math id="I2.i5.p1.m3" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>に対する値<math id="I2.i5.p1.m4" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>を計算すると、
+<math id="I2.i5.p1.m5" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>は<math id="I2.i5.p1.m6" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>を<span class="ltx_text ltx_font_typewriter">permutation</span>した結果のはずであるから、
+全体の結果は、<math id="I2.i5.p1.m7" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>の各要素に対して、その可能な位置に<math id="I2.i5.p1.m8" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math>を挿入したリストすべてである。
+従って、<math id="I2.i5.p1.m9" class="ltx_Math" alttext="Z=\mbox{\tt[nil]}" display="inline"><mrow><mi>Z</mi><mo>=</mo><mtext mathvariant="monospace">[nil]</mtext></mrow></math>、
+<math id="I2.i5.p1.m10" class="ltx_Math" alttext="f=\mbox{\tt fn (h,R) =&gt; foldr (fn (a,b) =&gt; insertAll h a @ b) nil R}" display="inline"><mrow><mi>f</mi><mo>=</mo><mtext mathvariant="monospace">fn (h,R) =&gt; foldr (fn (a,b) =&gt; insertAll h a @ b) nil R</mtext></mrow></math>
+である。</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="Ch6.Thmex9" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 6.9</span></span></h6>
+<div id="Ch6.Thmex9.p1" class="ltx_para">
+<p class="ltx_p">以下のリスト処理関数を <span class="ltx_text ltx_font_typewriter">foldr</span> を使って定義せよ．</p>
+<ol id="I3" class="ltx_enumerate">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">map</span>，
+<span class="ltx_text ltx_font_typewriter">flatten</span>，
+<span class="ltx_text ltx_font_typewriter">member</span>，
+<span class="ltx_text ltx_font_typewriter">unique</span>，
+<span class="ltx_text ltx_font_typewriter">prefixList</span>，
+<span class="ltx_text ltx_font_typewriter">permutations</span>
+の各関数．</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p">リストと
+条件（<span class="ltx_text ltx_font_typewriter">bool</span>型の関数）
+を受け取り，リストの中に条件を満たす要素が存在するか否か判定する関数
+<span class="ltx_text ltx_font_typewriter">exists</span>および，
+リストの中のすべての要素が条件を満たすか判定する関数
+<span class="ltx_text ltx_font_typewriter">forall</span>．
+定義上，任意の条件関数<math id="I3.i2.p1.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>に対して，<span class="ltx_text ltx_font_typewriter">exists <math id="I3.i2.p1.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> nil</span>
+は <span class="ltx_text ltx_font_typewriter">false</span>，<span class="ltx_text ltx_font_typewriter">forall <math id="I3.i2.p1.m3" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> nil</span>
+は <span class="ltx_text ltx_font_typewriter">true</span> を返すことに注意せよ．</p>
+</div>
+</li>
+<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<p class="ltx_p">整数リストのプレフィックス和を求める関数 <span class="ltx_text ltx_font_typewriter">prefixSum</span>．
+ただし，整数リスト<math id="I3.i3.p1.m1" class="ltx_Math" alttext="[a_{1},a_{2},\mbox{$\cdots$},a_{n}]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi>a</mi><msub><mi></mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">⋯</mi><mo>,</mo><mi>a</mi><msub><mi></mi><mi>n</mi></msub><mo stretchy="false">]</mo></mrow></math>のプレフィックス和
+は<math id="I3.i3.p1.m2" class="ltx_Math" alttext="[a_{1},a_{1}+a_{2},\cdots,a_{1}+\cdots a_{n-1},a_{1}+\cdots+a_{n}]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi>a</mi><msub><mi></mi><mn>1</mn></msub><mo>+</mo><mi>a</mi><msub><mi></mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">⋯</mi><mo>,</mo><mi>a</mi><msub><mi></mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mi>a</mi><msub><mi></mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><mi>a</mi><msub><mi></mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mi>a</mi><msub><mi></mi><mi>n</mi></msub><mo stretchy="false">]</mo></mrow></math>である．</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p2" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span></p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun map f L = foldr (fn (h,R) =&gt; f h :: R) nil L
+
+   fun flatten L = foldr (fn (h,R) =&gt;  h @ R) nil L
+
+   fun member e L = foldr (fn (h,R) =&gt; R orelse e = h) false L
+
+   fun unique L =
+       foldr (fn (h,R) =&gt; if member h R then R else h :: R) nil L
+
+   fun prefixList L =
+       foldr (fn (x,l)=&gt; [x]::(map (fn y =&gt; x::y) l)) nil L;
+
+   fun permutations L =
+       let fun insertAll s nil = [[s]]
+             | insertAll s (h::t) =
+                 let val L = insertAll s t
+                 in (s::(h::t)) :: (map (fn x =&gt; h::x) L)
+                 end
+       in foldr (fn (x,y) =&gt; foldr (fn (a,b) =&gt; insertAll x a @ b) nil y)
+                [nil]
+                L
+       end
+
+   fun exists p L =
+       foldr (fn (y,r) =&gt; p y orelse r) false L
+
+   fun forall p L =
+       foldr (fn (y,r) =&gt; p y andalso r) true L
+
+   fun prefixSum L =
+       foldr (fn (x,y) =&gt; x::(map (fn z =&gt; z + x) y)) nil L
+</pre>
+</div>
+<div id="Ch6.Thmex10" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 6.10</span></span></h6>
+<div id="Ch6.Thmex10.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">foldr</span><span class="ltx_text ltx_font_italic"> の処理は，以下のような等式の結果を求めることと理解できる．</span></p>
+<table id="Ch6.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.Ex16.m1" class="ltx_Math" alttext="\mbox{{\tt foldr $f$ $Z$ [$a_{1}$,$a_{2}$,$\cdots$,$a_{n}$]}}=f(a_{1},f(a_{2},%
+f(\cdots,f(a_{n},Z)\cdots)))" display="block"><mrow><mrow><mtext mathvariant="monospace">foldr </mtext><mi>f</mi><mtext mathvariant="monospace"> </mtext><mi>Z</mi><mtext mathvariant="monospace"> [</mtext><mrow><mi>a</mi><msub><mi></mi><mn>1</mn></msub></mrow><mtext mathvariant="monospace">,</mtext><mrow><mi>a</mi><msub><mi></mi><mn>2</mn></msub></mrow><mtext mathvariant="monospace">,</mtext><mi mathvariant="normal">⋯</mi><mtext mathvariant="monospace">,</mtext><mrow><mi>a</mi><msub><mi></mi><mi>n</mi></msub></mrow><mtext mathvariant="monospace">]</mtext></mrow><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi>a</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi>f</mi><mo stretchy="false">(</mo><mi>a</mi><msub><mi></mi><mn>2</mn></msub><mo>,</mo><mi>f</mi><mo stretchy="false">(</mo><mi mathvariant="normal">⋯</mi><mo>,</mo><mi>f</mi><mo stretchy="false">(</mo><mi>a</mi><msub><mi></mi><mi>n</mi></msub><mo>,</mo><mi>Z</mi><mo stretchy="false">)</mo><mi mathvariant="normal">⋯</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">これに対して，以下のような動作をする </span><span class="ltx_text ltx_font_typewriter">foldl</span><span class="ltx_text ltx_font_italic"> もトップレベルで定義されている．</span></p>
+<table id="Ch6.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.Ex17.m1" class="ltx_Math" alttext="\mbox{{\tt foldr $f$ $Z$ [$a_{1}$,$\cdots$,$a_{n-1}$,$a_{n}$]}}=f(a_{n},f(a_{n%
+-1},f(\cdots,f(a_{1},Z)\cdots)))" display="block"><mrow><mrow><mtext mathvariant="monospace">foldr </mtext><mi>f</mi><mtext mathvariant="monospace"> </mtext><mi>Z</mi><mtext mathvariant="monospace"> [</mtext><mrow><mi>a</mi><msub><mi></mi><mn>1</mn></msub></mrow><mtext mathvariant="monospace">,</mtext><mi mathvariant="normal">⋯</mi><mtext mathvariant="monospace">,</mtext><mrow><mi>a</mi><msub><mi></mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mtext mathvariant="monospace">,</mtext><mrow><mi>a</mi><msub><mi></mi><mi>n</mi></msub></mrow><mtext mathvariant="monospace">]</mtext></mrow><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi>a</mi><msub><mi></mi><mi>n</mi></msub><mo>,</mo><mi>f</mi><mo stretchy="false">(</mo><mi>a</mi><msub><mi></mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><mi>f</mi><mo stretchy="false">(</mo><mi mathvariant="normal">⋯</mi><mo>,</mo><mi>f</mi><mo stretchy="false">(</mo><mi>a</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi>Z</mi><mo stretchy="false">)</mo><mi mathvariant="normal">⋯</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<ol id="I4" class="ltx_enumerate">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I4.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">foldl</span><span class="ltx_text ltx_font_italic"> の定義を与えよ．</span></p>
+</div>
+</li>
+<li id="I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I4.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">foldl</span><span class="ltx_text ltx_font_italic"> を使って </span><span class="ltx_text ltx_font_typewriter">rev</span><span class="ltx_text ltx_font_italic"> を定義せよ．</span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p3" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span></p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun foldl f z nil = z
+     | foldl f z (h::t) = foldl f (f (h,z)) t
+
+   fun rev L = foldl (op ::) nil L
+</pre>
+</div>
+<div id="Ch6.Thmex11" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 6.11</span></span></h6>
+<div id="Ch6.Thmex11.p1" class="ltx_para">
+<p class="ltx_p">関係のリスト表現で，同一の要素が一回しか含まれないとき，正規形と呼ぶ
+ことにする．
+上で定義した <span class="ltx_text ltx_font_typewriter">tc</span> は，入力が正規形であっても結果は正規形とは限ら
+ない．</p>
+<ol id="I5" class="ltx_enumerate">
+<li id="I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I5.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">tc <math id="I5.i1.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math></span>が正規形とならない正規形のリスト<math id="I5.i1.p1.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>の例を挙げよ．</p>
+</div>
+</li>
+<li id="I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I5.i2.p1" class="ltx_para">
+<p class="ltx_p">正規形の入力に対しては，必ず正規形の結果を返すように，<span class="ltx_text ltx_font_typewriter">tc</span> の定
+義を修正せよ．</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p4" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+正規形の入力<math id="p4.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>に対して、<span class="ltx_text ltx_font_typewriter">tc <math id="p4.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math></span>が正規形にならない例：
+<span class="ltx_text ltx_font_typewriter">tc [(1,1),(1,2),(2,3)]</span>。</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">正規形を維持するための<span class="ltx_text ltx_font_typewriter">tc</span>の改良：簡単な解決法は、</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun normalTc R = unique (tc R)
+</pre>
+</div>
+<div id="Ch6.Thmex12" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 6.12</span></span></h6>
+<div id="Ch6.Thmex12.p1" class="ltx_para">
+<p class="ltx_p">関係のリスト表現に関する以下の関数を定義せよ．</p>
+<ol id="I6" class="ltx_enumerate">
+<li id="I6.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I6.i1.p1" class="ltx_para">
+<p class="ltx_p">関係<math id="I6.i1.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>と組<math id="I6.i1.p1.m2" class="ltx_Math" alttext="(a,b)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></math>に対して，<math id="I6.i1.p1.m3" class="ltx_Math" alttext="(a,b)\in R" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo><mo>∈</mo><mi>R</mi></mrow></math>か否かを判定する関数
+<span class="ltx_text ltx_font_typewriter">isRelated</span>．</p>
+</div>
+</li>
+<li id="I6.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I6.i2.p1" class="ltx_para">
+<p class="ltx_p">関係<math id="I6.i2.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>と点<math id="I6.i2.p1.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>に対して，集合<math id="I6.i2.p1.m3" class="ltx_Math" alttext="\{x\ |\ (a,x)\in R\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>x</mi><mspace width="5.0pt"></mspace><mo stretchy="false">|</mo><mspace width="5.0pt"></mspace><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo><mo>∈</mo><mi>R</mi><mo stretchy="false">}</mo></mrow></math>を求める関数
+<span class="ltx_text ltx_font_typewriter">targetOf</span>．</p>
+</div>
+</li>
+<li id="I6.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="I6.i3.p1" class="ltx_para">
+<p class="ltx_p">関係<math id="I6.i3.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>と点<math id="I6.i3.p1.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>に対して，集合<math id="I6.i3.p1.m3" class="ltx_Math" alttext="\{x\ |\ (x,a)\in R\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>x</mi><mspace width="5.0pt"></mspace><mo stretchy="false">|</mo><mspace width="5.0pt"></mspace><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo><mo>∈</mo><mi>R</mi><mo stretchy="false">}</mo></mrow></math>を求める関数
+<span class="ltx_text ltx_font_typewriter">sourceOf</span>．</p>
+</div>
+</li>
+<li id="I6.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="I6.i4.p1" class="ltx_para">
+<p class="ltx_p">関係<math id="I6.i4.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>の逆<math id="I6.i4.p1.m2" class="ltx_Math" alttext="R^{-1}" display="inline"><mrow><mi>R</mi><msup><mi></mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>を求める関数 <span class="ltx_text ltx_font_typewriter">inverseRel</span>．</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p6" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span></p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun isRelated (R,a) = member a R
+
+   fun targetOf (R,a) = filter (fn (x,y) =&gt; x = a) R
+
+   fun sourceOf (R,a) = filter (fn (x,y) =&gt; y = a) R
+
+   fun inverseRel R = map (fn (a,b) =&gt; (b, a)) R
+</pre>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="Ch6.S4.html" title="6.4 リスト処理の基本関数 ‣ 第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.4 </span>リスト処理の基本関数</span></a><a href="Ch7.html" title="第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>データ構造の定義と利用</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Nov  6 00:44:26 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+{% endraw %}

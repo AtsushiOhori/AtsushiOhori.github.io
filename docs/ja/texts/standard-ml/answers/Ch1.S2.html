@@ -1,0 +1,193 @@
+---
+layout: default
+permalink: /ja/texts/standard-ml/answers//Ch1.S2.html
+translated: true
+lang: ja
+head: |
+ <!--Generated on Sat Nov  6 00:44:26 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Document created on 2021年11月5日.-->
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="LaTeXML.css" type="text/css">
+ <link rel="stylesheet" href="ltx-book.css" type="text/css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+ <link rel="up" href="Ch1.html" title="第 1 章 MLプログラミングの基本 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up up" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="start" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="prev" href="Ch1.html" title="第 1 章 MLプログラミングの基本 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="next" href="Ch1.S4.html" title="1.4 変数の束縛と識別子 ‣ 第 1 章 MLプログラミングの基本 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch1.S4.html" title="1.4 変数の束縛と識別子 ‣ 第 1 章 MLプログラミングの基本 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch1.S5.html" title="1.5 ファイルからのプログラムの入力 ‣ 第 1 章 MLプログラミングの基本 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch1.html" title="第 1 章 MLプログラミングの基本 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch2.html" title="第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch3.html" title="第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch4.html" title="第 4 章 MLの基本データ型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch5.html" title="第 5 章 レコード ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch6.html" title="第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch7.html" title="第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch8.html" title="第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch9.html" title="第 9 章 例外処理 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch10.html" title="第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+---
+{% raw %}
+<div class="ltx_page_main">
+<header class="ltx_page_header"><div class="ltx_document_title">プログラミング言語 Standard ML 入門 (問題の解答例)</div>
+<div>
+<a href="Ch1.html" title="第 1 章 MLプログラミングの基本 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>MLプログラミングの基本</span></a><a href="Ch1.html" title="第 1 章 MLプログラミングの基本 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>MLプログラミングの基本</span></a><a href="Ch1.S4.html" title="1.4 変数の束縛と識別子 ‣ 第 1 章 MLプログラミングの基本 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.4 </span>変数の束縛と識別子</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1.2 </span>式の入力と評価</h1>
+
+<div id="Ch1.Thmex1" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 1.1</span></span></h6>
+<div id="Ch1.Thmex1.p1" class="ltx_para">
+<p class="ltx_p">第18章付録の情報などを参考に
+SML#コンパイラをインストールし，対話型システムを起動し，以上のよ
+うな対話が可能であることを確かめよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+SML#を，そのホームページ
+<a href="https://smlsharp.github.io/ja/" title="" class="ltx_ref ltx_href">https://smlsharp.github.io/ja/</a>
+の情報を参考にインストールしてみよう。
+例えば，お使いのシステムがVittualBoxやWSL2などにセットアップされたLinux
+ディストリビューションであれば，
+<a href="https://smlsharp.github.io/ja/downloads/" title="" class="ltx_ref ltx_href">ダウンロードページ</a>
+の情報から簡単にインストールできる．
+インストールが成功すれば，以下のように起動できるはずである．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   $ smlsharp
+   SML# 4.0.0 (2021-04-06 05:12:50 JST) for x86_64-pc-linux-gnu with LLVM 10.0.0
+   # fun f x = x;
+   val f = fn : [’a. ’a -&gt; ’a]
+</pre>
+</div>
+<div id="Ch1.Thmex2" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 1.2</span></span></h6>
+<div id="Ch1.Thmex2.p1" class="ltx_para">
+<p class="ltx_p">以下の各行をこの順に入力した場合の各行の結果を予測せよ．</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">44;</span></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">it mod 3;</span></p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">44 - it;</span></p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">(it mod 3) = 0;</span></p>
+</div>
+</li>
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">if it then "Boring" else "Strange";</span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p2" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+以下の通りである。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # 44;
+   val it = 44 : int
+   # it mod 3;
+   val it = 2 : int
+   # 44 - it;
+   val it = 42 : int
+   # (it mod 3) = 0;
+   val it = true : bool
+   # if it then "Boring" else "Strange";
+   val it = "Boring" : string
+</pre>
+</div>
+<div id="Ch1.Thmex3" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 1.3</span></span></h6>
+<div id="Ch1.Thmex3.p1" class="ltx_para">
+<p class="ltx_p">英大文字のASCIIコードはAからZの順に並んでおり，英小文字のASCIIコー
+ドはaからzの順に並んでいる．
+この事実のみを仮定して，文字定数 <span class="ltx_text ltx_font_typewriter">#"S"</span> を小文字に直すプログラム
+を書け．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p3" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span></p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # chr (ord \#"a" + (ord \#"S" - ord \#"A"));
+   val it = #"s" : char
+</pre>
+</div>
+<div id="Ch1.Thmex4" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 1.4</span></span></h6>
+<div id="Ch1.Thmex4.p1" class="ltx_para">
+<p class="ltx_p">英字の大文字と小文字のASCIIコードは連続していない．
+これらの間にある文字の数を求める式を書き評価せよ．
+さらにこの結果を利用して，英字の大文字と小文字の間にあるすべての文
+字を小さい順に並べた文字列を求めるプログラムを書け．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p4" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+英字の大文字と小文字の間にある文字の数を求める式とその評価結果：</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # if #"A" &gt; #"a" then ord #"A" - (ord #"z" + 1) else ord #"a" - (ord #"Z" + 1);
+   val it = 6 : int
+</pre>
+<p class="ltx_p">英字の大文字と小文字の間にあるすべての文字を小さい順に並べた文字列を求め
+る式とその評価結果</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # if (ord #"a") &gt; (ord #"A")
+     then
+          str (chr ((ord #"Z") + 1))
+        ^ str (chr ((ord #"Z") + 2))
+        ^ str (chr ((ord #"Z") + 3))
+        ^ str (chr ((ord #"Z") + 4))
+        ^ str (chr ((ord #"Z") + 5))
+        ^ str (chr ((ord #"Z") + 6))
+        ^ str (chr ((ord #"Z") + 7))
+     else
+          str (chr ((ord #"z") + 1))
+        ^ str (chr ((ord #"z") + 2))
+        ^ str (chr ((ord #"z") + 3))
+        ^ str (chr ((ord #"z") + 4))
+        ^ str (chr ((ord #"z") + 5))
+        ^ str (chr ((ord #"z") + 6))
+        ^ str (chr ((ord #"z") + 7))
+      ;
+
+   val it = "[\\]^_‘" : string
+</pre>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="Ch1.html" title="第 1 章 MLプログラミングの基本 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>MLプログラミングの基本</span></a><a href="Ch1.S4.html" title="1.4 変数の束縛と識別子 ‣ 第 1 章 MLプログラミングの基本 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.4 </span>変数の束縛と識別子</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Nov  6 00:44:26 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+{% endraw %}

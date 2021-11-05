@@ -1,0 +1,270 @@
+---
+layout: default
+permalink: /ja/texts/standard-ml/answers//Ch6.S1.html
+translated: true
+lang: ja
+head: |
+ <!--Generated on Sat Nov  6 00:44:26 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Document created on 2021年11月5日.-->
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="LaTeXML.css" type="text/css">
+ <link rel="stylesheet" href="ltx-book.css" type="text/css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+ <link rel="up" href="Ch6.html" title="第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up up" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="start" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="prev" href="Ch6.html" title="第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="next" href="Ch6.S2.html" title="6.2 リスト型（ τ list） ‣ 第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch6.S2.html" title="6.2 リスト型（ τ list） ‣ 第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch6.S3.html" title="6.3 パターンマッチングによるリストの分解 ‣ 第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch6.S4.html" title="6.4 リスト処理の基本関数 ‣ 第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch6.S5.html" title="6.5 リスト処理の一般構造と汎用のリスト処理関数 ‣ 第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch1.html" title="第 1 章 MLプログラミングの基本 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch2.html" title="第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch3.html" title="第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch4.html" title="第 4 章 MLの基本データ型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch5.html" title="第 5 章 レコード ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch6.html" title="第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch7.html" title="第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch8.html" title="第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch9.html" title="第 9 章 例外処理 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch10.html" title="第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <meta name="keywords" lang="en" content="直積">
+---
+{% raw %}
+<div class="ltx_page_main">
+<header class="ltx_page_header"><div class="ltx_document_title">プログラミング言語 Standard ML 入門 (問題の解答例)</div>
+<div>
+<a href="Ch6.html" title="第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>リスト</span></a><a href="Ch6.html" title="第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>リスト</span></a><a href="Ch6.S2.html" title="6.2 リスト型（ τ list） ‣ 第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.2 </span>リスト型（<math class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math><span class="ltx_text ltx_font_typewriter"> list</span>）</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6.1 </span>リスト構造</h1>
+
+<div id="Ch6.Thmex1" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 6.1</span></span></h6>
+<div id="Ch6.Thmex1.p1" class="ltx_para">
+<p class="ltx_p">本問では，無限集合の簡単な扱いに慣れている読者のために，リ
+ストの数学的なモデルを考察する．
+ポインタ構造を無視すると，上記のリスト構造は以下のように入れ子に
+なった組とみなせる．</p>
+<table id="Ch6.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.Ex1.m1" class="ltx_Math" alttext="({\rm v1},({\rm v2},\cdots({\rm vn},{\rm nil})\cdots))" display="block"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">v</mi><mn>1</mn><mo>,</mo><mo stretchy="false">(</mo><mi mathvariant="normal">v</mi><mn>2</mn><mo>,</mo><mi mathvariant="normal">⋯</mi><mo stretchy="false">(</mo><mi mathvariant="normal">v</mi><mi mathvariant="normal">n</mi><mo>,</mo><mi mathvariant="normal">n</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">l</mi><mo stretchy="false">)</mo><mi mathvariant="normal">⋯</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">v1,v2,<math id="Ch6.Thmex1.p1.m1" class="ltx_Math" alttext="\cdots" display="inline"><mi mathvariant="normal">⋯</mi></math>,vnが属する集合を<math id="Ch6.Thmex1.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>とし，
+集合<math id="Ch6.Thmex1.p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>と<math id="Ch6.Thmex1.p1.m4" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>の直積<math id="Ch6.Thmex1.p1.m5" class="ltx_Math" alttext="A\times B" display="inline"><mrow><mi>A</mi><mo>×</mo><mi>B</mi></mrow></math>を以下のように定義する．
+</p>
+<table id="Ch6.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.Ex2.m1" class="ltx_Math" alttext="A\times B=\{(a,b)|a\in A,b\in B\}" display="block"><mrow><mi>A</mi><mo>×</mo><mi>B</mi><mo>=</mo><mo stretchy="false">{</mo><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo><mo stretchy="false">|</mo><mi>a</mi><mo>∈</mo><mi>A</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi>B</mi><mo stretchy="false">}</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">さらに，nilを唯一の要素とする集合を<math id="Ch6.Thmex1.p1.m6" class="ltx_Math" alttext="Nil" display="inline"><mrow><mi>N</mi><mi>i</mi><mi>l</mi></mrow></math>とする．
+すると，<math id="Ch6.Thmex1.p1.m7" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>個の要素からなるリストは以下のような集合の要素と考えら
+れる．</p>
+<table id="Ch6.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.Ex3.m1" class="ltx_Math" alttext="\underbrace{A\times(A\times(\cdots(A}_{\mbox{$n$個の$A$}}\times Nil)\cdots))" display="block"><mrow><munder accentunder="true"><mrow><mi>A</mi><mo>×</mo><mo stretchy="false">(</mo><mi>A</mi><mo>×</mo><mo stretchy="false">(</mo><mi mathvariant="normal">⋯</mi><mo stretchy="false">(</mo><mi>A</mi></mrow><mo>⏟</mo></munder><msub><mi></mi><mrow><mi>n</mi><mtext>個の</mtext><mi>A</mi></mrow></msub><mo>×</mo><mi>N</mi><mi>i</mi><mi>l</mi><mo stretchy="false">)</mo><mi mathvariant="normal">⋯</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Ch6.Thmex1.p2" class="ltx_para">
+<p class="ltx_p"><math id="Ch6.Thmex1.p2.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>個に限らず，集合<math id="Ch6.Thmex1.p2.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>の要素からなるすべてのリストの集合は，集合に
+関する以下のような方程式の解と考えることができる．</p>
+<table id="Ch6.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.Ex4.m1" class="ltx_Math" alttext="L=Nil\cup(A\times L)" display="block"><mrow><mi>L</mi><mo>=</mo><mi>N</mi><mi>i</mi><mi>l</mi><mo>∪</mo><mo stretchy="false">(</mo><mi>A</mi><mo>×</mo><mi>L</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">この方程式の最小解を以下の手順で求めよ．</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">集合の系列<math id="I1.i1.p1.m1" class="ltx_Math" alttext="X_{i}" display="inline"><mrow><mi>X</mi><msub><mi></mi><mi>i</mi></msub></mrow></math> を以下のように定める．</p>
+<table id="Ch17.S2.EGx11" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="Ch6.Ex5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch6.Ex5.m1" class="ltx_Math" alttext="\displaystyle X_{0}" display="inline"><mrow><mi>X</mi><msub><mi></mi><mn>0</mn></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch6.Ex5.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch6.Ex5.m3" class="ltx_Math" alttext="\displaystyle Nil" display="inline"><mrow><mi>N</mi><mi>i</mi><mi>l</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch6.Ex6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch6.Ex6.m1" class="ltx_Math" alttext="\displaystyle X_{i+1}" display="inline"><mrow><mi>X</mi><msub><mi></mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch6.Ex6.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch6.Ex6.m3" class="ltx_Math" alttext="\displaystyle X_{i}\cup(A\times X_{i})" display="inline"><mrow><mi>X</mi><msub><mi></mi><mi>i</mi></msub><mo>∪</mo><mo stretchy="false">(</mo><mi>A</mi><mo>×</mo><mi>X</mi><msub><mi></mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">もし<math id="I1.i1.p1.m2" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>に関する方程式が解を持てば，任意の<math id="I1.i1.p1.m3" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>に対して，</p>
+<table id="Ch6.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.Ex7.m1" class="ltx_Math" alttext="X_{i}\subseteq L" display="block"><mrow><mi>X</mi><msub><mi></mi><mi>i</mi></msub><mo>⊆</mo><mi>L</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">であることを<math id="I1.i1.p1.m4" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>に関する数学的帰納法で示せ．</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">この系列を用いて，集合<math id="I1.i2.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>を以下のように定義する．</p>
+<table id="Ch6.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.Ex8.m1" class="ltx_Math" alttext="X=\bigcup_{i\geq 0}X_{i}" display="block"><mrow><mi>X</mi><mo>=</mo><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋃</mo><msub><mi></mi><mrow><mi>i</mi><mo>≥</mo><mn>0</mn></mrow></msub><mi>X</mi><msub><mi></mi><mi>i</mi></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">このとき，<math id="I1.i2.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>は上記の方程式を満たすことを示し，したがって，<math id="I1.i2.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>が上記方程
+式の最小解であることを確認せよ．</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span></p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.p1.m1" class="ltx_Math" alttext="{\cal L}" display="inline"><mi class="ltx_font_mathcaligraphic">ℒ</mi></math>を方程式の任意の解とし、<math id="I2.i1.p1.m2" class="ltx_Math" alttext="X_{i}\subseteq{\cal L}" display="inline"><mrow><mi>X</mi><msub><mi></mi><mi>i</mi></msub><mo>⊆</mo><mi class="ltx_font_mathcaligraphic">ℒ</mi></mrow></math>を<math id="I2.i1.p1.m3" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>に関する数学的帰納法で示す。</p>
+</div>
+<div id="I2.i1.p2" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.p2.m1" class="ltx_Math" alttext="(i=0)" display="inline"><mrow><mo stretchy="false">(</mo><mi>i</mi><mo>=</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math>の場合。</p>
+<table id="Ch17.S2.EGx12" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="Ch6.Ex11">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch6.Ex9.m1" class="ltx_Math" alttext="\displaystyle X_{0}" display="inline"><mrow><mi>X</mi><msub><mi></mi><mn>0</mn></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch6.Ex9.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch6.Ex9.m3" class="ltx_Math" alttext="\displaystyle Nil" display="inline"><mrow><mi>N</mi><mi>i</mi><mi>l</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch6.Ex10.m2" class="ltx_Math" alttext="\displaystyle\subseteq" display="inline"><mo>⊆</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch6.Ex10.m3" class="ltx_Math" alttext="\displaystyle Nil\cup(A\times{\cal L})" display="inline"><mrow><mi>N</mi><mi>i</mi><mi>l</mi><mo>∪</mo><mo stretchy="false">(</mo><mi>A</mi><mo>×</mo><mi class="ltx_font_mathcaligraphic">ℒ</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch6.Ex11.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch6.Ex11.m3" class="ltx_Math" alttext="\displaystyle{\cal L}" display="inline"><mi class="ltx_font_mathcaligraphic">ℒ</mi></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="I2.i1.p3" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.p3.m1" class="ltx_Math" alttext="(i&gt;k+1)" display="inline"><mrow><mo stretchy="false">(</mo><mi>i</mi><mo>&gt;</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math>の場合。</p>
+<table id="Ch17.S2.EGx13" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="Ch6.Ex14">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch6.Ex12.m1" class="ltx_Math" alttext="\displaystyle X_{k+1}" display="inline"><mrow><mi>X</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch6.Ex12.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch6.Ex12.m3" class="ltx_Math" alttext="\displaystyle X_{k}\cup(A\times X_{k})" display="inline"><mrow><mi>X</mi><msub><mi></mi><mi>k</mi></msub><mo>∪</mo><mo stretchy="false">(</mo><mi>A</mi><mo>×</mo><mi>X</mi><msub><mi></mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch6.Ex13.m2" class="ltx_Math" alttext="\displaystyle\subseteq" display="inline"><mo>⊆</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch6.Ex13.m3" class="ltx_Math" alttext="\displaystyle{\cal L}\cup(A\times{\cal L})" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℒ</mi><mo>∪</mo><mo stretchy="false">(</mo><mi>A</mi><mo>×</mo><mi class="ltx_font_mathcaligraphic">ℒ</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch6.Ex14.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch6.Ex14.m3" class="ltx_Math" alttext="\displaystyle{\cal L}" display="inline"><mi class="ltx_font_mathcaligraphic">ℒ</mi></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<table id="Ch6.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.Ex15.m1" class="ltx_Math" alttext="X=Nil\cup A\times X" display="block"><mrow><mi>X</mi><mo>=</mo><mi>N</mi><mi>i</mi><mi>l</mi><mo>∪</mo><mi>A</mi><mo>×</mo><mi>X</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">を示せば良い。
+集合の等式であるから、
+<math id="I2.i2.p1.m1" class="ltx_Math" alttext="X\subseteq Nil\cup(A\times X)" display="inline"><mrow><mi>X</mi><mo>⊆</mo><mi>N</mi><mi>i</mi><mi>l</mi><mo>∪</mo><mo stretchy="false">(</mo><mi>A</mi><mo>×</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></math>
+および
+<math id="I2.i2.p1.m2" class="ltx_Math" alttext="Nil\cup(A\times X)\subseteq X" display="inline"><mrow><mi>N</mi><mi>i</mi><mi>l</mi><mo>∪</mo><mo stretchy="false">(</mo><mi>A</mi><mo>×</mo><mi>X</mi><mo stretchy="false">)</mo><mo>⊆</mo><mi>X</mi></mrow></math>
+を示せばよい。</p>
+</div>
+<div id="I2.i2.p2" class="ltx_para">
+<p class="ltx_p"><math id="I2.i2.p2.m1" class="ltx_Math" alttext="X\subseteq Nil\cup(A\times X)" display="inline"><mrow><mi>X</mi><mo>⊆</mo><mi>N</mi><mi>i</mi><mi>l</mi><mo>∪</mo><mo stretchy="false">(</mo><mi>A</mi><mo>×</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></math>は、
+<math id="I2.i2.p2.m2" class="ltx_Math" alttext="X=\bigcup_{i\geq 0}X_{i}" display="inline"><mrow><mi>X</mi><mo>=</mo><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋃</mo><msub><mi></mi><mrow><mi>i</mi><mo>≥</mo><mn>0</mn></mrow></msub><mi>X</mi><msub><mi></mi><mi>i</mi></msub></mrow></math>の要素集合<math id="I2.i2.p2.m3" class="ltx_Math" alttext="X_{i}" display="inline"><mrow><mi>X</mi><msub><mi></mi><mi>i</mi></msub></mrow></math>について、
+<math id="I2.i2.p2.m4" class="ltx_Math" alttext="X_{i}\subseteq Nil\cup(A\times X)" display="inline"><mrow><mi>X</mi><msub><mi></mi><mi>i</mi></msub><mo>⊆</mo><mi>N</mi><mi>i</mi><mi>l</mi><mo>∪</mo><mo stretchy="false">(</mo><mi>A</mi><mo>×</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></math>を示せばよい。
+定義の形から、ほぼ自明である。
+厳密には、<math id="I2.i2.p2.m5" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>に関する帰納法による。
+<math id="I2.i2.p2.m6" class="ltx_Math" alttext="X_{0}=Nil\subseteq Nil\cup(A\times X)" display="inline"><mrow><mi>X</mi><msub><mi></mi><mn>0</mn></msub><mo>=</mo><mi>N</mi><mi>i</mi><mi>l</mi><mo>⊆</mo><mi>N</mi><mi>i</mi><mi>l</mi><mo>∪</mo><mo stretchy="false">(</mo><mi>A</mi><mo>×</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></math>であり、成立する。
+<math id="I2.i2.p2.m7" class="ltx_Math" alttext="i=K+1" display="inline"><mrow><mi>i</mi><mo>=</mo><mi>K</mi><mo>+</mo><mn>1</mn></mrow></math>の場合、<math id="I2.i2.p2.m8" class="ltx_Math" alttext="X_{k+1}=X_{k}\cup A\times X_{k}" display="inline"><mrow><mi>X</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mi>X</mi><msub><mi></mi><mi>k</mi></msub><mo>∪</mo><mi>A</mi><mo>×</mo><mi>X</mi><msub><mi></mi><mi>k</mi></msub></mrow></math>である。
+帰納法の仮定から<math id="I2.i2.p2.m9" class="ltx_Math" alttext="X_{k}\subseteq Nil\cup(A\times X)" display="inline"><mrow><mi>X</mi><msub><mi></mi><mi>k</mi></msub><mo>⊆</mo><mi>N</mi><mi>i</mi><mi>l</mi><mo>∪</mo><mo stretchy="false">(</mo><mi>A</mi><mo>×</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></math>である、
+また、定義から、<math id="I2.i2.p2.m10" class="ltx_Math" alttext="A\times X_{k}\subseteq A\times X" display="inline"><mrow><mi>A</mi><mo>×</mo><mi>X</mi><msub><mi></mi><mi>k</mi></msub><mo>⊆</mo><mi>A</mi><mo>×</mo><mi>X</mi></mrow></math>であり、
+従って、<math id="I2.i2.p2.m11" class="ltx_Math" alttext="X_{k+1}\subseteq A\times X" display="inline"><mrow><mi>X</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⊆</mo><mi>A</mi><mo>×</mo><mi>X</mi></mrow></math>である。</p>
+</div>
+<div id="I2.i2.p3" class="ltx_para">
+<p class="ltx_p"><math id="I2.i2.p3.m1" class="ltx_Math" alttext="Nil\cup A\times X\subseteq X" display="inline"><mrow><mi>N</mi><mi>i</mi><mi>l</mi><mo>∪</mo><mi>A</mi><mo>×</mo><mi>X</mi><mo>⊆</mo><mi>X</mi></mrow></math>を示すには、
+<math id="I2.i2.p3.m2" class="ltx_Math" alttext="Nil\subseteq X" display="inline"><mrow><mi>N</mi><mi>i</mi><mi>l</mi><mo>⊆</mo><mi>X</mi></mrow></math>
+と
+任意の<math id="I2.i2.p3.m3" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>に関して、<math id="I2.i2.p3.m4" class="ltx_Math" alttext="A\times X_{i}\subseteq X" display="inline"><mrow><mi>A</mi><mo>×</mo><mi>X</mi><msub><mi></mi><mi>i</mi></msub><mo>⊆</mo><mi>X</mi></mrow></math>を示せば十分である。
+前者は、<math id="I2.i2.p3.m5" class="ltx_Math" alttext="Nil=X_{0}\subseteq X" display="inline"><mrow><mi>N</mi><mi>i</mi><mi>l</mi><mo>=</mo><mi>X</mi><msub><mi></mi><mn>0</mn></msub><mo>⊆</mo><mi>X</mi></mrow></math>であり、成立する。
+後者は、定義より、
+<math id="I2.i2.p3.m6" class="ltx_Math" alttext="A\times X_{i}\subseteq X_{i}\cup A\times X_{i}=X_{i+1}\subseteq X" display="inline"><mrow><mi>A</mi><mo>×</mo><mi>X</mi><msub><mi></mi><mi>i</mi></msub><mo>⊆</mo><mi>X</mi><msub><mi></mi><mi>i</mi></msub><mo>∪</mo><mi>A</mi><mo>×</mo><mi>X</mi><msub><mi></mi><mi>i</mi></msub><mo>=</mo><mi>X</mi><msub><mi></mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⊆</mo><mi>X</mi></mrow></math>
+であり成立する。</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="Ch6.html" title="第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>リスト</span></a><a href="Ch6.S2.html" title="6.2 リスト型（ τ list） ‣ 第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.2 </span>リスト型（<math class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math><span class="ltx_text ltx_font_typewriter"> list</span>）</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Nov  6 00:44:26 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+{% endraw %}

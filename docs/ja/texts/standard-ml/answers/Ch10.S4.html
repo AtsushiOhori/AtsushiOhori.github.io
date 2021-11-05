@@ -1,0 +1,303 @@
+---
+layout: default
+permalink: /ja/texts/standard-ml/answers//Ch10.S4.html
+translated: true
+lang: ja
+head: |
+ <!--Generated on Sat Nov  6 00:44:26 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Document created on 2021年11月5日.-->
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="LaTeXML.css" type="text/css">
+ <link rel="stylesheet" href="ltx-book.css" type="text/css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+ <link rel="up" href="Ch10.html" title="第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up up" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="start" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="prev" href="Ch10.S2.html" title="10.2 モジュールのシグネチャの指定 ‣ 第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="next" href="Ch10.S5.html" title="10.5 functor文を使ったモジューラープログラミング ‣ 第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch10.S1.html" title="10.1 Structure文によるモジュールの定義と利用 ‣ 第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch10.S2.html" title="10.2 モジュールのシグネチャの指定 ‣ 第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch10.S5.html" title="10.5 functor文を使ったモジューラープログラミング ‣ 第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch1.html" title="第 1 章 MLプログラミングの基本 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch2.html" title="第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch3.html" title="第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch4.html" title="第 4 章 MLの基本データ型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch5.html" title="第 5 章 レコード ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch6.html" title="第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch7.html" title="第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch8.html" title="第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch9.html" title="第 9 章 例外処理 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch10.html" title="第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+---
+{% raw %}
+<div class="ltx_page_main">
+<header class="ltx_page_header"><div class="ltx_document_title">プログラミング言語 Standard ML 入門 (問題の解答例)</div>
+<div>
+<a href="Ch10.html" title="第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10 </span>モジュールシステム</span></a><a href="Ch10.S2.html" title="10.2 モジュールのシグネチャの指定 ‣ 第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.2 </span>モジュールのシグネチャの指定</span></a><a href="Ch10.S5.html" title="10.5 functor文を使ったモジューラープログラミング ‣ 第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.5 </span>functor文を使ったモジューラープログラミング</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">10.4 </span>モジュールを使ったプログラミング例</h1>
+
+<div id="Ch10.Thmex6" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 10.6</span></span></h6>
+<div id="Ch10.Thmex6.p1" class="ltx_para">
+<p class="ltx_p">以下の実行結果を予測せよ．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   BF.bf (fromPreOrder "1(2(3()())(4()()))(5()())");
+</pre>
+<p class="ltx_p">さらに，実際にテストを行い，結果を確認せよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+幅優先探索であるから、ルートから同一レベルのルートが順に探索される。
+従って、1,2,5,3,4の順に探索されるはずである。
+実際、SML#での実行結果は以下の通りである。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # BF.bf (fromPreOrder "1(2(3()())(4()()))(5()())");
+   val a = ["1", "2", "5", "3", "4"] : string list
+</pre>
+</div>
+<div id="Ch10.Thmex7" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 10.7</span></span></h6>
+<div id="Ch10.Thmex7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">int tree</span> を要素とする待ち行列 <span class="ltx_text ltx_font_typewriter">ITQueue</span> とそれを使って幅
+優先探索を行うストラクチャ <span class="ltx_text ltx_font_typewriter">BFI</span> を定義せよ．
+さらに，第<a href="Ch7.S1.html" title="7.1 datatype文によるデータ型の定義 ‣ 第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7.1</span></a>節で定義した <span class="ltx_text ltx_font_typewriter">fromPreOrder</span> 関数を改良し，
+<span class="ltx_text ltx_font_typewriter">int tree</span> を返す関数 <span class="ltx_text ltx_font_typewriter">fromIntPreOrder</span> を定義し，
+問<a href="#Ch10.Thmex6" title="問 10.6 ‣ 10.4 モジュールを使ったプログラミング例 ‣ 第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref"><span class="ltx_text ltx_ref_tag">10.6</span></a>同様のテストを行え．
+<span class="ltx_text ltx_font_typewriter">fromIntPreOrder</span> の定義には，基本ライブラリで提供されている，文字列を
+整数に変換する関数 <span class="ltx_text ltx_font_typewriter">Int.fromString : string -&gt; int option</span> を使用せよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p2" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+<span class="ltx_text ltx_font_typewriter">ITQueue</span>、
+<span class="ltx_text ltx_font_typewriter">BFI</span>、
+<span class="ltx_text ltx_font_typewriter">fromIntPreOrxder</span>
+の定義例を以下に示す。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   structure ITQueue :&gt; POLY_QUEUE where type elem = int tree =
+   struct
+     exception EmptyQueue
+     type elem = int tree
+     type queue = elem list ref * elem list ref
+     fun newQueue () = (ref [],ref []) : queue
+     fun enqueue (i,(a,b))  = a := i :: (!a)
+     fun dequeue (ref [],ref []) = raise EmptyQueue
+       | dequeue (a as ref L, b as ref []) =
+           let val (h::t) = rev L
+           in (a:=nil; b:=t; h)
+           end
+       | dequeue (a,b as ref (h::t)) = (b := t; h)
+   end
+
+   structure BFI = struct
+      structure Q = ITQueue
+      fun bf t =
+        let val queue = Q.newQueue()
+            fun loop () =
+                (case Q.dequeue queue of
+                       Node(data,l,r) =&gt; (Q.enqueue (l,queue);
+                                          Q.enqueue (r,queue);
+                                          data::loop())
+                     | Empty =&gt; loop())
+                handle Q.EmptyQueue =&gt; nil
+        in (Q.enqueue (t,queue); loop())
+        end
+   end
+
+   fun fromIntPreOrder s =
+       if s = "" then Empty
+       else let val (root,left,right) = decompose s
+                val SOME data = Int.fromString root
+            in Node(data, fromIntPreOrder left, fromIntPreOrder right)
+            end
+</pre>
+<p class="ltx_p">SML#による<span class="ltx_text ltx_font_typewriter">BFI.bf</span>のテスト結果は以下の通りである。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # val intList = BFI.bf (fromIntPreOrder "1(2(3()())(4()()))(5()())");
+   val intList = [1, 2, 5, 3, 4] : int list
+</pre>
+</div>
+<div id="Ch10.Thmex8" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 10.8</span></span></h6>
+<div id="Ch10.Thmex8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">string tree</span> を要素とする待ち行列を，
+関数型待ち行列による方法，および，
+単純なリストによる実現法
+の2通りの方法で定義し，それぞれに対して<span class="ltx_text ltx_font_typewriter">BF</span>の<span class="ltx_text ltx_font_typewriter">Q</span>ストラクチャの定義
+を変更し，いずれの場合も <span class="ltx_text ltx_font_typewriter">BF</span> が正しく動くことを確かめよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p3" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+それぞれの<span class="ltx_text ltx_font_typewriter">BF</span>の定義例を以下にしめす。
+以下では、単純なリストの場合のストラクチャ名を<span class="ltx_text ltx_font_typewriter">BFSimple</span>としてある。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   structure STQueue :&gt; POLY_QUEUE where type elem = string tree = struct
+     exception EmptyQueue
+     type elem = string tree
+     type queue = elem list ref * elem list ref
+     fun newQueue () = (ref [],ref []) : queue
+     fun enqueue (i,(a,b))  = a := i :: (!a)
+     fun dequeue (ref [],ref []) = raise EmptyQueue
+       | dequeue (a as ref L, b as ref []) =
+           let val (h::t) = rev L
+           in (a:=nil; b:=t; h)
+           end
+       | dequeue (a,b as ref (h::t)) = (b := t; h)
+   end
+
+   structure BF = struct
+     structure Q = STQueue
+     fun bf t =
+       let val queue = Q.newQueue()
+           fun loop () =
+               (case Q.dequeue queue of
+                      Node(data,l,r) =&gt; (Q.enqueue (l,queue);
+                                         Q.enqueue (r,queue);
+                                         data::loop())
+                    | Empty =&gt; loop())
+               handle Q.EmptyQueue =&gt; nil
+       in (Q.enqueue (t,queue); loop())
+       end
+   end
+   structure STQueueSimple :&gt; POLY_QUEUE where type elem = string tree = struct
+     exception EmptyQueue
+     type elem = string tree
+     type queue = elem list ref
+     fun newQueue() = ref nil : queue
+     fun enqueue (item,queue) =
+         queue := item :: (!queue)
+     fun removeLast nil = raise EmptyQueue
+       | removeLast [x] = (nil,x)
+       | removeLast (h::t) =
+         let val (t’,last) = removeLast t
+         in (h::t’,last)
+         end
+     fun dequeue queue =
+         let val (rest,last) = removeLast (!queue)
+         in (queue:=rest; last)
+         end
+   end
+
+   structure BFSimple = struct
+      structure Q = STQueueSimple
+      fun bf t =
+        let val queue = Q.newQueue()
+            fun loop () =
+                (case Q.dequeue queue of
+                       Node(data,l,r) =&gt; (Q.enqueue (l,queue);
+                                          Q.enqueue (r,queue);
+                                          data::loop())
+                     | Empty =&gt; loop())
+                handle Q.EmptyQueue =&gt; nil
+        in (Q.enqueue (t,queue); loop())
+        end
+   end
+</pre>
+<p class="ltx_p">SML#によるテスト実行結果は以下の通りである。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # val a = BF.bf (fromPreOrder "1(2(3()())(4()()))(5()())");
+   val a = ["1", "2", "5", "3", "4"] : string list
+   # val b = BFSimple.bf (fromPreOrder "1(2(3()())(4()()))(5()())");
+   val b = ["1", "2", "5", "3", "4"] : string list
+</pre>
+</div>
+<div id="Ch10.Thmex9" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 10.9</span></span></h6>
+<div id="Ch10.Thmex9.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">BF</span> ストラクチャに，以下の引数を受け取り結果を返す汎用な関数
+<span class="ltx_text ltx_font_typewriter">bffold</span> の定義を追加せよ．</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">木が空のとき返す値</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">空でない木に対して，ルートノードのデータと，
+ルート以外のノードを幅優先でたどり処理した結果を受け取り，最終結果を返す関数．
+</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">BF</span> ストラクチャの <span class="ltx_text ltx_font_typewriter">bf</span> 関数をごくわずか変更するだけで，
+簡単に定義できるはずである．</p>
+</div>
+<div id="Ch10.Thmex9.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">bffold</span> は，上記の関数 <span class="ltx_text ltx_font_typewriter">bf</span> とリストの <span class="ltx_text ltx_font_typewriter">foldr</span> 関数を組み
+合わせて得られる関数と同一の動きをするはずである．
+以下の2つの関数が同一の動作をすることをテストによって確かめよ．</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">BF.bffold f z t</span></p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">foldr f z (BF.bf t)</span></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="p4" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+<span class="ltx_text ltx_font_typewriter">bffold</span>を含む<span class="ltx_text ltx_font_typewriter">BF</span>の定義例を示す。
+<span class="ltx_text ltx_font_typewriter">bf</span>と<span class="ltx_text ltx_font_typewriter">bffold</span>はほぼ同一の構造をもち、かつ前者は後者を使って簡単に定義できるため、
+以下の例では、<span class="ltx_text ltx_font_typewriter">bf</span>の定義を<span class="ltx_text ltx_font_typewriter">bffold</span>を使って定義してある。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   structure BF = struct
+      structure Q = STQueue
+      fun bffold f z t =
+        let val queue = Q.newQueue()
+            fun loop () =
+                (case Q.dequeue queue of
+                       Node(data,l,r) =&gt; (Q.enqueue (l,queue);
+                                          Q.enqueue (r,queue);
+                                          f (data, loop()))
+                     | Empty =&gt; loop())
+                handle Q.EmptyQueue =&gt; z
+        in (Q.enqueue (t,queue); loop())
+        end
+      fun bf t = bffold (op ::) nil t
+   end
+</pre>
+<p class="ltx_p">以下は、SML#によるテスト例である。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # val a = BF.bf (fromPreOrder "1(2(3()())(4()()))(5()())");
+   val a = ["1", "2", "5", "3", "4"] : string list
+   # val b = BF.bffold (op ::) nil (fromPreOrder "1(2(3()())(4()()))(5()())");
+   val b = ["1", "2", "5", "3", "4"] : string list
+   # val c = BF.bffold (op ^) "" (fromPreOrder "1(2(3()())(4()()))(5()())");
+   val c = "12534" : string
+   # val d = foldr (op ^) "" (BF.bf (fromPreOrder "1(2(3()())(4()()))(5()())"));
+   val d = "12534" : string
+</pre>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="Ch10.S2.html" title="10.2 モジュールのシグネチャの指定 ‣ 第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.2 </span>モジュールのシグネチャの指定</span></a><a href="Ch10.S5.html" title="10.5 functor文を使ったモジューラープログラミング ‣ 第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.5 </span>functor文を使ったモジューラープログラミング</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Nov  6 00:44:26 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+{% endraw %}

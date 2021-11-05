@@ -1,0 +1,163 @@
+---
+layout: default
+permalink: /ja/texts/standard-ml/answers//Ch12.S1.html
+translated: true
+lang: ja
+head: |
+ <!--Generated on Sat Nov  6 00:44:26 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Document created on 2021年11月5日.-->
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="LaTeXML.css" type="text/css">
+ <link rel="stylesheet" href="ltx-book.css" type="text/css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+ <link rel="up" href="Ch12.html" title="第 12 章 基本ライブラリの利用法 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up up" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="start" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="prev" href="Ch12.html" title="第 12 章 基本ライブラリの利用法 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="next" href="Ch12.S2.html" title="12.2 Generalストラクチャ ‣ 第 12 章 基本ライブラリの利用法 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch12.S2.html" title="12.2 Generalストラクチャ ‣ 第 12 章 基本ライブラリの利用法 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch12.html" title="第 12 章 基本ライブラリの利用法 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch13.html" title="第 13 章 配列を用いたプログラミング ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch14.html" title="第 14 章 システム時計の利用 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch15.html" title="第 15 章 入出力処理 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch16.html" title="第 16 章 データのフォーマッティング ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch17.html" title="第 17 章 OSとのインターフェイス ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+---
+{% raw %}
+<div class="ltx_page_main">
+<header class="ltx_page_header"><div class="ltx_document_title">プログラミング言語 Standard ML 入門 (問題の解答例)</div>
+<div>
+<a href="Ch12.html" title="第 12 章 基本ライブラリの利用法 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">12 </span>基本ライブラリの利用法</span></a><a href="Ch12.html" title="第 12 章 基本ライブラリの利用法 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">12 </span>基本ライブラリの利用法</span></a><a href="Ch12.S2.html" title="12.2 Generalストラクチャ ‣ 第 12 章 基本ライブラリの利用法 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">12.2 </span>Generalストラクチャ</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">12.1 </span>ライブラリの種類とそのシグネチャの表示法</h1>
+
+<div id="Ch12.Thmex1" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 12.1</span></span></h6>
+<div id="Ch12.Thmex1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">Math</span> ストラクチャを利用して，
+対数関数の底を変換する関数</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   val convBase : (real -&gt; real) -&gt; real -&gt; real -&gt; real
+</pre>
+<p class="ltx_p">を定義せよ．たとえば，
+<br class="ltx_break">
+<span class="ltx_tabular">
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">- val log2 = convBase Math.log10 2.0;</span></span></span>
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_italic">val log2 = fn : real <span class="ltx_text ltx_font_typewriter ltx_font_upright">-&gt;</span> real</span></span></span>
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">- log2 1024.0;</span></span></span>
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_italic">10.0 : real</span></span></span>
+</span> 
+<br class="ltx_break">のように動作する．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span></p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun convBase (f:real -&gt; real) b x = f x / f b
+</pre>
+</div>
+<div id="Ch12.Thmex2" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 12.2</span></span></h6>
+<div id="Ch12.Thmex2.p1" class="ltx_para">
+<p class="ltx_p">よく使用するモジュールのシグネチャをプリントしておくと，モジュー
+ルの参照カードの役割を果たし，便利である．
+第I部で概説した
+<span class="ltx_text ltx_font_typewriter">bool</span>，
+<span class="ltx_text ltx_font_typewriter">char</span>，
+<span class="ltx_text ltx_font_typewriter">int</span>，
+<span class="ltx_text ltx_font_typewriter">list</span>，
+<span class="ltx_text ltx_font_typewriter">real</span>，
+<span class="ltx_text ltx_font_typewriter">string</span>
+の各データ型の機能は，それぞれ
+<span class="ltx_text ltx_font_typewriter">Bool</span>，
+<span class="ltx_text ltx_font_typewriter">Char</span>，
+<span class="ltx_text ltx_font_typewriter">Int</span>，
+<span class="ltx_text ltx_font_typewriter">List</span>，
+<span class="ltx_text ltx_font_typewriter">Real</span>，
+<span class="ltx_text ltx_font_typewriter">String</span> の各ストラクチャで実現されている．
+これらストラクチャのシグネチャをプリントし，参照カードを作成せよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p2" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+例えば、SML#の対話型環境で、
+<span class="ltx_text ltx_font_typewriter">Bool</span>および<span class="ltx_text ltx_font_typewriter">Char</span>を
+<span class="ltx_text ltx_font_typewriter">structure Bool = Bool;</span>
+<span class="ltx_text ltx_font_typewriter">structure Char = Char;</span>
+のように再定義することによって、以下のような出力が
+得られる。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # structure Bool = Bool;
+   structure Bool =
+     struct
+       datatype bool = false | true
+       val not = fn : bool -&gt; bool
+       val toString = fn : bool -&gt; string
+       val scan = fn : [’a. (’a -&gt; (char * ’a) option) -&gt; ’a -&gt; (bool * ’a) option]
+       val fromString = fn : string -&gt; bool option
+     end
+
+   # structure Char = Char;
+   structure Char =
+     struct
+       type char = char
+       type string = string
+       val minChar = #"\^@" : char
+       val maxChar = #"\255" : char
+       val maxOrd = 255 : int
+       val ord = &lt;builtin&gt; : char -&gt; int
+       val chr = &lt;builtin&gt; : int -&gt; char
+       val succ = fn : char -&gt; char
+       val pred = fn : char -&gt; char
+       val compare = fn : char * char -&gt; order
+       val &lt; = &lt;builtin&gt; : char * char -&gt; bool
+       val &lt;= = &lt;builtin&gt; : char * char -&gt; bool
+       val &gt; = &lt;builtin&gt; : char * char -&gt; bool
+       val &gt;= = &lt;builtin&gt; : char * char -&gt; bool
+       val contains = fn : string -&gt; char -&gt; bool
+       val notContains = fn : string -&gt; char -&gt; bool
+       val isAscii = fn : char -&gt; bool
+       val toLower = fn : char -&gt; char
+       val toUpper = fn : char -&gt; char
+       val isAlpha = fn : char -&gt; bool
+       val isAlphaNum = fn : char -&gt; bool
+       val isCntrl = fn : char -&gt; bool
+       val isDigit = fn : char -&gt; bool
+       val isGraph = fn : char -&gt; bool
+       val isHexDigit = fn : char -&gt; bool
+       val isLower = fn : char -&gt; bool
+       val isPrint = fn : char -&gt; bool
+       val isSpace = fn : char -&gt; bool
+       val isPunct = fn : char -&gt; bool
+       val isUpper = fn : char -&gt; bool
+       val toString = fn : char -&gt; string
+       val toRawString = fn : char -&gt; string
+       val scan = fn : [’a. (’a -&gt; (char * ’a) option) -&gt; ’a -&gt; (char * ’a) option]
+       val fromString = fn : string -&gt; char option
+       val toCString = fn : char -&gt; string
+       val fromCString = fn : string -&gt; char option
+     end
+</pre>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="Ch12.html" title="第 12 章 基本ライブラリの利用法 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">12 </span>基本ライブラリの利用法</span></a><a href="Ch12.S2.html" title="12.2 Generalストラクチャ ‣ 第 12 章 基本ライブラリの利用法 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">12.2 </span>Generalストラクチャ</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Nov  6 00:44:26 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+{% endraw %}

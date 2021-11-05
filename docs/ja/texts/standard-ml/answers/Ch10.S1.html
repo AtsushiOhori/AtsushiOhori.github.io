@@ -1,0 +1,389 @@
+---
+layout: default
+permalink: /ja/texts/standard-ml/answers//Ch10.S1.html
+translated: true
+lang: ja
+head: |
+ <!--Generated on Sat Nov  6 00:44:26 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Document created on 2021年11月5日.-->
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="LaTeXML.css" type="text/css">
+ <link rel="stylesheet" href="ltx-book.css" type="text/css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+ <link rel="up" href="Ch10.html" title="第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up up" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="start" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="prev" href="Ch10.html" title="第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="next" href="Ch10.S2.html" title="10.2 モジュールのシグネチャの指定 ‣ 第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch10.S2.html" title="10.2 モジュールのシグネチャの指定 ‣ 第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch10.S4.html" title="10.4 モジュールを使ったプログラミング例 ‣ 第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch10.S5.html" title="10.5 functor文を使ったモジューラープログラミング ‣ 第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch1.html" title="第 1 章 MLプログラミングの基本 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch2.html" title="第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch3.html" title="第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch4.html" title="第 4 章 MLの基本データ型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch5.html" title="第 5 章 レコード ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch6.html" title="第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch7.html" title="第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch8.html" title="第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch9.html" title="第 9 章 例外処理 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch10.html" title="第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+---
+{% raw %}
+<div class="ltx_page_main">
+<header class="ltx_page_header"><div class="ltx_document_title">プログラミング言語 Standard ML 入門 (問題の解答例)</div>
+<div>
+<a href="Ch10.html" title="第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10 </span>モジュールシステム</span></a><a href="Ch10.html" title="第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10 </span>モジュールシステム</span></a><a href="Ch10.S2.html" title="10.2 モジュールのシグネチャの指定 ‣ 第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.2 </span>モジュールのシグネチャの指定</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">10.1 </span>Structure文によるモジュールの定義と利用</h1>
+
+<div id="Ch10.Thmex1" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 10.1</span></span></h6>
+<div id="Ch10.Thmex1.p1" class="ltx_para">
+<p class="ltx_p">第<a href="Ch8.S3.html" title="8.3 変更可能なデータ構造 ‣ 第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.3</span></a>節で定義した循環2重リストを使い，
+<span class="ltx_text ltx_font_typewriter">IntQueue</span> と置き換え可能なストラクチャ <span class="ltx_text ltx_font_typewriter">ImperativeIntQueue</span> を定義し，
+そのテストを行え．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+この例を実装するために、まず、循環2重リストのコードを
+以下の<span class="ltx_text ltx_font_typewriter">DList</span>ストラクチャにまとめる。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   structure DList =
+   struct
+     datatype ’a cell
+       = NIL
+       | CELL of {data:’a, left:’a cell ref, right:’a cell ref}
+     exception EMPTY_DLIST
+     type ’a dlist = ’a cell ref
+     fun emptyDlist () = ref NIL
+     fun rightDlist (ref (CELL{right,...})) = right | rightDlist _ = raise EMPTY_DLIST
+     fun leftDlist (ref (CELL{left,...})) = left | leftDlist _ = raise EMPTY_DLIST
+     fun dataDlist (ref (CELL{data,...})) = data | dataDlist _ = raise EMPTY_DLIST
+     fun singleton a =
+         let
+           val l = ref NIL
+           val r = ref NIL
+           val c = CELL{left=l, right=r, data=a}
+         in  (l:=c; r:=c; ref c)
+         end
+     fun member x nil = false
+       | member x (h::t) = x = h orelse member x t
+     fun insert a dlist =
+         case dlist of
+           ref (CELL{left=l1 as ref (CELL{right=r1,...}),...}) =&gt;
+           let val newcell = CELL{data=a,
+                                  right=ref (!dlist),
+                                  left=ref (!l1)}
+           in (dlist:=newcell; l1:=newcell; r1:=newcell)
+           end
+         | ref NIL =&gt;
+           let
+             val l = ref NIL
+             val r = ref NIL
+             val cell = CELL{data=a,left=l,right=r}
+           in  (dlist:=cell; l:=cell; r:=cell)
+           end
+         | _ =&gt; raise EMPTY_DLIST
+   fun deleteDlist dlist =
+       case dlist of
+         ref NIL =&gt; ()
+       | ref (CELL{left=l1 as ref (CELL{right=r2,left=l2,...}),
+                   right=r1 as ref (CELL{right=r3,left=l3,...}),
+                   ...}) =&gt;
+           if l1 = l2 then dlist := NIL
+           else (dlist := !r1; r2 := !r1; l3 := !l1)
+     fun toList L =
+         let fun f l visited =
+                 if member l visited then nil
+                 else (dataDlist l)::(f (rightDlist l) (l::visited))
+         in f (rightDlist (leftDlist L)) nil
+         end
+     fun fromList (L:int list) = foldl (fn (x,y) =&gt; (insert x y;y)) (ref NIL) L
+     fun concatDlist D1 D2 =
+         case (D1, D2) of
+           (ref NIL, _) =&gt; D1 := !D2
+         | (_, ref NIL) =&gt; D2 := !D1
+         | (ref (CELL{left=d1l as ref (CELL{right=d1lr,...}),...}),
+            ref (CELL{left=d2l as ref (CELL{right=d2lr,...}),...})) =&gt;
+           let
+             val d1lCell = !d1l
+             val d1lrCell = !d1lr
+           in
+             (d1l := !d2l;
+              d1lr := !d2lr;
+              d2l := d1lCell;
+              d2lr := d1lrCell)
+           end
+         | _ =&gt; raise EMPTY_DLIST
+     fun mapDlist f d =
+         let
+           fun newElem x nil = NONE
+             | newElem x ((h,newH)::t) =
+               if x = h then SOME newH
+               else newElem x t
+           fun copy l copied =
+               case l of
+                 ref NIL =&gt; ref NIL
+               | ref (CELL{left, right, data}) =&gt;
+                 (case newElem l copied of
+                    NONE =&gt;
+                    let
+                      val newL = ref NIL
+                      val copied = (l, newL)::copied
+                      val l = copy left copied
+                      val r = copy right copied
+                    in
+                      (newL := CELL{left = l, right = r, data = f data};
+                       newL)
+                    end
+                  | SOME newL =&gt; newL
+                 )
+         in
+           copy d nil
+         end
+     fun copyDlist d = mapDlist (fn x =&gt; x) d
+     fun foldrDlist F z d =
+         let
+           fun f d z visited =
+               if member d visited then z
+               else F (dataDlist d, f (rightDlist d) z (d::visited))
+         in f (rightDlist (leftDlist d)) z nil
+         end
+     fun foldlDlist F z d =
+         let
+           fun f d z visited =
+               if member d visited then z
+               else f (rightDlist d) (F (dataDlist d, z)) (d::visited)
+         in f (rightDlist (leftDlist d)) z nil
+         end
+   end
+</pre>
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">ImperativeIntQueue</span>ストラクチャは、この<span class="ltx_text ltx_font_typewriter">DList</span>ストラクチャを
+使って、以下のように定義される。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   structure ImperativeIntQueue =
+   struct
+     exception EmptyQueue
+     type queue = int DList.dlist
+     fun newQueue() = DList.emptyDlist() : queue
+     fun enqueue (item,queue) = DList.insert item queue
+     fun dequeue queue =
+         let
+           val last = DList.leftDlist queue
+           val data = DList.dataDlist last
+         in
+           (DList.deleteDlist last; data)
+         end
+         handle DList.EMPTY_DLIST =&gt; raise EmptyQueue
+   end
+</pre>
+<p class="ltx_p">以下は、実行結果である。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # val q = ImperativeIntQueue.newQueue();
+   val q = ref NIL : int DList.cell ref
+   # val _ = ImperativeIntQueue.enqueue(1,q);
+   # val x = ImperativeIntQueue.dequeue q;
+   val x = 1 : int
+</pre>
+</div>
+<div id="Ch10.Thmex2" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 10.2</span></span></h6>
+<div id="Ch10.Thmex2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">FastIntQueue</span> が正しく待ち行列を実現していることを確認せよ．
+すなわち，空の待ち行列から始めて <span class="ltx_text ltx_font_typewriter">enqueue</span> と <span class="ltx_text ltx_font_typewriter">dequeue</span> 操
+作を繰り返したときの動作が，単純なリストによる場合と同一であることを示せ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p2" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+空の待ち行列から始めて<span class="ltx_text ltx_font_typewriter">enqueue(Q, <math id="p2.m1" class="ltx_Math" alttext="e_{i}" display="inline"><mrow><mi>e</mi><msub><mi></mi><mi>i</mi></msub></mrow></math>)</span>を<math id="p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>回、
+<span class="ltx_text ltx_font_typewriter">dequeue</span>を<math id="p2.m3" class="ltx_Math" alttext="m\ (n&gt;m)" display="inline"><mrow><mi>m</mi><mspace width="5.0pt"></mspace><mo stretchy="false">(</mo><mi>n</mi><mo>&gt;</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></math>実施した場合を考える。
+単純なリストの場合、リストの中身は、
+<math id="p2.m4" class="ltx_Math" alttext="[e_{n},e_{n-1},\ldots,e_{n-m}]\ (n&gt;m))" display="inline"><mrow><mo stretchy="false">[</mo><mi>e</mi><msub><mi></mi><mi>n</mi></msub><mo>,</mo><mi>e</mi><msub><mi></mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>e</mi><msub><mi></mi><mrow><mi>n</mi><mo>-</mo><mi>m</mi></mrow></msub><mo stretchy="false">]</mo><mspace width="5.0pt"></mspace><mo stretchy="false">(</mo><mi>n</mi><mo>&gt;</mo><mi>m</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow></math>で
+あり、次の<span class="ltx_text ltx_font_typewriter">dequeue</span>操作で、<math id="p2.m5" class="ltx_Math" alttext="e_{n-m}" display="inline"><mrow><mi>e</mi><msub><mi></mi><mrow><mi>n</mi><mo>-</mo><mi>m</mi></mrow></msub></mrow></math>が返される。
+任意の<math id="p2.m6" class="ltx_Math" alttext="n,m(n&gt;m)" display="inline"><mrow><mi>n</mi><mo>,</mo><mi>m</mi><mo stretchy="false">(</mo><mi>n</mi><mo>&gt;</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></math>について、<span class="ltx_text ltx_font_typewriter">FastQueue</span>の場合も、この状
+態と同等の状態が保たれることが示せればよい。
+<span class="ltx_text ltx_font_typewriter">FastIntQueue</span>の操作途中の状態は、２つのリストの組<math id="p2.m7" class="ltx_Math" alttext="(L1,L2)" display="inline"><mrow><mo stretchy="false">(</mo><mi>L</mi><mn>1</mn><mo>,</mo><mi>L</mi><mn>2</mn><mo stretchy="false">)</mo></mrow></math>である。この２つのリストの中の要素を</p>
+<table id="Ch10.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch10.Ex1.m1" class="ltx_Math" alttext="\begin{array}[]{lcl}L1&amp;=&amp;[e_{1}^{1},\ldots,e_{n}^{1}]\\
+L2&amp;=&amp;[e_{1}^{2},\ldots,e_{n}^{2}]\end{array}" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mi>L</mi><mn>1</mn></mrow></mtd><mtd columnalign="center"><mo>=</mo></mtd><mtd columnalign="left"><mrow><mo stretchy="false">[</mo><mi>e</mi><msub><mi></mi><mn>1</mn></msub><msup><mi></mi><mn>1</mn></msup><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>e</mi><msub><mi></mi><mi>n</mi></msub><msup><mi></mi><mn>1</mn></msup><mo stretchy="false">]</mo></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><mi>L</mi><mn>2</mn></mrow></mtd><mtd columnalign="center"><mo>=</mo></mtd><mtd columnalign="left"><mrow><mo stretchy="false">[</mo><mi>e</mi><msub><mi></mi><mn>1</mn></msub><msup><mi></mi><mn>2</mn></msup><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>e</mi><msub><mi></mi><mi>n</mi></msub><msup><mi></mi><mn>2</mn></msup><mo stretchy="false">]</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">とする。
+すると、</p>
+<table id="Ch10.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch10.Ex2.m1" class="ltx_Math" alttext="[e_{1}^{1},\ldots,e_{n}^{1},e_{n}^{2},\ldots,e_{1}^{2}]=[e_{n},e_{n-1},\ldots,%
+e_{n-m}]" display="block"><mrow><mo stretchy="false">[</mo><mi>e</mi><msub><mi></mi><mn>1</mn></msub><msup><mi></mi><mn>1</mn></msup><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>e</mi><msub><mi></mi><mi>n</mi></msub><msup><mi></mi><mn>1</mn></msup><mo>,</mo><mi>e</mi><msub><mi></mi><mi>n</mi></msub><msup><mi></mi><mn>2</mn></msup><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>e</mi><msub><mi></mi><mn>1</mn></msub><msup><mi></mi><mn>2</mn></msup><mo stretchy="false">]</mo><mo>=</mo><mo stretchy="false">[</mo><mi>e</mi><msub><mi></mi><mi>n</mi></msub><mo>,</mo><mi>e</mi><msub><mi></mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>e</mi><msub><mi></mi><mrow><mi>n</mi><mo>-</mo><mi>m</mi></mrow></msub><mo stretchy="false">]</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">が成立し、次に返される値<math id="p2.m8" class="ltx_Math" alttext="e_{1}^{2}" display="inline"><mrow><mi>e</mi><msub><mi></mi><mn>1</mn></msub><msup><mi></mi><mn>2</mn></msup></mrow></math>は、<math id="p2.m9" class="ltx_Math" alttext="e_{n-m}" display="inline"><mrow><mi>e</mi><msub><mi></mi><mrow><mi>n</mi><mo>-</mo><mi>m</mi></mrow></msub></mrow></math>であり、
+リストを用いた待ち行列と同一である。
+この性質が、任意の<math id="p2.m10" class="ltx_Math" alttext="n,m(n&gt;m)" display="inline"><mrow><mi>n</mi><mo>,</mo><mi>m</mi><mo stretchy="false">(</mo><mi>n</mi><mo>&gt;</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></math>で成り立つから、
+<span class="ltx_text ltx_font_typewriter">FastQueue</span>は単純なリストを用いた実装と同一の振る舞いをする。</p>
+</div>
+<div id="Ch10.Thmex3" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 10.3</span></span></h6>
+<div id="Ch10.Thmex3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">enqueue</span> と <span class="ltx_text ltx_font_typewriter">dequeue</span> がランダムに行われる場合の，<span class="ltx_text ltx_font_typewriter">dequeue</span>
+の平均の実行時間を見積もれ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p3" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+<span class="ltx_text ltx_font_typewriter">dequeue</span>に掛かる実行時間を</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">リストに要素を１つ追加するための必要な時間<math id="I1.i1.p1.m1" class="ltx_Math" alttext="CONS" display="inline"><mrow><mi>C</mi><mi>O</mi><mi>N</mi><mi>S</mi></mrow></math></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">リストから先頭要素を１つ取り出すのに必要な時間<math id="I1.i2.p1.m1" class="ltx_Math" alttext="CAR" display="inline"><mrow><mi>C</mi><mi>A</mi><mi>R</mi></mrow></math></p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">の回数で見積もる。
+<math id="p3.m1" class="ltx_Math" alttext="L_{2}" display="inline"><mrow><mi>L</mi><msub><mi></mi><mn>2</mn></msub></mrow></math>が空でない合は<math id="p3.m2" class="ltx_Math" alttext="CAR=1,CONS=0" display="inline"><mrow><mi>C</mi><mi>A</mi><mi>R</mi><mo>=</mo><mn>1</mn><mo>,</mo><mi>C</mi><mi>O</mi><mi>N</mi><mi>S</mi><mo>=</mo><mn>0</mn></mrow></math>である。
+<math id="p3.m3" class="ltx_Math" alttext="L_{2}" display="inline"><mrow><mi>L</mi><msub><mi></mi><mn>2</mn></msub></mrow></math>が空の場合、<math id="p3.m4" class="ltx_Math" alttext="L_{1}" display="inline"><mrow><mi>L</mi><msub><mi></mi><mn>1</mn></msub></mrow></math>の長さを<math id="p3.m5" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math>とすると、
+<math id="p3.m6" class="ltx_Math" alttext="CAR=N+1,CONS=N" display="inline"><mrow><mi>C</mi><mi>A</mi><mi>R</mi><mo>=</mo><mi>N</mi><mo>+</mo><mn>1</mn><mo>,</mo><mi>C</mi><mi>O</mi><mi>N</mi><mi>S</mi><mo>=</mo><mi>N</mi></mrow></math>に等しく、
+これら回数の平均を見積もることである。
+</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">この問題は、amortize cost（償却原価）の考え方を使えば、統計的・解析的な計算をせず、
+即座に求めることができる。
+<span class="ltx_text ltx_font_typewriter">dequeue</span>で取り除かれる要素<math id="p4.m1" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math>に着目する。
+この要素は、<span class="ltx_text ltx_font_typewriter">enqueue</span>で<math id="p4.m2" class="ltx_Math" alttext="L1" display="inline"><mrow><mi>L</mi><mn>1</mn></mrow></math>のリストの先頭に追加され、
+さらに、<span class="ltx_text ltx_font_typewriter">dequeue</span>操作でとりだされる前のいずれかの<span class="ltx_text ltx_markedasmath ltx_font_typewriter">dequeue</span>操作で
+<math id="p4.m4" class="ltx_Math" alttext="L1" display="inline"><mrow><mi>L</mi><mn>1</mn></mrow></math>のリストから取り除かれ、<math id="p4.m5" class="ltx_Math" alttext="L2" display="inline"><mrow><mi>L</mi><mn>2</mn></mrow></math>のリストの先頭に追加される。
+このコストは<math id="p4.m6" class="ltx_Math" alttext="CAR=1,CONS=1" display="inline"><mrow><mi>C</mi><mi>A</mi><mi>R</mi><mo>=</mo><mn>1</mn><mo>,</mo><mi>C</mi><mi>O</mi><mi>N</mi><mi>S</mi><mo>=</mo><mn>1</mn></mrow></math>である。
+そこで、この<math id="p4.m7" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math>が待ち行列に追加された時、この要素を
+<span class="ltx_text ltx_font_typewriter">dequeue</span>するための将来必要なコスト原価として計上しておく、と考える。
+すると、<span class="ltx_text ltx_font_typewriter">dequeue</span>操作では、<math id="p4.m8" class="ltx_Math" alttext="L2" display="inline"><mrow><mi>L</mi><mn>2</mn></mrow></math>が空の時に、<math id="p4.m9" class="ltx_Math" alttext="L1" display="inline"><mrow><mi>L</mi><mn>1</mn></mrow></math>から
+<math id="p4.m10" class="ltx_Math" alttext="L2" display="inline"><mrow><mi>L</mi><mn>2</mn></mrow></math>へ移動させるコストはすでにこの原価に含まれている、と考え、
+取り除かれる要素<math id="p4.m11" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math>のコストは、<math id="p4.m12" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math>を取り除くための原価(<math id="p4.m13" class="ltx_Math" alttext="CAR=1,CONS=1" display="inline"><mrow><mi>C</mi><mi>A</mi><mi>R</mi><mo>=</mo><mn>1</mn><mo>,</mo><mi>C</mi><mi>O</mi><mi>N</mi><mi>S</mi><mo>=</mo><mn>1</mn></mrow></math>)
+＋実際に掛かるコスト（<math id="p4.m14" class="ltx_Math" alttext="CAR=1" display="inline"><mrow><mi>C</mi><mi>A</mi><mi>R</mi><mo>=</mo><mn>1</mn></mrow></math>）と計算できる。
+以上から、<span class="ltx_text ltx_font_typewriter">dequeue</span>操作の平均時間は<math id="p4.m15" class="ltx_Math" alttext="CAR=2,CONS=1" display="inline"><mrow><mi>C</mi><mi>A</mi><mi>R</mi><mo>=</mo><mn>2</mn><mo>,</mo><mi>C</mi><mi>O</mi><mi>N</mi><mi>S</mi><mo>=</mo><mn>1</mn></mrow></math>である。</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">ちなみに、<span class="ltx_text ltx_font_typewriter">enqueue</span>操作の平均時間は、<math id="p5.m1" class="ltx_Math" alttext="CONS=1" display="inline"><mrow><mi>C</mi><mi>O</mi><mi>N</mi><mi>S</mi><mo>=</mo><mn>1</mn></mrow></math>であるから、
+<span class="ltx_text ltx_font_typewriter">FastQueue</span>の要素あたりの<span class="ltx_text ltx_font_typewriter">enqueue</span>、<span class="ltx_text ltx_font_typewriter">dequeue</span>コストは
+<math id="p5.m2" class="ltx_Math" alttext="CONS=2,CAR=2" display="inline"><mrow><mi>C</mi><mi>O</mi><mi>N</mi><mi>S</mi><mo>=</mo><mn>2</mn><mo>,</mo><mi>C</mi><mi>A</mi><mi>R</mi><mo>=</mo><mn>2</mn></mrow></math>であることがわかる。</p>
+</div>
+<div id="Ch10.Thmex4" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 10.4</span></span></h6>
+<div id="Ch10.Thmex4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">IntQueue</span> を<span class="ltx_text ltx_font_typewriter">FastIntQueue</span> に置き換えてテストを行え．
+<span class="ltx_text ltx_font_italic">
+</span></p>
+</div>
+</div>
+<div id="p6" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+教科書にあるコードの通り<span class="ltx_text ltx_font_typewriter">IntQueue</span>が定義されている環境で、たとえば、
+以下のようなコードが可能である。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   structure Q = IntQueue
+   val q = Q.newQueue()
+   val _ = Q.enqueue(1, q)
+   val _ = Q.enqueue(2, q)
+   val _ = Q.enqueue(3, q)
+   val a = Q.dequeue q
+   val b = Q.dequeue q
+   val c = Q.dequeue q
+</pre>
+<p class="ltx_p">SML#の対話型環境では、以下のような実行結果を得る。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # structure Q = IntQueue;
+   structure Q =
+     struct
+       type queue = int list ref
+       exception EmptyQueue = IntQueue.EmptyQueue
+       val newQueue = fn : unit -&gt; int list ref
+       val enqueue = fn : [’a. ’a * ’a list ref -&gt; unit]
+       val removeLast = fn : [’a. ’a list -&gt; ’a list * ’a]
+       val dequeue = fn : [’a. ’a list ref -&gt; ’a]
+     end
+   # val q = Q.newQueue();
+   val q = ref [] : int list ref
+   # val _ = Q.enqueue(1, q);
+   # val _ = Q.enqueue(2, q);
+   # val _ = Q.enqueue(3, q);
+   # val a = Q.dequeue q;
+   val a = 1 : int
+   # val b = Q.dequeue q;
+   val b = 2 : int
+   # val c = Q.dequeue q;
+   val c = 3 : int
+   #
+</pre>
+<p class="ltx_p">この<span class="ltx_text ltx_font_typewriter">Q</span>ストラクチャの定義のみを、<span class="ltx_text ltx_font_typewriter">FastIntQueue</span>に置き換えると以下
+のコードを得る。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   structure Q = FastIntQueue
+   val q = Q.newQueue()
+   val _ = Q.enqueue(1, q)
+   val _ = Q.enqueue(2, q)
+   val _ = Q.enqueue(3, q)
+   val a = Q.dequeue q
+   val b = Q.dequeue q
+   val c = Q.dequeue q
+</pre>
+<p class="ltx_p">SML#の対話型環境では、以下のような実行結果を得る。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # structure Q = FastQueue;
+   structure Q =
+     struct
+       type elem = int32
+       type queue = elem list ref * elem list ref
+       exception EmptyQueue = FastQueue.EmptyQueue
+       val newQueue = fn : unit -&gt; elem list ref * elem list ref
+       val enqueue = fn : [’a, ’b. ’a * (’a list ref * ’b) -&gt; unit]
+       val dequeue = fn : [’a. ’a list ref * ’a list ref -&gt; ’a]
+     end
+   # val q = Q.newQueue();
+   val q = (ref [], ref []) : int list ref * int list ref
+   # val _ = Q.enqueue(1, q);
+   # val _ = Q.enqueue(2, q);
+   # val _ = Q.enqueue(3, q);
+   # val a = Q.dequeue q;
+   val a = 1 : int
+   # val b = Q.dequeue q;
+   val b = 2 : int
+   # val c = Q.dequeue q;
+   val c = 3 : int
+</pre>
+<p class="ltx_p">この結果から、同一の動作をしており、置き換え可能であることが確認できる。</p>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="Ch10.html" title="第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10 </span>モジュールシステム</span></a><a href="Ch10.S2.html" title="10.2 モジュールのシグネチャの指定 ‣ 第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.2 </span>モジュールのシグネチャの指定</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Nov  6 00:44:26 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+{% endraw %}

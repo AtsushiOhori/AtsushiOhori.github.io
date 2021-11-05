@@ -1,0 +1,476 @@
+---
+layout: default
+permalink: /ja/texts/standard-ml/answers//Ch2.S3.html
+translated: true
+lang: ja
+head: |
+ <!--Generated on Sat Nov  6 00:44:26 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Document created on 2021年11月5日.-->
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="LaTeXML.css" type="text/css">
+ <link rel="stylesheet" href="ltx-book.css" type="text/css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+ <link rel="up" href="Ch2.html" title="第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up up" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="start" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="prev" href="Ch2.S1.html" title="2.1 関数の定義 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="next" href="Ch2.S4.html" title="2.4 局所変数の使用 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch2.S1.html" title="2.1 関数の定義 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch2.S4.html" title="2.4 局所変数の使用 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch2.S5.html" title="2.5 相互再帰的関数 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch2.S6.html" title="2.6 高階の関数 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch2.S7.html" title="2.7 関数式 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch2.S8.html" title="2.8 変数のスコープ ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch2.S9.html" title="2.9 2項演算子 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch1.html" title="第 1 章 MLプログラミングの基本 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch2.html" title="第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch3.html" title="第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch4.html" title="第 4 章 MLの基本データ型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch5.html" title="第 5 章 レコード ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch6.html" title="第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch7.html" title="第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch8.html" title="第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch9.html" title="第 9 章 例外処理 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch10.html" title="第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+---
+{% raw %}
+<div class="ltx_page_main">
+<header class="ltx_page_header"><div class="ltx_document_title">プログラミング言語 Standard ML 入門 (問題の解答例)</div>
+<div>
+<a href="Ch2.html" title="第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>関数を用いたプログラミング</span></a><a href="Ch2.S1.html" title="2.1 関数の定義 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.1 </span>関数の定義</span></a><a href="Ch2.S4.html" title="2.4 局所変数の使用 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.4 </span>局所変数の使用</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2.3 </span>再帰的関数</h1>
+
+<div id="Ch2.Thmex2" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 2.2</span></span></h6>
+<div id="Ch2.Thmex2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">factorial</span> 関数が正しく動作することを，
+<span class="ltx_text ltx_font_typewriter">factorial 0</span>，
+<span class="ltx_text ltx_font_typewriter">factorial 2</span>，
+<span class="ltx_text ltx_font_typewriter">factorial 3</span>
+の各場合の動作をトレースすることによって確かめよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+<span class="ltx_text ltx_font_typewriter">factorial 3</span>の呼び出しは以下のようなトレースを生成する．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   factorial 3
+    &gt; 3 * factorial 2
+    &gt;      &gt; 2 * factorial 1
+    &gt;      &gt;      &gt; 1 * factorial 0
+    &gt;      &gt;      &gt;      &gt; 1
+    &gt;      &gt;      &gt; 1 * 1
+    &gt;      &gt;      &gt; 1
+    &gt;      &gt; 2 * 1
+    &gt;      &gt; 2
+    &gt; 3 * 2
+    &gt; 6
+</pre>
+</div>
+<div id="Ch2.Thmex3" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 2.3</span></span></h6>
+<div id="Ch2.Thmex3.p1" class="ltx_para">
+<p class="ltx_p">以下の各数列<math id="Ch2.Thmex3.p1.m1" class="ltx_Math" alttext="S_{n}" display="inline"><mrow><mi>S</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>について，<math id="Ch2.Thmex3.p1.m2" class="ltx_Math" alttext="S_{n}" display="inline"><mrow><mi>S</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>が満たすべき性質を<math id="Ch2.Thmex3.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>に関する漸化式として記述し，
+それに対応する再帰的関数を記述することによって，<math id="Ch2.Thmex3.p1.m4" class="ltx_Math" alttext="S_{n}" display="inline"><mrow><mi>S</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>を求めるプログラムを
+書け．</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="S_{n}=1+2+\cdots+n" display="inline"><mrow><mi>S</mi><msub><mi></mi><mi>n</mi></msub><mo>=</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mi>n</mi></mrow></math></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="S_{n}=1+(1+2)+(1+2+3)+\cdots+(1+2+\cdots+n)" display="inline"><mrow><mi>S</mi><msub><mi></mi><mi>n</mi></msub><mo>=</mo><mn>1</mn><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo stretchy="false">)</mo><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo stretchy="false">)</mo><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></math>
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p2" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span></p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">漸化式は</p>
+<table id="Ch17.S2.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="Ch2.Ex1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.Ex1.m1" class="ltx_Math" alttext="\displaystyle S_{0}" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>0</mn></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch2.Ex1.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex1.m3" class="ltx_Math" alttext="\displaystyle 0" display="inline"><mn>0</mn></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch2.Ex2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.Ex2.m1" class="ltx_Math" alttext="\displaystyle S_{n}" display="inline"><mrow><mi>S</mi><msub><mi></mi><mi>n</mi></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch2.Ex2.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex2.m3" class="ltx_Math" alttext="\displaystyle n+S_{n-1}" display="inline"><mrow><mi>n</mi><mo>+</mo><mi>S</mi><msub><mi></mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">と与えられる．よって，この関数を<span class="ltx_text ltx_font_typewriter">f</span>とすると，以下の
+コードで実現できる．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun f 0 = 0
+     | f n = n + f (n - 1);
+</pre>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">漸化式は、上記の漸化式の解を<math id="I2.i2.p1.m1" class="ltx_Math" alttext="S_{n}" display="inline"><mrow><mi>S</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>として、</p>
+<table id="Ch17.S2.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="Ch2.Ex3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.Ex3.m1" class="ltx_Math" alttext="\displaystyle T_{0}" display="inline"><mrow><mi>T</mi><msub><mi></mi><mn>0</mn></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch2.Ex3.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex3.m3" class="ltx_Math" alttext="\displaystyle 0" display="inline"><mn>0</mn></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch2.Ex4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.Ex4.m1" class="ltx_Math" alttext="\displaystyle T_{n}" display="inline"><mrow><mi>T</mi><msub><mi></mi><mi>n</mi></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch2.Ex4.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex4.m3" class="ltx_Math" alttext="\displaystyle T_{n-1}+S_{n}" display="inline"><mrow><mi>T</mi><msub><mi></mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>+</mo><mi>S</mi><msub><mi></mi><mi>n</mi></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">と与えられる．よって，この関数を<span class="ltx_text ltx_font_typewriter">g</span>とすると，以下のコードで実現できる．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun g 0 = 0
+     | g n = g (n - 1) + f n;
+</pre>
+</div>
+</li>
+</ol>
+</div>
+<div id="Ch2.Thmex4" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 2.4</span></span></h6>
+<div id="Ch2.Thmex4.p1" class="ltx_para">
+<p class="ltx_p">問<a href="#Ch2.Thmex3" title="問 2.3 ‣ 2.3 再帰的関数 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.3</span></a>で定義した2つの関数が，それぞれ正しく数列の和
+を計算することを，入力<math id="Ch2.Thmex4.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>に関する帰納法で証明せよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p3" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span></p>
+<ol id="I3" class="ltx_enumerate">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i1.p1.m1" class="ltx_Math" alttext="S_{n}=1+2+...+n" display="inline"><mrow><mi>S</mi><msub><mi></mi><mi>n</mi></msub><mo>=</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mo>.</mo><mo>.</mo><mo>.</mo><mo>+</mo><mi>n</mi></mrow></math></p>
+<ol id="I3.i1.I1" class="ltx_enumerate">
+<li id="I3.i1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="I3.i1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">（基底）n = 0のとき．<math id="I3.i1.I1.i1.p1.m1" class="ltx_Math" alttext="S_{0}=0" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>0</mn></msub><mo>=</mo><mn>0</mn></mrow></math>, <math id="I3.i1.I1.i1.p1.m2" class="ltx_Math" alttext="\mbox{\tt f 0}=\mbox{\tt 0}" display="inline"><mrow><mtext mathvariant="monospace">f 0</mtext><mo>=</mo><mtext>𝟶</mtext></mrow></math>で正しい．</p>
+</div>
+</li>
+<li id="I3.i1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="I3.i1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">（帰納段階）n = kのとき正しいと仮定する．</p>
+<table id="Ch2.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.Ex5.m1" class="ltx_Math" alttext="S_{k+1}=1+2+...+k+(k+1)=S_{k}+(k+1)" display="block"><mrow><mi>S</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mo>.</mo><mo>.</mo><mo>.</mo><mo>+</mo><mi>k</mi><mo>+</mo><mo stretchy="false">(</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mo>=</mo><mi>S</mi><msub><mi></mi><mi>k</mi></msub><mo>+</mo><mo stretchy="false">(</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">である．
+一方<span class="ltx_text ltx_font_typewriter">f (k + 1) = (k + 1) + f k</span>であり，帰納法の仮定より
+<math id="I3.i1.I1.i2.p1.m1" class="ltx_Math" alttext="\mbox{\tt f k}=S_{k}" display="inline"><mrow><mtext mathvariant="monospace">f k</mtext><mo>=</mo><mi>S</mi><msub><mi></mi><mi>k</mi></msub></mrow></math>であるから，
+<math id="I3.i1.I1.i2.p1.m2" class="ltx_Math" alttext="\mbox{\tt f (k + 1)}=S_{k+1}" display="inline"><mrow><mtext mathvariant="monospace">f (k + 1)</mtext><mo>=</mo><mi>S</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></math>である．</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i2.p1.m1" class="ltx_Math" alttext="S_{n}=1+(1+2)+(1+2+3)+...+(1+2+...+n)" display="inline"><mrow><mi>S</mi><msub><mi></mi><mi>n</mi></msub><mo>=</mo><mn>1</mn><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo stretchy="false">)</mo><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo stretchy="false">)</mo><mo>+</mo><mo>.</mo><mo>.</mo><mo>.</mo><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mo>.</mo><mo>.</mo><mo>.</mo><mo>+</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></math></p>
+<ol id="I3.i2.I1" class="ltx_enumerate">
+<li id="I3.i2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="I3.i2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">（基底）<math id="I3.i2.I1.i1.p1.m1" class="ltx_Math" alttext="n=0" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow></math>のとき, <math id="I3.i2.I1.i1.p1.m2" class="ltx_Math" alttext="S_{0}=0" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>0</mn></msub><mo>=</mo><mn>0</mn></mrow></math>, <math id="I3.i2.I1.i1.p1.m3" class="ltx_Math" alttext="\mbox{\tt f 0}=0" display="inline"><mrow><mtext mathvariant="monospace">f 0</mtext><mo>=</mo><mn>0</mn></mrow></math>で正しい．</p>
+</div>
+</li>
+<li id="I3.i2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="I3.i2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">（帰納段階）<math id="I3.i2.I1.i2.p1.m1" class="ltx_Math" alttext="n=k" display="inline"><mrow><mi>n</mi><mo>=</mo><mi>k</mi></mrow></math>のとき正しいと仮定する．</p>
+<table id="Ch17.S2.EGx3" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="Ch2.Ex7">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.Ex6.m1" class="ltx_Math" alttext="\displaystyle S_{k+1}" display="inline"><mrow><mi>S</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch2.Ex6.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex6.m3" class="ltx_Math" alttext="\displaystyle 1+(1+2)+(1+2+3)+...+(1+2+...+k)+(1+2+...+k+(k+1))" display="inline"><mrow><mn>1</mn><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo stretchy="false">)</mo><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo stretchy="false">)</mo><mo>+</mo><mo>.</mo><mo>.</mo><mo>.</mo><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mo>.</mo><mo>.</mo><mo>.</mo><mo>+</mo><mi>k</mi><mo stretchy="false">)</mo><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mo>.</mo><mo>.</mo><mo>.</mo><mo>+</mo><mi>k</mi><mo>+</mo><mo stretchy="false">(</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch2.Ex7.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex7.m3" class="ltx_Math" alttext="\displaystyle S_{k}+(1+2+...+k+(k+1))" display="inline"><mrow><mi>S</mi><msub><mi></mi><mi>k</mi></msub><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mo>.</mo><mo>.</mo><mo>.</mo><mo>+</mo><mi>k</mi><mo>+</mo><mo stretchy="false">(</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p">である．
+一方<math id="I3.i2.I1.i2.p1.m2" class="ltx_Math" alttext="\mbox{\tt f (k + 1)}=\mbox{\tt f k + g (k + 1)}" display="inline"><mrow><mtext mathvariant="monospace">f (k + 1)</mtext><mo>=</mo><mtext mathvariant="monospace">f k + g (k + 1)</mtext></mrow></math>であり，
+帰納法の仮定と前項の結果より
+<math id="I3.i2.I1.i2.p1.m3" class="ltx_Math" alttext="\mbox{\tt f k}=S_{k}" display="inline"><mrow><mtext mathvariant="monospace">f k</mtext><mo>=</mo><mi>S</mi><msub><mi></mi><mi>k</mi></msub></mrow></math>
+かつ
+<math id="I3.i2.I1.i2.p1.m4" class="ltx_Math" alttext="\mbox{\tt g (k+1)}=(1+2+...+k+(k+1))" display="inline"><mrow><mtext mathvariant="monospace">g (k+1)</mtext><mo>=</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mo>.</mo><mo>.</mo><mo>.</mo><mo>+</mo><mi>k</mi><mo>+</mo><mo stretchy="false">(</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow></math>であるから，
+<math id="I3.i2.I1.i2.p1.m5" class="ltx_Math" alttext="\mbox{\tt f (k + 1)}=S_{k+1}" display="inline"><mrow><mtext mathvariant="monospace">f (k + 1)</mtext><mo>=</mo><mi>S</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></math>である．</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div id="Ch2.Thmex5" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 2.5</span></span></h6>
+<div id="Ch2.Thmex5.p1" class="ltx_para">
+<p class="ltx_p">以下のように再帰的に定義される数列をフィボナッチ数列と呼ぶ．</p>
+<table id="Ch17.S2.EGx4" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="Ch2.Ex8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.Ex8.m1" class="ltx_Math" alttext="\displaystyle F_{0}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mn>0</mn></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch2.Ex8.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex8.m3" class="ltx_Math" alttext="\displaystyle 0" display="inline"><mn>0</mn></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch2.Ex9"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.Ex9.m1" class="ltx_Math" alttext="\displaystyle F_{1}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mn>1</mn></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch2.Ex9.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex9.m3" class="ltx_Math" alttext="\displaystyle 1" display="inline"><mn>1</mn></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch2.Ex10"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.Ex10.m1" class="ltx_Math" alttext="\displaystyle F_{n}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>n</mi></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch2.Ex10.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex10.m3" class="ltx_Math" alttext="\displaystyle F_{n-2}+F_{n-1}\ \ \ \ \ (n\geq 2)" display="inline"><mrow><mi>F</mi><msub><mi></mi><mrow><mi>n</mi><mo>-</mo><mn>2</mn></mrow></msub><mo>+</mo><mi>F</mi><msub><mi></mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mspace width="5.0pt"></mspace><mspace width="5.0pt"></mspace><mspace width="5.0pt"></mspace><mspace width="5.0pt"></mspace><mspace width="5.0pt"></mspace><mo stretchy="false">(</mo><mi>n</mi><mo>≥</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">負でない整数<math id="Ch2.Thmex5.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>を受け取り<math id="Ch2.Thmex5.p1.m2" class="ltx_Math" alttext="F_{n}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>を計算する関数 <span class="ltx_text ltx_font_typewriter">fib</span> を定義せよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p4" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span></p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun fib n = if n = 0 then 0
+               else if n = 1 then 1
+               else fib (n - 1) + fib (n - 2)
+</pre>
+</div>
+<div id="Ch2.Thmex6" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 2.6</span></span></h6>
+<div id="Ch2.Thmex6.p1" class="ltx_para">
+<p class="ltx_p"><math id="Ch2.Thmex6.p1.m1" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>を与えられた負でない整数とし，任意の<math id="Ch2.Thmex6.p1.m2" class="ltx_Math" alttext="0\leq n\leq k" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><mi>k</mi></mrow></math>について
+<span class="ltx_text ltx_font_typewriter">fib n</span> が<math id="Ch2.Thmex6.p1.m3" class="ltx_Math" alttext="F_{n}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>を計算することを，<math id="Ch2.Thmex6.p1.m4" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>に関する数学的帰納法で示せ．
+これを用いて，<span class="ltx_text ltx_font_typewriter">fib</span> が，0以上の任意の自然数に対して正しく
+<math id="Ch2.Thmex6.p1.m5" class="ltx_Math" alttext="F_{n}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>の値を計算することを確認せよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p5" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+任意の<math id="p5.m1" class="ltx_Math" alttext="0\leq n\leq k" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><mi>k</mi></mrow></math>について<span class="ltx_text ltx_font_typewriter">fib n</span> が<math id="p5.m2" class="ltx_Math" alttext="F_{n}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>を計算することの<math id="p5.m3" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>に関する帰納法による証明
+</p>
+<ul id="I4" class="ltx_itemize">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I4.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I4.i1.p1.m1" class="ltx_Math" alttext="k=0,1" display="inline"><mrow><mi>k</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>1</mn></mrow></math>の時．
+<math id="I4.i1.p1.m2" class="ltx_Math" alttext="\mbox{\tt fib 0}=0=F_{0}" display="inline"><mrow><mtext mathvariant="monospace">fib 0</mtext><mo>=</mo><mn>0</mn><mo>=</mo><mi>F</mi><msub><mi></mi><mn>0</mn></msub></mrow></math>
+かつ
+<math id="I4.i1.p1.m3" class="ltx_Math" alttext="\mbox{\tt fib 1}=1=F_{1}" display="inline"><mrow><mtext mathvariant="monospace">fib 1</mtext><mo>=</mo><mn>1</mn><mo>=</mo><mi>F</mi><msub><mi></mi><mn>1</mn></msub></mrow></math>
+であり成立．</p>
+</div>
+</li>
+<li id="I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I4.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I4.i2.p1.m1" class="ltx_Math" alttext="k=i(i\geq 1)" display="inline"><mrow><mi>k</mi><mo>=</mo><mi>i</mi><mo stretchy="false">(</mo><mi>i</mi><mo>≥</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math>の時成立すると仮定する．
+<math id="I4.i2.p1.m2" class="ltx_Math" alttext="\mbox{\tt fib ($i$ + 1)}=\mbox{\tt fib $i$}+\mbox{\tt fib ($i$ - 1)}" display="inline"><mrow><mrow><mtext mathvariant="monospace">fib (</mtext><mi>i</mi><mtext mathvariant="monospace"> + 1)</mtext></mrow><mo>=</mo><mrow><mtext mathvariant="monospace">fib </mtext><mi>i</mi></mrow><mo>+</mo><mrow><mtext mathvariant="monospace">fib (</mtext><mi>i</mi><mtext mathvariant="monospace"> - 1)</mtext></mrow></mrow></math>
+である．
+帰納法の仮定より，
+<math id="I4.i2.p1.m3" class="ltx_Math" alttext="\mbox{\tt fib $i$}=F_{i}" display="inline"><mrow><mrow><mtext mathvariant="monospace">fib </mtext><mi>i</mi></mrow><mo>=</mo><mi>F</mi><msub><mi></mi><mi>i</mi></msub></mrow></math>かつ
+<math id="I4.i2.p1.m4" class="ltx_Math" alttext="\mbox{\tt fib ($i$ - 1)}=F_{i-1}" display="inline"><mrow><mrow><mtext mathvariant="monospace">fib (</mtext><mi>i</mi><mtext mathvariant="monospace"> - 1)</mtext></mrow><mo>=</mo><mi>F</mi><msub><mi></mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></math>
+である．
+また定義より，
+<math id="I4.i2.p1.m5" class="ltx_Math" alttext="F_{i}=F_{i-1}+F_{i-2}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>i</mi></msub><mo>=</mo><mi>F</mi><msub><mi></mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>+</mo><mi>F</mi><msub><mi></mi><mrow><mi>i</mi><mo>-</mo><mn>2</mn></mrow></msub></mrow></math>
+である．
+よって，<math id="I4.i2.p1.m6" class="ltx_Math" alttext="\mbox{\tt fib $i$}=F_{i}" display="inline"><mrow><mrow><mtext mathvariant="monospace">fib </mtext><mi>i</mi></mrow><mo>=</mo><mi>F</mi><msub><mi></mi><mi>i</mi></msub></mrow></math>となる．
+従って，任意の<math id="I4.i2.p1.m7" class="ltx_Math" alttext="0\leq n\leq i+1" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><mi>i</mi><mo>+</mo><mn>1</mn></mrow></math> について
+<math id="I4.i2.p1.m8" class="ltx_Math" alttext="\mbox{\tt fib n}=F_{n}" display="inline"><mrow><mtext mathvariant="monospace">fib n</mtext><mo>=</mo><mi>F</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>であり，成立する．</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">以上より，<math id="p5.m4" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>以上の任意の<math id="p5.m5" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>に対して，
+任意の<math id="p5.m6" class="ltx_Math" alttext="0\leq n\leq k" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><mi>k</mi></mrow></math> について
+<math id="p5.m7" class="ltx_Math" alttext="\mbox{\tt fib n}=F_{n}" display="inline"><mrow><mtext mathvariant="monospace">fib n</mtext><mo>=</mo><mi>F</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>であるから，
+<math id="p5.m8" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>以上の任意の自然数に対して正しく
+<math id="p5.m9" class="ltx_Math" alttext="F_{n}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>の値を計算する．</p>
+</div>
+<div id="Ch2.Thmex7" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 2.7</span></span></h6>
+<div id="Ch2.Thmex7.p1" class="ltx_para">
+<p class="ltx_p">フィボナッチ数列<math id="Ch2.Thmex7.p1.m1" class="ltx_Math" alttext="F_{n}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>の再帰的定義をそのまま再帰的関数として実現す
+ると，<math id="Ch2.Thmex7.p1.m2" class="ltx_Math" alttext="F_{n}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>の計算に掛かる時間は<math id="Ch2.Thmex7.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>が大きくなるに従って指数関数的に増大す
+る．
+<math id="Ch2.Thmex7.p1.m4" class="ltx_Math" alttext="F_{n}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>を<math id="Ch2.Thmex7.p1.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>に比例する時間で計算する関数 <span class="ltx_text ltx_font_typewriter">fastFib</span> を以下の洞察を
+参考に定義せよ．</p>
+<ol id="I5" class="ltx_enumerate">
+<li id="I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I5.i1.p1" class="ltx_para">
+<p class="ltx_p">フィボナッチ数列の定義は，連続する2つの数から次の数を決めるような
+構成になっている．
+したがって，<math id="I5.i1.p1.m1" class="ltx_Math" alttext="F_{k}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>k</mi></msub></mrow></math>と<math id="I5.i1.p1.m2" class="ltx_Math" alttext="F_{k+1}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></math>が与えられれば<math id="I5.i1.p1.m3" class="ltx_Math" alttext="F_{k+2}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>2</mn></mrow></msub></mrow></math>が即座に求められ
+る．
+この作業を<math id="I5.i1.p1.m4" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></math>回繰り返せば，<math id="I5.i1.p1.m5" class="ltx_Math" alttext="F_{k}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>k</mi></msub></mrow></math>と<math id="I5.i1.p1.m6" class="ltx_Math" alttext="F_{k+1}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></math>から<math id="I5.i1.p1.m7" class="ltx_Math" alttext="F_{k+n}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mi>n</mi></mrow></msub></mrow></math>が求めら
+れるはずである．</p>
+</div>
+</li>
+<li id="I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I5.i2.p1" class="ltx_para">
+<p class="ltx_p">前項の考え方を参考に，与えられた連続する2つのフィボナッチ数
+<math id="I5.i2.p1.m1" class="ltx_Math" alttext="F_{k}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>k</mi></msub></mrow></math>と<math id="I5.i2.p1.m2" class="ltx_Math" alttext="F_{k+1}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></math>から，
+<math id="I5.i2.p1.m3" class="ltx_Math" alttext="F_{k}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>k</mi></msub></mrow></math>の<math id="I5.i2.p1.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>個先のフィボナッチ数を求める関数 <span class="ltx_text ltx_font_typewriter">G(<math id="I5.i2.p1.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>,<math id="I5.i2.p1.m6" class="ltx_Math" alttext="F_{k}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>k</mi></msub></mrow></math>,<math id="I5.i2.p1.m7" class="ltx_Math" alttext="F_{k+1}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo mathvariant="normal">+</mo><mn mathvariant="normal">1</mn></mrow></msub></mrow></math>)</span> を定義する．
+<math id="I5.i2.p1.m8" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>が<math id="I5.i2.p1.m9" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>の場合は<math id="I5.i2.p1.m10" class="ltx_Math" alttext="F_{k}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>k</mi></msub></mrow></math>を返せばよい．
+<math id="I5.i2.p1.m11" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>が<math id="I5.i2.p1.m12" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>の場合は<math id="I5.i2.p1.m13" class="ltx_Math" alttext="F_{k+1}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></math>を返せばよい．
+<math id="I5.i2.p1.m14" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>が<math id="I5.i2.p1.m15" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math>以上の場合は，<math id="I5.i2.p1.m16" class="ltx_Math" alttext="F_{k}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>k</mi></msub></mrow></math>と<math id="I5.i2.p1.m17" class="ltx_Math" alttext="F_{k+1}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></math>から<math id="I5.i2.p1.m18" class="ltx_Math" alttext="F_{k+2}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>2</mn></mrow></msub></mrow></math>を求め，
+<math id="I5.i2.p1.m19" class="ltx_Math" alttext="F_{k+1}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></math>と<math id="I5.i2.p1.m20" class="ltx_Math" alttext="F_{k+2}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>2</mn></mrow></msub></mrow></math>から，<math id="I5.i2.p1.m21" class="ltx_Math" alttext="F_{k+1}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></math>の<math id="I5.i2.p1.m22" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></math>個先のフィボナッチ数を求めればよ
+いから，<span class="ltx_text ltx_font_typewriter">G(<math id="I5.i2.p1.m23" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></math>,<math id="I5.i2.p1.m24" class="ltx_Math" alttext="F_{k+1}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo mathvariant="normal">+</mo><mn mathvariant="normal">1</mn></mrow></msub></mrow></math>,<math id="I5.i2.p1.m25" class="ltx_Math" alttext="F_{k}+F_{k+1}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>k</mi></msub><mo mathvariant="normal">+</mo><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo mathvariant="normal">+</mo><mn mathvariant="normal">1</mn></mrow></msub></mrow></math>)</span> を呼び出せばよい．</p>
+</div>
+</li>
+<li id="I5.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="I5.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I5.i3.p1.m1" class="ltx_Math" alttext="F_{n}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>は<math id="I5.i3.p1.m2" class="ltx_Math" alttext="F_{0}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mn>0</mn></msub></mrow></math>から<math id="I5.i3.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>個先のフィボナッチ数であるから，<span class="ltx_text ltx_font_typewriter">G(n,<math id="I5.i3.p1.m4" class="ltx_Math" alttext="F_{0}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mn mathvariant="normal">0</mn></msub></mrow></math>,<math id="I5.i3.p1.m5" class="ltx_Math" alttext="F_{1}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mn mathvariant="normal">1</mn></msub></mrow></math>)</span> である．
+したがって <span class="ltx_text ltx_font_typewriter">fastFib</span> は，上記の動作をする補助関数 <span class="ltx_text ltx_font_typewriter">G</span> を呼
+び出すことによって実現できる．</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p6" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span></p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun G(n,fk,fk1) = if n = 0 then fk
+                     else if n = 1 then fk1
+                     else G(n-1,fk1,fk+fk1);
+   fun fastFib n = G(n,0,1);
+</pre>
+</div>
+<div id="Ch2.Thmex8" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 2.8</span></span></h6>
+<div id="Ch2.Thmex8.p1" class="ltx_para">
+<p class="ltx_p">負でない任意の整数<math id="Ch2.Thmex8.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>に対して<span class="ltx_text ltx_font_typewriter">G(<math id="Ch2.Thmex8.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>,<math id="Ch2.Thmex8.p1.m3" class="ltx_Math" alttext="F_{k}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>k</mi></msub></mrow></math>,<math id="Ch2.Thmex8.p1.m4" class="ltx_Math" alttext="F_{k+1}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo mathvariant="normal">+</mo><mn mathvariant="normal">1</mn></mrow></msub></mrow></math>)</span>は
+<math id="Ch2.Thmex8.p1.m5" class="ltx_Math" alttext="F_{k+n}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mi>n</mi></mrow></msub></mrow></math>を計算することを，<math id="Ch2.Thmex8.p1.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>に関する数学的帰納法で証明せよ．
+この性質を使って，<span class="ltx_text ltx_font_typewriter">fastFib <math id="Ch2.Thmex8.p1.m7" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math></span>が正しくフィボナッチ数<math id="Ch2.Thmex8.p1.m8" class="ltx_Math" alttext="F_{n}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>を計
+算することを示せ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p7" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span></p>
+<ul id="I6" class="ltx_itemize">
+<li id="I6.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I6.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I6.i1.p1.m1" class="ltx_Math" alttext="n=0,1" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>1</mn></mrow></math>の時。</p>
+<table id="Ch17.S2.EGx5" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="Ch2.Ex11"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath ltx_font_typewriter">G(0,<math id="Ch2.Ex11.m1.m1" class="ltx_Math" alttext="F_{k}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>k</mi></msub></mrow></math>,<math id="Ch2.Ex11.m1.m2" class="ltx_Math" alttext="F_{k+1}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo mathvariant="normal">+</mo><mn mathvariant="normal">1</mn></mrow></msub></mrow></math>)</span></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch2.Ex11.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex11.m3" class="ltx_Math" alttext="\displaystyle F_{k}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>k</mi></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch2.Ex12"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath ltx_font_typewriter">G(1,<math id="Ch2.Ex12.m1.m1" class="ltx_Math" alttext="F_{k}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>k</mi></msub></mrow></math>,<math id="Ch2.Ex12.m1.m2" class="ltx_Math" alttext="F_{k+1}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo mathvariant="normal">+</mo><mn mathvariant="normal">1</mn></mrow></msub></mrow></math>)</span></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch2.Ex12.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex12.m3" class="ltx_Math" alttext="\displaystyle F_{k+1}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">であり成立する．</p>
+</div>
+</li>
+<li id="I6.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I6.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I6.i2.p1.m1" class="ltx_Math" alttext="n=i+1(i\geq 1)" display="inline"><mrow><mi>n</mi><mo>=</mo><mi>i</mi><mo>+</mo><mn>1</mn><mo stretchy="false">(</mo><mi>i</mi><mo>≥</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math>の時。
+Gの定義より</p>
+<table id="Ch2.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.Ex13.m1" class="ltx_Math" alttext="\mbox{\tt G($i+1$,$F_{k}$, $F_{k+1}$)}=\mbox{\tt G($i$, $F_{k+1}$, $F_{k}+F_{k%
++1}$)}" display="block"><mrow><mrow><mtext mathvariant="monospace">G(</mtext><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow><mtext mathvariant="monospace">,</mtext><mrow><mi>F</mi><msub><mi></mi><mi>k</mi></msub></mrow><mtext mathvariant="monospace">, </mtext><mrow><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mtext mathvariant="monospace">)</mtext></mrow><mo>=</mo><mrow><mtext mathvariant="monospace">G(</mtext><mi>i</mi><mtext mathvariant="monospace">, </mtext><mrow><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mtext mathvariant="monospace">, </mtext><mrow><mi>F</mi><msub><mi></mi><mi>k</mi></msub><mo>+</mo><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mtext mathvariant="monospace">)</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">である．
+<math id="I6.i2.p1.m2" class="ltx_Math" alttext="F_{n}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>の定義より，
+<math id="I6.i2.p1.m3" class="ltx_Math" alttext="F_{k}+F_{k+1}=F_{k+2}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>k</mi></msub><mo>+</mo><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>2</mn></mrow></msub></mrow></math>
+である．
+よって，
+<math id="I6.i2.p1.m4" class="ltx_Math" alttext="\mbox{\tt G($i+1$, $F_{k}$, $F_{k+1}$)}=\mbox{\tt G($i$,$F_{k+1}$,$F_{k+2}$)}" display="inline"><mrow><mrow><mtext mathvariant="monospace">G(</mtext><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow><mtext mathvariant="monospace">, </mtext><mrow><mi>F</mi><msub><mi></mi><mi>k</mi></msub></mrow><mtext mathvariant="monospace">, </mtext><mrow><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mtext mathvariant="monospace">)</mtext></mrow><mo>=</mo><mrow><mtext mathvariant="monospace">G(</mtext><mi>i</mi><mtext mathvariant="monospace">,</mtext><mrow><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mtext mathvariant="monospace">,</mtext><mrow><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>2</mn></mrow></msub></mrow><mtext mathvariant="monospace">)</mtext></mrow></mrow></math>
+である．
+帰納法の仮定より，
+<math id="I6.i2.p1.m5" class="ltx_Math" alttext="\mbox{\tt G($i+1$,$F_{k}$,$F_{k+1}$)}=F_{k+i+1}" display="inline"><mrow><mrow><mtext mathvariant="monospace">G(</mtext><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow><mtext mathvariant="monospace">,</mtext><mrow><mi>F</mi><msub><mi></mi><mi>k</mi></msub></mrow><mtext mathvariant="monospace">,</mtext><mrow><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mtext mathvariant="monospace">)</mtext></mrow><mo>=</mo><mi>F</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></math>
+となり成立する．
+</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">以上の特殊な場合として，
+<math id="p7.m1" class="ltx_Math" alttext="\mbox{\tt G($n$,$F_{0}$,$F_{1}$)}=F_{n}" display="inline"><mrow><mrow><mtext mathvariant="monospace">G(</mtext><mi>n</mi><mtext mathvariant="monospace">,</mtext><mrow><mi>F</mi><msub><mi></mi><mn>0</mn></msub></mrow><mtext mathvariant="monospace">,</mtext><mrow><mi>F</mi><msub><mi></mi><mn>1</mn></msub></mrow><mtext mathvariant="monospace">)</mtext></mrow><mo>=</mo><mi>F</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>
+であり，したがって，
+<math id="p7.m2" class="ltx_Math" alttext="\mbox{\tt fastFib $n$}=F_{n}" display="inline"><mrow><mrow><mtext mathvariant="monospace">fastFib </mtext><mi>n</mi></mrow><mo>=</mo><mi>F</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>である．</p>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="Ch2.S1.html" title="2.1 関数の定義 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.1 </span>関数の定義</span></a><a href="Ch2.S4.html" title="2.4 局所変数の使用 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.4 </span>局所変数の使用</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Nov  6 00:44:26 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+{% endraw %}

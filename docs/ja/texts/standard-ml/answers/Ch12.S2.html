@@ -1,0 +1,90 @@
+---
+layout: default
+permalink: /ja/texts/standard-ml/answers//Ch12.S2.html
+translated: true
+lang: ja
+head: |
+ <!--Generated on Sat Nov  6 00:44:26 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Document created on 2021年11月5日.-->
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="LaTeXML.css" type="text/css">
+ <link rel="stylesheet" href="ltx-book.css" type="text/css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+ <link rel="up" href="Ch12.html" title="第 12 章 基本ライブラリの利用法 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up up" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="start" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="prev" href="Ch12.S1.html" title="12.1 ライブラリの種類とそのシグネチャの表示法 ‣ 第 12 章 基本ライブラリの利用法 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="next" href="Ch13.html" title="第 13 章 配列を用いたプログラミング ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch12.S1.html" title="12.1 ライブラリの種類とそのシグネチャの表示法 ‣ 第 12 章 基本ライブラリの利用法 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch12.html" title="第 12 章 基本ライブラリの利用法 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch13.html" title="第 13 章 配列を用いたプログラミング ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch14.html" title="第 14 章 システム時計の利用 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch15.html" title="第 15 章 入出力処理 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch16.html" title="第 16 章 データのフォーマッティング ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch17.html" title="第 17 章 OSとのインターフェイス ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <meta name="keywords" lang="en" content=", トップレベル">
+---
+{% raw %}
+<div class="ltx_page_main">
+<header class="ltx_page_header"><div class="ltx_document_title">プログラミング言語 Standard ML 入門 (問題の解答例)</div>
+<div>
+<a href="Ch12.html" title="第 12 章 基本ライブラリの利用法 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">12 </span>基本ライブラリの利用法</span></a><a href="Ch12.S1.html" title="12.1 ライブラリの種類とそのシグネチャの表示法 ‣ 第 12 章 基本ライブラリの利用法 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">12.1 </span>ライブラリの種類とそのシグネチャの表示法</span></a><a href="Ch13.html" title="第 13 章 配列を用いたプログラミング ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">13 </span>配列を用いたプログラミング</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">12.2 </span>Generalストラクチャ</h1>
+
+<div id="Ch12.Thmex3" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 12.3</span></span></h6>
+<div id="Ch12.Thmex3.p1" class="ltx_para">
+<p class="ltx_p">以下の汎用エラー処理関数を定義せよ．
+関数とその引数，さらにエラーの場合に返す値を受け取り，関数を引数に適用すると
+ともに，上記の基本演算のエラーをキャッチしエラーメッセージを表示した後，エ
+ラーの場合の値を返す，</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+    catchAll : (’a -&gt; ’b) -&gt; ’a -&gt; ’b -&gt; ’b
+</pre>
+<p class="ltx_p">たとえば，
+<br class="ltx_break">
+<span class="ltx_tabular">
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">- catchAll (fn (x,y) =&gt; x div y) (1,0) 999;</span></span></span>
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_italic">divide by zero</span></span></span>
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_italic">val it = 999 : int</span></span></span>
+</span> 
+<br class="ltx_break">のように動作する．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+以下にSML#での定義と実行の例を示す。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # fun catchAll f x z =
+         f x handle en =&gt; (print (exnMessage en ^ "\n"); z);
+   val catchAll = fn : [’a, ’b. (’a -&gt; ’b) -&gt; ’a -&gt; ’b -&gt; ’b]
+   # catchAll (op div) (1,0) 999;
+   Div at (interactive):9.12
+   val it = 999 : int
+</pre>
+<p class="ltx_p">（注）Generalストラクチャの0除算例外名は<span class="ltx_text ltx_font_typewriter">divide by zero</span>ではなく<span class="ltx_text ltx_font_typewriter">Div</span>である。
+
+
+</p>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="Ch12.S1.html" title="12.1 ライブラリの種類とそのシグネチャの表示法 ‣ 第 12 章 基本ライブラリの利用法 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">12.1 </span>ライブラリの種類とそのシグネチャの表示法</span></a><a href="Ch13.html" title="第 13 章 配列を用いたプログラミング ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">13 </span>配列を用いたプログラミング</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Nov  6 00:44:26 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+{% endraw %}

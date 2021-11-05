@@ -1,0 +1,391 @@
+---
+layout: default
+permalink: /ja/texts/standard-ml/answers//Ch16.S3.html
+translated: true
+lang: ja
+head: |
+ <!--Generated on Sat Nov  6 00:44:26 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Document created on 2021年11月5日.-->
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="LaTeXML.css" type="text/css">
+ <link rel="stylesheet" href="ltx-book.css" type="text/css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+ <link rel="up" href="Ch16.html" title="第 16 章 データのフォーマッティング ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up up" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="start" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="prev" href="Ch16.S2.html" title="16.2 文字列からのデータの読み込み ‣ 第 16 章 データのフォーマッティング ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="next" href="Ch17.html" title="第 17 章 OSとのインターフェイス ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch16.S2.html" title="16.2 文字列からのデータの読み込み ‣ 第 16 章 データのフォーマッティング ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch12.html" title="第 12 章 基本ライブラリの利用法 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch13.html" title="第 13 章 配列を用いたプログラミング ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch14.html" title="第 14 章 システム時計の利用 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch15.html" title="第 15 章 入出力処理 ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch16.html" title="第 16 章 データのフォーマッティング ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch17.html" title="第 17 章 OSとのインターフェイス ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+---
+{% raw %}
+<div class="ltx_page_main">
+<header class="ltx_page_header"><div class="ltx_document_title">プログラミング言語 Standard ML 入門 (問題の解答例)</div>
+<div>
+<a href="Ch16.html" title="第 16 章 データのフォーマッティング ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">16 </span>データのフォーマッティング</span></a><a href="Ch16.S2.html" title="16.2 文字列からのデータの読み込み ‣ 第 16 章 データのフォーマッティング ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">16.2 </span>文字列からのデータの読み込み</span></a><a href="Ch17.html" title="第 17 章 OSとのインターフェイス ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">17 </span>OSとのインターフェイス</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">16.3 </span>書式付き書き出し処理</h1>
+
+<div id="Ch16.Thmex7" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 16.7</span></span></h6>
+<div id="Ch16.Thmex7.p1" class="ltx_para">
+<p class="ltx_p">上で定義した <span class="ltx_text ltx_font_typewriter">formatData</span> 関数を使って，
+<span class="ltx_text ltx_font_typewriter">string * string * string</span> 型データと <span class="ltx_text ltx_font_typewriter">int * int * int list</span> 型の
+データを受け取り，</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   - printData ("first", "second", "third") [(1,2,3),(4,5,6)];
+        first    second     third
+            1         2         3
+            4         5         6
+</pre>
+<p class="ltx_p">のような形式でプリントする関数 <span class="ltx_text ltx_font_typewriter">printTriple</span> を書け．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span></p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun printTriple (s1, s2, s3) L =
+       let
+         val width = 10
+         fun prS s =
+             print
+              (formatData
+               {kind=STRING, width=SOME width, align=RIGHT} (S s))
+         fun prI i =
+             print
+              (formatData
+               {kind=INT StringCvt.DEC, width=SOME width, align=RIGHT} (I i))
+         fun printLine (i1,i2,i3) = (prI i1; prI i2; prI i3; print "\n")
+       in
+         prS s1;
+         prS s2;
+         prS s3;
+         print "\n";
+         map printLine L
+       end
+</pre>
+</div>
+<div id="Ch16.Thmex8" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 16.8</span></span></h6>
+<div id="Ch16.Thmex8.p1" class="ltx_para">
+<p class="ltx_p">第<a href="Ch16.S2.html" title="16.2 文字列からのデータの読み込み ‣ 第 16 章 データのフォーマッティング ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref"><span class="ltx_text ltx_ref_tag">16.2</span></a>節で定義した <span class="ltx_text ltx_font_typewriter">intScan</span> を利用し，
+与えられた部分文字列の先頭が整数<math id="Ch16.Thmex8.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>の表現であれば <span class="ltx_text ltx_font_typewriter">SOME <math id="Ch16.Thmex8.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math></span> と残りの
+部分文字列を返し，数字表現でなければ <span class="ltx_text ltx_font_typewriter">NONE</span> と与えられた部分文字列その
+ものを返す関数</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   scanInt : substring -&gt; int option * substring
+</pre>
+<p class="ltx_p">を書け．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p2" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span></p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun scanInt s =
+       case intScan s of
+         SOME (i,s) =&gt; (SOME i, s)
+       | NONE =&gt; (NONE, s)
+</pre>
+</div>
+<div id="Ch16.Thmex9" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 16.9</span></span></h6>
+<div id="Ch16.Thmex9.p1" class="ltx_para">
+<p class="ltx_p">以上の関数定義をまとめて，以下のシグネチャを持つストラクチャ<span class="ltx_text ltx_font_typewriter">Format</span> を構築せよ．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   signature FORMAT =
+   sig datatype kind =  INT of StringCvt.radix
+                      | REAL of StringCvt.realfmt
+                      | STRING
+                      | BOOL
+       datatype align = LEFT | RIGHT
+       datatype format =
+                LITERAL of string
+              | SPEC of {kind:kind,width:int option,align:align}
+       datatype argument = I of int
+                         | R of real
+                         | S of string
+                         | B of bool
+       exception formatError
+       val format : string -&gt; argument list -&gt; string
+       val printf : string -&gt; argument list -&gt; unit
+   end
+</pre>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">ただし，</span><span class="ltx_text ltx_font_typewriter">printf</span><span class="ltx_text ltx_font_italic"> 関数は，</span><span class="ltx_text ltx_font_typewriter">format</span><span class="ltx_text ltx_font_italic"> 関数を使ってフォーマットした文字
+列を標準出力に印字する関数である．</span></p>
+</div>
+</div>
+<div id="p3" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span></p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   structure Format : FORMAT =
+   struct
+     exception formatError
+     structure S = Substring
+     datatype kind =  INT of StringCvt.radix
+                    | REAL of StringCvt.realfmt
+                    | STRING
+                    | BOOL
+     datatype align = LEFT | RIGHT
+     datatype format =
+              LITERAL of string
+            | SPEC of {kind:kind,width:int option,align:align}
+     datatype argument = I of int
+                       | R of real
+                       | S of string
+                       | B of bool
+     fun formatData {kind,width,align} data=
+         let val body =
+                 case (kind,data) of
+                   (INT radix,I i) =&gt; Int.fmt radix i
+                 | (REAL fmt,R r) =&gt; Real.fmt fmt r
+                 | (STRING,S s) =&gt; s
+                 | (BOOL,B b) =&gt; Bool.toString b
+                 | _ =&gt; raise formatError
+         in case width of
+              NONE =&gt; body
+            | SOME w =&gt; (case align of
+                           LEFT =&gt; StringCvt.padRight #" " w body
+                         | RIGHT =&gt; StringCvt.padLeft #" " w body)
+         end
+     fun scanInt s =
+         let val r= Int.scan StringCvt.DEC S.getc s
+         in case r of NONE =&gt; (NONE,s)
+                    | SOME(n,s) =&gt; (SOME n,s)
+         end
+     fun oneFormat s =
+         let val s = S.triml 1 s
+         in if S.isPrefix "%" s then (LITERAL "%",S.triml 1 s)
+            else
+              let val (a,s) = if S.isPrefix "-" s
+                              then (LEFT,S.triml 1 s)
+                              else (RIGHT,s)
+                  val (w,s) = scanInt s
+                  val (c,s) = case S.getc s of NONE =&gt; raise formatError
+                                             | SOME s  =&gt; s
+              in (SPEC {width=w,align=a,
+                        kind=case c of
+                               #"d" =&gt; INT StringCvt.DEC
+                             | #"s" =&gt; STRING
+                             | #"f" =&gt; REAL (StringCvt.FIX NONE)
+                             | #"e" =&gt; REAL (StringCvt.SCI NONE)
+                             | #"g" =&gt; REAL (StringCvt.GEN NONE)
+                             | _ =&gt; raise formatError},
+                  s)
+              end
+         end
+     fun parse s =
+         let
+           val (s1,s) = StringCvt.splitl (fn c =&gt; c &lt;&gt; #"%") S.getc s
+           val prefix = if s1 = "" then nil
+                        else [LITERAL s1]
+         in if S.isEmpty s then prefix
+            else let val (f,s) = oneFormat s
+                     val L = parse s
+                 in prefix@(f::L)
+                 end
+         end
+     fun format s L =
+         let val FL = parse (S.full s)
+             fun splice (h::t) L =
+                 (case h of
+                    LITERAL s =&gt; s ^ (splice t L)
+                  | SPEC s =&gt; (formatData s (List.hd L) ^ (splice t (List.tl L))))
+               | splice nil l = ""
+         in
+           (splice FL L)
+         end
+     fun printf s L = print (format s L)
+   end
+</pre>
+</div>
+<div id="Ch16.Thmex10" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 16.10</span></span></h6>
+<div id="Ch16.Thmex10.p1" class="ltx_para">
+<p class="ltx_p">日時を表す書式を以下のように定める．</p>
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">%H</span></td>
+<td class="ltx_td ltx_align_left">24時間制の時間（00から23）</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">%I</span></td>
+<td class="ltx_td ltx_align_left">12時間制の時間（01から12）</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">%k</span></td>
+<td class="ltx_td ltx_align_left">24時間制の時間（0から23）</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">%M</span></td>
+<td class="ltx_td ltx_align_left">分</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">%S</span></td>
+<td class="ltx_td ltx_align_left">秒</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">%d</span></td>
+<td class="ltx_td ltx_align_left">日（01から31)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">%m</span></td>
+<td class="ltx_td ltx_align_left">月（01から12）</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">%Y</span></td>
+<td class="ltx_td ltx_align_left">年</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">format</span> の定義を参考にして，日時に関する以下の埋め込み書式指定を含む
+文字列を受け取り，日時をプリントする関数
+</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   showTime : string -&gt; unit
+</pre>
+<p class="ltx_p">を書け．
+たとえば</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   - showTime "The time is %H hour %M minutes on %m/%d/%Y.\n";
+   The time is 21 hour 04 minutes on 9/9/2000.
+   val it = () : unit
+</pre>
+<p class="ltx_p">のように動作をする．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p4" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span></p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   structure ShowTime =
+   struct
+   local
+     structure S = Substring
+   in
+     exception FormatError
+     fun dH t = StringCvt.padLeft #"0" 2 (Int.toString (Date.hour (Date.fromTimeLocal t)))
+     fun dI t =
+         let val h = Date.hour (Date.fromTimeLocal t)
+             val i = if h = 0 then 12 else if h &gt; 12 then h - 12 else h
+         in StringCvt.padLeft #"0" 2 (Int.toString i)
+         end
+     fun dk t = Int.toString (Date.hour (Date.fromTimeLocal t))
+     fun dM t = Int.toString (Date.minute (Date.fromTimeLocal t))
+     fun dS t = Int.toString (Date.second (Date.fromTimeLocal t))
+     fun dd t= StringCvt.padLeft #"0" 2
+                 (Int.toString (Date.day (Date.fromTimeLocal t)))
+     fun dm t = case Date.month (Date.fromTimeLocal t) of
+                  Date.Jan =&gt; "01"
+                | Date.Feb =&gt; "02"
+                | Date.Mar =&gt; "03"
+                | Date.Apr =&gt; "04"
+                | Date.May =&gt; "05"
+                | Date.Jun =&gt; "06"
+                | Date.Jul =&gt; "07"
+                | Date.Aug =&gt; "08"
+                | Date.Sep =&gt; "09"
+                | Date.Oct =&gt; "10"
+                | Date.Nov =&gt; "11"
+                | Date.Dec =&gt; "12"
+     fun dY t = Int.toString (Date.year (Date.fromTimeLocal t))
+     datatype spec = EMBED of Time.time -&gt; string | LITERAL of string
+     fun oneFormat s =
+         let val s = S.triml 1 s
+         in if S.isPrefix "%" s then (LITERAL "%",S.triml 1 s)
+            else
+              let
+                val (c,s) = case S.getc s of NONE =&gt; raise FormatError
+                                           | SOME s  =&gt; s
+              in (EMBED (case c of
+                          #"H" =&gt; dH
+                        | #"I" =&gt; dI
+                        | #"k" =&gt; dk
+                        | #"M" =&gt; dM
+                        | #"S" =&gt; dS
+                        | #"d" =&gt; dd
+                        | #"m" =&gt; dm
+                        | #"Y" =&gt; dY
+                        | _ =&gt; raise FormatError),
+                  s)
+              end
+         end
+     fun parse s =
+         let
+           val (s1,s) = StringCvt.splitl (fn c =&gt; c &lt;&gt; #"%") S.getc s
+           val prefix = if s1 = "" then nil
+                        else [LITERAL s1]
+         in if S.isEmpty s then prefix
+            else let val (f,s) = oneFormat s
+                     val L = parse s
+                 in prefix@(f::L)
+                 end
+         end
+     fun format s tm =
+         let val FL = parse (S.full s)
+             fun splice (h::t) =
+                 (case h of
+                    LITERAL s =&gt; s ^ (splice t)
+                  | EMBED f =&gt; f tm ^ (splice t))
+               | splice nil = ""
+         in
+           splice FL
+         end
+     fun showTime s =
+         print (format s (Time.now()))
+   end
+   end
+</pre>
+</div>
+<div id="Ch16.Thmex11" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 16.11</span></span></h6>
+<div id="Ch16.Thmex11.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">Format</span> ストラクチャを用いて，第<a href="Ch13.html" title="第 13 章 配列を用いたプログラミング ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref"><span class="ltx_text ltx_ref_tag">13</span></a>章で作成したソート関
+数の評価プログラムの印字処理部分を書き直せ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p5" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+以下に変更部分の例を示す。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun evalSort L =
+       let
+         val L’ = map checkTime L
+         val av = (foldr (fn ((_,_,x),y) =&gt; y+x) 0.0 L’)/(Real.fromInt (List.length L’))
+         fun printLine (n,a,c) =
+             Format.printf  "%20d%20d%20f\n" [Format.I n, Format.I a, Format.R c]
+        in
+          (Format.printf
+             "%20s%20s%20s\n"
+              [Format.S "array size", Format.S "milli-sec.", Format.S "micro s./nlogn"];
+           map printLine L’;
+           print "------------------------------------------------------------\n";
+           Format.printf "%40s%20f\n" [Format.S "avarage", Format.R av]
+         )
+       end
+</pre>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="Ch16.S2.html" title="16.2 文字列からのデータの読み込み ‣ 第 16 章 データのフォーマッティング ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">16.2 </span>文字列からのデータの読み込み</span></a><a href="Ch17.html" title="第 17 章 OSとのインターフェイス ‣ Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">17 </span>OSとのインターフェイス</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Nov  6 00:44:26 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+{% endraw %}

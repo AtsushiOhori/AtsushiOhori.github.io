@@ -1,0 +1,148 @@
+---
+layout: default
+permalink: /ja/texts/standard-ml/answers//Ch7.S5.html
+translated: true
+lang: ja
+head: |
+ <!--Generated on Sat Nov  6 00:44:26 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Document created on 2021年11月5日.-->
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="LaTeXML.css" type="text/css">
+ <link rel="stylesheet" href="ltx-book.css" type="text/css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+ <link rel="up" href="Ch7.html" title="第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up up" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="start" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="prev" href="Ch7.S4.html" title="7.4 システム定義のデータ型 ‣ 第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="next" href="Ch7.S6.html" title="7.6 無限なデータ構造の定義と利用 ‣ 第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch7.S1.html" title="7.1 datatype文によるデータ型の定義 ‣ 第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch7.S2.html" title="7.2 パターンマッチングを用いたデータ構造の利用 ‣ 第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch7.S3.html" title="7.3 パターンマッチングの拡張機能 ‣ 第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch7.S4.html" title="7.4 システム定義のデータ型 ‣ 第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch7.S6.html" title="7.6 無限なデータ構造の定義と利用 ‣ 第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch1.html" title="第 1 章 MLプログラミングの基本 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch2.html" title="第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch3.html" title="第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch4.html" title="第 4 章 MLの基本データ型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch5.html" title="第 5 章 レコード ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch6.html" title="第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch7.html" title="第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch8.html" title="第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch9.html" title="第 9 章 例外処理 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch10.html" title="第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+---
+{% raw %}
+<div class="ltx_page_main">
+<header class="ltx_page_header"><div class="ltx_document_title">プログラミング言語 Standard ML 入門 (問題の解答例)</div>
+<div>
+<a href="Ch7.html" title="第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>データ構造の定義と利用</span></a><a href="Ch7.S4.html" title="7.4 システム定義のデータ型 ‣ 第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.4 </span>システム定義のデータ型</span></a><a href="Ch7.S6.html" title="7.6 無限なデータ構造の定義と利用 ‣ 第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.6 </span>無限なデータ構造の定義と利用</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">7.5 </span>データ型を使用したプログラミング例</h1>
+
+<div id="Ch7.Thmex10" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 7.10</span></span></h6>
+<div id="Ch7.Thmex10.p1" class="ltx_para">
+<p class="ltx_p">キーと値の組のリストを受け取り，それらを含む辞書を作成する関数</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+    val makeDict : (string, ’a) list -&gt; ’a dict
+</pre>
+<p class="ltx_p">を定義し，それを使って辞書を作成し，上記関数のテストを行え．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+<span class="ltx_text ltx_font_typewriter">makeDict</span>関数の定義例は以下の通り。各関数のテストは省略。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun makeDict L =
+      foldr
+        (fn ((key, v), dict) =&gt; enter(key, v, dict))
+        Empty
+        L
+</pre>
+</div>
+<div id="Ch7.Thmex11" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 7.11</span></span></h6>
+<div id="Ch7.Thmex11.p1" class="ltx_para">
+<p class="ltx_p">上記の例はキーを <span class="ltx_text ltx_font_typewriter">string</span> 型に制限されている．
+この制限を取り除く1つの方法は，
+<span class="ltx_text ltx_font_typewriter">string</span> 型の比較演算を直接含む <span class="ltx_text ltx_font_typewriter">enter</span> と <span class="ltx_text ltx_font_typewriter">lookUp</span> 関数を定義する
+代わりに，比較関数を引数として受け取り，<span class="ltx_text ltx_font_typewriter">enter</span> と <span class="ltx_text ltx_font_typewriter">lookUp</span> 関数に相当する関
+数を作り出す，以下の型を持つ高階の関数 <span class="ltx_text ltx_font_typewriter">makeEnter</span> と <span class="ltx_text ltx_font_typewriter">makeLookUp</span> を
+定義することである．
+</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   type (’a,’b) dict = (’a * ’b) tree
+   val makeEnter : (’a * ’a -&gt; order) -&gt; ’a * ’b * (’a,’b) dict -&gt; (’a,’b) dict
+   val makeLookUp : (’a * ’a -&gt; order) -&gt; ’a * (’a,’b) dict -&gt; ’b
+</pre>
+<p class="ltx_p">上記の関数を定義し，テストを行え．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p2" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+<span class="ltx_text ltx_font_typewriter">makeEnter</span>の型は、foldlなどと一緒に使うことを考えると、</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   val makeEnter : (’a * ’a -&gt; order) -&gt; (’a * ’b) * (’a,’b) dict -&gt; (’a,’b) dict
+</pre>
+<p class="ltx_p">の方が便利である。
+そこで、この型の関数として定義例を以下に示す。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun makeEnter f ((k, v), Empty) = Node((k,v), Empty, Empty)
+     | makeEnter f ((k, v), dict as Node((k’,v’),L,R)) =
+       (case f (k,k’) of
+           EQUAL =&gt; dict
+         | GREATER =&gt; Node((k’,v’), L, makeEnter f ((k,v), R))
+         | LESS =&gt; Node((k’,v’), makeEnter f ((k,v),L), R))
+   fun makeLookUp f (k, Empty) = NONE
+     | makeLookUp f (k, dict as Node((k’,v’),L,R)) =
+       (case f (k,k’) of
+           EQUAL =&gt; SOME v’
+         | GREATER =&gt; makeLookUp f (k, R)
+         | LESS =&gt; makeLookUp f (k, L))
+</pre>
+</div>
+<div id="Ch7.Thmex12" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 7.12</span></span></h6>
+<div id="Ch7.Thmex12.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">makeEnter</span> と <span class="ltx_text ltx_font_typewriter">makeLookUp</span> を使って，
+<span class="ltx_text ltx_font_typewriter">int</span> 型データをキーとし，<span class="ltx_text ltx_font_typewriter">string</span> 型データを値として持つ
+<span class="ltx_text ltx_font_typewriter">(int,string) dict</span> 型の辞書の操作関数を作成し，
+テストを行え．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p3" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+SML#での定義とテストの例を以下に示す。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # fun enterIntDict x = makeEnter Int.compare x;
+   val enterIntDict = fn : [’a. (int * ’a) * (int * ’a) tree -&gt; (int * ’a) tree]
+   # fun lookUpIntDict x = makeLookUp Int.compare x;
+   val lookUpIntDict = fn : [’a. int * (int * ’a) tree -&gt; ’a option]
+   # val D = foldl enterIntDict Empty [(1,"1"), (2, "2"), (3, "3")];
+   val D =
+     Node
+     ((1, "1"), Empty, Node ((2, "2"), Empty, Node ((..., ...), Empty, Empty)))
+     : (int * string) tree
+   # val items = map (fn x =&gt; lookUpIntDict (x, D)) [1,2,3,4]
+   val items = [SOME "1", SOME "2", SOME "3", NONE] : string option list
+</pre>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="Ch7.S4.html" title="7.4 システム定義のデータ型 ‣ 第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.4 </span>システム定義のデータ型</span></a><a href="Ch7.S6.html" title="7.6 無限なデータ構造の定義と利用 ‣ 第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.6 </span>無限なデータ構造の定義と利用</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Nov  6 00:44:26 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+{% endraw %}

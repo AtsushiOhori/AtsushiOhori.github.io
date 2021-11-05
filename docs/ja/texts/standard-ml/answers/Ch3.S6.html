@@ -1,0 +1,198 @@
+---
+layout: default
+permalink: /ja/texts/standard-ml/answers//Ch3.S6.html
+translated: true
+lang: ja
+head: |
+ <!--Generated on Sat Nov  6 00:44:26 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Document created on 2021年11月5日.-->
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="LaTeXML.css" type="text/css">
+ <link rel="stylesheet" href="ltx-book.css" type="text/css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+ <link rel="up" href="Ch3.html" title="第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up up" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="start" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="prev" href="Ch3.S5.html" title="3.5 多相型の使用の制限 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="next" href="Ch4.html" title="第 4 章 MLの基本データ型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch3.S1.html" title="3.1 型推論と静的型チェック ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch3.S2.html" title="3.2 型の多相性と多相関数 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch3.S3.html" title="3.3 明示的な型宣言 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch3.S4.html" title="3.4 関数名の多重定義 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch3.S5.html" title="3.5 多相型の使用の制限 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch1.html" title="第 1 章 MLプログラミングの基本 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch2.html" title="第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch3.html" title="第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch4.html" title="第 4 章 MLの基本データ型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch5.html" title="第 5 章 レコード ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch6.html" title="第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch7.html" title="第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch8.html" title="第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch9.html" title="第 9 章 例外処理 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch10.html" title="第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+---
+{% raw %}
+<div class="ltx_page_main">
+<header class="ltx_page_header"><div class="ltx_document_title">プログラミング言語 Standard ML 入門 (問題の解答例)</div>
+<div>
+<a href="Ch3.html" title="第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>MLの型システム</span></a><a href="Ch3.S5.html" title="3.5 多相型の使用の制限 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.5 </span>多相型の使用の制限</span></a><a href="Ch4.html" title="第 4 章 MLの基本データ型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>MLの基本データ型</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3.6 </span>等値演算子の型の扱い</h1>
+
+<div id="Ch3.Thmex14" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 3.14</span></span></h6>
+<div id="Ch3.Thmex14.p1" class="ltx_para">
+<p class="ltx_p">以下の各式について型が正しいか判定し，正しければ結果の型を予測せよ．</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">"M" = #"M"</span></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">"ML" = "SML"</span></p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fn x =&gt; (x,x) = (x,x)</span></p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fn (x,f) =&gt;(f (fn x =&gt; x), f x, x = x)</span></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span></p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">"M" = #"M"</span></p>
+</div>
+<div id="I2.i1.p2" class="ltx_para">
+<p class="ltx_p">左辺は<span class="ltx_text ltx_font_typewriter">string</span>型，右辺は<span class="ltx_text ltx_font_typewriter">char</span>型であるから型エラーである．</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">"ML" = "SML"</span></p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # "ML" = "SML";
+   val it = false : bool
+</pre>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fn x =&gt; (x,x) = (x,x)</span></p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # fn x =&gt; (x,x) = (x,x);
+   val it = fn : [’’a .’’a  -&gt; bool]
+</pre>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fn (x,f) =&gt;(f (fn x =&gt; x), f x, x = x)</span></p>
+</div>
+<div id="I2.i4.p2" class="ltx_para">
+<p class="ltx_p">部分式<span class="ltx_text ltx_font_typewriter">f (fn x =&gt; x)</span>から<span class="ltx_text ltx_font_typewriter">f</span>は関数を引数とする関数である．
+したがって，部分式<span class="ltx_text ltx_font_typewriter">f x</span>から<span class="ltx_text ltx_font_typewriter">x</span>も関数である．
+すると，<span class="ltx_text ltx_font_typewriter">x = x</span>は関数同士の比較となり，型エラーとなる．</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="Ch3.Thmex15" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 3.15</span></span></h6>
+<div id="Ch3.Thmex15.p1" class="ltx_para">
+<p class="ltx_p">整数の組を受け取り，それぞれのフィボナッチ数を計算しその組を返す関数
+を定義し，それにメモ関数を適用し，メモ関数が使用可能であることを確かめよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p2" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span></p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # memo;
+   val it = fn : [’’a,’b.(’’a  -&gt; ’b)  -&gt; ’’a  -&gt; ’’a  -&gt; ’b]
+   # fun f (x,y) = (fib x, fib y);
+   val f = fn : int * int  -&gt; int * int
+   # val f = memo f (30,31);
+   val f = fn : int * int  -&gt; int * int
+   # f (30,31);
+   val it = ( 2178309, 832040 ) : int * int
+   # f (31,30);
+   val it = ( 832040, 2178309 ) : int * int
+</pre>
+<p class="ltx_p">を実行すると，<span class="ltx_text ltx_font_typewriter">f (30,31)</span>は瞬時に修了することが確認できる．</p>
+</div>
+<div id="Ch3.Thmex16" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 3.16</span></span></h6>
+<div id="Ch3.Thmex16.p1" class="ltx_para">
+<p class="ltx_p">問<a href="Ch2.S7.html#Ch2.Thmex22" title="問 2.22 ‣ 2.7 関数式 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.22</span></a>における集合を表現する型は
+<span class="ltx_text ltx_font_typewriter">int -&gt; bool</span> のみならず，<span class="ltx_text ltx_font_typewriter">’’a -&gt; bool</span> に一般化でき，したがって，
+問<a href="Ch2.S7.html#Ch2.Thmex22" title="問 2.22 ‣ 2.7 関数式 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.22</span></a>で作成したプログラムは，eqtypeに属する型であれば，
+どのような型の集合としても使用できることを確かめよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p3" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+以下にSML#での例を示す．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # val emptySet = fn x =&gt; false;
+   val emptySet = fn : [’a .’a  -&gt; bool]
+   # fun singleton n = fn x =&gt; x = n;
+   val singleton = fn : [’’a .’’a  -&gt; ’’a  -&gt; bool]
+   # fun member n S = S n;
+   val member = fn : [’a .’a  -&gt; [’b .(’a  -&gt; ’b)  -&gt; ’b]]
+   # fun insert n S = fn x =&gt; x = n orelse S x;
+   val insert = fn : [’’a .’’a  -&gt; (’’a  -&gt; bool)  -&gt; ’’a  -&gt; bool]
+   # fun union S1 S2 = fn x =&gt; S1 x orelse S2 x;
+   val union = fn : [’a .(’a  -&gt; bool)  -&gt; (’a  -&gt; bool)  -&gt; ’a  -&gt; bool]
+   # fun intersection S1 S2 = fn x =&gt; S1 x andalso S2 x;
+   val intersection = fn : [’a .(’a  -&gt; bool)  -&gt; (’a  -&gt; bool)  -&gt; ’a  -&gt; bool]
+   # fun difference S1 S2 = fn x =&gt; S1 x andalso not (S2 x);
+   val difference = fn : [’a .(’a  -&gt; bool)  -&gt; (’a  -&gt; Bool.bool)  -&gt; ’a  -&gt; bool]
+   # singleton (1,2);
+   val it = fn : int * int  -&gt; bool
+   # val S = singleton (1,"1");
+   val S = fn : int * string  -&gt; bool
+   # val S = insert (2,"2") S;
+   val S = fn : int * string  -&gt; bool
+   # member (1,"1") S ;
+   val it = true : bool
+   # member (1,"2") S ;
+   val it = false : bool
+</pre>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="Ch3.S5.html" title="3.5 多相型の使用の制限 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.5 </span>多相型の使用の制限</span></a><a href="Ch4.html" title="第 4 章 MLの基本データ型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>MLの基本データ型</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Nov  6 00:44:26 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+{% endraw %}

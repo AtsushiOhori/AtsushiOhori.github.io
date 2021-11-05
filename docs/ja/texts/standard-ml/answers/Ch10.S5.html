@@ -1,0 +1,263 @@
+---
+layout: default
+permalink: /ja/texts/standard-ml/answers//Ch10.S5.html
+translated: true
+lang: ja
+head: |
+ <!--Generated on Sat Nov  6 00:44:26 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Document created on 2021年11月5日.-->
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="LaTeXML.css" type="text/css">
+ <link rel="stylesheet" href="ltx-book.css" type="text/css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+ <link rel="up" href="Ch10.html" title="第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up up" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="start" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="prev" href="Ch10.S4.html" title="10.4 モジュールを使ったプログラミング例 ‣ 第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="next" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch10.S1.html" title="10.1 Structure文によるモジュールの定義と利用 ‣ 第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch10.S2.html" title="10.2 モジュールのシグネチャの指定 ‣ 第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch10.S4.html" title="10.4 モジュールを使ったプログラミング例 ‣ 第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch1.html" title="第 1 章 MLプログラミングの基本 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch2.html" title="第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch3.html" title="第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch4.html" title="第 4 章 MLの基本データ型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch5.html" title="第 5 章 レコード ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch6.html" title="第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch7.html" title="第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch8.html" title="第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch9.html" title="第 9 章 例外処理 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch10.html" title="第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+---
+{% raw %}
+<div class="ltx_page_main">
+<header class="ltx_page_header"><div class="ltx_document_title">プログラミング言語 Standard ML 入門 (問題の解答例)</div>
+<div>
+<a href="Ch10.html" title="第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10 </span>モジュールシステム</span></a><a href="Ch10.S4.html" title="10.4 モジュールを使ったプログラミング例 ‣ 第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.4 </span>モジュールを使ったプログラミング例</span></a><a href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">II </span>Standard ML基本ライブラリ</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">10.5 </span>functor文を使ったモジューラープログラミング</h1>
+
+<div id="Ch10.Thmex10" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 10.10</span></span></h6>
+<div id="Ch10.Thmex10.p1" class="ltx_para">
+<p class="ltx_p">上記の <span class="ltx_text ltx_font_typewriter">QueueFUN</span> を完成し，それを使って <span class="ltx_text ltx_font_typewriter">STQueue</span> と <span class="ltx_text ltx_font_typewriter">ITQueue</span> を定義せよ．</p>
+</div>
+<div id="Ch10.Thmex10.p2" class="ltx_para">
+<p class="ltx_p">さらに，それらを定義の下で，<span class="ltx_text ltx_font_typewriter">BF</span> ストラクチャおよび
+<span class="ltx_text ltx_font_typewriter">BFI</span> ストラクチャを作成しなおし，</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+    BF.bf (fromPreOrder "1(2(3()())(4()()))(5()())");
+    BFI.bf (fromIntPreOrder "1(2(3()())(4()()))(5()())");
+</pre>
+<p class="ltx_p">などのテストプログラムを実行し，正しく動くことを確かめよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+コード例を以下に示す。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   functor QueueFUN(type ty) :&gt; POLY_QUEUE where type elem = ty =
+   struct
+     exception EmptyQueue
+     type elem = ty
+     type queue = elem list ref * elem list ref
+     fun newQueue () = (ref [],ref []) : queue
+     fun enqueue (i,(a,b))  = a := i :: (!a)
+     fun dequeue (ref [],ref []) = raise EmptyQueue
+       | dequeue (a as ref L, b as ref []) =
+           let val (h::t) = rev L
+           in (a:=nil; b:=t; h)
+           end
+       | dequeue (a,b as ref (h::t)) = (b := t; h)
+   end
+   structure ITQueue = QueueFUN(type ty = int tree)
+   structure STQueue = QueueFUN(type ty = string tree)
+   structure BF = struct
+     structure Q = STQueue
+     fun bf t =
+       let val queue = Q.newQueue()
+           fun loop () =
+               (case Q.dequeue queue of
+                      Node(data,r,l) =&gt; (Q.enqueue (r,queue);
+                                         Q.enqueue (l,queue);
+                                         data::loop())
+                    | Empty =&gt; loop())
+               handle Q.EmptyQueue =&gt; nil
+       in (Q.enqueue (t,queue); loop())
+       end
+   end
+   structure BFI = struct
+     structure Q = ITQueue
+     fun bf t =
+       let val queue = Q.newQueue()
+           fun loop () =
+               (case Q.dequeue queue of
+                      Node(data,l,r) =&gt; (Q.enqueue (l,queue);
+                                         Q.enqueue (r,queue);
+                                         data::loop())
+                    | Empty =&gt; loop())
+               handle Q.EmptyQueue =&gt; nil
+       in (Q.enqueue (t,queue); loop())
+       end
+   end
+</pre>
+<p class="ltx_p">以下は、SML#によるテスト例である。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # val a = BF.bf (fromPreOrder "1(2(3()())(4()()))(5()())");
+   val a = ["1", "2", "5", "3", "4"] : string list
+   # val b = BFI.bf (fromIntPreOrder "1(2(3()())(4()()))(5()())");
+   val b = [1, 2, 5, 3, 4] : int list
+</pre>
+</div>
+<div id="Ch10.Thmex11" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 10.11</span></span></h6>
+<div id="Ch10.Thmex11.p1" class="ltx_para">
+<p class="ltx_p">種々の要素の型に対する待ち行列を作成するもう1つの方法は，
+待ち行列を <span class="ltx_text ltx_font_typewriter">’a queue</span> のような多相型にすることである．
+しかし多相型を持つ値に対する参照は許されない．
+そこで，参照型を使わずに，待ち行列のシグネチャを以下のように変更
+することにする．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   signature FUNQUEUE = sig
+      type ’a queue
+      val newQueue : unit -&gt; ’a queue
+      val enqueue : ’a * ’a queue -&gt; ’ a queue
+      val dequeue : ’a queue -&gt; ’a * ’a queue
+   end
+</pre>
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">IntQueue</span> および <span class="ltx_text ltx_font_typewriter">FastIntQueue</span> を
+それぞれこのシグネチャを持つように変更し，汎用の待ち行列ストラクチャを作
+成せよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p2" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+以下にコード例を示す。このコードでは、<span class="ltx_text ltx_font_typewriter">FUNQUEUE</span>シグネチャに
+<span class="ltx_text ltx_font_typewriter">EmptyQueue</span>例外を追加してある。
+また、汎用の待ち行列名をそれぞれ<span class="ltx_text ltx_font_typewriter">Queue</span>、<span class="ltx_text ltx_font_typewriter">FastQueue</span>とし
+不透明なシグネチャ制約を付してある。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   signature FUNQUEUE = sig
+     type ’a queue
+     exception EmptyQueue
+     val newQueue : unit -&gt; ’a queue
+     val enqueue : ’a * ’a queue -&gt; ’a queue
+     val dequeue : ’a queue -&gt; ’a * ’a queue
+   end
+
+   structure Queue :&gt; FUNQUEUE =
+   struct
+     exception EmptyQueue
+     type ’a queue = ’a list
+     fun newQueue() = nil : ’a queue
+     fun enqueue (item,queue) = item :: queue
+     fun dequeue nil = raise EmptyQueue
+       | dequeue [x] = (x, nil)
+       | dequeue (h::t) =
+         let val (last, t’) =  dequeue t
+         in (last, h::t’)
+         end
+   end
+
+   structure FastQueue :&gt; FUNQUEUE = struct
+     exception EmptyQueue
+     type ’a queue = ’a list * ’a list
+     fun newQueue () = ([],[]) : ’a queue
+     fun enqueue (i,(a,b))  = (i :: a, b)
+     fun dequeue ([],[]) = raise EmptyQueue
+       | dequeue (L, []) =
+           let
+               val (h::t) = rev L
+           in
+              (h, ([], t))
+           end
+      | dequeue (a,h::t) = (h, (a,t))
+   end
+</pre>
+<p class="ltx_p">以下は、SML#によるテスト例である。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # val q = Queue.newQueue() : int Queue.queue;
+   val q = _ : int Queue.queue
+   # val q = Queue.enqueue(1, q);
+   val q = _ : int Queue.queue
+   # val q = Queue.enqueue(2, q);
+   val q = _ : int Queue.queue
+   # val q = Queue.enqueue(3, q);
+   val q = _ : int Queue.queue
+   # val (a,q) = Queue.dequeue q;
+   val a = 1 : int
+   val q = _ : int Queue.queue
+   # val (b,q) = Queue.dequeue q;
+   val b = 2 : int
+   val q = _ : int Queue.queue
+   # val (c,q) = Queue.dequeue q;
+   val c = 3 : int
+   val q = _ : int Queue.queue
+   # val q’ = FastQueue.newQueue() : int FastQueue.queue;
+   val q’ = _ : int FastQueue.queue
+   # val q’ = FastQueue.enqueue(4, q’);
+   val q’ = _ : int FastQueue.queue
+   # val q’ = FastQueue.enqueue(5, q’);
+   val q’ = _ : int FastQueue.queue
+   # val q’ = FastQueue.enqueue(6, q’);
+   val q’ = _ : int FastQueue.queue
+   # val (d,q’) = FastQueue.dequeue q’;
+   val d = 4 : int
+   val q’ = _ : int FastQueue.queue
+   # val (e,q’) = FastQueue.dequeue q’;
+   val e = 5 : int
+   val q’ = _ : int FastQueue.queue
+   # val (f,q’) = FastQueue.dequeue q’;
+   val f = 6 : int
+   val q’ = _ : int FastQueue.queue
+</pre>
+</div>
+<div id="Ch10.Thmex12" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 10.12</span></span></h6>
+<div id="Ch10.Thmex12.p1" class="ltx_para">
+<p class="ltx_p">入出力バッファを生成するファンクタの定義を，
+<span class="ltx_text ltx_font_typewriter">FUNQUEUE</span> シグネチャを持つストラクチャを受け取り
+<span class="ltx_text ltx_font_typewriter">BUFFER</span> シグネチャを持つストラクチャを生成するように変更せよ．
+<span class="ltx_text ltx_font_italic">
+</span></p>
+</div>
+</div>
+<div id="p3" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+以下にコード例を示す。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   functor BufferFUN(structure FQueue : FUNQUEUE )
+           :&gt; BUFFER =
+   struct
+     exception EndOfBuffer
+     type channel = char FQueue.queue ref
+     fun openBuffer () = ref (FQueue.newQueue()) : channel
+     fun input ch =
+        let
+          val (out, queue) = (FQueue.dequeue (!ch))
+        in
+          (ch := queue; out)
+        end
+        handle FQueue.EmptyQueue =&gt; raise EndOfBuffer
+     fun output(ch, c) = ch := FQueue.enqueue (c, !ch)
+   end
+</pre>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="Ch10.S4.html" title="10.4 モジュールを使ったプログラミング例 ‣ 第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.4 </span>モジュールを使ったプログラミング例</span></a><a href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">II </span>Standard ML基本ライブラリ</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Nov  6 00:44:26 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+{% endraw %}

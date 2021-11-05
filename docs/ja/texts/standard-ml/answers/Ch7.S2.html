@@ -1,0 +1,445 @@
+---
+layout: default
+permalink: /ja/texts/standard-ml/answers//Ch7.S2.html
+translated: true
+lang: ja
+head: |
+ <!--Generated on Sat Nov  6 00:44:26 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Document created on 2021年11月5日.-->
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="LaTeXML.css" type="text/css">
+ <link rel="stylesheet" href="ltx-book.css" type="text/css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+ <link rel="up" href="Ch7.html" title="第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up up" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="start" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="prev" href="Ch7.S1.html" title="7.1 datatype文によるデータ型の定義 ‣ 第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="next" href="Ch7.S3.html" title="7.3 パターンマッチングの拡張機能 ‣ 第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch7.S1.html" title="7.1 datatype文によるデータ型の定義 ‣ 第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch7.S3.html" title="7.3 パターンマッチングの拡張機能 ‣ 第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch7.S4.html" title="7.4 システム定義のデータ型 ‣ 第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch7.S5.html" title="7.5 データ型を使用したプログラミング例 ‣ 第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch7.S6.html" title="7.6 無限なデータ構造の定義と利用 ‣ 第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch1.html" title="第 1 章 MLプログラミングの基本 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch2.html" title="第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch3.html" title="第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch4.html" title="第 4 章 MLの基本データ型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch5.html" title="第 5 章 レコード ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch6.html" title="第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch7.html" title="第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch8.html" title="第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch9.html" title="第 9 章 例外処理 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch10.html" title="第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+---
+{% raw %}
+<div class="ltx_page_main">
+<header class="ltx_page_header"><div class="ltx_document_title">プログラミング言語 Standard ML 入門 (問題の解答例)</div>
+<div>
+<a href="Ch7.html" title="第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>データ構造の定義と利用</span></a><a href="Ch7.S1.html" title="7.1 datatype文によるデータ型の定義 ‣ 第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.1 </span>datatype文によるデータ型の定義</span></a><a href="Ch7.S3.html" title="7.3 パターンマッチングの拡張機能 ‣ 第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.3 </span>パターンマッチングの拡張機能</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">7.2 </span>パターンマッチングを用いたデータ構造の利用</h1>
+
+<div id="Ch7.Thmex5" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 7.5</span></span></h6>
+<div id="Ch7.Thmex5.p1" class="ltx_para">
+<p class="ltx_p">2分木に対する以下の各関数を定義せよ．</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">ノードの総数を求める関数 <span class="ltx_text ltx_font_typewriter">nodes</span>．</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">型が <span class="ltx_text ltx_font_typewriter">int tree</span> である木を対象とし，
+ノードの値の総和を求める関数 <span class="ltx_text ltx_font_typewriter">sumTree</span>．</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">引数で与えられた関数を木の各ノードのデータに適用して得られる新しい
+木を作る関数<span class="ltx_text ltx_font_typewriter">mapTree</span>．</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">string tree</span> 型データを，前節で解説した
+post-order表現，およびin-order表現に変換する以下の各関数．
+<br class="ltx_break">
+<span class="ltx_tabular">
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">toPostOrder</span></span>
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">: string tree </span><span class="ltx_text ltx_font_typewriter">-&gt;</span><span class="ltx_text ltx_font_typewriter"> string</span></span></span>
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">toInOrder</span></span>
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">: string tree </span><span class="ltx_text ltx_font_typewriter">-&gt;</span><span class="ltx_text ltx_font_typewriter"> string</span></span></span>
+</span> 
+<br class="ltx_break">文字列の形式は，以前同様とする．
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span></p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun nodes Empty = 0
+     | nodes (Node(_, L, R)) = 1 + nodes L + nodes R
+
+   fun sumTree Empty = 0
+     | sumTree (Node(n, L, R)) = n + sumTree L + sumTree R
+
+   fun mapTree f Empty = Empty
+     | mapTree f (Node(x, L, R)) = Node(f x, mapTree f L, mapTree f R)
+
+   fun toPostOrder Empty = ""
+     | toPostOrder (Node(a,b,c)) =
+         "(" ^ toPostOrder b ^ ")"
+       ^ "(" ^ toPostOrder c ^ ")"
+       ^  a
+
+   fun toInOrder Empty = ""
+     | toInOrder (Node(a,b,c)) =
+         "(" ^ toInOrder b ^ ")"
+       ^ a
+       ^ "(" ^ toInOrder c ^ ")"
+</pre>
+</div>
+<div id="Ch7.Thmex6" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 7.6</span></span></h6>
+<div id="Ch7.Thmex6.p1" class="ltx_para">
+<p class="ltx_p">本問では
+<span class="ltx_text ltx_font_typewriter">string tree</span>型データとpre-order，in-order，post-orderの各文字列表
+現との変換処理を，以下の方針に従い，<a href="Ch7.S1.html" title="7.1 datatype文によるデータ型の定義 ‣ 第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7.1</span></a>節で定義
+した多相型の<span class="ltx_text ltx_font_typewriter">’a newTree</span>型に一般化することを考える．</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">’a newTree</span>型の文字列表現の生成には，
+<span class="ltx_text ltx_font_typewriter">’a</span>型の文字列表現の生成が必要である．
+そこで，
+木の文字列表現生成関数を，
+<span class="ltx_text ltx_font_typewriter">’a -&gt; string</span>型の関数を引数として取る高階関数とする．
+文字列表現からの復元関数も同様に，
+<span class="ltx_text ltx_font_typewriter">string -&gt; ’a</span>型の関数を引数として取る高階関数とする．</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">string tree</span>の場合，
+‘<span class="ltx_text ltx_font_typewriter">(</span>’と‘<span class="ltx_text ltx_font_typewriter">)</span>’がノードの値に含まれないと仮定し，
+これらを，文字列表現における部分木の区切り記号として用いた．
+しかし，たとえば<span class="ltx_text ltx_font_typewriter">int * int</span>型のデータを考えれば明らかなよう
+に，一般にこの仮定は成立しない．
+区切り文字は，可能な限り，種々の文字列表現に現れないものを選ぶ必要がある．
+ここでは，文字列定数
+<code class="ltx_verbatim ltx_font_typewriter">"\000"</code>
+と
+<code class="ltx_verbatim ltx_font_typewriter">"\001"</code>
+の2つを利用することとする．
+さらに，特別な型を処理したい場合に備え，
+変数</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   val lp = "\000"
+   val rp = "\001"
+</pre>
+<p class="ltx_p">を定義し，プログラムではこれらの変数を使用することとする．</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">’a newTree</span>では，子ノードが存在しないことを表現する必要が
+ある．
+種々の表現が可能であるが，<span class="ltx_text ltx_font_typewriter">string tree</span>の場合の関数の再利用性
+などを考慮し，子ノードが存在しないことを，
+<span class="ltx_text ltx_font_typewriter">string tree</span>の場合の空の木の表現<code class="ltx_verbatim ltx_font_typewriter">"()"</code>に対応させ，
+文字列<code class="ltx_verbatim ltx_font_typewriter">"\000\001"</code>で表すことにする．</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">以上の方針に従い，文字列表現への変換とその逆変換を行う以下の関数を定義せよ．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   val newTreeToPreOrder : (’a -&gt; string) -&gt; ’a newTree -&gt; string
+   val newTreeToInOrder : (’a -&gt; string) -&gt; ’a newTree -&gt; string
+   val newTreeToPostOrder : (’a -&gt; string) -&gt; ’a newTree -&gt; string
+   val preOrderToNewTree : (string -&gt; ’a) -&gt; string -&gt; ’a newTree
+   val inOrderToNewTree : (string -&gt; ’a) -&gt; string -&gt; ’a newTree
+   val postOrderToNewTree : (string -&gt; ’a) -&gt; string -&gt; ’a newTree
+</pre>
+<p class="ltx_p">さらに，<span class="ltx_text ltx_font_typewriter">int * int</span>型と文字列との変換関数を定義し，
+<span class="ltx_text ltx_font_typewriter">(int * int) newTree</span>型に対して，上記の各関数のテストを行え．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p2" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   datatype ’a newTree
+     = Leaf of ’a
+     | Node of ’a * ’a newTree * ’a newTree
+     | NodeL of ’a * ’a newTree
+     | NodeR of ’a * ’a newTree
+
+   val lp = "\000"
+   val rp = "\001"
+   val LP = #"\000"
+   val RP = #"\001"
+
+   fun searchLP s p =
+       if substring(s,p,1) = lp then p
+       else searchLP s (p+1)
+
+   fun searchRP s p n =
+       if substring(s,p,1) = lp then searchRP s (p+1) (n+1)
+       else if substring(s,p,1) = rp then
+         if n=0 then p else searchRP s (p+1) (n - 1)
+       else searchRP s (p+1) n
+
+   fun decompose s =
+      let val lp1 = searchLP s 0
+          val rp1 = searchRP s (lp1+1) 0
+          val lp2 = searchLP s  rp1
+          val rp2 = searchRP s (lp2+1) 0
+      in (substring (s,0,lp1),
+          substring (s,lp1+1,rp1-lp1 -1),
+          substring (s,lp2+1,rp2 - lp2-1))
+      end
+
+   fun decomposeIn s =
+      let val lp1 = searchLP s 0
+          val rp1 = searchRP s (lp1+1) 0
+          val lp2 = searchLP s  rp1
+          val rp2 = searchRP s (lp2+1) 0
+      in (substring (s, rp1+1, lp2 - rp1 - 1),
+          substring (s, lp1+1, rp1 - lp1 -1),
+          substring (s, lp2+1, rp2 - lp2 - 1))
+      end
+
+   fun decomposePost s =
+      let val lp1 = searchLP s 0
+          val rp1 = searchRP s (lp1+1) 0
+          val lp2 = searchLP s  rp1
+          val rp2 = searchRP s (lp2+1) 0
+      in (substring (s,rp2+1,size s - rp2 - 1),
+          substring (s,lp1+1,rp1-lp1 -1),
+          substring (s,lp2+1,rp2 - lp2-1))
+      end
+
+   fun newTreeToPreOrder toString t =
+       let
+         val preOrder = newTreeToPreOrder toString
+       in
+         case t of
+           Leaf v =&gt; toString v ^ lp ^ rp ^ lp ^ rp
+         | Node(v, L, R) =&gt; toString v ^ lp ^ preOrder L ^ rp ^ lp ^ preOrder R ^ rp
+         | NodeL(v, L) =&gt; toString v ^ lp ^ preOrder L ^ rp ^ lp ^ rp
+         | NodeR(v, R) =&gt; toString v ^ lp ^ rp ^ lp ^ preOrder R ^ rp
+       end
+
+   fun newTreeToInOrder toString t =
+       let
+         val inOrder = newTreeToInOrder toString
+       in
+         case t of
+           Leaf v =&gt; lp ^ rp ^ toString v ^ lp ^ rp
+         | Node(v, L, R) =&gt; lp ^ inOrder L ^ rp ^ toString v ^ lp ^ inOrder R ^ rp
+         | NodeL(v, L) =&gt; lp ^ inOrder L ^ rp ^ toString v ^ lp ^ rp
+         | NodeR(v, R) =&gt; lp ^ rp ^ toString v ^ lp ^ inOrder R ^ rp
+       end
+
+   fun newTreeToPostOrder toString t =
+       let
+         val postOrder = newTreeToPostOrder toString
+       in
+         case t of
+           Leaf v =&gt; lp ^ rp ^ lp ^ rp ^ toString v
+         | Node(v, L, R) =&gt; lp ^ postOrder L ^ rp ^ lp ^ postOrder R ^ rp ^ toString v
+         | NodeL(v, L) =&gt; lp ^ postOrder L ^ rp ^ lp ^ rp ^ toString v
+         | NodeR(v, R) =&gt; lp ^ rp ^ lp ^ postOrder R ^ rp ^ toString v
+       end
+
+   fun toNewTree decomp fromString s =
+       let
+          val (root,left,right) = decomp s
+          val toTree = toNewTree decomp fromString
+       in
+         case (left, right) of
+           ("","") =&gt; Leaf (fromString root)
+         | (_, "") =&gt; NodeL (fromString root, toTree left)
+         | ("",_) =&gt; NodeR (fromString root, toTree right)
+         | _ =&gt; Node (fromString root, toTree left, toTree right)
+       end
+
+   fun preOrderToNewTree fromString s = toNewTree decompose fromString s
+   fun inOrderToNewTree fromString s = toNewTree decomposeIn fromString s
+   fun postOrderToNewTree fromString s = toNewTree decomposePost fromString s
+</pre>
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">int * int</span>型に対する処理関の定義例。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun intIntToString (x : int * int) = Dynamic.format x
+   fun stringToIntInt s =
+       let
+         val ss = Substring.full s
+         val (x,y) = Substring.splitl (fn x =&gt; x &lt;&gt; #",") ss
+         val x = Substring.dropl (fn x =&gt; x = #"(") x
+         val x = Substring.string (Substring.takel Char.isDigit x)
+         val y = Substring.dropl (fn x =&gt; x = #"," orelse Char.isSpace x) y
+         val y = Substring.string (Substring.takel Char.isDigit y)
+         val i1 = valOf (Int.fromString x)
+         val i2 = valOf (Int.fromString y)
+       in
+         (i1,i2)
+       end
+
+   fun intIntNewTreeToPreOrder t = newTreeToPreOrder intIntToString t
+   fun intIntNewTreeToInOrder t = newTreeToInOrder intIntToString t
+   fun intIntNewTreeToPostOrder t = newTreeToPostOrder intIntToString t
+
+   fun preOrderToIntIntNewTree s = preOrderToNewTree stringToIntInt s
+   fun inOrderToIntIntNewTree s = inOrderToNewTree stringToIntInt s
+   fun postOrderToIntIntNewTree s = postOrderToNewTree stringToIntInt s
+</pre>
+<p class="ltx_p">以下は<span class="ltx_text ltx_font_typewriter">(int * int) newTree</span>に対するSML#でのテスト例である。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # val T = Node((1,2), Leaf (2,3), NodeR((3,4), Leaf (4,5)));
+   val T =
+     Node ((1, 2), Leaf (2, 3), NodeR ((3, 4), Leaf (4, 5))) : (int * int) newTree
+   # val preOrderOfT = intIntNewTreeToPreOrder T
+   # val inOrderOfT = intIntNewTreeToInOrder T;
+   val preOrderOfT =
+     "(1, 2)\^@(2, 3)\^@\^A\^@\^A\^A\^@(3, 4)\^@\^A\^@(4, 5)\^@\^A\^@\^A\^A\^A"
+     : string
+   # val inOrderOfT = intIntNewTreeToInOrder T;
+   val inOrderOfT =
+     "\^@\^@\^A(2, 3)\^@\^A\^A(1, 2)\^@\^@\^A(3, 4)\^@\^@\^A(4, 5)\^@\^A\^A\^A"
+     : string
+   # val postOrderOfT = intIntNewTreeToPostOrder T;
+   val postOrderOfT =
+     "\^@\^@\^A\^@\^A(2, 3)\^A\^@\^@\^A\^@\^@\^A\^@\^A(4, 5)\^A(3, 4)\^A(1, 2)"
+     : string
+   # val T1 = preOrderToIntIntNewTree preOrderOfT;
+   val T1 =
+     Node ((1, 2), Leaf (2, 3), NodeR ((3, 4), Leaf (4, 5))) : (int * int) newTree
+   # val T2 = inOrderToIntIntNewTree inOrderOfT;
+   val T2 =
+     Node ((1, 2), Leaf (2, 3), NodeR ((3, 4), Leaf (4, 5))) : (int * int) newTree
+   # val T3 = postOrderToIntIntNewTree postOrderOfT;
+   val T3 =
+     Node ((1, 2), Leaf (2, 3), NodeR ((3, 4), Leaf (4, 5))) : (int * int) newTree
+</pre>
+</div>
+<div id="Ch7.Thmex7" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 7.7</span></span></h6>
+<div id="Ch7.Thmex7.p1" class="ltx_para">
+<p class="ltx_p">リストデータを処理するさまざまな関数は，高階関数 <span class="ltx_text ltx_font_typewriter">foldr</span> を使って
+簡単に定義できた．
+2分木に対しても，<span class="ltx_text ltx_font_typewriter">foldr</span> に対応する高階関数があると便利である．
+<span class="ltx_text ltx_font_typewriter">’a tree</span> を処理する汎用の高階関数 <span class="ltx_text ltx_font_typewriter">treeFold</span> を書いてみよう．</p>
+</div>
+<div id="Ch7.Thmex7.p2" class="ltx_para">
+<p class="ltx_p">まず <span class="ltx_text ltx_font_typewriter">treeFold</span> の取るべき引数を考えてみよう．
+<span class="ltx_text ltx_font_typewriter">foldr</span> の場合との対応から，以下の引数が必要であると推定できる．</p>
+<ol id="I3" class="ltx_enumerate">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p">変換の対象とする木 <span class="ltx_text ltx_font_typewriter">t</span>．</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p">木が <span class="ltx_text ltx_font_typewriter">Empty</span> のときの値 <span class="ltx_text ltx_font_typewriter">z</span>．</p>
+</div>
+</li>
+<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<p class="ltx_p">左部分木<math id="I3.i3.p1.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>と右部分木<math id="I3.i3.p1.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>をそれぞれ <span class="ltx_text ltx_font_typewriter">treeFold</span> した結果とノードのデー
+タ<math id="I3.i3.p1.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>から，木 <span class="ltx_text ltx_font_typewriter">Node(<math id="I3.i3.p1.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>,<math id="I3.i3.p1.m5" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>,<math id="I3.i3.p1.m6" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>)</span> の結果を計算する関数 <span class="ltx_text ltx_font_typewriter">f</span>．</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="Ch7.Thmex7.p3" class="ltx_para">
+<p class="ltx_p">処理の対象となる木の型を <span class="ltx_text ltx_font_typewriter">’a tree</span> とし，結果の型を <span class="ltx_text ltx_font_typewriter">’b</span>
+とす
+る．
+すると引数 <span class="ltx_text ltx_font_typewriter">z</span> の型は <span class="ltx_text ltx_font_typewriter">’b</span> であるはずである．
+変換関数 <span class="ltx_text ltx_font_typewriter">f</span> は，木構成子 <span class="ltx_text ltx_font_typewriter">Node</span> の型と対応させて，<span class="ltx_text ltx_font_typewriter">’a * ’b
+* ’b -&gt; ’b</span> の型を持つ関数と定義すると，<span class="ltx_text ltx_font_typewriter">treeFold</span> を使って種々
+の木変換関数を定義する上で都合がよい．
+以上より <span class="ltx_text ltx_font_typewriter">treeFold</span> は以下のような関数として定義できる．
+</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # fun treeFold f z Empty = z
+       | treeFold f z (Node (x, L, R)) =
+            ...
+   val treeFold = fn : (’a * ’b * ’b -&gt; ’b) -&gt; ’b -&gt; ’a tree -&gt; ’b
+</pre>
+<ol id="I4" class="ltx_enumerate">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I4.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">treeFold</span> の定義を完成せよ．</p>
+</div>
+</li>
+<li id="I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I4.i2.p1" class="ltx_para">
+<p class="ltx_p">前節で定義した各関数を <span class="ltx_text ltx_font_typewriter">treeFold</span> を使って定義せよ．</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p3" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+<span class="ltx_text ltx_font_typewriter">treeFold</span>の定義例は以下の通り。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun treeFold f z Empty = z
+     | treeFold f z (Node(a,b,c)) = f (a,treeFold f z b,treeFold f z c);
+</pre>
+<p class="ltx_p">上記の各関数は、<span class="ltx_text ltx_font_typewriter">treeFold</span>を使って以下の通り定義できる。
+</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun nodes t = treeFold (fn (x,y,z) =&gt; 1 + y + z) 0 t
+   fun sumTree t = treeFold (fn (x,y,z) =&gt; x + y + z) 0 t
+   fun mapTree f t = treeFold (fn (x,y,z) =&gt; Node(f x, y, z)) Empty t
+   fun toPostOrder t =
+       treeFold
+         (fn (x,L,R) =&gt; "(" ^ L ^ ")" ^ "(" ^  R ^ ")" ^ x)
+         ""
+         t
+   fun toInOrder t =
+       treeFold
+         (fn (x,L,R) =&gt; "(" ^ L ^ ")" ^ x ^ "(" ^  R ^ ")")
+         ""
+         t
+</pre>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="Ch7.S1.html" title="7.1 datatype文によるデータ型の定義 ‣ 第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.1 </span>datatype文によるデータ型の定義</span></a><a href="Ch7.S3.html" title="7.3 パターンマッチングの拡張機能 ‣ 第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.3 </span>パターンマッチングの拡張機能</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Nov  6 00:44:26 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+{% endraw %}

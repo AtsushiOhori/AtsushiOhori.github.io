@@ -1,0 +1,470 @@
+---
+layout: default
+permalink: /ja/texts/standard-ml/answers//Ch3.S2.html
+translated: true
+lang: ja
+head: |
+ <!--Generated on Sat Nov  6 00:44:26 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Document created on 2021年11月5日.-->
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="LaTeXML.css" type="text/css">
+ <link rel="stylesheet" href="ltx-book.css" type="text/css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+ <link rel="up" href="Ch3.html" title="第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up up" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="start" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="prev" href="Ch3.S1.html" title="3.1 型推論と静的型チェック ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="next" href="Ch3.S3.html" title="3.3 明示的な型宣言 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch3.S1.html" title="3.1 型推論と静的型チェック ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch3.S3.html" title="3.3 明示的な型宣言 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch3.S4.html" title="3.4 関数名の多重定義 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch3.S5.html" title="3.5 多相型の使用の制限 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch3.S6.html" title="3.6 等値演算子の型の扱い ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch1.html" title="第 1 章 MLプログラミングの基本 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch2.html" title="第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch3.html" title="第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch4.html" title="第 4 章 MLの基本データ型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch5.html" title="第 5 章 レコード ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch6.html" title="第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch7.html" title="第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch8.html" title="第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch9.html" title="第 9 章 例外処理 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch10.html" title="第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+---
+{% raw %}
+<div class="ltx_page_main">
+<header class="ltx_page_header"><div class="ltx_document_title">プログラミング言語 Standard ML 入門 (問題の解答例)</div>
+<div>
+<a href="Ch3.html" title="第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>MLの型システム</span></a><a href="Ch3.S1.html" title="3.1 型推論と静的型チェック ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.1 </span>型推論と静的型チェック</span></a><a href="Ch3.S3.html" title="3.3 明示的な型宣言 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.3 </span>明示的な型宣言</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3.2 </span>型の多相性と多相関数</h1>
+
+<div id="Ch3.Thmex2" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 3.2</span></span></h6>
+<div id="Ch3.Thmex2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fn x =&gt; id id x</span> の型を以下の手順で求め，<span class="ltx_text ltx_font_typewriter">’a -&gt; ’a</span> とな
+ることを確認せよ．</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">id</span> の型が <span class="ltx_text ltx_font_typewriter">’a -&gt; ’a</span> であることを用いて，
+<span class="ltx_text ltx_font_typewriter">id id</span> の型を求めよ．</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">一般に，関数<math id="I1.i2.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>が型<math id="I1.i2.p1.m2" class="ltx_Math" alttext="\tau_{1}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>1</mn></msub></mrow></math><span class="ltx_text ltx_font_typewriter"> -&gt; <math id="I1.i2.p1.m3" class="ltx_Math" alttext="\tau_{2}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn mathvariant="normal">2</mn></msub></mrow></math></span>を持てば，
+<span class="ltx_text ltx_font_typewriter">fn x =&gt; <math id="I1.i2.p1.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> x</span> も型<math id="I1.i2.p1.m5" class="ltx_Math" alttext="\tau_{1}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>1</mn></msub></mrow></math><span class="ltx_text ltx_font_typewriter"> -&gt; <math id="I1.i2.p1.m6" class="ltx_Math" alttext="\tau_{2}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn mathvariant="normal">2</mn></msub></mrow></math></span>を持つこと確かめよ．</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">以上から，全体の型を求め，<span class="ltx_text ltx_font_typewriter">’a -&gt; ’a</span> とな
+ることを確認せよ．</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span></p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">id</span>の型は<span class="ltx_text ltx_font_typewriter">’a -&gt; ’a</span>である．ここで，<span class="ltx_text ltx_font_typewriter">’a</span>は任意の型を表す多相型変数である．
+そこで<span class="ltx_text ltx_font_typewriter">id id</span>の1番目の<span class="ltx_text ltx_font_typewriter">id</span>と２番目の<span class="ltx_text ltx_font_typewriter">id</span>の型をそれぞれ
+<span class="ltx_text ltx_font_typewriter">X -&gt; X</span>および<span class="ltx_text ltx_font_typewriter">Y -&gt; Y</span>と置くことができる．
+前者が後者に適用されているので，<span class="ltx_text ltx_font_typewriter">X = Y -&gt; Y</span>であり，かつこの式全体の型は<span class="ltx_text ltx_font_typewriter">X</span>である．
+よって<span class="ltx_text ltx_font_typewriter">id id</span>の型は<span class="ltx_text ltx_font_typewriter">Y -&gt; Y</span>と書ける．</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">関数<span class="ltx_text ltx_font_typewriter">f</span>が型<span class="ltx_text ltx_font_typewriter">A -&gt; B</span>を持つとする．
+式<span class="ltx_text ltx_font_typewriter">f x</span>の型が正しいとすると<span class="ltx_text ltx_font_typewriter">x</span>の型は<span class="ltx_text ltx_font_typewriter">A</span>であり，かつ式<span class="ltx_text ltx_font_typewriter">f x</span>の型は<span class="ltx_text ltx_font_typewriter">B</span>である．
+よって，式<span class="ltx_text ltx_font_typewriter">fn x =&gt; f x</span>の型は<span class="ltx_text ltx_font_typewriter">A -&gt; B</span>である．</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">以上より，式<span class="ltx_text ltx_font_typewriter">fn x =&gt; id id x</span>の型は<span class="ltx_text ltx_font_typewriter">id id x</span>の型と同じ型，すなわち<span class="ltx_text ltx_font_typewriter">Y -&gt; Y</span>である．
+さらに，<span class="ltx_text ltx_font_typewriter">Y</span>は任意の型であるから，多相型変数を使うと，<span class="ltx_text ltx_font_typewriter">’a -&gt; ’a</span>と表
+される．</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="Ch3.Thmex3" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 3.3</span></span></h6>
+<div id="Ch3.Thmex3.p1" class="ltx_para">
+<p class="ltx_p">以下の各型を推定し，実際の型と比較せよ．</p>
+<ol id="I3" class="ltx_enumerate">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">twice cube</span></p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fn x =&gt; twice id x</span></p>
+</div>
+</li>
+<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fun thrice f x = f (f (f x))</span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p2" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+省略。
+</p>
+</div>
+<div id="Ch3.Thmex4" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 3.4</span></span></h6>
+<div id="Ch3.Thmex4.p1" class="ltx_para">
+<p class="ltx_p">MLシステムは，各引数の型に関するすべての条件を満たす最も一般的な解
+を計算することによって，関数の最も一般的な多相型を計算する．
+<span class="ltx_text ltx_font_typewriter">twice</span> の最も一般的な多相型が
+<span class="ltx_text ltx_font_typewriter">(’a -&gt; ’a) -&gt; ’a -&gt; ’a</span> であることを以下の手順で
+確かめよ．</p>
+<ol id="I4" class="ltx_enumerate">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I4.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">twice</span> の定義に現れる各式の型をそれぞれ以下のように仮定
+する．</p>
+<table id="Ch3.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.Ex1.m1" class="ltx_Math" alttext="\mbox{{\tt fun}}\ \underline{\mbox{{\tt twice}}}_{\tau_{1}}\ \underline{\mbox{%
+{\tt f}}}_{\tau_{2}}\ \underline{\mbox{{\tt x}}}_{\tau_{3}}=\underline{\mbox{{%
+\tt f\  \mbox{$\underline{\mbox{{\tt(f\  x)}}}_{\tau_{4}}$}}}}_{\tau_{5}}\mbox%
+{{\tt;}}" display="block"><mrow><mtext>𝚏𝚞𝚗</mtext><mspace width="5.0pt"></mspace><munder accentunder="true"><mtext>𝚝𝚠𝚒𝚌𝚎</mtext><mo>¯</mo></munder><msub><mi></mi><mrow><mi>τ</mi><msub><mi></mi><mn>1</mn></msub></mrow></msub><mspace width="5.0pt"></mspace><munder accentunder="true"><mtext>𝚏</mtext><mo>¯</mo></munder><msub><mi></mi><mrow><mi>τ</mi><msub><mi></mi><mn>2</mn></msub></mrow></msub><mspace width="5.0pt"></mspace><munder accentunder="true"><mtext>𝚡</mtext><mo>¯</mo></munder><msub><mi></mi><mrow><mi>τ</mi><msub><mi></mi><mn>3</mn></msub></mrow></msub><mo>=</mo><munder accentunder="true"><mrow><mtext mathvariant="monospace">f </mtext><mrow><munder accentunder="true"><mtext>(f  x)</mtext><mo mathvariant="normal">¯</mo></munder><msub><mi></mi><mrow><mi>τ</mi><msub><mi></mi><mn mathvariant="normal">4</mn></msub></mrow></msub></mrow></mrow><mo>¯</mo></munder><msub><mi></mi><mrow><mi>τ</mi><msub><mi></mi><mn>5</mn></msub></mrow></msub><mtext mathvariant="monospace">;</mtext></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I4.i2.p1" class="ltx_para">
+<p class="ltx_p">関数適用<math id="I4.i2.p1.m1" class="ltx_Math" alttext="\underline{\mbox{{\tt(f\ x)}}}_{\tau_{4}}" display="inline"><mrow><munder accentunder="true"><mtext mathvariant="monospace">(f x)</mtext><mo>¯</mo></munder><msub><mi></mi><mrow><mi>τ</mi><msub><mi></mi><mn>4</mn></msub></mrow></msub></mrow></math>が型エラーを起こさないため
+には
+（1） <span class="ltx_text ltx_font_typewriter">f</span> の型<math id="I4.i2.p1.m2" class="ltx_Math" alttext="\tau_{2}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>2</mn></msub></mrow></math>は<math id="I4.i2.p1.m3" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math><span class="ltx_text ltx_font_typewriter"> -&gt; <math id="I4.i2.p1.m4" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math></span>の
+形をした関数型であり，
+（2）型<math id="I4.i2.p1.m5" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>は <span class="ltx_text ltx_font_typewriter">x</span> の型<math id="I4.i2.p1.m6" class="ltx_Math" alttext="\tau_{3}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>3</mn></msub></mrow></math>と等しく，
+（3）型<math id="I4.i2.p1.m7" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math>は <span class="ltx_text ltx_font_typewriter">(f x)</span> の型の結果の<math id="I4.i2.p1.m8" class="ltx_Math" alttext="\tau_{4}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>4</mn></msub></mrow></math>
+と等しくなければならない．
+したがって，以下の等式が成立しなければならない．</p>
+<table id="Ch3.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.Ex2.m1" class="ltx_Math" alttext="\tau_{2}=\tau_{3}\ \mbox{\tt-&gt;}{}\ \tau_{4}" display="block"><mrow><mi>τ</mi><msub><mi></mi><mn>2</mn></msub><mo>=</mo><mi>τ</mi><msub><mi></mi><mn>3</mn></msub><mspace width="5.0pt"></mspace><mtext mathvariant="monospace">-&gt;</mtext><mspace width="5.0pt"></mspace><mi>τ</mi><msub><mi></mi><mn>4</mn></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">以上のような分析を他の要素についても行い，
+型の間に成り立つべき関係すべてを等式として書き出せ．</p>
+</div>
+</li>
+<li id="I4.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="I4.i3.p1" class="ltx_para">
+<p class="ltx_p">2で生成した型に関する等式の<math id="I4.i3.p1.m1" class="ltx_Math" alttext="\tau_{1}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>1</mn></msub></mrow></math>に関する最も一般的な解を考え，それが
+<span class="ltx_text ltx_font_typewriter">twice</span> の型<span class="ltx_text ltx_font_typewriter">(’a -&gt; ’a) -&gt; ’a -&gt; ’a</span>であるこ
+とを確かめよ．</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p3" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+<span class="ltx_text ltx_font_typewriter">twice</span>の各変数に対して仮定された型<math id="p3.m1" class="ltx_Math" alttext="\tau_{1},\ldots,\tau_{5}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>τ</mi><msub><mi></mi><mn>5</mn></msub></mrow></math>が満たすべき等式を
+以下のように書き下すことができる。</p>
+<table id="Ch17.S2.EGx8" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="Ch3.Ex3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.Ex3.m1" class="ltx_Math" alttext="\displaystyle\tau_{1}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>1</mn></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch3.Ex3.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.Ex3.m3" class="ltx_Math" alttext="\displaystyle\tau_{2}\longrightarrow\tau_{3}\longrightarrow\tau_{5}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>2</mn></msub><mo>⟶</mo><mi>τ</mi><msub><mi></mi><mn>3</mn></msub><mo>⟶</mo><mi>τ</mi><msub><mi></mi><mn>5</mn></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch3.Ex4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.Ex4.m1" class="ltx_Math" alttext="\displaystyle\tau_{2}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>2</mn></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch3.Ex4.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.Ex4.m3" class="ltx_Math" alttext="\displaystyle\tau_{3}\longrightarrow\tau_{4}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>3</mn></msub><mo>⟶</mo><mi>τ</mi><msub><mi></mi><mn>4</mn></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch3.Ex5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.Ex5.m1" class="ltx_Math" alttext="\displaystyle\tau_{2}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>2</mn></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch3.Ex5.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.Ex5.m3" class="ltx_Math" alttext="\displaystyle\tau_{4}\longrightarrow\tau_{5}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>4</mn></msub><mo>⟶</mo><mi>τ</mi><msub><mi></mi><mn>5</mn></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">2番目と3番目の等式から、以下のような等式集合が導ける。</p>
+<table id="Ch17.S2.EGx9" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="Ch3.Ex6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.Ex6.m1" class="ltx_Math" alttext="\displaystyle\tau_{1}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>1</mn></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch3.Ex6.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.Ex6.m3" class="ltx_Math" alttext="\displaystyle\tau_{2}\longrightarrow\tau_{3}\longrightarrow\tau_{5}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>2</mn></msub><mo>⟶</mo><mi>τ</mi><msub><mi></mi><mn>3</mn></msub><mo>⟶</mo><mi>τ</mi><msub><mi></mi><mn>5</mn></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch3.Ex7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.Ex7.m1" class="ltx_Math" alttext="\displaystyle\tau_{2}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>2</mn></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch3.Ex7.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.Ex7.m3" class="ltx_Math" alttext="\displaystyle\tau_{3}\longrightarrow\tau_{4}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>3</mn></msub><mo>⟶</mo><mi>τ</mi><msub><mi></mi><mn>4</mn></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch3.Ex8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.Ex8.m1" class="ltx_Math" alttext="\displaystyle\tau_{3}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>3</mn></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch3.Ex8.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.Ex8.m3" class="ltx_Math" alttext="\displaystyle\tau_{4}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>4</mn></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch3.Ex9"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.Ex9.m1" class="ltx_Math" alttext="\displaystyle\tau_{4}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>4</mn></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch3.Ex9.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.Ex9.m3" class="ltx_Math" alttext="\displaystyle\tau_{5}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>5</mn></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">右辺の型に対するさらなる等式がない、解けた形の等式
+<math id="p3.m2" class="ltx_Math" alttext="\tau_{4}=\tau_{5}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>4</mn></msub><mo>=</mo><mi>τ</mi><msub><mi></mi><mn>5</mn></msub></mrow></math>を使い、変数<math id="p3.m3" class="ltx_Math" alttext="\tau_{4}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>4</mn></msub></mrow></math>を消去すると、</p>
+<table id="Ch17.S2.EGx10" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="Ch3.Ex10"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.Ex10.m1" class="ltx_Math" alttext="\displaystyle\tau_{1}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>1</mn></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch3.Ex10.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.Ex10.m3" class="ltx_Math" alttext="\displaystyle\tau_{2}\longrightarrow\tau_{3}\longrightarrow\tau_{5}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>2</mn></msub><mo>⟶</mo><mi>τ</mi><msub><mi></mi><mn>3</mn></msub><mo>⟶</mo><mi>τ</mi><msub><mi></mi><mn>5</mn></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch3.Ex11"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.Ex11.m1" class="ltx_Math" alttext="\displaystyle\tau_{2}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>2</mn></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch3.Ex11.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.Ex11.m3" class="ltx_Math" alttext="\displaystyle\tau_{3}\longrightarrow\tau_{5}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>3</mn></msub><mo>⟶</mo><mi>τ</mi><msub><mi></mi><mn>5</mn></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch3.Ex12"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.Ex12.m1" class="ltx_Math" alttext="\displaystyle\tau_{3}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>3</mn></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch3.Ex12.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.Ex12.m3" class="ltx_Math" alttext="\displaystyle\tau_{5}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>5</mn></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">を得る。これを繰り返すと、</p>
+<table id="Ch3.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.Ex13.m1" class="ltx_Math" alttext="\tau_{1}=(\tau_{5}\longrightarrow\tau_{5})\longrightarrow\tau_{5}%
+\longrightarrow\tau_{5}" display="block"><mrow><mi>τ</mi><msub><mi></mi><mn>1</mn></msub><mo>=</mo><mo stretchy="false">(</mo><mi>τ</mi><msub><mi></mi><mn>5</mn></msub><mo>⟶</mo><mi>τ</mi><msub><mi></mi><mn>5</mn></msub><mo stretchy="false">)</mo><mo>⟶</mo><mi>τ</mi><msub><mi></mi><mn>5</mn></msub><mo>⟶</mo><mi>τ</mi><msub><mi></mi><mn>5</mn></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">を得る。<math id="p3.m4" class="ltx_Math" alttext="\tau_{5}" display="inline"><mrow><mi>τ</mi><msub><mi></mi><mn>5</mn></msub></mrow></math>は、何も等式が存在しない自由変数である。
+この型を型変数<span class="ltx_text ltx_font_typewriter">’a</span>とすると、</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   twice : (’a -&gt; ’a) -&gt; ’a -&gt; ’a
+</pre>
+<p class="ltx_p">を得る。</p>
+</div>
+<div id="Ch3.Thmex5" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 3.5</span></span></h6>
+<div id="Ch3.Thmex5.p1" class="ltx_para">
+<p class="ltx_p">以下の各プログラムについて，もしそれが型を持たなければ
+（つまり型エラーを含めば）その理由を説明し，型を持てばその
+の最も一般的な多相型を推定せよ．</p>
+<ol id="I5" class="ltx_enumerate">
+<li id="I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I5.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fun S x y z = (x z) (y z)</span></p>
+</div>
+</li>
+<li id="I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I5.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fun K x y = x</span></p>
+</div>
+</li>
+<li id="I5.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="I5.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fun A x y z = z y x</span></p>
+</div>
+</li>
+<li id="I5.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="I5.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fun B f g = f g g</span></p>
+</div>
+</li>
+<li id="I5.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="I5.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fun C x = x C</span></p>
+</div>
+</li>
+<li id="I5.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="I5.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fun D p a b = if p a then (b,a) else (a,b)</span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p4" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span></p>
+<ol id="I6" class="ltx_enumerate">
+<li id="I6.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I6.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fun S x y z = (x z) (y z)
+<br class="ltx_break"></span>SML#は以下のような型を推論する．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # fun S x y z = (x z) (y z);
+   val S = fn : [’a,’b,’c.(’a  -&gt; ’b  -&gt; ’c)  -&gt; (’a  -&gt; ’b)  -&gt; ’a  -&gt; ’c]
+</pre>
+<p class="ltx_p">(補足）このSは，コンビネータ論理においてSコンビネータとして知られる基本関数である．
+さらに，この関数は，構成的論理学では，ヒルベルトシステムの公理
+<math id="I6.i1.p1.m1" class="ltx_Math" alttext="(A\supset B\supset C)\supset(A\supset B)\supset(A\supset C)" display="inline"><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>⊃</mo><mi>B</mi><mo>⊃</mo><mi>C</mi><mo stretchy="false">)</mo><mo>⊃</mo><mo stretchy="false">(</mo><mi>A</mi><mo>⊃</mo><mi>B</mi><mo stretchy="false">)</mo><mo>⊃</mo><mo stretchy="false">(</mo><mi>A</mi><mo>⊃</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></math>
+に対応している．
+興味のある読者は，大堀，ガリグ，西村，「コンピュータサイエンス入門，アルゴリズムとプログラミング言語」（岩波書店）の第2部を参照されたい．</p>
+</div>
+</li>
+<li id="I6.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I6.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fun K x y = x
+<br class="ltx_break"></span>SML#は以下のような型を推論する．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # fun K x y = x;
+   val K = fn : [’a .’a  -&gt; [’b .’b  -&gt; ’a]]
+</pre>
+<p class="ltx_p">(補足）このKは，コンビネータ論理においてKコンビネータとして知られる基本関数である．
+さらに，この関数は，構成的論理学では，ヒルベルトシステムの公理
+<math id="I6.i2.p1.m1" class="ltx_Math" alttext="A\supset B\supset A" display="inline"><mrow><mi>A</mi><mo>⊃</mo><mi>B</mi><mo>⊃</mo><mi>A</mi></mrow></math>
+に対応している．</p>
+</div>
+</li>
+<li id="I6.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="I6.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fun A x y z = z y x
+<br class="ltx_break"></span>SML#は以下のような型を推論する．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # fun A x y z = z y x;
+   val A = fn : [’a .’a  -&gt; [’b .’b  -&gt; [’c .(’b  -&gt; ’a  -&gt; ’c)  -&gt; ’c]]]
+</pre>
+</div>
+</li>
+<li id="I6.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="I6.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fun B f g = f g g
+<br class="ltx_break"></span>SML#は以下のような型を推論する．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # fun B f g = f g g;
+   val B = fn : [’a,’b.(’a  -&gt; ’a  -&gt; ’b)  -&gt; ’a  -&gt; ’b]
+</pre>
+</div>
+</li>
+<li id="I6.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="I6.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fun C x = x C
+<br class="ltx_break"></span>この式は，<span class="ltx_text ltx_font_typewriter">C</span>はを引数とする関数でありかつ<span class="ltx_text ltx_font_typewriter">x</span>は<span class="ltx_text ltx_font_typewriter">C</span>を引数と
+する関数であることを要求している．したがって．Cの型は，Cを引数とする関数
+を引数とする関数となり，自分自身を部分に含む型となってしまい，そのような
+性質をもつ型は有限な範囲では存在しない．</p>
+</div>
+</li>
+<li id="I6.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span> 
+<div id="I6.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fun D p a b = if p a then (b,a) else (a,b)
+<br class="ltx_break"></span>SML#は以下のような型を推論する．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # fun D p a b = if p a then (b,a) else (a,b);
+   val D = fn : [’a .(’a  -&gt; bool)  -&gt; ’a  -&gt; ’a  -&gt; ’a * ’a]
+</pre>
+</div>
+</li>
+</ol>
+</div>
+<div id="Ch3.Thmex6" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 3.6</span></span></h6>
+<div id="Ch3.Thmex6.p1" class="ltx_para">
+<p class="ltx_p">以下の関数およびプログラムはどのような型を持つか．
+<br class="ltx_break">
+<span class="ltx_tabular">
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">fun f x = f x;</span></span></span>
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">f 1;</span></span></span>
+</span>
+さらに，2番目の式の計算結果について考察せよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p5" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+SML#は以下のような型を推論する．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # fun f x = f x;
+   val f = fn : [’a,’b.’a  -&gt; ’b]
+</pre>
+<p class="ltx_p">式<span class="ltx_text ltx_font_typewriter">f 1</span>の定義から，<span class="ltx_text ltx_font_typewriter">f 1</span>を呼び出し続ける無限ループ式であることがわかる．</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">この性質は，式の型からも分析することができる．
+<span class="ltx_text ltx_font_typewriter">f</span>の型から，<span class="ltx_text ltx_font_typewriter">f 1</span>の型は<span class="ltx_text ltx_font_typewriter">’a</span>であることがわかる．
+この型は，<span class="ltx_text ltx_font_typewriter">f 1</span>の結果がすべての型を持ちうることを示している．
+したがって，この式の計算が修了し，結果を返せば，その結果は総ての型をもつ値である．
+しかし，すべての型どころか，<span class="ltx_text ltx_font_typewriter">int</span>型と<span class="ltx_text ltx_font_typewriter">real</span>型を同時にもつよう
+な値さえ存在しない．したがって，この式の計算が修了し結果を返すことはない．</p>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="Ch3.S1.html" title="3.1 型推論と静的型チェック ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.1 </span>型推論と静的型チェック</span></a><a href="Ch3.S3.html" title="3.3 明示的な型宣言 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.3 </span>明示的な型宣言</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Nov  6 00:44:26 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+{% endraw %}

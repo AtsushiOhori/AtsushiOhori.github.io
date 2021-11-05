@@ -1,0 +1,142 @@
+---
+layout: default
+permalink: /ja/texts/standard-ml/answers//Ch2.S7.html
+translated: true
+lang: ja
+head: |
+ <!--Generated on Sat Nov  6 00:44:26 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Document created on 2021年11月5日.-->
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="LaTeXML.css" type="text/css">
+ <link rel="stylesheet" href="ltx-book.css" type="text/css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+ <link rel="up" href="Ch2.html" title="第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up up" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="start" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="prev" href="Ch2.S6.html" title="2.6 高階の関数 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="next" href="Ch2.S8.html" title="2.8 変数のスコープ ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch2.S1.html" title="2.1 関数の定義 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch2.S3.html" title="2.3 再帰的関数 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch2.S4.html" title="2.4 局所変数の使用 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch2.S5.html" title="2.5 相互再帰的関数 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch2.S6.html" title="2.6 高階の関数 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch2.S8.html" title="2.8 変数のスコープ ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch2.S9.html" title="2.9 2項演算子 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch1.html" title="第 1 章 MLプログラミングの基本 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch2.html" title="第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch3.html" title="第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch4.html" title="第 4 章 MLの基本データ型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch5.html" title="第 5 章 レコード ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch6.html" title="第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch7.html" title="第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch8.html" title="第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch9.html" title="第 9 章 例外処理 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch10.html" title="第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <meta name="keywords" lang="en" content=", ">
+---
+{% raw %}
+<div class="ltx_page_main">
+<header class="ltx_page_header"><div class="ltx_document_title">プログラミング言語 Standard ML 入門 (問題の解答例)</div>
+<div>
+<a href="Ch2.html" title="第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>関数を用いたプログラミング</span></a><a href="Ch2.S6.html" title="2.6 高階の関数 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.6 </span>高階の関数</span></a><a href="Ch2.S8.html" title="2.8 変数のスコープ ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.8 </span>変数のスコープ</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2.7 </span>関数式</h1>
+
+<div id="Ch2.Thmex21" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 2.21</span></span></h6>
+<div id="Ch2.Thmex21.p1" class="ltx_para">
+<p class="ltx_p">以上の2つの <span class="ltx_text ltx_font_typewriter">f</span> の定義のそれぞれについて，上記の <span class="ltx_text ltx_font_typewriter">g</span> を含むプ
+ログラムの評価を行い，実行時間を比較せよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+省略。</p>
+</div>
+<div id="Ch2.Thmex22" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 2.22</span></span></h6>
+<div id="Ch2.Thmex22.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">int -&gt; bool</span> 型の関数は，与えられた整数が条件を満たすか否かを判
+定する関数であるが，見方を変えれば，条件を満たす整数の集合の表現とみなすこ
+とができる．
+たとえば
+
+<span class="ltx_tabular">
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">fn x =&gt; x = 1 orelse x = 2 orelse x = 3</span></span></span>
+</span>
+は集合<math id="Ch2.Thmex22.p1.m1" class="ltx_Math" alttext="\{1,2,3\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">}</mo></mrow></math>の表現と考えることができる．
+ここで<math id="Ch2.Thmex22.p1.m2" class="ltx_Math" alttext="exp_{1}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn>1</mn></msub></mrow></math><span class="ltx_text ltx_font_typewriter"> orelse <math id="Ch2.Thmex22.p1.m3" class="ltx_Math" alttext="exp_{2}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn mathvariant="normal">2</mn></msub></mrow></math></span>は，<math id="Ch2.Thmex22.p1.m4" class="ltx_Math" alttext="exp_{1}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn>1</mn></msub></mrow></math>と<math id="Ch2.Thmex22.p1.m5" class="ltx_Math" alttext="exp_{2}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn>2</mn></msub></mrow></math>の論理和（<math id="Ch2.Thmex22.p1.m6" class="ltx_Math" alttext="exp_{1}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn>1</mn></msub></mrow></math>ま
+たは<math id="Ch2.Thmex22.p1.m7" class="ltx_Math" alttext="exp_{2}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn>2</mn></msub></mrow></math>）を表す構文である．
+<math id="Ch2.Thmex22.p1.m8" class="ltx_Math" alttext="exp_{1}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn>1</mn></msub></mrow></math>と<math id="Ch2.Thmex22.p1.m9" class="ltx_Math" alttext="exp_{2}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn>2</mn></msub></mrow></math>の論理積（<math id="Ch2.Thmex22.p1.m10" class="ltx_Math" alttext="exp_{1}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn>1</mn></msub></mrow></math>かつ<math id="Ch2.Thmex22.p1.m11" class="ltx_Math" alttext="exp_{2}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn>2</mn></msub></mrow></math>）を表す構文は
+<math id="Ch2.Thmex22.p1.m12" class="ltx_Math" alttext="exp_{1}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn>1</mn></msub></mrow></math><span class="ltx_text ltx_font_typewriter"> andalso <math id="Ch2.Thmex22.p1.m13" class="ltx_Math" alttext="exp_{2}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn mathvariant="normal">2</mn></msub></mrow></math></span>である．
+</p>
+</div>
+<div id="Ch2.Thmex22.p2" class="ltx_para">
+<p class="ltx_p">この見方に従い，以下の定義を与えよ．</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">空集合を表す関数 <span class="ltx_text ltx_font_typewriter">emptySet</span>．</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">整数<math id="I1.i2.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>を受け取り，単位集合<math id="I1.i2.p1.m2" class="ltx_Math" alttext="\{n\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>n</mi><mo stretchy="false">}</mo></mrow></math>を生成する関数 <span class="ltx_text ltx_font_typewriter">singleton</span>．</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">集合<math id="I1.i3.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>に要素<math id="I1.i3.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>を加える関数 <span class="ltx_text ltx_font_typewriter">insert</span>．</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">要素<math id="I1.i4.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>が集合<math id="I1.i4.p1.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>に含まれるか判定する関数 <span class="ltx_text ltx_font_typewriter">member</span>．</p>
+</div>
+</li>
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p">2つの集合の和集合，積集合，差集合を計算する関数
+<span class="ltx_text ltx_font_typewriter">union</span>，
+<span class="ltx_text ltx_font_typewriter">intersection</span>，
+<span class="ltx_text ltx_font_typewriter">difference</span>．</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p2" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span></p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   val emptySet = fn x =&gt; false
+   fun singleton n = fn x =&gt; x = n
+   fun insert n S = fn x =&gt; x = n orelse S x
+   fun member n S = S n
+   fun union S1 S2 = fn x =&gt; S1 x orelse S2 x
+   fun intersection S1 S2 = fn x =&gt; S1 x andalso S2 x
+   fun difference S1 S2 = fn x =&gt; S1 x andalso not (S2 x)
+</pre>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="Ch2.S6.html" title="2.6 高階の関数 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.6 </span>高階の関数</span></a><a href="Ch2.S8.html" title="2.8 変数のスコープ ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.8 </span>変数のスコープ</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Nov  6 00:44:26 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+{% endraw %}

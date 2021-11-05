@@ -1,0 +1,435 @@
+---
+layout: default
+permalink: /ja/texts/standard-ml/answers//Ch2.S5.html
+translated: true
+lang: ja
+head: |
+ <!--Generated on Sat Nov  6 00:44:26 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Document created on 2021年11月5日.-->
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="LaTeXML.css" type="text/css">
+ <link rel="stylesheet" href="ltx-book.css" type="text/css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+ <link rel="up" href="Ch2.html" title="第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up up" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="start" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="prev" href="Ch2.S4.html" title="2.4 局所変数の使用 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="next" href="Ch2.S6.html" title="2.6 高階の関数 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch2.S1.html" title="2.1 関数の定義 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch2.S3.html" title="2.3 再帰的関数 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch2.S4.html" title="2.4 局所変数の使用 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch2.S6.html" title="2.6 高階の関数 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch2.S7.html" title="2.7 関数式 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch2.S8.html" title="2.8 変数のスコープ ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch2.S9.html" title="2.9 2項演算子 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch1.html" title="第 1 章 MLプログラミングの基本 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch2.html" title="第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch3.html" title="第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch4.html" title="第 4 章 MLの基本データ型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch5.html" title="第 5 章 レコード ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch6.html" title="第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch7.html" title="第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch8.html" title="第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch9.html" title="第 9 章 例外処理 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch10.html" title="第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <meta name="keywords" lang="en" content="フィボナッチ数">
+---
+{% raw %}
+<div class="ltx_page_main">
+<header class="ltx_page_header"><div class="ltx_document_title">プログラミング言語 Standard ML 入門 (問題の解答例)</div>
+<div>
+<a href="Ch2.html" title="第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>関数を用いたプログラミング</span></a><a href="Ch2.S4.html" title="2.4 局所変数の使用 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.4 </span>局所変数の使用</span></a><a href="Ch2.S6.html" title="2.6 高階の関数 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.6 </span>高階の関数</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2.5 </span>相互再帰的関数</h1>
+
+<div id="Ch2.Thmex10" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 2.10</span></span></h6>
+<div id="Ch2.Thmex10.p1" class="ltx_para">
+<p class="ltx_p">最低利率が1%，残高1000万円以上の場合の利率が2%，
+残高が1000万円以下の場合の利率は，残高に比例して1%から2%まで連続し
+て増えるものとする．
+この利率を表す関数 <span class="ltx_text ltx_font_typewriter">F</span> を定義し，<span class="ltx_text ltx_font_typewriter">F</span> を使って <span class="ltx_text ltx_font_typewriter">I</span> と
+<span class="ltx_text ltx_font_typewriter">A</span> を定義せよ．
+さらに，<span class="ltx_text ltx_font_typewriter">A(100.0,10)</span>，<span class="ltx_text ltx_font_typewriter">A(100.0,20)</span>，<span class="ltx_text ltx_font_typewriter">A(100.0,25)</span>，
+<span class="ltx_text ltx_font_typewriter">A(100.0,30)</span> の値をそれぞれ計算せよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+例えば以下のようにコード化できる．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun F x = if x &gt; 2000.0 then 0.02
+             else 0.01 + 0.01 * (x  - 1000.0) / 1000.0;
+   fun I(x,n) = F(A(x,n - 1))
+   and A(x,n) = if n = 0 then x
+                else A(x,n-1)*(1.0+I(x,n));
+</pre>
+<p class="ltx_p">これをSML#で実行すると，以下のような結果となる．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # A(900.0, 10);
+   val it = 988.102574973 : real
+   # A(900.0, 20);
+   val it = 1095.21279511 : real
+   # A(900.0, 25);
+   val it = 1157.91903751 : real
+   # A(900.0, 30);
+   val it = 1228.19345742 : real
+</pre>
+<p class="ltx_p">(注１）教科書では
+<span class="ltx_text ltx_font_typewriter">A(100.0,10)</span>，
+<span class="ltx_text ltx_font_typewriter">A(100.0,20)</span>，
+<span class="ltx_text ltx_font_typewriter">A(100.0,25)</span>，
+<span class="ltx_text ltx_font_typewriter">A(100.0,30)</span>
+をそれぞれ計算せよ，との問題であるが，この範囲では
+<span class="ltx_text ltx_font_typewriter">F</span>の変化が結果に影響しないので，値を変えてある．</p>
+</div>
+<div id="p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">(注２）<span class="ltx_text ltx_font_typewriter">A(900.0, 30)</span>の計算は、筆者の現在（Mon Jul 13 05:52:44 JST
+2020）の環境では21秒ほど掛かる。</p>
+</div>
+<div id="Ch2.Thmex11" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 2.11</span></span></h6>
+<div id="Ch2.Thmex11.p1" class="ltx_para">
+<p class="ltx_p">問<a href="#Ch2.Thmex10" title="問 2.10 ‣ 2.5 相互再帰的関数 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.10</span></a>を実際試してみるとわかる通り，関数 <span class="ltx_text ltx_font_typewriter">A</span> は <span class="ltx_text ltx_font_typewriter">n</span> が大きくなると処理時間が膨大になり，実用に適さない．
+問<a href="Ch2.S3.html#Ch2.Thmex7" title="問 2.7 ‣ 2.3 再帰的関数 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.7</span></a>で定義した <span class="ltx_text ltx_font_typewriter">fastFib</span> の考え方に習い，
+<math id="Ch2.Thmex11.p1.m1" class="ltx_Math" alttext="A_{x}^{n}" display="inline"><mrow><mi>A</mi><msub><mi></mi><mi>x</mi></msub><msup><mi></mi><mi>n</mi></msup></mrow></math>と<math id="Ch2.Thmex11.p1.m2" class="ltx_Math" alttext="I_{x}^{n}" display="inline"><mrow><mi>I</mi><msub><mi></mi><mi>x</mi></msub><msup><mi></mi><mi>n</mi></msup></mrow></math>の組を，以下の方針で同時に高速に計算する
+補助関数 <span class="ltx_text ltx_font_typewriter">auxAI</span> を考えることができる．</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">auxAI</span> の引数は，目標とする年までの残りの年数<math id="I1.i1.p1.m1" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>，
+そのときの残高<math id="I1.i1.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>，および利率<math id="I1.i1.p1.m3" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>の値の組とする．</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">残りの年数が<math id="I1.i2.p1.m1" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>の場合は，引数をそのまま返せばよい．
+したがって <span class="ltx_text ltx_font_typewriter">auxAI(0,<math id="I1.i2.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>,<math id="I1.i2.p1.m3" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>)</span> は <span class="ltx_text ltx_font_typewriter">(<math id="I1.i2.p1.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>,<math id="I1.i2.p1.m5" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>)</span> である．</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>が<math id="I1.i3.p1.m2" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>でない場合，与えられた<math id="I1.i3.p1.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>と<math id="I1.i3.p1.m4" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>から1年先の<math id="I1.i3.p1.m5" class="ltx_Math" alttext="x^{\prime}" display="inline"><mrow><mi>x</mi><msup><mi></mi><mo>′</mo></msup></mrow></math>と<math id="I1.i3.p1.m6" class="ltx_Math" alttext="i^{\prime}" display="inline"><mrow><mi>i</mi><msup><mi></mi><mo>′</mo></msup></mrow></math>を求め，
+それらから<math id="I1.i3.p1.m7" class="ltx_Math" alttext="k-1" display="inline"><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></math>年先の値を求めればよいから，<span class="ltx_text ltx_font_typewriter">auxAI(<math id="I1.i3.p1.m8" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>,<math id="I1.i3.p1.m9" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>,<math id="I1.i3.p1.m10" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>)</span> は，
+<span class="ltx_text ltx_font_typewriter">auxAI(k-1,<math id="I1.i3.p1.m11" class="ltx_Math" alttext="x^{\prime}" display="inline"><mrow><mi>x</mi><msup><mi></mi><mo mathvariant="normal">′</mo></msup></mrow></math>,<math id="I1.i3.p1.m12" class="ltx_Math" alttext="i^{\prime}" display="inline"><mrow><mi>i</mi><msup><mi></mi><mo mathvariant="normal">′</mo></msup></mrow></math>)</span> を呼び出すことによって計算できる．
+<math id="I1.i3.p1.m13" class="ltx_Math" alttext="i^{\prime}" display="inline"><mrow><mi>i</mi><msup><mi></mi><mo>′</mo></msup></mrow></math>は<math id="I1.i3.p1.m14" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math>を前年の残高に適用して得られる値であり，<math id="I1.i3.p1.m15" class="ltx_Math" alttext="x^{\prime}" display="inline"><mrow><mi>x</mi><msup><mi></mi><mo>′</mo></msup></mrow></math>は<math id="I1.i3.p1.m16" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>に<math id="I1.i3.p1.m17" class="ltx_Math" alttext="1+i^{\prime}" display="inline"><mrow><mn>1</mn><mo>+</mo><mi>i</mi><msup><mi></mi><mo>′</mo></msup></mrow></math>を
+乗じたものである．</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">auxAI</span> を補助関数として用い，残高<math id="Ch2.Thmex11.p1.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>と年数<math id="Ch2.Thmex11.p1.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>から
+<math id="Ch2.Thmex11.p1.m5" class="ltx_Math" alttext="A_{x}^{n}" display="inline"><mrow><mi>A</mi><msub><mi></mi><mi>x</mi></msub><msup><mi></mi><mi>n</mi></msup></mrow></math>と<math id="Ch2.Thmex11.p1.m6" class="ltx_Math" alttext="I_{x}^{n}" display="inline"><mrow><mi>I</mi><msub><mi></mi><mi>x</mi></msub><msup><mi></mi><mi>n</mi></msup></mrow></math>の組を計算する関数 <span class="ltx_text ltx_font_typewriter">fastAI</span> を定義せよ．
+さらに，<span class="ltx_text ltx_font_typewriter">fastAI(100.0,100)</span> と <span class="ltx_text ltx_font_typewriter">fastAI(100.0,1000)</span> の値をそれぞ
+れ計算せよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p3" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+<span class="ltx_text ltx_font_typewriter">fastAI</span>は以下のようにコード化できる．但し，<span class="ltx_text ltx_font_typewriter">F</span>は定義済み
+と仮定している．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+  fun auxAI(n,x,i) = if n = 0 then (x,i)
+                     else auxAI(n-1,x*(1.0 + F(x)),1.0 + F(x))
+  fun fastAI(x,n) = auxAI(n,x,F(x));
+</pre>
+<p class="ltx_p">SML#での実行結果は以下の通り．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # fastAI(900.0,100);
+   val it = (4305.75128361, 1.02) : real * real
+   # fastAI(900.0,1000);
+   val it = (236702870934.0, 1.02) : real * real
+</pre>
+<p class="ltx_p">これらは一瞬で終了する．</p>
+</div>
+<div id="Ch2.Thmex12" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 2.12</span></span></h6>
+<div id="Ch2.Thmex12.p1" class="ltx_para">
+<p class="ltx_p">上記の2つのプログラムで，
+<math id="Ch2.Thmex12.p1.m1" class="ltx_Math" alttext="\left(\begin{array}[]{cc}1&amp;0\\
+0&amp;1\end{array}\right)" display="inline"><mrow><mo>(</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></math>
+の<math id="Ch2.Thmex12.p1.m2" class="ltx_Math" alttext="20" display="inline"><mrow><mn>2</mn><mn>0</mn></mrow></math>乗と<math id="Ch2.Thmex12.p1.m3" class="ltx_Math" alttext="30" display="inline"><mrow><mn>3</mn><mn>0</mn></mrow></math>乗を実際に計算し，かかった時間を比較せよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p4" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+筆者の現在の環境でtimeコマンドで計測した実行時間は以下の通り。</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">プログラム：<span class="ltx_text ltx_font_typewriter">(x (20, 1, 0, 0, 1), y (20, 1, 0, 0, 1), z (20, 1, 0, 0, 1), w (20, 1, 0, 0, 1))</span></p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   real    0m0.099s
+   user    0m0.072s
+   sys     0m0.024s
+</pre>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">プログラム：<span class="ltx_text ltx_font_typewriter">(x (30, 1, 0, 0, 1), y (30, 1, 0, 0, 1), z (30, 1, 0, 0, 1), w (30, 1, 0, 0, 1))</span></p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   real    1m14.405s
+   user    1m13.904s
+   sys     0m0.512s
+</pre>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">プログラム：<span class="ltx_text ltx_font_typewriter">matrixPower (20, 1, 0, 0, 1)</span></p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   real    0m0.003s
+   user    0m0.000s
+   sys     0m0.000s
+</pre>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p">プログラム：<span class="ltx_text ltx_font_typewriter">matrixPower (30, 1, 0, 0, 1)</span></p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   real    0m0.003s
+   user    0m0.000s
+   sys     0m0.004s
+</pre>
+</div>
+</li>
+</ul>
+</div>
+<div id="Ch2.Thmex13" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 2.13</span></span></h6>
+<div id="Ch2.Thmex13.p1" class="ltx_para">
+<p class="ltx_p">フィボナッチ数の定義から，当然，以下の等式が成立する．</p>
+<table id="Ch17.S2.EGx6" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="Ch2.Ex14"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.Ex14.m1" class="ltx_Math" alttext="\displaystyle F_{n}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>n</mi></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch2.Ex14.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex14.m3" class="ltx_Math" alttext="\displaystyle F_{n}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>n</mi></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch2.Ex15"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.Ex15.m1" class="ltx_Math" alttext="\displaystyle F_{n+1}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch2.Ex15.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex15.m3" class="ltx_Math" alttext="\displaystyle F_{n-1}+F_{n}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>+</mo><mi>F</mi><msub><mi></mi><mi>n</mi></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">今，
+<math id="Ch2.Thmex13.p1.m1" class="ltx_Math" alttext="G_{n}=\left(\begin{array}[]{c}F_{n}\\
+F_{n+1}\end{array}\right)" display="inline"><mrow><mi>G</mi><msub><mi></mi><mi>n</mi></msub><mo>=</mo><mo>(</mo><mtable rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mi>F</mi><msub><mi></mi><mi>n</mi></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mi>F</mi><msub><mi></mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></mtd></mtr></mtable><mo>)</mo></mrow></math>とおき，
+<math id="Ch2.Thmex13.p1.m2" class="ltx_Math" alttext="G_{n}" display="inline"><mrow><mi>G</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>と<math id="Ch2.Thmex13.p1.m3" class="ltx_Math" alttext="G_{n-1}" display="inline"><mrow><mi>G</mi><msub><mi></mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></math>との関係を考えると，上記
+の等式は，以下のような行列を用いた式で表現できる．</p>
+<table id="Ch2.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.Ex16.m1" class="ltx_Math" alttext="G_{n}=\left(\begin{array}[]{cc}0&amp;1\\
+1&amp;1\end{array}\right)G_{n-1}" display="block"><mrow><mi>G</mi><msub><mi></mi><mi>n</mi></msub><mo>=</mo><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo><mi>G</mi><msub><mi></mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><math id="Ch2.Thmex13.p1.m4" class="ltx_Math" alttext="G_{0}=\left(\begin{array}[]{c}0\\
+1\end{array}\right)" display="inline"><mrow><mi>G</mi><msub><mi></mi><mn>0</mn></msub><mo>=</mo><mo>(</mo><mtable rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></math>であるから，
+定義に従い展開すると，以下の式が得られる．</p>
+<table id="Ch2.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.Ex17.m1" class="ltx_Math" alttext="G_{n}=\left(\begin{array}[]{c}F_{n}\\
+F_{n+1}\end{array}\right)=\underbrace{\left(\begin{array}[]{cc}0&amp;1\\
+1&amp;1\end{array}\right)\left(\begin{array}[]{cc}0&amp;1\\
+1&amp;1\end{array}\right)\cdots\left(\begin{array}[]{cc}0&amp;1\\
+1&amp;1\end{array}\right)}_{\mbox{$n$回の繰り返し}}\left(\begin{array}[]{c}0\\
+1\end{array}\right)" display="block"><mrow><mi>G</mi><msub><mi></mi><mi>n</mi></msub><mo>=</mo><mo>(</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mi>F</mi><msub><mi></mi><mi>n</mi></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mi>F</mi><msub><mi></mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></mtd></mtr></mtable><mo>)</mo><mo>=</mo><munder accentunder="true"><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo><mi mathvariant="normal">⋯</mi><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>⏟</mo></munder><msub><mi></mi><mrow><mi>n</mi><mtext>回の繰り返し</mtext></mrow></msub><mo>(</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><math id="Ch2.Thmex13.p1.m5" class="ltx_Math" alttext="A=\left(\begin{array}[]{cc}0&amp;1\\
+1&amp;1\end{array}\right)" display="inline"><mrow><mi>A</mi><mo>=</mo><mo>(</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></math>
+とおくと，
+行列の積の結合性より，以下の結果を得る．</p>
+<table id="Ch2.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.Ex18.m1" class="ltx_Math" alttext="G_{n}=A^{n}\left(\begin{array}[]{c}0\\
+1\end{array}\right)" display="block"><mrow><mi>G</mi><msub><mi></mi><mi>n</mi></msub><mo>=</mo><mi>A</mi><msup><mi></mi><mi>n</mi></msup><mo>(</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">したがって，<math id="Ch2.Thmex13.p1.m6" class="ltx_Math" alttext="F_{n}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>は行列<math id="Ch2.Thmex13.p1.m7" class="ltx_Math" alttext="A^{n}" display="inline"><mrow><mi>A</mi><msup><mi></mi><mi>n</mi></msup></mrow></math>の第一行第二列目の成分に一致する．
+この性質を使い，フィボナッチ数を線形時間で求める
+関数 <span class="ltx_text ltx_font_typewriter">fastFib’</span> を <span class="ltx_text ltx_font_typewriter">matrixPower</span> を使って定義せよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p5" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+ベクトルとの積を考えると<math id="p5.m1" class="ltx_Math" alttext="A_{n}" display="inline"><mrow><mi>A</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>の第１行の和が<math id="p5.m2" class="ltx_Math" alttext="F_{n}" display="inline"><mrow><mi>F</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>であるか
+ら以下のようにコード化できる．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun fastFib’ n = let
+                       val (a,b,c,d) = matrixPower(n,0,1,1,1)
+                    in
+                      a + b
+                    end;
+</pre>
+</div>
+<div id="Ch2.Thmex14" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 2.14</span></span></h6>
+<div id="Ch2.Thmex14.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">matrixPower</span> は，<math id="Ch2.Thmex14.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>に関して線形時間を必要とするが，結合律が成
+り立つ積に関する巾乗の計算の場合は，それをさらに対数時間に高速化可能である．
+以下の処理を行う <span class="ltx_text ltx_font_typewriter">fastMatrixPower</span> を定義せよ．</p>
+<ol id="I3" class="ltx_enumerate">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i1.p1.m1" class="ltx_Math" alttext="n=0" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow></math>なら単位行列(1,0,0,1)を返す．</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i2.p1.m1" class="ltx_Math" alttext="n&gt;0" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>0</mn></mrow></math>なら<math id="I3.i2.p1.m2" class="ltx_Math" alttext="m={n\over 2}" display="inline"><mrow><mi>m</mi><mo>=</mo><mfrac><mi>n</mi><mn>2</mn></mfrac></mrow></math>と<math id="I3.i2.p1.m3" class="ltx_Math" alttext="k=(n\ mod\ 2)" display="inline"><mrow><mi>k</mi><mo>=</mo><mo stretchy="false">(</mo><mi>n</mi><mspace width="5.0pt"></mspace><mi>m</mi><mi>o</mi><mi>d</mi><mspace width="5.0pt"></mspace><mn>2</mn><mo stretchy="false">)</mo></mrow></math>を求め，以下の処理を行う．</p>
+<ol id="I3.i2.I1" class="ltx_enumerate">
+<li id="I3.i2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="I3.i2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fastMatrixPower(m,a,b,c,d)</span> を計算する．</p>
+</div>
+</li>
+<li id="I3.i2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="I3.i2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">上記の行列同士の積を計算する．</p>
+</div>
+</li>
+<li id="I3.i2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="I3.i2.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">もし<math id="I3.i2.I1.i3.p1.m1" class="ltx_Math" alttext="k=1" display="inline"><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow></math>なら，さらに，上で求めた行列と引数で与えられた行列の積を求める．</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+<p class="ltx_p"><math id="Ch2.Thmex14.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>が<math id="Ch2.Thmex14.p1.m3" class="ltx_Math" alttext="2^{k}" display="inline"><mrow><mn>2</mn><msup><mi></mi><mi>k</mi></msup></mrow></math>の場合について，<span class="ltx_text ltx_font_typewriter">fastMatrixPower</span> が行う行列の掛け算の回数を
+見積もれ．</p>
+</div>
+<div id="Ch2.Thmex14.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">matrixPower(1000000,1,0,0,1)</span> と
+<span class="ltx_text ltx_font_typewriter">fastMatrixPower(1000000,1,0,0,1)</span> とをそれぞれ計算し，実行速度を比較
+せよ．</p>
+</div>
+<div id="Ch2.Thmex14.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fastMatrixPower</span> を使って，<span class="ltx_text ltx_font_typewriter">fastFib’</span> と同一の動作をする関
+数 <span class="ltx_text ltx_font_typewriter">veryFastFib</span> を定義せよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p6" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+<span class="ltx_text ltx_font_typewriter">fastMatrixPower</span>は以下のようにコードできる．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun matrixMult (a,b,c,d) (x,y,z,w) = (a*x+b*z,a*y+b*w,c*x+d*z,c*y+d*w)
+   fun fastMatrixPower (n,a,b,c,d) =
+        if n = 0 then (1,0,0,1)
+        else let val m = n div 2
+                 val k = n mod 2
+             in if m = 0 then (a,b,c,d)
+                else let val (x,y,z,w) = fastMatrixPower(m,a,b,c,d)
+                         val (x,y,z,w) = matrixMult (x,y,z,w) (x,y,z,w)
+                      in if k = 0 then (x,y,z,w)
+                          else matrixMult (x,y,z,w) (a,b,c,d)
+                      end
+             end;
+</pre>
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fastMatrixPower</span>が引数<math id="p6.m1" class="ltx_Math" alttext="2^{k}" display="inline"><mrow><mn>2</mn><msup><mi></mi><mi>k</mi></msup></mrow></math>に対して行う掛け算の回数を<math id="p6.m2" class="ltx_Math" alttext="S_{k}" display="inline"><mrow><mi>S</mi><msub><mi></mi><mi>k</mi></msub></mrow></math>と置くと</p>
+<table id="Ch17.S2.EGx7" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="Ch2.Ex19"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.Ex19.m1" class="ltx_Math" alttext="\displaystyle S_{0}" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>0</mn></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch2.Ex19.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex19.m3" class="ltx_Math" alttext="\displaystyle 0" display="inline"><mn>0</mn></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch2.Ex20"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.Ex20.m1" class="ltx_Math" alttext="\displaystyle S_{k+1}" display="inline"><mrow><mi>S</mi><msub><mi></mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ch2.Ex20.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.Ex20.m3" class="ltx_Math" alttext="\displaystyle S_{k}+8" display="inline"><mrow><mi>S</mi><msub><mi></mi><mi>k</mi></msub><mo>+</mo><mn>8</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">である．従って<math id="p6.m3" class="ltx_Math" alttext="8k" display="inline"><mrow><mn>8</mn><mi>k</mi></mrow></math>回である．</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">以下に、プログラムコードと現在の著者の環境で計測した実行時間を示す。</p>
+<ul id="I4" class="ltx_itemize">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I4.i1.p1" class="ltx_para">
+<p class="ltx_p">プログラム：<span class="ltx_text ltx_font_typewriter">matrixPower (1000000,1, 0, 0, 1)</span></p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   real    0m0.085s
+   user    0m0.052s
+   sys     0m0.032s
+</pre>
+</div>
+</li>
+<li id="I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I4.i2.p1" class="ltx_para">
+<p class="ltx_p">プログラム：<span class="ltx_text ltx_font_typewriter">fastMatrixPower (1000000,1, 0, 0, 1)</span></p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   real    0m0.002s
+   user    0m0.000s
+   sys     0m0.000s
+</pre>
+</div>
+</li>
+</ul>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">veryFastFib</span>は，<span class="ltx_text ltx_font_typewriter">fastMatrixPower</span>を使い以下のように定義できる．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   fun veryFastFib n =
+       let
+         val (a,b,c,d) = fastMatrixPower(n,1,1,1,0)
+       in
+         b
+       end;
+</pre>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="Ch2.S4.html" title="2.4 局所変数の使用 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.4 </span>局所変数の使用</span></a><a href="Ch2.S6.html" title="2.6 高階の関数 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.6 </span>高階の関数</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Nov  6 00:44:26 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+{% endraw %}

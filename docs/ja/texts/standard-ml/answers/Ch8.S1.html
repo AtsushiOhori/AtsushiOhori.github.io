@@ -1,0 +1,262 @@
+---
+layout: default
+permalink: /ja/texts/standard-ml/answers//Ch8.S1.html
+translated: true
+lang: ja
+head: |
+ <!--Generated on Sat Nov  6 00:44:26 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Document created on 2021年11月5日.-->
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="LaTeXML.css" type="text/css">
+ <link rel="stylesheet" href="ltx-book.css" type="text/css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+ <link rel="up" href="Ch8.html" title="第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up up" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="start" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="prev" href="Ch8.html" title="第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="next" href="Ch8.S2.html" title="8.2 履歴に依存するプログラム ‣ 第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch8.S2.html" title="8.2 履歴に依存するプログラム ‣ 第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch8.S3.html" title="8.3 変更可能なデータ構造 ‣ 第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch8.S6.html" title="8.6 SML#のランク1多相性 ‣ 第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch1.html" title="第 1 章 MLプログラミングの基本 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch2.html" title="第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch3.html" title="第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch4.html" title="第 4 章 MLの基本データ型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch5.html" title="第 5 章 レコード ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch6.html" title="第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch7.html" title="第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch8.html" title="第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch9.html" title="第 9 章 例外処理 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch10.html" title="第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+---
+{% raw %}
+<div class="ltx_page_main">
+<header class="ltx_page_header"><div class="ltx_document_title">プログラミング言語 Standard ML 入門 (問題の解答例)</div>
+<div>
+<a href="Ch8.html" title="第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8 </span>参照型</span></a><a href="Ch8.html" title="第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8 </span>参照型</span></a><a href="Ch8.S2.html" title="8.2 履歴に依存するプログラム ‣ 第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8.2 </span>履歴に依存するプログラム</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">8.1 </span>参照型（<span class="ltx_text ltx_font_typewriter">eqtype <math id="m1" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math> ref</span>）と逐次評価</h1>
+
+<div id="Ch8.Thmex1" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 8.1</span></span></h6>
+<div id="Ch8.Thmex1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">x</span> を <span class="ltx_text ltx_font_typewriter">int ref</span> 型の式とする．以下の両式の違いは何か．
+</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">!x before x:= !x + 1</span></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">(x:= !x + 1; !x)</span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+前者は、<span class="ltx_text ltx_font_typewriter">x</span>を<span class="ltx_text ltx_font_typewriter">!x+1</span>で更新した後、参照しその値を返す式であるのに対して、
+後者は、更新した後、参照しその値を返す式である。</p>
+</div>
+<div id="Ch8.Thmex2" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 8.2</span></span></h6>
+<div id="Ch8.Thmex2.p1" class="ltx_para">
+<p class="ltx_p">上記3つの構文は，他の構文の評価順序の約束を使って定義することがで
+きる．
+たとえば <span class="ltx_text ltx_font_typewriter">(<math id="Ch8.Thmex2.p1.m1" class="ltx_Math" alttext="exp_{1}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn mathvariant="normal">1</mn></msub></mrow></math>; <math id="Ch8.Thmex2.p1.m2" class="ltx_Math" alttext="\cdots" display="inline"><mi mathvariant="normal">⋯</mi></math>; <math id="Ch8.Thmex2.p1.m3" class="ltx_Math" alttext="exp_{n}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>)</span> は <span class="ltx_text ltx_font_typewriter">#n (<math id="Ch8.Thmex2.p1.m4" class="ltx_Math" alttext="exp_{1}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn mathvariant="normal">1</mn></msub></mrow></math>, <math id="Ch8.Thmex2.p1.m5" class="ltx_Math" alttext="\cdots" display="inline"><mi mathvariant="normal">⋯</mi></math>, <math id="Ch8.Thmex2.p1.m6" class="ltx_Math" alttext="exp_{n}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>)</span>
+の略記法とみなせる．
+<math id="Ch8.Thmex2.p1.m7" class="ltx_Math" alttext="exp_{1}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn>1</mn></msub></mrow></math><span class="ltx_text ltx_font_typewriter"> before <math id="Ch8.Thmex2.p1.m8" class="ltx_Math" alttext="exp_{2}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn mathvariant="normal">2</mn></msub></mrow></math></span>および<span class="ltx_text ltx_font_typewriter">while <math id="Ch8.Thmex2.p1.m9" class="ltx_Math" alttext="exp_{1}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn mathvariant="normal">1</mn></msub></mrow></math> do <math id="Ch8.Thmex2.p1.m10" class="ltx_Math" alttext="exp_{2}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn mathvariant="normal">2</mn></msub></mrow></math></span>の定義を与えよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p2" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+例えば以下のような定義が可能である。</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.p1.m1" class="ltx_Math" alttext="exp_{1}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn>1</mn></msub></mrow></math><span class="ltx_text ltx_font_typewriter"> before <math id="I2.i1.p1.m2" class="ltx_Math" alttext="exp_{2}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn mathvariant="normal">2</mn></msub></mrow></math></span>：
+<br class="ltx_break">
+<span class="ltx_tabular">
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">(fn x =&gt; fn () =&gt; x) </span><math id="I2.i1.p1.m3" class="ltx_Math" alttext="exp_{1}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn>1</mn></msub></mrow></math><span class="ltx_text ltx_font_typewriter"> </span><math id="I2.i1.p1.m4" class="ltx_Math" alttext="exp_{2}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn>2</mn></msub></mrow></math></span></span>
+</span></p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">while <math id="I2.i2.p1.m1" class="ltx_Math" alttext="exp_{1}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn mathvariant="normal">1</mn></msub></mrow></math> do <math id="I2.i2.p1.m2" class="ltx_Math" alttext="exp_{2}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn mathvariant="normal">2</mn></msub></mrow></math></span>：
+<br class="ltx_break">
+<span class="ltx_tabular">
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">let</span></span></span>
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">    val E1 = fn () =&gt; </span><math id="I2.i2.p1.m3" class="ltx_Math" alttext="exp_{1}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn>1</mn></msub></mrow></math></span></span>
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">    val E2 = fn () =&gt; </span><math id="I2.i2.p1.m4" class="ltx_Math" alttext="exp_{2}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn>2</mn></msub></mrow></math></span></span>
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">    fun f () = if E1() then (E2(); f()) else ()</span></span></span>
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">in</span></span></span>
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">    f ()</span></span></span>
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">end</span></span></span>
+</span></p>
+</div>
+</li>
+</ul>
+</div>
+<div id="Ch8.Thmex3" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 8.3</span></span></h6>
+<div id="Ch8.Thmex3.p1" class="ltx_para">
+<p class="ltx_p">以下の式の評価の結果を予測せよ．</p>
+<ol id="I3" class="ltx_enumerate">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<table class="ltx_tabular ltx_align_top">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">
+<span class="ltx_text ltx_font_typewriter">(fn f =&gt; (print "a</span><code class="ltx_verbatim ltx_font_typewriter">\</code><span class="ltx_text ltx_font_typewriter">n";f))</span>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">
+<span class="ltx_text ltx_font_typewriter">(fn x =&gt; (print "b</span><code class="ltx_verbatim ltx_font_typewriter">\</code><span class="ltx_text ltx_font_typewriter">n";x))</span>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">
+<span class="ltx_text ltx_font_typewriter">(print "c</span><code class="ltx_verbatim ltx_font_typewriter">\</code><span class="ltx_text ltx_font_typewriter">n";1);</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<table class="ltx_tabular ltx_align_top">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">
+<span class="ltx_text ltx_font_typewriter">(fn f =&gt; (print "a</span><code class="ltx_verbatim ltx_font_typewriter">\</code><span class="ltx_text ltx_font_typewriter">n";f))</span>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">
+<span class="ltx_text ltx_font_typewriter">((fn x =&gt; (print "b</span><code class="ltx_verbatim ltx_font_typewriter">\</code><span class="ltx_text ltx_font_typewriter">n";x))</span>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">
+<span class="ltx_text ltx_font_typewriter"> (print "c</span><code class="ltx_verbatim ltx_font_typewriter">\</code><span class="ltx_text ltx_font_typewriter">n";1));</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<table class="ltx_tabular ltx_align_top">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">
+<span class="ltx_text ltx_font_typewriter">{S = "S" before print "S</span><code class="ltx_verbatim ltx_font_typewriter">\</code><span class="ltx_text ltx_font_typewriter">n",</span>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">
+<span class="ltx_text ltx_font_typewriter"> M = "M" before print "M</span><code class="ltx_verbatim ltx_font_typewriter">\</code><span class="ltx_text ltx_font_typewriter">n",</span>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">
+<span class="ltx_text ltx_font_typewriter"> L = "L" before print "L</span><code class="ltx_verbatim ltx_font_typewriter">\</code><span class="ltx_text ltx_font_typewriter">n"};</span>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="ltx_tabular ltx_align_top">
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p3" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+「予測せよ」の解答例は困難であるが、… SML#による結果は以下の通り。</p>
+<ol id="I4" class="ltx_enumerate">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I4.i1.p1" class="ltx_para">
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # (fn f =&gt; (print "a\n";f))
+   &gt; (fn x =&gt; (print "b\n";x))
+   &gt; (print "c\n";1);
+   a
+   c
+   b
+   val it = 1 : int
+</pre>
+</div>
+</li>
+<li id="I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I4.i2.p1" class="ltx_para">
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # (fn f =&gt; (print "a\n";f))
+   &gt; ((fn x =&gt; (print "b\n";x))
+   &gt;  (print "c\n";1));
+   c
+   b
+   a
+   val it = 1 : int
+</pre>
+</div>
+</li>
+<li id="I4.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="I4.i3.p1" class="ltx_para">
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # {S = "S" before print "S\n",
+   &gt;  M = "M" before print "M\n",
+   &gt;  L = "L" before print "L\n"};
+   S
+   M
+   L
+   val it = {L = "L", M = "M", S = "S"} : {L: string, M: string, S: string}
+</pre>
+</div>
+</li>
+</ol>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="Ch8.html" title="第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8 </span>参照型</span></a><a href="Ch8.S2.html" title="8.2 履歴に依存するプログラム ‣ 第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8.2 </span>履歴に依存するプログラム</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Nov  6 00:44:26 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+{% endraw %}

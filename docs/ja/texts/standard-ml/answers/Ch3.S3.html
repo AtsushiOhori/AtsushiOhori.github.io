@@ -1,0 +1,236 @@
+---
+layout: default
+permalink: /ja/texts/standard-ml/answers//Ch3.S3.html
+translated: true
+lang: ja
+head: |
+ <!--Generated on Sat Nov  6 00:44:26 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Document created on 2021年11月5日.-->
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="LaTeXML.css" type="text/css">
+ <link rel="stylesheet" href="ltx-book.css" type="text/css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+ <link rel="up" href="Ch3.html" title="第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up up" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="start" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="prev" href="Ch3.S2.html" title="3.2 型の多相性と多相関数 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="next" href="Ch3.S4.html" title="3.4 関数名の多重定義 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch3.S1.html" title="3.1 型推論と静的型チェック ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch3.S2.html" title="3.2 型の多相性と多相関数 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch3.S4.html" title="3.4 関数名の多重定義 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch3.S5.html" title="3.5 多相型の使用の制限 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch3.S6.html" title="3.6 等値演算子の型の扱い ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch1.html" title="第 1 章 MLプログラミングの基本 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch2.html" title="第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch3.html" title="第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch4.html" title="第 4 章 MLの基本データ型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch5.html" title="第 5 章 レコード ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch6.html" title="第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch7.html" title="第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch8.html" title="第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch9.html" title="第 9 章 例外処理 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch10.html" title="第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+---
+{% raw %}
+<div class="ltx_page_main">
+<header class="ltx_page_header"><div class="ltx_document_title">プログラミング言語 Standard ML 入門 (問題の解答例)</div>
+<div>
+<a href="Ch3.html" title="第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>MLの型システム</span></a><a href="Ch3.S2.html" title="3.2 型の多相性と多相関数 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.2 </span>型の多相性と多相関数</span></a><a href="Ch3.S4.html" title="3.4 関数名の多重定義 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.4 </span>関数名の多重定義</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3.3 </span>明示的な型宣言</h1>
+
+<div id="Ch3.Thmex7" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 3.7</span></span></h6>
+<div id="Ch3.Thmex7.p1" class="ltx_para">
+<p class="ltx_p">以下の関数の型を推定せよ．</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fun f x y z = x y z : int</span></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fun f x y z = x (y z) : int</span></p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fun f x y z = (x y z) : int</span></p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fun f x y z = x y (z : int)</span></p>
+</div>
+</li>
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fun f x y z = x (y z : int)</span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+たとえばSML#の推論結果以下の通りである．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # fun f x y z = x y z : int;
+   val f = fn : [’a,’b.(’a  -&gt; ’b  -&gt; int)  -&gt; ’a  -&gt; ’b  -&gt; int]
+   # fun f x y z = x (y z) : int;
+   val f = fn : [’a .(’a  -&gt; int)  -&gt; [’b .(’b  -&gt; ’a)  -&gt; ’b  -&gt; int]]
+   # fun f x y z = (x y z) : int;
+   val f = fn : [’a,’b.(’a  -&gt; ’b  -&gt; int)  -&gt; ’a  -&gt; ’b  -&gt; int]
+   # fun f x y z = x y (z : int);
+   val f = fn : [’a,’b.(’a  -&gt; int  -&gt; ’b)  -&gt; ’a  -&gt; int  -&gt; ’b]
+   # fun f x y z = x (y z : int);
+   val f = fn : [’a .(int  -&gt; ’a)  -&gt; [’b .(’b  -&gt; int)  -&gt; ’b  -&gt; ’a]]
+</pre>
+</div>
+<div id="Ch3.Thmex8" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 3.8</span></span></h6>
+<div id="Ch3.Thmex8.p1" class="ltx_para">
+<p class="ltx_p">関数<span class="ltx_text ltx_font_typewriter">fun f x = K x (fn y =&gt; x (x 1))</span>
+の動作と型を説明せよ．
+ただし <span class="ltx_text ltx_font_typewriter">K</span> は問<a href="Ch3.S2.html#Ch3.Thmex5" title="問 3.5 ‣ 3.2 型の多相性と多相関数 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.5</span></a>で定義した関数である．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p2" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+<span class="ltx_text ltx_font_typewriter">K</span>は２番目の引数を捨てて1番目の引数を返す関数であるから，
+<span class="ltx_text ltx_font_typewriter">fun f x = K x (fn y =&gt; x (x 1))</span>
+は<span class="ltx_text ltx_font_typewriter">x</span>を受け取り<span class="ltx_text ltx_font_typewriter">x</span>を返す関数である．
+従って，<span class="ltx_text ltx_font_typewriter">x</span>の型をAとすると，<span class="ltx_text ltx_font_typewriter">f</span>の型は
+<span class="ltx_text ltx_font_typewriter">A -&gt; A</span>である．
+ただし，<span class="ltx_text ltx_font_typewriter">(fn y =&gt; x (x 1))</span>があるため
+<span class="ltx_text ltx_font_typewriter">x</span>の型は<span class="ltx_text ltx_font_typewriter">int -&gt; int</span>に制限される．
+そこで，<span class="ltx_text ltx_font_typewriter">f</span>の型は<span class="ltx_text ltx_font_typewriter">(int -&gt; int) -&gt; int -&gt; int</span>となる．</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">実際SML#は以下のような型を推論する．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # fun f x = K x (fn y =&gt; x (x 1));
+   val f = fn : (int  -&gt; int)  -&gt; int  -&gt; int
+</pre>
+</div>
+<div id="Ch3.Thmex9" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 3.9</span></span></h6>
+<div id="Ch3.Thmex9.p1" class="ltx_para">
+<p class="ltx_p">問<a href="#Ch3.Thmex8" title="問 3.8 ‣ 3.3 明示的な型宣言 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.8</span></a>の考察から理解されるように，明示的な型宣
+言を使用しなくても型の制約を加えることができる場合がある．
+型変数を含まない型<math id="Ch3.Thmex9.p1.m1" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math>を持つ式<math id="Ch3.Thmex9.p1.m2" class="ltx_Math" alttext="exp_{\tau}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mi>τ</mi></msub></mrow></math>が与えられているとする．
+</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.p1.m1" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math>より一般的な多相型を持つ式<math id="I2.i1.p1.m2" class="ltx_Math" alttext="exp" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi></mrow></math>が与えられたとき，
+その式の動作を変えずに，その式の型を<math id="I2.i1.p1.m3" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math>制限する式の定義を与えよ．</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">恒等関数と同一の動作をし，かつ型が<math id="I2.i2.p1.m1" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math><span class="ltx_text ltx_font_typewriter"> -&gt; <math id="I2.i2.p1.m2" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math></span>であ
+る関数を定義せよ．</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p4" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span></p>
+<ol id="I3" class="ltx_enumerate">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p">簡単には，
+<br class="ltx_break">
+<span class="ltx_tabular">
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">if true then exp else </span><math id="I3.i1.p1.m1" class="ltx_Math" alttext="E_{τ}" display="inline"><mrow><mi>E</mi><msub><mi></mi><mi>τ</mi></msub></mrow></math></span></span>
+</span>
+とすればよい．
+if分を使わずに，より純粋なラムダ式で表現したければ，以下の手順で構築できる．
+式<math id="I3.i1.p1.m2" class="ltx_Math" alttext="exp" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi></mrow></math>の型を式<math id="I3.i1.p1.m3" class="ltx_Math" alttext="E_{τ}" display="inline"><mrow><mi>E</mi><msub><mi></mi><mi>τ</mi></msub></mrow></math>の型と強制的に一致させるには，それら二つの式
+を，それらの型が等式で結ばれるような式の中に埋め込めばよい．以下はその典
+型的な例である．
+<br class="ltx_break">
+<span class="ltx_tabular">
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">(fn y =&gt; fn z =&gt; z (y </span><math id="I3.i1.p1.m4" class="ltx_Math" alttext="E_{τ}" display="inline"><mrow><mi>E</mi><msub><mi></mi><mi>τ</mi></msub></mrow></math><span class="ltx_text ltx_font_typewriter">) (y </span><math id="I3.i1.p1.m5" class="ltx_Math" alttext="exp" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi></mrow></math><span class="ltx_text ltx_font_typewriter">))</span></span></span>
+</span>
+この関数は<math id="I3.i1.p1.m6" class="ltx_Math" alttext="exp" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi></mrow></math>と同一の動作をせず，要求を満さない．
+求める式は，評価すると<math id="I3.i1.p1.m7" class="ltx_Math" alttext="exp" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi></mrow></math>が得られるような式でなければならない．
+そこで，上記の<math id="I3.i1.p1.m8" class="ltx_Math" alttext="exp" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi></mrow></math>の部分を引数とし，
+<br class="ltx_break">
+<span class="ltx_tabular">
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">(fn x =&gt; ... (fn y =&gt;fn z =&gt; z (y </span><math id="I3.i1.p1.m9" class="ltx_Math" alttext="E_{τ}" display="inline"><mrow><mi>E</mi><msub><mi></mi><mi>τ</mi></msub></mrow></math><span class="ltx_text ltx_font_typewriter">) (y </span><math id="I3.i1.p1.m10" class="ltx_Math" alttext="exp" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi></mrow></math><span class="ltx_text ltx_font_typewriter">)) ... ) </span><math id="I3.i1.p1.m11" class="ltx_Math" alttext="exp" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi></mrow></math></span></span>
+</span>
+と変形することを考える．
+関数の本体全体は<span class="ltx_text ltx_font_typewriter">x</span>と同一の意味をもつ式である必要がある．
+そこで，<span class="ltx_text ltx_font_typewriter">val K = fn x =&gt; fn y =&gt; x</span>を使い，型を一致させるだ
+けに導入した上記の部分を捨て，<math id="I3.i1.p1.m12" class="ltx_Math" alttext="exp" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi></mrow></math>自身を返すようにすればよい．
+以下が要求を満す式の例である．
+<br class="ltx_break">
+<span class="ltx_tabular">
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">(fn x =&gt; K x (fn y =&gt;fn z =&gt; z (y E&lt;sub&gt;τ&lt;/sub&gt;) (y exp))) exp</span></span></span>
+</span></p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p">上記を応用すれば，以下のような例が考えられる．
+<br class="ltx_break">
+<span class="ltx_tabular">
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_left"><span class="ltx_text ltx_font_typewriter">fn x =&gt; K x (fn y =&gt;fn z =&gt; z (y </span><math id="I3.i2.p1.m1" class="ltx_Math" alttext="E_{τ}" display="inline"><mrow><mi>E</mi><msub><mi></mi><mi>τ</mi></msub></mrow></math><span class="ltx_text ltx_font_typewriter">) (y x))</span></span></span>
+</span>
+たとえば，<span class="ltx_text ltx_font_typewriter">fn x =&gt; K x (fn y =&gt;fn z =&gt; z (y 1) (y x))</span>¿は
+<span class="ltx_text ltx_font_typewriter">int -&gt; int</span>型の関数である．</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="Ch3.Thmex10" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 3.10</span></span></h6>
+<div id="Ch3.Thmex10.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">higherTwice</span> と同一の動作をし型が等しい関数を，明示的な型制約
+を加えずに定義せよ．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p5" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+以下にコード例とSML#で推論された型を示す。</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # fun higherTwice f x = f (f (K x (fn y =&gt; (y x, y id))));
+   val higherTwice = fn : [’a .((’a  -&gt; ’a)  -&gt; ’a  -&gt; ’a)  -&gt; (’a  -&gt; ’a)  -&gt; ’a  -&gt; ’a]
+</pre>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="Ch3.S2.html" title="3.2 型の多相性と多相関数 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.2 </span>型の多相性と多相関数</span></a><a href="Ch3.S4.html" title="3.4 関数名の多重定義 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.4 </span>関数名の多重定義</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Nov  6 00:44:26 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+{% endraw %}

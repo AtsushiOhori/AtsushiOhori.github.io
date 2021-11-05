@@ -1,0 +1,186 @@
+---
+layout: default
+permalink: /ja/texts/standard-ml/answers//Ch3.S5.html
+translated: true
+lang: ja
+head: |
+ <!--Generated on Sat Nov  6 00:44:26 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Document created on 2021年11月5日.-->
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="LaTeXML.css" type="text/css">
+ <link rel="stylesheet" href="ltx-book.css" type="text/css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+ <link rel="up" href="Ch3.html" title="第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="up up up" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="start" href="./" title="プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="prev" href="Ch3.S4.html" title="3.4 関数名の多重定義 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="next" href="Ch3.S6.html" title="3.6 等値演算子の型の扱い ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch3.S1.html" title="3.1 型推論と静的型チェック ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch3.S2.html" title="3.2 型の多相性と多相関数 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch3.S3.html" title="3.3 明示的な型宣言 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch3.S4.html" title="3.4 関数名の多重定義 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="section" href="Ch3.S6.html" title="3.6 等値演算子の型の扱い ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch1.html" title="第 1 章 MLプログラミングの基本 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch2.html" title="第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch3.html" title="第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch4.html" title="第 4 章 MLの基本データ型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch5.html" title="第 5 章 レコード ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch6.html" title="第 6 章 リスト ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch7.html" title="第 7 章 データ構造の定義と利用 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch8.html" title="第 8 章 参照型 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch9.html" title="第 9 章 例外処理 ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="chapter" href="Ch10.html" title="第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt1.html" title="Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+ <link rel="part" href="Pt2.html" title="Part II Standard ML基本ライブラリ ‣ プログラミング言語 Standard ML 入門 (問題の解答例)">
+---
+{% raw %}
+<div class="ltx_page_main">
+<header class="ltx_page_header"><div class="ltx_document_title">プログラミング言語 Standard ML 入門 (問題の解答例)</div>
+<div>
+<a href="Ch3.html" title="第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>MLの型システム</span></a><a href="Ch3.S4.html" title="3.4 関数名の多重定義 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.4 </span>関数名の多重定義</span></a><a href="Ch3.S6.html" title="3.6 等値演算子の型の扱い ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.6 </span>等値演算子の型の扱い</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3.5 </span>多相型の使用の制限</h1>
+
+<div id="Ch3.Thmex12" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 3.12</span></span></h6>
+<div id="Ch3.Thmex12.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fn f =&gt; twice twice f</span> が関数を引数に<math id="Ch3.Thmex12.p1.m1" class="ltx_Math" alttext="4" display="inline"><mn>4</mn></math>回適用する高階の関数であるこ
+とを確かめよ．
+<span class="ltx_text ltx_font_typewriter">fn f =&gt; twice fourTimes f</span> および
+<span class="ltx_text ltx_font_typewriter">fn f =&gt; fourTimes twice f</span> はそれぞれどのような関数か．
+<span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+例えば以下のように確かめることができる．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # fun printStar () = print "*";
+   val printStar = fn : unit  -&gt; unit
+   # twice twice printStar ();
+   ****val it = () : unit
+</pre>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">以下の例からわかるように、<span class="ltx_text ltx_font_typewriter">fn f =&gt; twice fourTimes f</span> および
+<span class="ltx_text ltx_font_typewriter">fn f =&gt; fourTimes twice f</span>は、どちらも関数を16回適用する高階関数で
+ある．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # twice fourTimes printStar ();
+   ****************val it = () : unit
+   # fourTimes twice printStar ();
+   ****************val it = () : unit
+</pre>
+<p class="ltx_p">（補足）
+<span class="ltx_text ltx_font_typewriter">twice fourTimes f x</span>は，その定義から，
+<span class="ltx_text ltx_font_typewriter">fourTimes (fourTimes f) x</span>
+である．
+さらに<span class="ltx_text ltx_font_typewriter">fourTimes</span>の定義にしたがって展開すると
+<span class="ltx_text ltx_font_typewriter">(fourTimes f) ((fourTimes f) ((fourTimes f) (fourTimes f x)))</span>
+となる．
+このことから，<span class="ltx_text ltx_font_typewriter">twice fourTimes f x</span>は<span class="ltx_text ltx_font_typewriter">f</span>を<span class="ltx_text ltx_font_typewriter">x</span>に
+<math id="p2.m1" class="ltx_Math" alttext="4^{2}" display="inline"><mrow><mn>4</mn><msup><mi></mi><mn>2</mn></msup></mrow></math>回適用する関数となることがわかる．
+一般に，関数を<math id="p2.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>回適用する関数を<math id="p2.m3" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>，
+関数を<math id="p2.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>回適用する関数を<math id="p2.m5" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math>とすると<span class="ltx_text ltx_font_typewriter">M N</span>は関数を
+<math id="p2.m6" class="ltx_Math" alttext="n^{m}" display="inline"><mrow><mi>n</mi><msup><mi></mi><mi>m</mi></msup></mrow></math>回適用する関数となる．
+以下に<math id="p2.m7" class="ltx_Math" alttext="m=4，n=3" display="inline"><mrow><mi>m</mi><mo>=</mo><mn>4</mn><mi mathvariant="normal">，</mi><mi>n</mi><mo>=</mo><mn>3</mn></mrow></math>の例を示す．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # fun threeTimes f x = f (f (f x));
+   val threeTimes = fn : [’a .(’a  -&gt; ’a)  -&gt; ’a  -&gt; ’a]
+   # fourTimes threeTimes printStar ();
+   *********************************************************************************val it = () : unit
+</pre>
+</div>
+<div id="Ch3.Thmex13" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 3.13</span></span></h6>
+<div id="Ch3.Thmex13.p1" class="ltx_para">
+<p class="ltx_p">以下の各式が値式であるか否か判定せよ．</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fn x =&gt; x 1</span></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">(fn x =&gt; x) 1</span></p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">(fn x =&gt; x,fn x =&gt; x)</span>
+</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">let fun f x = x in f end</span></p>
+</div>
+</li>
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span> 
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">let val a = 1 + 1 in fn x =&gt; x end</span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p3" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
+以下のものがは値式である．</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fn x =&gt; x 1</span></p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">(fn x =&gt; x,fn x =&gt; x)</span></p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">（補足）以下の各式は値式ではない．</p>
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">let fun f x = x in f end</span></p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">let val a = 1 + 1 in fn x =&gt; x end</span></p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">しかし，ランク１多相性を実現しているSML#では以下のように多相型が与えられる．</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+   # let fun f x = x in f end;
+   val it = fn : [’a .’a  -&gt; ’a]
+   # let val a = 1 + 1 in fn x =&gt; x end;
+   val it = fn : [’a .’a  -&gt; ’a]
+</pre>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="Ch3.S4.html" title="3.4 関数名の多重定義 ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.4 </span>関数名の多重定義</span></a><a href="Ch3.S6.html" title="3.6 等値演算子の型の扱い ‣ 第 3 章 MLの型システム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.6 </span>等値演算子の型の扱い</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Nov  6 00:44:26 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+{% endraw %}
