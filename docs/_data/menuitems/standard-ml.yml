@@ -1,10 +1,16 @@
 ---
-title: "プログラミング言語Standard ML入門 改訂版"
+title: "プログラミング言語Standard ML入門（改訂版）"
 
 url: /ja/texts/standard-ml/
 menuText: 概要
 
-menu: []
+menu:
+- text: コード
+  url: /ja/texts/standard-ml/codes/
+- text: 正誤表
+  url: /ja/texts/standard-ml/errata/
+- text: 練習問題の解答例
+  url: /ja/texts/standard-ml/answers/
 
 super:
 - text: ホーム/
