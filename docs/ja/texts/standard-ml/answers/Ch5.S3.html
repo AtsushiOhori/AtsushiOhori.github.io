@@ -4,7 +4,7 @@ permalink: /ja/texts/standard-ml/answers//Ch5.S3.html
 translated: true
 lang: ja
 head: |
- <!--Generated on Sat Nov  6 00:44:26 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Generated on Sat Nov  6 10:29:27 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
  <!--Document created on 2021年11月5日.-->
  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <link rel="stylesheet" href="LaTeXML.css" type="text/css">
@@ -66,7 +66,8 @@ head: |
 (ヒント：式<math id="I1.i2.p1.m10" class="ltx_Math" alttext="exp" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi></mrow></math>の中では<math id="I1.i2.p1.m11" class="ltx_Math" alttext="x_{1}" display="inline"><mrow><mi>x</mi><msub><mi></mi><mn>1</mn></msub></mrow></math>から<math id="I1.i2.p1.m12" class="ltx_Math" alttext="x_{n}" display="inline"><mrow><mi>x</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>までの変数が使用されているはずである．
 この点を考えて，<span class="ltx_text ltx_font_typewriter">let val <math id="I1.i2.p1.m13" class="ltx_Math" alttext="x_{1}" display="inline"><mrow><mi>x</mi><msub><mi></mi><mn mathvariant="normal">1</mn></msub></mrow></math>=<math id="I1.i2.p1.m14" class="ltx_Math" alttext="exp_{1}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn mathvariant="normal">1</mn></msub></mrow></math> <math id="I1.i2.p1.m15" class="ltx_Math" alttext="\cdots" display="inline"><mi mathvariant="normal">⋯</mi></math> val <math id="I1.i2.p1.m16" class="ltx_Math" alttext="x_{n}" display="inline"><mrow><mi>x</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>=<math id="I1.i2.p1.m17" class="ltx_Math" alttext="exp_{n}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mi>n</mi></msub></mrow></math> in <math id="I1.i2.p1.m18" class="ltx_Math" alttext="exp" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi></mrow></math>
 end</span> の形の式を含む式を定義することを考えよ．ここで，<math id="I1.i2.p1.m19" class="ltx_Math" alttext="exp" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi></mrow></math>は与えられた式，<math id="I1.i2.p1.m20" class="ltx_Math" alttext="exp_{1}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mn>1</mn></msub></mrow></math>から
-<math id="I1.i2.p1.m21" class="ltx_Math" alttext="exp_{n}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>は適当に導入する式である．）</p>
+<math id="I1.i2.p1.m21" class="ltx_Math" alttext="exp_{n}" display="inline"><mrow><mi>e</mi><mi>x</mi><mi>p</mi><msub><mi></mi><mi>n</mi></msub></mrow></math>は適当に導入する式である．）
+</p>
 </div>
 </li>
 </ol>
@@ -117,7 +118,7 @@ SML#のレコード多相を用いれば、実際に関数として定義可能�
 <div>
 <a href="Ch5.html" title="第 5 章 レコード ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>レコード</span></a><a href="Ch5.S5.html" title="5.5 組型 ‣ 第 5 章 レコード ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.5 </span>組型</span></a>
 </div>
-<div class="ltx_page_logo">Generated  on Sat Nov  6 00:44:26 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+<div class="ltx_page_logo">Generated  on Sat Nov  6 10:29:27 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
 </div></footer>
 </div>
 {% endraw %}

@@ -4,7 +4,7 @@ permalink: /ja/texts/standard-ml/answers//Ch2.S6.html
 translated: true
 lang: ja
 head: |
- <!--Generated on Sat Nov  6 00:44:26 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Generated on Sat Nov  6 10:29:27 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
  <!--Document created on 2021年11月5日.-->
  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <link rel="stylesheet" href="LaTeXML.css" type="text/css">
@@ -86,7 +86,8 @@ head: |
 <li id="I2.i2" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_item">2.</span> 
 <div id="I2.i2.p1" class="ltx_para">
-<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fun f2 n = summation (power 2) n;</span></p>
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">fun f2 n = summation (power 2) n;</span>
+</p>
 </div>
 </li>
 <li id="I2.i3" class="ltx_item" style="list-style-type:none;">
@@ -157,7 +158,8 @@ val it = 66.0 : real
 <div id="Ch2.Thmex17.p1" class="ltx_para">
 <p class="ltx_p"><math id="Ch2.Thmex17.p1.m1" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></math>を実数から実数への関数とする．
 <math id="Ch2.Thmex17.p1.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>の<math id="Ch2.Thmex17.p1.m3" class="ltx_Math" alttext="[a,b]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></math>の区間の定積分の値<math id="Ch2.Thmex17.p1.m4" class="ltx_Math" alttext="\int_{a}^{b}f(x)dx" display="inline"><mrow><mo largeop="true" symmetric="true">∫</mo><msub><mi></mi><mi>a</mi></msub><msup><mi></mi><mi>b</mi></msup><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mi>d</mi><mi>x</mi></mrow></math>は，
-<math id="Ch2.Thmex17.p1.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>が十分に大きいとき，</p>
+<math id="Ch2.Thmex17.p1.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>が十分に大きいとき，
+</p>
 <table id="Ch2.Ex21" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -181,7 +183,8 @@ val it = 66.0 : real
 </div>
 <div id="p3" class="ltx_para ltx_noindent">
 <p class="ltx_p"><span class="ltx_text ltx_font_bold">解答例 </span>
-<span class="ltx_text ltx_font_typewriter">integral</span>の定義例：</p>
+<span class="ltx_text ltx_font_typewriter">integral</span>の定義例：
+</p>
 <pre class="ltx_verbatim ltx_font_typewriter">
    fun integral f n a b =
        let val unit = (b - a) / real n
@@ -256,8 +259,7 @@ val it = 66.0 : real
 <li id="I5.i3.I1.i3" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_item">(c)</span> 
 <div id="I5.i3.I1.i3.p1" class="ltx_para">
-<p class="ltx_p"><math id="I5.i3.I1.i3.p1.m1" class="ltx_Math" alttext="f_{3}(n,x)=1\times x^{1}+2\times x^{2}+\cdots+n\times x^{n}" display="inline"><mrow><mi>f</mi><msub><mi></mi><mn>3</mn></msub><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn><mo>×</mo><mi>x</mi><msup><mi></mi><mn>1</mn></msup><mo>+</mo><mn>2</mn><mo>×</mo><mi>x</mi><msup><mi></mi><mn>2</mn></msup><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mi>n</mi><mo>×</mo><mi>x</mi><msup><mi></mi><mi>n</mi></msup></mrow></math>
-</p>
+<p class="ltx_p"><math id="I5.i3.I1.i3.p1.m1" class="ltx_Math" alttext="f_{3}(n,x)=1\times x^{1}+2\times x^{2}+\cdots+n\times x^{n}" display="inline"><mrow><mi>f</mi><msub><mi></mi><mn>3</mn></msub><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn><mo>×</mo><mi>x</mi><msup><mi></mi><mn>1</mn></msup><mo>+</mo><mn>2</mn><mo>×</mo><mi>x</mi><msup><mi></mi><mn>2</mn></msup><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mi>n</mi><mo>×</mo><mi>x</mi><msup><mi></mi><mi>n</mi></msup></mrow></math></p>
 </div>
 </li>
 </ol>
@@ -308,8 +310,7 @@ val it = 66.0 : real
 <p class="ltx_p">以前定義した関数 <span class="ltx_text ltx_font_typewriter">power</span> と <span class="ltx_text ltx_font_typewriter">Power</span> の違いは引数の渡し方のみ
 であるから，<span class="ltx_text ltx_font_typewriter">power</span> と <span class="ltx_text ltx_font_typewriter">Power</span> のような関数同士は相互に変換可能なはず
 である．
-このような引数の受け渡し方の変換に関して以下の設問に答えよ．
-</p>
+このような引数の受け渡し方の変換に関して以下の設問に答えよ．</p>
 <ol id="I7" class="ltx_enumerate">
 <li id="I7.i1" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_item">1.</span> 
@@ -460,7 +461,7 @@ e)\cdots))" display="block"><mrow><mi>𝚏</mi><mi>𝚊</mi><mi>𝚜</mi><mi>�
 <div>
 <a href="Ch2.S5.html" title="2.5 相互再帰的関数 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.5 </span>相互再帰的関数</span></a><a href="Ch2.S7.html" title="2.7 関数式 ‣ 第 2 章 関数を用いたプログラミング ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.7 </span>関数式</span></a>
 </div>
-<div class="ltx_page_logo">Generated  on Sat Nov  6 00:44:26 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+<div class="ltx_page_logo">Generated  on Sat Nov  6 10:29:27 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
 </div></footer>
 </div>
 {% endraw %}

@@ -11,6 +11,8 @@ menu:
   url: /ja/texts/standard-ml/errata/
 - text: 練習問題の解答例
   url: /ja/texts/standard-ml/answers/
+- text: 謝辞
+  url: /ja/texts/standard-ml/acknowledgments/
 
 super:
 - text: ホーム/

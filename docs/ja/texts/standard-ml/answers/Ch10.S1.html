@@ -4,7 +4,7 @@ permalink: /ja/texts/standard-ml/answers//Ch10.S1.html
 translated: true
 lang: ja
 head: |
- <!--Generated on Sat Nov  6 00:44:26 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Generated on Sat Nov  6 10:29:27 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
  <!--Document created on 2021年11月5日.-->
  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <link rel="stylesheet" href="LaTeXML.css" type="text/css">
@@ -201,7 +201,8 @@ head: |
 <p class="ltx_p"><span class="ltx_text ltx_font_typewriter">FastIntQueue</span> が正しく待ち行列を実現していることを確認せよ．
 すなわち，空の待ち行列から始めて <span class="ltx_text ltx_font_typewriter">enqueue</span> と <span class="ltx_text ltx_font_typewriter">dequeue</span> 操
 作を繰り返したときの動作が，単純なリストによる場合と同一であることを示せ．
-<span class="ltx_text ltx_font_italic"></span></p>
+<span class="ltx_text ltx_font_italic">
+</span></p>
 </div>
 </div>
 <div id="p2" class="ltx_para ltx_noindent">
@@ -268,8 +269,7 @@ e_{n-m}]" display="block"><mrow><mo stretchy="false">[</mo><mi>e</mi><msub><mi><
 <math id="p3.m1" class="ltx_Math" alttext="L_{2}" display="inline"><mrow><mi>L</mi><msub><mi></mi><mn>2</mn></msub></mrow></math>が空でない合は<math id="p3.m2" class="ltx_Math" alttext="CAR=1,CONS=0" display="inline"><mrow><mi>C</mi><mi>A</mi><mi>R</mi><mo>=</mo><mn>1</mn><mo>,</mo><mi>C</mi><mi>O</mi><mi>N</mi><mi>S</mi><mo>=</mo><mn>0</mn></mrow></math>である。
 <math id="p3.m3" class="ltx_Math" alttext="L_{2}" display="inline"><mrow><mi>L</mi><msub><mi></mi><mn>2</mn></msub></mrow></math>が空の場合、<math id="p3.m4" class="ltx_Math" alttext="L_{1}" display="inline"><mrow><mi>L</mi><msub><mi></mi><mn>1</mn></msub></mrow></math>の長さを<math id="p3.m5" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math>とすると、
 <math id="p3.m6" class="ltx_Math" alttext="CAR=N+1,CONS=N" display="inline"><mrow><mi>C</mi><mi>A</mi><mi>R</mi><mo>=</mo><mi>N</mi><mo>+</mo><mn>1</mn><mo>,</mo><mi>C</mi><mi>O</mi><mi>N</mi><mi>S</mi><mo>=</mo><mi>N</mi></mrow></math>に等しく、
-これら回数の平均を見積もることである。
-</p>
+これら回数の平均を見積もることである。</p>
 </div>
 <div id="p4" class="ltx_para">
 <p class="ltx_p">この問題は、amortize cost（償却原価）の考え方を使えば、統計的・解析的な計算をせず、
@@ -296,8 +296,7 @@ e_{n-m}]" display="block"><mrow><mo stretchy="false">[</mo><mi>e</mi><msub><mi><
 <h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">問 10.4</span></span></h6>
 <div id="Ch10.Thmex4.p1" class="ltx_para">
 <p class="ltx_p"><span class="ltx_text ltx_font_typewriter">IntQueue</span> を<span class="ltx_text ltx_font_typewriter">FastIntQueue</span> に置き換えてテストを行え．
-<span class="ltx_text ltx_font_italic">
-</span></p>
+<span class="ltx_text ltx_font_italic"></span></p>
 </div>
 </div>
 <div id="p6" class="ltx_para ltx_noindent">
@@ -351,7 +350,8 @@ e_{n-m}]" display="block"><mrow><mo stretchy="false">[</mo><mi>e</mi><msub><mi><
    val b = Q.dequeue q
    val c = Q.dequeue q
 </pre>
-<p class="ltx_p">SML#の対話型環境では、以下のような実行結果を得る。</p>
+<p class="ltx_p">SML#の対話型環境では、以下のような実行結果を得る。
+</p>
 <pre class="ltx_verbatim ltx_font_typewriter">
    # structure Q = FastQueue;
    structure Q =
@@ -375,7 +375,9 @@ e_{n-m}]" display="block"><mrow><mo stretchy="false">[</mo><mi>e</mi><msub><mi><
    # val c = Q.dequeue q;
    val c = 3 : int
 </pre>
-<p class="ltx_p">この結果から、同一の動作をしており、置き換え可能であることが確認できる。</p>
+<p class="ltx_p">この結果から、同一の動作をしており、置き換え可能であることが確認できる。
+
+</p>
 </div>
 </section>
 </div>
@@ -383,7 +385,7 @@ e_{n-m}]" display="block"><mrow><mo stretchy="false">[</mo><mi>e</mi><msub><mi><
 <div>
 <a href="Ch10.html" title="第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10 </span>モジュールシステム</span></a><a href="Ch10.S2.html" title="10.2 モジュールのシグネチャの指定 ‣ 第 10 章 モジュールシステム ‣ Part I Standard ML言語 ‣ プログラミング言語 Standard ML 入門 (問題の解答例)" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.2 </span>モジュールのシグネチャの指定</span></a>
 </div>
-<div class="ltx_page_logo">Generated  on Sat Nov  6 00:44:26 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+<div class="ltx_page_logo">Generated  on Sat Nov  6 10:29:27 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
 </div></footer>
 </div>
 {% endraw %}
