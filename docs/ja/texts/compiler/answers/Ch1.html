@@ -4,7 +4,7 @@ permalink: /ja/texts/compiler/answers/Ch1.html
 translated: true
 lang: ja
 head: |
- <!--Generated on Sun Nov 14 12:41:04 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Generated on Sun Nov 14 12:44:02 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
  <!--Document created on 2021年10月29日.-->
  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <link rel="stylesheet" href="LaTeXML.css" type="text/css">
@@ -149,7 +149,7 @@ head: |
 <li id="S5.I2.i2" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_item">2.</span> 
 <div id="S5.I2.i2.p1" class="ltx_para">
-<p class="ltx_p">自然数から自然数への関数全体の集合は数え上げることができない（非加算である）．
+<p class="ltx_p">自然数から自然数への関数全体の集合は数え上げることができない（非可算である）．
 （もし数え上げ系列<math id="S5.I2.i2.p1.m1" class="ltx_Math" alttext="\{f_{0},f_{1},\ldots,f_{n},\ldots\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>f</mi><msub><mi></mi><mn>0</mn></msub><mo>,</mo><mi>f</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>f</mi><msub><mi></mi><mi>n</mi></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">}</mo></mrow></math>が存在するとすると，
 この系列の何処にも出てこない関数
 <math id="S5.I2.i2.p1.m2" class="ltx_Math" alttext="f(n)=f_{n}(n)+1" display="inline"><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>=</mo><mi>f</mi><msub><mi></mi><mi>n</mi></msub><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>+</mo><mn>1</mn></mrow></math>が定義できてしまい，矛盾してしまう．（対角線論法））
@@ -157,7 +157,7 @@ head: |
 通し番号をつけることができる．
 したがって，自然数から自然数への関数全体の集合には，プログラムでは表現できない
 関数が存在する．
-非加算集合から加算集合を取り除いた要素が有限であれば，非加算集合は数え上げることが
+非可算集合から可算集合を取り除いた要素が有限であれば，非可算集合は数え上げることが
 できてしまうので，プログラムでは表現できない関数は無限に存在する．</p>
 </div>
 </li>
@@ -167,23 +167,23 @@ head: |
 <p class="ltx_p">有理数係数の代数方程式は，有限の記号（数字，変数名，プラス・マイ
 ナス記号，等号等）で書かれたものであるから，これらの方程式を書き下すために必要な
 記号を<math id="S5.I2.i3.p1.m1" class="ltx_Math" alttext="\Sigma" display="inline"><mi mathvariant="normal">Σ</mi></math>と取れば，個々の方程式は<math id="S5.I2.i3.p1.m2" class="ltx_Math" alttext="\Sigma^{*}" display="inline"><mrow><mi mathvariant="normal">Σ</mi><msup><mi></mi><mo>*</mo></msup></mrow></math>の要素である．
-項目１から，すべての有理数係数の代数方程式の集合は加算無限である．
+項目１から，すべての有理数係数の代数方程式の集合は可算無限である．
 一つの方程式の解は高々有限個であるため，有理数係数の代数方程式の解の集合
-は，有限の要素をもつ加算無限個の集合の和集合である．
+は，有限の要素をもつ可算無限個の集合の和集合である．
 この和集合の要素は，それが属する集合の順に数え上げることができる
-ため，加算無限である．
-従って，有理数係数の代数方程式で表しうる実数の集合は，この加算無
-限集合の部分集合であり，加算である．
-一方，実数の集合は非加算である（項目2と同様に，対角線論法で示すことができる）．
+ため，可算無限である．
+従って，有理数係数の代数方程式で表しうる実数の集合は，この可算無
+限集合の部分集合であり，可算である．
+一方，実数の集合は非可算である（項目2と同様に，対角線論法で示すことができる）．
 以上から，実数の集合には，有理数係数の代数方程式で表し得ない数が無限に存在する．</p>
 </div>
 <div id="S5.I2.i3.p2" class="ltx_para ltx_noindent">
 <p class="ltx_p">（注釈）教科書の初版では，「代数方程式」を「連立方程式」としているが，正誤表の通り，
 代数的数の定義は「有理数係数の（一変数の）代数方程式の解と表される数」である．
-ただし，本問の主旨は，代数的数の集合が加算であることは，代数的数の性質等によらず，</p>
+ただし，本問の主旨は，代数的数の集合が可算であることは，代数的数の性質等によらず，</p>
 <blockquote class="ltx_quote">
 <p class="ltx_p">「記号で表現できる式は<math id="S5.I2.i3.p2.m1" class="ltx_Math" alttext="\Sigma^{*}" display="inline"><mrow><mi mathvariant="normal">Σ</mi><msup><mi></mi><mo>*</mo></msup></mrow></math>の要素であり，従ってそのような式全体の集
-合は加算である」</p>
+合は可算である」</p>
 </blockquote>
 <p class="ltx_p">という性質のみをつかって導かれる性質であることを理解する
 ことである．
@@ -200,7 +200,7 @@ head: |
 <div>
 <a href="./" title="コンパイラ – 原理と構造 初版 – 練習問題の解答例" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title">コンパイラ – 原理と構造 初版 – 練習問題の解答例<span class="ltx_text"> </span></span></a>
 </div>
-<div class="ltx_page_logo">Generated  on Sun Nov 14 12:41:04 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+<div class="ltx_page_logo">Generated  on Sun Nov 14 12:44:02 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
 </div></footer>
 </div>
 {% endraw %}
