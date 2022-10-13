@@ -1,0 +1,787 @@
+---
+layout: default
+permalink: /ja/texts/compiler/errata/firstEdition/Ch8.html
+translated: true
+lang: ja
+head: |
+ <!--Generated on Thu Oct 13 10:18:38 2022 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Document created on 令和4年10月13日.-->
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="LaTeXML.css" type="text/css">
+ <link rel="stylesheet" href="ltx-book.css" type="text/css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+ <link rel="up" href="./" title="コンパイラ – 原理と構造 – 初版 正誤表">
+ <link rel="start" href="./" title="コンパイラ – 原理と構造 – 初版 正誤表">
+ <link rel="prev" href="Ch7.html" title="第 7 章 インタープリタ ‣ コンパイラ – 原理と構造 – 初版 正誤表">
+ <link rel="next" href="Chx1.html" title="参考文献 ‣ コンパイラ – 原理と構造 – 初版 正誤表">
+ <link rel="chapter" href="Ch1.html" title="第 1 章 計算とプログラミング言語 ‣ コンパイラ – 原理と構造 – 初版 正誤表">
+ <link rel="chapter" href="Ch2.html" title="第 2 章 SML#チュートリアル ‣ コンパイラ – 原理と構造 – 初版 正誤表">
+ <link rel="chapter" href="Ch3.html" title="第 3 章 文字列の性質と文字列処理 ‣ コンパイラ – 原理と構造 – 初版 正誤表">
+ <link rel="chapter" href="Ch4.html" title="第 4 章 字句解析 ‣ コンパイラ – 原理と構造 – 初版 正誤表">
+ <link rel="chapter" href="Ch5.html" title="第 5 章 構文解析 ‣ コンパイラ – 原理と構造 – 初版 正誤表">
+ <link rel="chapter" href="Ch6.html" title="第 6 章 型の解析と型推論 ‣ コンパイラ – 原理と構造 – 初版 正誤表">
+ <link rel="chapter" href="Ch7.html" title="第 7 章 インタープリタ ‣ コンパイラ – 原理と構造 – 初版 正誤表">
+ <link rel="chapter" href="Chx1.html" title="参考文献 ‣ コンパイラ – 原理と構造 – 初版 正誤表">
+---
+{% raw %}
+<div class="ltx_page_main">
+<header class="ltx_page_header"><div class="ltx_document_title">コンパイラ – 原理と構造 – 初版 正誤表</div>
+<div>
+<a href="./" title="コンパイラ – 原理と構造 – 初版 正誤表" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title">コンパイラ – 原理と構造 – 初版 正誤表<span class="ltx_text"> </span></span></a><a href="Ch7.html" title="第 7 章 インタープリタ ‣ コンパイラ – 原理と構造 – 初版 正誤表" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>インタープリタ</span></a><a href="Chx1.html" title="参考文献 ‣ コンパイラ – 原理と構造 – 初版 正誤表" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title">参考文献</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_chapter ltx_authors_1line">
+<h1 class="ltx_title ltx_title_chapter">
+<span class="ltx_tag ltx_tag_chapter">第 8 章 </span>機械語コードへのコンパイル</h1>
+
+<div id="p1" class="ltx_para">
+<ol id="S0.I1" class="ltx_enumerate">
+<li id="S0.I1.i81" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">81.</span> 
+<div id="S0.I1.i81.p1" class="ltx_para">
+<p class="ltx_p">158ページ 11行目</p>
+<dl id="S0.I1.i81.I1" class="ltx_description">
+<dt id="S0.I1.i81.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i81.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text" style="color:#FF0000;">ラムダ式</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i81.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i81.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text" style="color:#0000FF;">ラムダ計算</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i81.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i81.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i82" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">82.</span> 
+<div id="S0.I1.i82.p1" class="ltx_para">
+<p class="ltx_p">158ページ (12行目)</p>
+<dl id="S0.I1.i82.I1" class="ltx_description">
+<dt id="S0.I1.i82.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i82.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text" style="color:#FF0000;">ラムダ式</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i82.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i82.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text" style="color:#0000FF;">ラムダ計算</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i82.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i82.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i83" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">83.</span> 
+<div id="S0.I1.i83.p1" class="ltx_para">
+<p class="ltx_p">158ページ 23行目</p>
+<dl id="S0.I1.i83.I1" class="ltx_description">
+<dt id="S0.I1.i83.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i83.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i83.I1.ix1.p1.m1" class="ltx_Math" alttext="c" display="inline"><mi mathcolor="#FF0000">c</mi></math></p>
+</div>
+</dd>
+<dt id="S0.I1.i83.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i83.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i83.I1.ix2.p1.m1" class="ltx_Math" alttext="[\![c]\!]" display="inline"><mrow><mo mathcolor="#0000FF" stretchy="false">[</mo><mspace width="-1.66666666666667pt"></mspace><mo mathcolor="#0000FF" stretchy="false">[</mo><mi mathcolor="#0000FF">c</mi><mo mathcolor="#0000FF" stretchy="false">]</mo><mspace width="-1.66666666666667pt"></mspace><mo mathcolor="#0000FF" stretchy="false">]</mo></mrow></math></p>
+</div>
+</dd>
+<dt id="S0.I1.i83.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i83.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i84" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">84.</span> 
+<div id="S0.I1.i84.p1" class="ltx_para">
+<p class="ltx_p">160ページ 2行目(<span class="ltx_text ltx_markedasmath ltx_font_typewriter">Acc(<math id="S0.I1.i84.p1.m1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>)</span>規則)</p>
+<dl id="S0.I1.i84.I1" class="ltx_description">
+<dt id="S0.I1.i84.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i84.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i84.I1.ix1.p1.m1" class="ltx_Math" alttext="(S,\ E\{x:v\},\ \mbox{\frenchspacing Acc}(x)::C,\ D)\Longrightarrow(v::S,\ {%
+\color[rgb]{1,0,0}E},\ C,\ D)" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi>E</mi><mo stretchy="false">{</mo><mi>x</mi><mo>:</mo><mi>v</mi><mo stretchy="false">}</mo><mo>,</mo><mspace width="5.0pt"></mspace><mtext>𝙰𝚌𝚌</mtext><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mi>C</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi>D</mi><mo stretchy="false">)</mo><mo>⟹</mo><mo stretchy="false">(</mo><mi>v</mi><mo>:</mo><mo>:</mo><mi>S</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#FF0000">E</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi>C</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi>D</mi><mo stretchy="false">)</mo></mrow></math></p>
+</div>
+</dd>
+<dt id="S0.I1.i84.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i84.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i84.I1.ix2.p1.m1" class="ltx_Math" alttext="(S,\ E\{x:v\},\ \mbox{\frenchspacing Acc}(x)::C,\ D)\Longrightarrow(v::S,\ {%
+\color[rgb]{0,0,1}E\{x:v\}},\ C,\ D)" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi>E</mi><mo stretchy="false">{</mo><mi>x</mi><mo>:</mo><mi>v</mi><mo stretchy="false">}</mo><mo>,</mo><mspace width="5.0pt"></mspace><mtext>𝙰𝚌𝚌</mtext><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mi>C</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi>D</mi><mo stretchy="false">)</mo><mo>⟹</mo><mo stretchy="false">(</mo><mi>v</mi><mo>:</mo><mo>:</mo><mi>S</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#0000FF">E</mi><mo mathcolor="#0000FF" stretchy="false">{</mo><mi mathcolor="#0000FF">x</mi><mo mathcolor="#0000FF">:</mo><mi mathcolor="#0000FF">v</mi><mo mathcolor="#0000FF" stretchy="false">}</mo><mo>,</mo><mspace width="5.0pt"></mspace><mi>C</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi>D</mi><mo stretchy="false">)</mo></mrow></math></p>
+</div>
+</dd>
+<dt id="S0.I1.i84.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i84.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i85" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">85.</span> 
+<div id="S0.I1.i85.p1" class="ltx_para">
+<p class="ltx_p">160ページ 6行目</p>
+<dl id="S0.I1.i85.I1" class="ltx_description">
+<dt id="S0.I1.i85.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i85.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i85.I1.ix1.p1.m1" class="ltx_Math" alttext="\Longrightarrow(S,\ E_{0}\{x:{\color[rgb]{1,0,0}v_{0}}\},\ C_{0},\ (E,C)::D)" display="inline"><mrow><mo>⟹</mo><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi>E</mi><msub><mi></mi><mn>0</mn></msub><mo stretchy="false">{</mo><mi>x</mi><mo>:</mo><mi mathcolor="#FF0000">v</mi><msub><mi></mi><mn mathcolor="#FF0000">0</mn></msub><mo stretchy="false">}</mo><mo>,</mo><mspace width="5.0pt"></mspace><mi>C</mi><msub><mi></mi><mn>0</mn></msub><mo>,</mo><mspace width="5.0pt"></mspace><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi>C</mi><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mi>D</mi><mo stretchy="false">)</mo></mrow></math></p>
+</div>
+</dd>
+<dt id="S0.I1.i85.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i85.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i85.I1.ix2.p1.m1" class="ltx_Math" alttext="\Longrightarrow(S,\ E_{0}\{x:{\color[rgb]{1,0,0}v_{1}}\},\ C_{0},\ (E,C)::D)" display="inline"><mrow><mo>⟹</mo><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi>E</mi><msub><mi></mi><mn>0</mn></msub><mo stretchy="false">{</mo><mi>x</mi><mo>:</mo><mi mathcolor="#FF0000">v</mi><msub><mi></mi><mn mathcolor="#FF0000">1</mn></msub><mo stretchy="false">}</mo><mo>,</mo><mspace width="5.0pt"></mspace><mi>C</mi><msub><mi></mi><mn>0</mn></msub><mo>,</mo><mspace width="5.0pt"></mspace><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi>C</mi><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mi>D</mi><mo stretchy="false">)</mo></mrow></math></p>
+</div>
+</dd>
+<dt id="S0.I1.i85.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i85.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i86" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">86.</span> 
+<div id="S0.I1.i86.p1" class="ltx_para">
+<p class="ltx_p">160ページ 8行目</p>
+<dl id="S0.I1.i86.I1" class="ltx_description">
+<dt id="S0.I1.i86.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i86.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i86.I1.ix1.p1.m1" class="ltx_Math" alttext="\Longrightarrow(S,\ E_{0}\{f:Rec(E_{0},f,x,C_{0}),x:{\color[rgb]{1,0,0}v_{0}}%
+\},\ C_{0},\ (E,C)::D)" display="inline"><mrow><mo>⟹</mo><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi>E</mi><msub><mi></mi><mn>0</mn></msub><mo stretchy="false">{</mo><mi>f</mi><mo>:</mo><mi>R</mi><mi>e</mi><mi>c</mi><mo stretchy="false">(</mo><mi>E</mi><msub><mi></mi><mn>0</mn></msub><mo>,</mo><mi>f</mi><mo>,</mo><mi>x</mi><mo>,</mo><mi>C</mi><msub><mi></mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo>,</mo><mi>x</mi><mo>:</mo><mi mathcolor="#FF0000">v</mi><msub><mi></mi><mn mathcolor="#FF0000">0</mn></msub><mo stretchy="false">}</mo><mo>,</mo><mspace width="5.0pt"></mspace><mi>C</mi><msub><mi></mi><mn>0</mn></msub><mo>,</mo><mspace width="5.0pt"></mspace><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi>C</mi><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mi>D</mi><mo stretchy="false">)</mo></mrow></math></p>
+</div>
+</dd>
+<dt id="S0.I1.i86.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i86.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i86.I1.ix2.p1.m1" class="ltx_Math" alttext="\Longrightarrow(S,\ E_{0}\{f:Rec(E_{0},f,x,C_{0}),x:{\color[rgb]{0,0,1}v_{1}}%
+\},\ C_{0},\ (E,C)::D)" display="inline"><mrow><mo>⟹</mo><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi>E</mi><msub><mi></mi><mn>0</mn></msub><mo stretchy="false">{</mo><mi>f</mi><mo>:</mo><mi>R</mi><mi>e</mi><mi>c</mi><mo stretchy="false">(</mo><mi>E</mi><msub><mi></mi><mn>0</mn></msub><mo>,</mo><mi>f</mi><mo>,</mo><mi>x</mi><mo>,</mo><mi>C</mi><msub><mi></mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo>,</mo><mi>x</mi><mo>:</mo><mi mathcolor="#0000FF">v</mi><msub><mi></mi><mn mathcolor="#0000FF">1</mn></msub><mo stretchy="false">}</mo><mo>,</mo><mspace width="5.0pt"></mspace><mi>C</mi><msub><mi></mi><mn>0</mn></msub><mo>,</mo><mspace width="5.0pt"></mspace><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi>C</mi><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mi>D</mi><mo stretchy="false">)</mo></mrow></math></p>
+</div>
+</dd>
+<dt id="S0.I1.i86.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i86.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i87" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">87.</span> 
+<div id="S0.I1.i87.p1" class="ltx_para">
+<p class="ltx_p">161ページ 2-7行目</p>
+<dl id="S0.I1.i87.I1" class="ltx_description">
+<dt id="S0.I1.i87.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i87.I1.ix1.p1" class="ltx_para">
+<table id="Chx1.S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="Ex7">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td colspan="3" class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ex1.m1" class="ltx_Math" alttext="\displaystyle({\color[rgb]{1,0,0}\emptyset},\ \ {\color[rgb]{1,0,0}\emptyset},%
+\ \ \mbox{\frenchspacing Push}(1)::\mbox{\frenchspacing Push}(2)::\mbox{%
+\frenchspacing Prim}(\mbox{\frenchspacing{\color[rgb]{1,0,0}Add}})::\mbox{%
+\frenchspacing Push}(2)::\mbox{\frenchspacing Prim}(\mbox{\frenchspacing{%
+\color[rgb]{1,0,0}Sub}})::{\color[rgb]{1,0,0}\emptyset},\ \ {\color[rgb]{1,0,0%
+}\emptyset})" display="inline"><mrow><mo stretchy="false">(</mo><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mspace width="5.0pt"></mspace><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mspace width="5.0pt"></mspace><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚛𝚒𝚖</mtext><mo stretchy="false">(</mo><mtext mathcolor="#FF0000">𝙰𝚍𝚍</mtext><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚛𝚒𝚖</mtext><mo stretchy="false">(</mo><mtext mathcolor="#FF0000">𝚂𝚞𝚋</mtext><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mspace width="5.0pt"></mspace><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ex3.m2" class="ltx_Math" alttext="\displaystyle\Longrightarrow" display="inline"><mo>⟹</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ex3.m3" class="ltx_Math" alttext="\displaystyle(1::{\color[rgb]{1,0,0}\emptyset},\ {\color[rgb]{1,0,0}\emptyset}%
+,\ \mbox{\frenchspacing Push}(2)::\mbox{\frenchspacing Prim}(\mbox{%
+\frenchspacing{\color[rgb]{1,0,0}Add}})::\mbox{\frenchspacing Push}(2)::\mbox{%
+\frenchspacing Prim}(\mbox{\frenchspacing{\color[rgb]{1,0,0}Sub}})::{\color[%
+rgb]{1,0,0}\emptyset},\ \ {\color[rgb]{1,0,0}\emptyset})" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>:</mo><mo>:</mo><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚛𝚒𝚖</mtext><mo stretchy="false">(</mo><mtext mathcolor="#FF0000">𝙰𝚍𝚍</mtext><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚛𝚒𝚖</mtext><mo stretchy="false">(</mo><mtext mathcolor="#FF0000">𝚂𝚞𝚋</mtext><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mspace width="5.0pt"></mspace><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ex4.m2" class="ltx_Math" alttext="\displaystyle\Longrightarrow" display="inline"><mo>⟹</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ex4.m3" class="ltx_Math" alttext="\displaystyle(2::1::{\color[rgb]{1,0,0}\emptyset},\ {\color[rgb]{1,0,0}%
+\emptyset},\ \mbox{\frenchspacing Prim}(\mbox{\frenchspacing{\color[rgb]{1,0,0%
+}Add}})::\mbox{\frenchspacing Push}(2)::\mbox{\frenchspacing Prim}(\mbox{%
+\frenchspacing{\color[rgb]{1,0,0}Sub}})::{\color[rgb]{1,0,0}\emptyset},\ {%
+\color[rgb]{1,0,0}\emptyset})" display="inline"><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>:</mo><mo>:</mo><mn>1</mn><mo>:</mo><mo>:</mo><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mtext>𝙿𝚛𝚒𝚖</mtext><mo stretchy="false">(</mo><mtext mathcolor="#FF0000">𝙰𝚍𝚍</mtext><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚛𝚒𝚖</mtext><mo stretchy="false">(</mo><mtext mathcolor="#FF0000">𝚂𝚞𝚋</mtext><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ex5.m2" class="ltx_Math" alttext="\displaystyle\Longrightarrow" display="inline"><mo>⟹</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ex5.m3" class="ltx_Math" alttext="\displaystyle(3::{\color[rgb]{1,0,0}\emptyset},\ {\color[rgb]{1,0,0}\emptyset}%
+,\ \mbox{\frenchspacing Push}(2)::\mbox{\frenchspacing Prim}(\mbox{%
+\frenchspacing{\color[rgb]{1,0,0}Sub}})::{\color[rgb]{1,0,0}\emptyset},\ {%
+\color[rgb]{1,0,0}\emptyset})" display="inline"><mrow><mo stretchy="false">(</mo><mn>3</mn><mo>:</mo><mo>:</mo><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚛𝚒𝚖</mtext><mo stretchy="false">(</mo><mtext mathcolor="#FF0000">𝚂𝚞𝚋</mtext><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ex6.m2" class="ltx_Math" alttext="\displaystyle\Longrightarrow" display="inline"><mo>⟹</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ex6.m3" class="ltx_Math" alttext="\displaystyle(2::3::{\color[rgb]{1,0,0}\emptyset},\ {\color[rgb]{1,0,0}%
+\emptyset},\ \mbox{\frenchspacing Prim}(\mbox{\frenchspacing{\color[rgb]{1,0,0%
+}Sub}})::{\color[rgb]{1,0,0}\emptyset},\ {\color[rgb]{1,0,0}\emptyset})" display="inline"><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>:</mo><mo>:</mo><mn>3</mn><mo>:</mo><mo>:</mo><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mtext>𝙿𝚛𝚒𝚖</mtext><mo stretchy="false">(</mo><mtext mathcolor="#FF0000">𝚂𝚞𝚋</mtext><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ex7.m2" class="ltx_Math" alttext="\displaystyle\Longrightarrow" display="inline"><mo>⟹</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ex7.m3" class="ltx_Math" alttext="\displaystyle(1::{\color[rgb]{1,0,0}\emptyset},\ {\color[rgb]{1,0,0}\emptyset}%
+,\ {\color[rgb]{1,0,0}\emptyset},\ {\color[rgb]{1,0,0}\emptyset})" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>:</mo><mo>:</mo><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</dd>
+<dt id="S0.I1.i87.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i87.I1.ix2.p1" class="ltx_para">
+<table id="Chx1.S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="Ex14">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td colspan="3" class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ex8.m1" class="ltx_Math" alttext="\displaystyle({\color[rgb]{0,0,1}nil},\ \ {\color[rgb]{0,0,1}nil},\ \ \mbox{%
+\frenchspacing Push}(1)::\mbox{\frenchspacing Push}(2)::\mbox{\frenchspacing
+Prim%
+}(\mbox{\frenchspacing{\color[rgb]{0,0,1}add}})::\mbox{\frenchspacing Push}(2)%
+::\mbox{\frenchspacing Prim}(\mbox{\frenchspacing{\color[rgb]{0,0,1}sub}})::{%
+\color[rgb]{0,0,1}nil},\ \ {\color[rgb]{0,0,1}nil})" display="inline"><mrow><mo stretchy="false">(</mo><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mspace width="5.0pt"></mspace><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mspace width="5.0pt"></mspace><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚛𝚒𝚖</mtext><mo stretchy="false">(</mo><mtext mathcolor="#0000FF">𝚊𝚍𝚍</mtext><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚛𝚒𝚖</mtext><mo stretchy="false">(</mo><mtext mathcolor="#0000FF">𝚜𝚞𝚋</mtext><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mspace width="5.0pt"></mspace><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ex10.m2" class="ltx_Math" alttext="\displaystyle\Longrightarrow" display="inline"><mo>⟹</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ex10.m3" class="ltx_Math" alttext="\displaystyle(1::{\color[rgb]{0,0,1}nil},\ {\color[rgb]{0,0,1}nil},\ \mbox{%
+\frenchspacing Push}(2)::\mbox{\frenchspacing Prim}(\mbox{\frenchspacing{%
+\color[rgb]{0,0,1}add}})::\mbox{\frenchspacing Push}(2)::\mbox{\frenchspacing
+Prim%
+}(\mbox{\frenchspacing{\color[rgb]{0,0,1}sub}})::{\color[rgb]{0,0,1}nil},\ \ {%
+\color[rgb]{0,0,1}nil})" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>:</mo><mo>:</mo><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚛𝚒𝚖</mtext><mo stretchy="false">(</mo><mtext mathcolor="#0000FF">𝚊𝚍𝚍</mtext><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚛𝚒𝚖</mtext><mo stretchy="false">(</mo><mtext mathcolor="#0000FF">𝚜𝚞𝚋</mtext><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mspace width="5.0pt"></mspace><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ex11.m2" class="ltx_Math" alttext="\displaystyle\Longrightarrow" display="inline"><mo>⟹</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ex11.m3" class="ltx_Math" alttext="\displaystyle(2::1::{\color[rgb]{0,0,1}nil},\ {\color[rgb]{0,0,1}nil},\ \mbox{%
+\frenchspacing Prim}(\mbox{\frenchspacing{\color[rgb]{0,0,1}add}})::\mbox{%
+\frenchspacing Push}(2)::\mbox{\frenchspacing Prim}(\mbox{\frenchspacing{%
+\color[rgb]{0,0,1}sub}})::{\color[rgb]{0,0,1}nil},\ {\color[rgb]{0,0,1}nil})" display="inline"><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>:</mo><mo>:</mo><mn>1</mn><mo>:</mo><mo>:</mo><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mtext>𝙿𝚛𝚒𝚖</mtext><mo stretchy="false">(</mo><mtext mathcolor="#0000FF">𝚊𝚍𝚍</mtext><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚛𝚒𝚖</mtext><mo stretchy="false">(</mo><mtext mathcolor="#0000FF">𝚜𝚞𝚋</mtext><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ex12.m2" class="ltx_Math" alttext="\displaystyle\Longrightarrow" display="inline"><mo>⟹</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ex12.m3" class="ltx_Math" alttext="\displaystyle(3::{\color[rgb]{0,0,1}nil},\ {\color[rgb]{0,0,1}nil},\ \mbox{%
+\frenchspacing Push}(2)::\mbox{\frenchspacing Prim}(\mbox{\frenchspacing{%
+\color[rgb]{0,0,1}sub}})::{\color[rgb]{0,0,1}nil},\ {\color[rgb]{0,0,1}nil})" display="inline"><mrow><mo stretchy="false">(</mo><mn>3</mn><mo>:</mo><mo>:</mo><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚛𝚒𝚖</mtext><mo stretchy="false">(</mo><mtext mathcolor="#0000FF">𝚜𝚞𝚋</mtext><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ex13.m2" class="ltx_Math" alttext="\displaystyle\Longrightarrow" display="inline"><mo>⟹</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ex13.m3" class="ltx_Math" alttext="\displaystyle(2::3::{\color[rgb]{0,0,1}nil},\ {\color[rgb]{0,0,1}nil},\ \mbox{%
+\frenchspacing Prim}(\mbox{\frenchspacing{\color[rgb]{0,0,1}sub}})::{\color[%
+rgb]{0,0,1}nil},\ {\color[rgb]{0,0,1}nil})" display="inline"><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>:</mo><mo>:</mo><mn>3</mn><mo>:</mo><mo>:</mo><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mtext>𝙿𝚛𝚒𝚖</mtext><mo stretchy="false">(</mo><mtext mathcolor="#0000FF">𝚜𝚞𝚋</mtext><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ex14.m2" class="ltx_Math" alttext="\displaystyle\Longrightarrow" display="inline"><mo>⟹</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ex14.m3" class="ltx_Math" alttext="\displaystyle(1::{\color[rgb]{0,0,1}nil},\ {\color[rgb]{0,0,1}nil},\ {\color[%
+rgb]{0,0,1}nil},\ {\color[rgb]{0,0,1}nil})" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>:</mo><mo>:</mo><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</dd>
+<dt id="S0.I1.i87.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i87.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i88" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">88.</span> 
+<div id="S0.I1.i88.p1" class="ltx_para">
+<p class="ltx_p">161ページ 9-14行目</p>
+<dl id="S0.I1.i88.I1" class="ltx_description">
+<dt id="S0.I1.i88.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i88.I1.ix1.p1" class="ltx_para">
+<table id="Chx1.S0.EGx3" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="Ex21">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td colspan="3" class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ex15.m1" class="ltx_Math" alttext="\displaystyle({\color[rgb]{1,0,0}\emptyset},\ {\color[rgb]{1,0,0}\emptyset},\ %
+\mbox{\frenchspacing Push}(1)::\mbox{\frenchspacing Push}(2)::\mbox{%
+\frenchspacing Pair}::\mbox{\frenchspacing Push}(3)::\mbox{\frenchspacing Pair%
+}::{\color[rgb]{1,0,0}\emptyset},\ \ {\color[rgb]{1,0,0}\emptyset})" display="inline"><mrow><mo stretchy="false">(</mo><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚊𝚒𝚛</mtext><mo>:</mo><mo>:</mo><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚊𝚒𝚛</mtext><mo>:</mo><mo>:</mo><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mspace width="5.0pt"></mspace><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ex17.m2" class="ltx_Math" alttext="\displaystyle\Longrightarrow" display="inline"><mo>⟹</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ex17.m3" class="ltx_Math" alttext="\displaystyle(1::{\color[rgb]{1,0,0}\emptyset},\ {\color[rgb]{1,0,0}\emptyset}%
+,\ \mbox{\frenchspacing Push}(2)::\mbox{\frenchspacing Pair}::\mbox{%
+\frenchspacing Push}(3)::\mbox{\frenchspacing Pair}::{\color[rgb]{1,0,0}%
+\emptyset},\ \ {\color[rgb]{1,0,0}\emptyset})" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>:</mo><mo>:</mo><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚊𝚒𝚛</mtext><mo>:</mo><mo>:</mo><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚊𝚒𝚛</mtext><mo>:</mo><mo>:</mo><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mspace width="5.0pt"></mspace><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ex18.m2" class="ltx_Math" alttext="\displaystyle\Longrightarrow" display="inline"><mo>⟹</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ex18.m3" class="ltx_Math" alttext="\displaystyle(2::1::{\color[rgb]{1,0,0}\emptyset},\ {\color[rgb]{1,0,0}%
+\emptyset},\ \mbox{\frenchspacing Pair}::\mbox{\frenchspacing Push}(3)::\mbox{%
+\frenchspacing Pair}::{\color[rgb]{1,0,0}\emptyset},\ {\color[rgb]{1,0,0}%
+\emptyset})" display="inline"><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>:</mo><mo>:</mo><mn>1</mn><mo>:</mo><mo>:</mo><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mtext>𝙿𝚊𝚒𝚛</mtext><mo>:</mo><mo>:</mo><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚊𝚒𝚛</mtext><mo>:</mo><mo>:</mo><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ex19.m2" class="ltx_Math" alttext="\displaystyle\Longrightarrow" display="inline"><mo>⟹</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ex19.m3" class="ltx_Math" alttext="\displaystyle((1,2)::{\color[rgb]{1,0,0}\emptyset},\ {\color[rgb]{1,0,0}%
+\emptyset},\ \mbox{\frenchspacing Push}(3)::\mbox{\frenchspacing Pair}::{%
+\color[rgb]{1,0,0}\emptyset},\ {\color[rgb]{1,0,0}\emptyset})" display="inline"><mrow><mo stretchy="false">(</mo><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚊𝚒𝚛</mtext><mo>:</mo><mo>:</mo><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ex20.m2" class="ltx_Math" alttext="\displaystyle\Longrightarrow" display="inline"><mo>⟹</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ex20.m3" class="ltx_Math" alttext="\displaystyle(3::(1,2)::{\color[rgb]{1,0,0}\emptyset},\ {\color[rgb]{1,0,0}%
+\emptyset},\ \mbox{\frenchspacing Pair}::{\color[rgb]{1,0,0}\emptyset},\ {%
+\color[rgb]{1,0,0}\emptyset})" display="inline"><mrow><mo stretchy="false">(</mo><mn>3</mn><mo>:</mo><mo>:</mo><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mtext>𝙿𝚊𝚒𝚛</mtext><mo>:</mo><mo>:</mo><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ex21.m2" class="ltx_Math" alttext="\displaystyle\Longrightarrow" display="inline"><mo>⟹</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ex21.m3" class="ltx_Math" alttext="\displaystyle(((1,2),3)::{\color[rgb]{1,0,0}\emptyset},\ {\color[rgb]{1,0,0}%
+\emptyset},\ {\color[rgb]{1,0,0}\emptyset},\ {\color[rgb]{1,0,0}\emptyset})" display="inline"><mrow><mo stretchy="false">(</mo><mo stretchy="false">(</mo><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#FF0000" mathvariant="normal">∅</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</dd>
+<dt id="S0.I1.i88.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i88.I1.ix2.p1" class="ltx_para">
+<table id="Chx1.S0.EGx4" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="Ex28">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td colspan="3" class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ex22.m1" class="ltx_Math" alttext="\displaystyle({\color[rgb]{0,0,1}nil},\ {\color[rgb]{0,0,1}nil},\ \mbox{%
+\frenchspacing Push}(1)::\mbox{\frenchspacing Push}(2)::\mbox{\frenchspacing
+Pair%
+}::\mbox{\frenchspacing Push}(3)::\mbox{\frenchspacing Pair}::{\color[rgb]{%
+0,0,1}nil},\ \ {\color[rgb]{0,0,1}nil})" display="inline"><mrow><mo stretchy="false">(</mo><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚊𝚒𝚛</mtext><mo>:</mo><mo>:</mo><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚊𝚒𝚛</mtext><mo>:</mo><mo>:</mo><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mspace width="5.0pt"></mspace><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ex24.m2" class="ltx_Math" alttext="\displaystyle\Longrightarrow" display="inline"><mo>⟹</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ex24.m3" class="ltx_Math" alttext="\displaystyle(1::{\color[rgb]{0,0,1}nil},\ {\color[rgb]{0,0,1}nil},\ \mbox{%
+\frenchspacing Push}(2)::\mbox{\frenchspacing Pair}::\mbox{\frenchspacing Push%
+}(3)::\mbox{\frenchspacing Pair}::{\color[rgb]{0,0,1}nil},\ \ {\color[rgb]{%
+0,0,1}nil})" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>:</mo><mo>:</mo><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚊𝚒𝚛</mtext><mo>:</mo><mo>:</mo><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚊𝚒𝚛</mtext><mo>:</mo><mo>:</mo><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mspace width="5.0pt"></mspace><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ex25.m2" class="ltx_Math" alttext="\displaystyle\Longrightarrow" display="inline"><mo>⟹</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ex25.m3" class="ltx_Math" alttext="\displaystyle(2::1::{\color[rgb]{0,0,1}nil},\ {\color[rgb]{0,0,1}nil},\ \mbox{%
+\frenchspacing Pair}::\mbox{\frenchspacing Push}(3)::\mbox{\frenchspacing Pair%
+}::{\color[rgb]{0,0,1}nil},\ {\color[rgb]{0,0,1}nil})" display="inline"><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>:</mo><mo>:</mo><mn>1</mn><mo>:</mo><mo>:</mo><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mtext>𝙿𝚊𝚒𝚛</mtext><mo>:</mo><mo>:</mo><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚊𝚒𝚛</mtext><mo>:</mo><mo>:</mo><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ex26.m2" class="ltx_Math" alttext="\displaystyle\Longrightarrow" display="inline"><mo>⟹</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ex26.m3" class="ltx_Math" alttext="\displaystyle((1,2)::{\color[rgb]{0,0,1}nil},\ {\color[rgb]{0,0,1}nil},\ \mbox%
+{\frenchspacing Push}(3)::\mbox{\frenchspacing Pair}::{\color[rgb]{0,0,1}nil},%
+\ {\color[rgb]{0,0,1}nil})" display="inline"><mrow><mo stretchy="false">(</mo><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚊𝚒𝚛</mtext><mo>:</mo><mo>:</mo><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ex27.m2" class="ltx_Math" alttext="\displaystyle\Longrightarrow" display="inline"><mo>⟹</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ex27.m3" class="ltx_Math" alttext="\displaystyle(3::(1,2)::{\color[rgb]{0,0,1}nil},\ {\color[rgb]{0,0,1}nil},\ %
+\mbox{\frenchspacing Pair}::{\color[rgb]{0,0,1}nil},\ {\color[rgb]{0,0,1}nil})" display="inline"><mrow><mo stretchy="false">(</mo><mn>3</mn><mo>:</mo><mo>:</mo><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mtext>𝙿𝚊𝚒𝚛</mtext><mo>:</mo><mo>:</mo><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="Ex28.m2" class="ltx_Math" alttext="\displaystyle\Longrightarrow" display="inline"><mo>⟹</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ex28.m3" class="ltx_Math" alttext="\displaystyle(((1,2),3)::{\color[rgb]{0,0,1}nil},\ {\color[rgb]{0,0,1}nil},\ {%
+\color[rgb]{0,0,1}nil},\ {\color[rgb]{0,0,1}nil})" display="inline"><mrow><mo stretchy="false">(</mo><mo stretchy="false">(</mo><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi mathcolor="#0000FF">n</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">l</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</dd>
+<dt id="S0.I1.i88.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i88.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i89" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">89.</span> 
+<div id="S0.I1.i89.p1" class="ltx_para">
+<p class="ltx_p">161ページ 16行目(説明を追加)</p>
+<dl id="S0.I1.i89.I1" class="ltx_description">
+<dt id="S0.I1.i89.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i89.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i89.I1.ix1.p1.m1" class="ltx_Math" alttext="\mbox{\frenchspacing If}(C_{1},C_{2})" display="inline"><mrow><mtext mathcolor="#FF0000">𝙸𝚏</mtext><mo mathcolor="#FF0000" stretchy="false">(</mo><mi mathcolor="#FF0000">C</mi><msub><mi></mi><mn mathcolor="#FF0000">1</mn></msub><mo mathcolor="#FF0000">,</mo><mi mathcolor="#FF0000">C</mi><msub><mi></mi><mn mathcolor="#FF0000">2</mn></msub><mo mathcolor="#FF0000" stretchy="false">)</mo></mrow></math><span class="ltx_text" style="color:#FF0000;">命令は，スタックトップの値を
+引数として取り，その値が<math id="S0.I1.i89.I1.ix1.p1.m2" class="ltx_Math" alttext="\mathit{true}" display="inline"><mrow><mi mathcolor="#FF0000">t</mi><mi mathcolor="#FF0000">r</mi><mi mathcolor="#FF0000">u</mi><mi mathcolor="#FF0000">e</mi></mrow></math>ならコード<math id="S0.I1.i89.I1.ix1.p1.m3" class="ltx_Math" alttext="C_{1}" display="inline"><mrow><mi mathcolor="#FF0000">C</mi><msub><mi></mi><mn mathcolor="#FF0000">1</mn></msub></mrow></math>を，
+<math id="S0.I1.i89.I1.ix1.p1.m4" class="ltx_Math" alttext="\mathit{false}" display="inline"><mrow><mi mathcolor="#FF0000">f</mi><mi mathcolor="#FF0000">a</mi><mi mathcolor="#FF0000">l</mi><mi mathcolor="#FF0000">s</mi><mi mathcolor="#FF0000">e</mi></mrow></math>ならコード<math id="S0.I1.i89.I1.ix1.p1.m5" class="ltx_Math" alttext="C_{2}" display="inline"><mrow><mi mathcolor="#FF0000">C</mi><msub><mi></mi><mn mathcolor="#FF0000">2</mn></msub></mrow></math>を実行する．
+</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i89.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i89.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i89.I1.ix2.p1.m1" class="ltx_Math" alttext="\mbox{\frenchspacing If}(C_{1},C_{2})" display="inline"><mrow><mtext mathcolor="#0000FF">𝙸𝚏</mtext><mo mathcolor="#0000FF" stretchy="false">(</mo><mi mathcolor="#0000FF">C</mi><msub><mi></mi><mn mathcolor="#0000FF">1</mn></msub><mo mathcolor="#0000FF">,</mo><mi mathcolor="#0000FF">C</mi><msub><mi></mi><mn mathcolor="#0000FF">2</mn></msub><mo mathcolor="#0000FF" stretchy="false">)</mo></mrow></math><span class="ltx_text" style="color:#0000FF;">命令は，スタックトッ
+プの値が<math id="S0.I1.i89.I1.ix2.p1.m2" class="ltx_Math" alttext="\mathit{true}" display="inline"><mrow><mi mathcolor="#0000FF">t</mi><mi mathcolor="#0000FF">r</mi><mi mathcolor="#0000FF">u</mi><mi mathcolor="#0000FF">e</mi></mrow></math>ならコード<math id="S0.I1.i89.I1.ix2.p1.m3" class="ltx_Math" alttext="C_{1}" display="inline"><mrow><mi mathcolor="#0000FF">C</mi><msub><mi></mi><mn mathcolor="#0000FF">1</mn></msub></mrow></math>を，<math id="S0.I1.i89.I1.ix2.p1.m4" class="ltx_Math" alttext="\mathit{false}" display="inline"><mrow><mi mathcolor="#0000FF">f</mi><mi mathcolor="#0000FF">a</mi><mi mathcolor="#0000FF">l</mi><mi mathcolor="#0000FF">s</mi><mi mathcolor="#0000FF">e</mi></mrow></math>ならコー
+ド<math id="S0.I1.i89.I1.ix2.p1.m5" class="ltx_Math" alttext="C_{2}" display="inline"><mrow><mi mathcolor="#0000FF">C</mi><msub><mi></mi><mn mathcolor="#0000FF">2</mn></msub></mrow></math>を実行する．
+ここでの表記<math id="S0.I1.i89.I1.ix2.p1.m6" class="ltx_Math" alttext="C_{1}@C" display="inline"><mrow><mi mathcolor="#0000FF">C</mi><msub><mi></mi><mn mathcolor="#0000FF">1</mn></msub><mi mathcolor="#0000FF" mathvariant="normal">@</mi><mi mathcolor="#0000FF">C</mi></mrow></math>は，<math id="S0.I1.i89.I1.ix2.p1.m7" class="ltx_Math" alttext="C_{1}" display="inline"><mrow><mi mathcolor="#0000FF">C</mi><msub><mi></mi><mn mathcolor="#0000FF">1</mn></msub></mrow></math>と<math id="S0.I1.i89.I1.ix2.p1.m8" class="ltx_Math" alttext="C" display="inline"><mi mathcolor="#0000FF">C</mi></math>の連結を表す．
+</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i89.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i89.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i90" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">90.</span> 
+<div id="S0.I1.i90.p1" class="ltx_para">
+<p class="ltx_p">163ページ 9行目</p>
+<dl id="S0.I1.i90.I1" class="ltx_description">
+<dt id="S0.I1.i90.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i90.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i90.I1.ix1.p1.m1" class="ltx_Math" alttext="\Longrightarrow(1::2::\emptyset,\ \{\mbox{\frenchspacing x}:{\color[rgb]{1,0,0%
+}1}\},\ \mbox{\frenchspacing Prim}(\mbox{\frenchspacing Add})::\mbox{%
+\frenchspacing Ret}::\emptyset," display="inline"><mrow><mo>⟹</mo><mo stretchy="false">(</mo><mn>1</mn><mo>:</mo><mo>:</mo><mn>2</mn><mo>:</mo><mo>:</mo><mi mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mo stretchy="false">{</mo><mtext>𝚡</mtext><mo>:</mo><mn mathcolor="#FF0000">1</mn><mo stretchy="false">}</mo><mo>,</mo><mspace width="5.0pt"></mspace><mtext>𝙿𝚛𝚒𝚖</mtext><mo stretchy="false">(</mo><mtext>𝙰𝚍𝚍</mtext><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝚁𝚎𝚝</mtext><mo>:</mo><mo>:</mo><mi mathvariant="normal">∅</mi><mo>,</mo></mrow></math></p>
+</div>
+</dd>
+<dt id="S0.I1.i90.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i90.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i90.I1.ix2.p1.m1" class="ltx_Math" alttext="\Longrightarrow(1::2::\emptyset,\ \{\mbox{\frenchspacing x}:{\color[rgb]{0,0,1%
+}2}\},\ \mbox{\frenchspacing Prim}(\mbox{\frenchspacing Add})::\mbox{%
+\frenchspacing Ret}::\emptyset," display="inline"><mrow><mo>⟹</mo><mo stretchy="false">(</mo><mn>1</mn><mo>:</mo><mo>:</mo><mn>2</mn><mo>:</mo><mo>:</mo><mi mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mo stretchy="false">{</mo><mtext>𝚡</mtext><mo>:</mo><mn mathcolor="#0000FF">2</mn><mo stretchy="false">}</mo><mo>,</mo><mspace width="5.0pt"></mspace><mtext>𝙿𝚛𝚒𝚖</mtext><mo stretchy="false">(</mo><mtext>𝙰𝚍𝚍</mtext><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝚁𝚎𝚝</mtext><mo>:</mo><mo>:</mo><mi mathvariant="normal">∅</mi><mo>,</mo></mrow></math></p>
+</div>
+</dd>
+<dt id="S0.I1.i90.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i90.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i91" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">91.</span> 
+<div id="S0.I1.i91.p1" class="ltx_para">
+<p class="ltx_p">163ページ 11行目</p>
+<dl id="S0.I1.i91.I1" class="ltx_description">
+<dt id="S0.I1.i91.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i91.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i91.I1.ix1.p1.m1" class="ltx_Math" alttext="\Longrightarrow(3::\emptyset,\ \{\mbox{\frenchspacing x}:{\color[rgb]{1,0,0}1}%
+\},\ \mbox{\frenchspacing Ret}::\emptyset,\ \ (\emptyset,\mbox{\frenchspacing
+Push%
+}(3)::\mbox{\frenchspacing Prim}(\mbox{\frenchspacing Add})::\emptyset)::\emptyset)" display="inline"><mrow><mo>⟹</mo><mo stretchy="false">(</mo><mn>3</mn><mo>:</mo><mo>:</mo><mi mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mo stretchy="false">{</mo><mtext>𝚡</mtext><mo>:</mo><mn mathcolor="#FF0000">1</mn><mo stretchy="false">}</mo><mo>,</mo><mspace width="5.0pt"></mspace><mtext>𝚁𝚎𝚝</mtext><mo>:</mo><mo>:</mo><mi mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mspace width="5.0pt"></mspace><mo stretchy="false">(</mo><mi mathvariant="normal">∅</mi><mo>,</mo><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚛𝚒𝚖</mtext><mo stretchy="false">(</mo><mtext>𝙰𝚍𝚍</mtext><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mi mathvariant="normal">∅</mi><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mi mathvariant="normal">∅</mi><mo stretchy="false">)</mo></mrow></math></p>
+</div>
+</dd>
+<dt id="S0.I1.i91.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i91.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i91.I1.ix2.p1.m1" class="ltx_Math" alttext="\Longrightarrow(3::\emptyset,\ \{\mbox{\frenchspacing x}:{\color[rgb]{0,0,1}2}%
+\},\ \mbox{\frenchspacing Ret}::\emptyset,\ \ (\emptyset,\mbox{\frenchspacing
+Push%
+}(3)::\mbox{\frenchspacing Prim}(\mbox{\frenchspacing Add})::\emptyset)::\emptyset)" display="inline"><mrow><mo>⟹</mo><mo stretchy="false">(</mo><mn>3</mn><mo>:</mo><mo>:</mo><mi mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mo stretchy="false">{</mo><mtext>𝚡</mtext><mo>:</mo><mn mathcolor="#0000FF">2</mn><mo stretchy="false">}</mo><mo>,</mo><mspace width="5.0pt"></mspace><mtext>𝚁𝚎𝚝</mtext><mo>:</mo><mo>:</mo><mi mathvariant="normal">∅</mi><mo>,</mo><mspace width="5.0pt"></mspace><mspace width="5.0pt"></mspace><mo stretchy="false">(</mo><mi mathvariant="normal">∅</mi><mo>,</mo><mtext>𝙿𝚞𝚜𝚑</mtext><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mtext>𝙿𝚛𝚒𝚖</mtext><mo stretchy="false">(</mo><mtext>𝙰𝚍𝚍</mtext><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mi mathvariant="normal">∅</mi><mo stretchy="false">)</mo><mo>:</mo><mo>:</mo><mi mathvariant="normal">∅</mi><mo stretchy="false">)</mo></mrow></math></p>
+</div>
+</dd>
+<dt id="S0.I1.i91.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i91.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i92" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">92.</span> 
+<div id="S0.I1.i92.p1" class="ltx_para">
+<p class="ltx_p">165ページ 14行目</p>
+<dl id="S0.I1.i92.I1" class="ltx_description">
+<dt id="S0.I1.i92.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i92.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i92.I1.ix1.p1.m1" class="ltx_Math" alttext="{\color[rgb]{1,0,0}\overline{c}=c}" display="inline"><mrow><mover accent="true"><mi mathcolor="#FF0000">c</mi><mo mathcolor="#FF0000">¯</mo></mover><mo mathcolor="#FF0000">=</mo><mi mathcolor="#FF0000">c</mi></mrow></math></p>
+</div>
+</dd>
+<dt id="S0.I1.i92.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i92.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i92.I1.ix2.p1.m1" class="ltx_Math" alttext="{\color[rgb]{0,0,1}\overline{[\![c]\!]}=[\![c]\!]}" display="inline"><mrow><mover accent="true"><mrow><mo mathcolor="#0000FF" stretchy="false">[</mo><mspace width="-1.66666666666667pt"></mspace><mo mathcolor="#0000FF" stretchy="false">[</mo><mi mathcolor="#0000FF">c</mi><mo mathcolor="#0000FF" stretchy="false">]</mo><mspace width="-1.66666666666667pt"></mspace><mo mathcolor="#0000FF" stretchy="false">]</mo></mrow><mo mathcolor="#0000FF">¯</mo></mover><mo mathcolor="#0000FF">=</mo><mo mathcolor="#0000FF" stretchy="false">[</mo><mspace width="-1.66666666666667pt"></mspace><mo mathcolor="#0000FF" stretchy="false">[</mo><mi mathcolor="#0000FF">c</mi><mo mathcolor="#0000FF" stretchy="false">]</mo><mspace width="-1.66666666666667pt"></mspace><mo mathcolor="#0000FF" stretchy="false">]</mo></mrow></math></p>
+</div>
+</dd>
+<dt id="S0.I1.i92.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i92.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i93" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">93.</span> 
+<div id="S0.I1.i93.p1" class="ltx_para">
+<p class="ltx_p">166ページ 13行目</p>
+<dl id="S0.I1.i93.I1" class="ltx_description">
+<dt id="S0.I1.i93.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i93.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i93.I1.ix1.p1.m1" class="ltx_Math" alttext="v=Cls(E,x,{\color[rgb]{1,0,0}e})" display="inline"><mrow><mi>v</mi><mo>=</mo><mi>C</mi><mi>l</mi><mi>s</mi><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi>x</mi><mo>,</mo><mi mathcolor="#FF0000">e</mi><mo stretchy="false">)</mo></mrow></math></p>
+</div>
+</dd>
+<dt id="S0.I1.i93.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i93.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i93.I1.ix2.p1.m1" class="ltx_Math" alttext="v=Cls(E,x,{\color[rgb]{0,0,1}e_{1}})" display="inline"><mrow><mi>v</mi><mo>=</mo><mi>C</mi><mi>l</mi><mi>s</mi><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi>x</mi><mo>,</mo><mi mathcolor="#0000FF">e</mi><msub><mi></mi><mn mathcolor="#0000FF">1</mn></msub><mo stretchy="false">)</mo></mrow></math></p>
+</div>
+</dd>
+<dt id="S0.I1.i93.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i93.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i94" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">94.</span> 
+<div id="S0.I1.i94.p1" class="ltx_para">
+<p class="ltx_p">169ページ 4,５行目(２箇所)</p>
+<dl id="S0.I1.i94.I1" class="ltx_description">
+<dt id="S0.I1.i94.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i94.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i94.I1.ix1.p1.m1" class="ltx_Math" alttext="{\color[rgb]{1,0,0}(}\mbox{\frenchspacing Proj1}::K{\color[rgb]{1,0,0})}" display="inline"><mrow><mo mathcolor="#FF0000" stretchy="false">(</mo><mtext>𝙿𝚛𝚘𝚓𝟷</mtext><mo>:</mo><mo>:</mo><mi>K</mi><mo mathcolor="#FF0000" stretchy="false">)</mo></mrow></math></p>
+</div>
+</dd>
+<dt id="S0.I1.i94.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i94.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i94.I1.ix2.p1.m1" class="ltx_Math" alttext="\mbox{\frenchspacing Proj1}::K" display="inline"><mrow><mtext>𝙿𝚛𝚘𝚓𝟷</mtext><mo>:</mo><mo>:</mo><mi>K</mi></mrow></math>   <span class="ltx_text" style="color:#0000FF;">（余分な括弧をトル）</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i94.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i94.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i95" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">95.</span> 
+<div id="S0.I1.i95.p1" class="ltx_para">
+<p class="ltx_p">169ページ 6行目</p>
+<dl id="S0.I1.i95.I1" class="ltx_description">
+<dt id="S0.I1.i95.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i95.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i95.I1.ix1.p1.m1" class="ltx_Math" alttext="{\color[rgb]{1,0,0}\stackrel{{\scriptstyle*}}{{\Longrightarrow}}}" display="inline"><mover><mo mathcolor="#FF0000" movablelimits="false">⟹</mo><mo mathcolor="#FF0000">*</mo></mover></math></p>
+</div>
+</dd>
+<dt id="S0.I1.i95.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i95.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i95.I1.ix2.p1.m1" class="ltx_Math" alttext="{\color[rgb]{0,0,1}\Longrightarrow}" display="inline"><mo mathcolor="#0000FF">⟹</mo></math></p>
+</div>
+</dd>
+<dt id="S0.I1.i95.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i95.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i96" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">96.</span> 
+<div id="S0.I1.i96.p1" class="ltx_para">
+<p class="ltx_p">175ページ 10行目</p>
+<dl id="S0.I1.i96.I1" class="ltx_description">
+<dt id="S0.I1.i96.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i96.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter ltx_framed_underline" style="color:#FF0000;">fun f x = if eq(x,0) then 1 else mul(x, f sub(x,1));</span><span class="ltx_text ltx_font_typewriter">
+</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i96.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i96.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter ltx_framed_underline" style="color:#0000FF;">fun f x = if prim(eq, x, 0) then 1 else</span>
+<br class="ltx_break"><span class="ltx_text ltx_font_typewriter" style="color:#0000FF;">           <span class="ltx_text ltx_framed_underline">prim(mul, x, f prim(sub, x, 1));</span><span class="ltx_text" style="color:black;">
+</span></span></p>
+</div>
+</dd>
+<dt id="S0.I1.i96.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i96.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i97" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">97.</span> 
+<div id="S0.I1.i97.p1" class="ltx_para">
+<p class="ltx_p">175ページ 23行目(ページレイアウト維持のため)</p>
+<dl id="S0.I1.i97.I1" class="ltx_description">
+<dt id="S0.I1.i97.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i97.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter" style="color:#FF0000;">Ret
+<br class="ltx_break">]<span class="ltx_text" style="color:black;">
+</span></span></p>
+</div>
+</dd>
+<dt id="S0.I1.i97.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i97.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter" style="color:#FF0000;">Ret ]<span class="ltx_text" style="color:black;">
+</span></span></p>
+</div>
+</dd>
+<dt id="S0.I1.i97.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i97.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+</ol>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="Ch7.html" title="第 7 章 インタープリタ ‣ コンパイラ – 原理と構造 – 初版 正誤表" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>インタープリタ</span></a><a href="Chx1.html" title="参考文献 ‣ コンパイラ – 原理と構造 – 初版 正誤表" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title">参考文献</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Thu Oct 13 10:18:38 2022 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+{% endraw %}

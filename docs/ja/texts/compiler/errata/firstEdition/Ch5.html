@@ -4,12 +4,11 @@ permalink: /ja/texts/compiler/errata/firstEdition/Ch5.html
 translated: true
 lang: ja
 head: |
- <!--Generated on Sun Dec 12 15:23:44 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
- <!--Document created on 令和3年12月12日.-->
+ <!--Generated on Thu Oct 13 10:18:38 2022 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Document created on 令和4年10月13日.-->
  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <link rel="stylesheet" href="LaTeXML.css" type="text/css">
  <link rel="stylesheet" href="ltx-book.css" type="text/css">
- <link rel="stylesheet" href="ltx-ulem.css" type="text/css">
  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
  <link rel="up" href="./" title="コンパイラ – 原理と構造 – 初版 正誤表">
  <link rel="start" href="./" title="コンパイラ – 原理と構造 – 初版 正誤表">
@@ -17,9 +16,11 @@ head: |
  <link rel="next" href="Ch6.html" title="第 6 章 型の解析と型推論 ‣ コンパイラ – 原理と構造 – 初版 正誤表">
  <link rel="chapter" href="Ch1.html" title="第 1 章 計算とプログラミング言語 ‣ コンパイラ – 原理と構造 – 初版 正誤表">
  <link rel="chapter" href="Ch2.html" title="第 2 章 SML#チュートリアル ‣ コンパイラ – 原理と構造 – 初版 正誤表">
+ <link rel="chapter" href="Ch3.html" title="第 3 章 文字列の性質と文字列処理 ‣ コンパイラ – 原理と構造 – 初版 正誤表">
  <link rel="chapter" href="Ch4.html" title="第 4 章 字句解析 ‣ コンパイラ – 原理と構造 – 初版 正誤表">
  <link rel="chapter" href="Ch6.html" title="第 6 章 型の解析と型推論 ‣ コンパイラ – 原理と構造 – 初版 正誤表">
  <link rel="chapter" href="Ch7.html" title="第 7 章 インタープリタ ‣ コンパイラ – 原理と構造 – 初版 正誤表">
+ <link rel="chapter" href="Ch8.html" title="第 8 章 機械語コードへのコンパイル ‣ コンパイラ – 原理と構造 – 初版 正誤表">
  <link rel="chapter" href="Chx1.html" title="参考文献 ‣ コンパイラ – 原理と構造 – 初版 正誤表">
 ---
 {% raw %}
@@ -34,34 +35,622 @@ head: |
 <span class="ltx_tag ltx_tag_chapter">第 5 章 </span>構文解析</h1>
 
 <div id="p1" class="ltx_para">
-<ul id="S0.I1" class="ltx_itemize">
-<li id="S0.I1.i1" class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_item">•</span> 
-<div id="S0.I1.i1.p1" class="ltx_para">
-<p class="ltx_p">78ページ (1行目, 図5.3の1行目)</p>
-<dl id="S0.I1.i1.I1" class="ltx_description">
-<dt id="S0.I1.i1.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<ol id="S0.I1" class="ltx_enumerate">
+<li id="S0.I1.i25" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">25.</span> 
+<div id="S0.I1.i25.p1" class="ltx_para">
+<p class="ltx_p">63ページ 27行目</p>
+<dl id="S0.I1.i25.I1" class="ltx_description">
+<dt id="S0.I1.i25.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
 <dd class="ltx_item">
-<div id="S0.I1.i1.I1.ix1.p1" class="ltx_para">
-<p class="ltx_p"><math id="S0.I1.i1.I1.ix1.p1.m1" class="ltx_Math" alttext="v" display="inline"><mi mathcolor="#FF0000">v</mi></math></p>
+<div id="S0.I1.i25.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p">さらに，<math id="S0.I1.i25.I1.ix1.p1.m1" class="ltx_Math" alttext="w\in{\color[rgb]{1,0,0}T}" display="inline"><mrow><mi>w</mi><mo>∈</mo><mi mathcolor="#FF0000">T</mi></mrow></math></p>
 </div>
 </dd>
-<dt id="S0.I1.i1.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dt id="S0.I1.i25.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
 <dd class="ltx_item">
-<div id="S0.I1.i1.I1.ix2.p1" class="ltx_para">
-<p class="ltx_p"><math id="S0.I1.i1.I1.ix2.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi mathcolor="#0000FF">x</mi></math></p>
+<div id="S0.I1.i25.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p">さらに，<math id="S0.I1.i25.I1.ix2.p1.m1" class="ltx_Math" alttext="w\in{\color[rgb]{0,0,1}T^{*}}" display="inline"><mrow><mi>w</mi><mo>∈</mo><mi mathcolor="#0000FF">T</mi><msup><mi></mi><mo mathcolor="#0000FF">*</mo></msup></mrow></math></p>
 </div>
 </dd>
-<dt id="S0.I1.i1.I1.ix3" class="ltx_item"></dt>
+<dt id="S0.I1.i25.I1.ix3" class="ltx_item"></dt>
 <dd class="ltx_item">
-<div id="S0.I1.i1.I1.ix3.p1" class="ltx_para">
+<div id="S0.I1.i25.I1.ix3.p1" class="ltx_para">
 <br class="ltx_break">
 </div>
 </dd>
 </dl>
 </div>
 </li>
-</ul>
+<li id="S0.I1.i26" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">26.</span> 
+<div id="S0.I1.i26.p1" class="ltx_para">
+<p class="ltx_p">68ページ 16行目</p>
+<dl id="S0.I1.i26.I1" class="ltx_description">
+<dt id="S0.I1.i26.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i26.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text" style="color:#FF0000;">文法<math id="S0.I1.i26.I1.ix1.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi mathcolor="#FF0000">G</mi></math>がこの性質を満たすとき，<math id="S0.I1.i26.I1.ix1.p1.m2" class="ltx_Math" alttext="G" display="inline"><mi mathcolor="#FF0000">G</mi></math>をLR(0)文法と呼ぶ．</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i26.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i26.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text" style="color:#0000FF;">LR(0)文法は，この性質を満たす制限された文脈自由文法のクラスである．</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i26.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i26.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i27" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">27.</span> 
+<div id="S0.I1.i27.p1" class="ltx_para">
+<p class="ltx_p">68ページ 17行目</p>
+<dl id="S0.I1.i27.I1" class="ltx_description">
+<dt id="S0.I1.i27.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i27.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p">5.6節でLR(0)文法の<span class="ltx_text" style="color:#FF0000;">別の</span>定義を与える．</p>
+</div>
+</dd>
+<dt id="S0.I1.i27.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i27.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p">5.6節でLR(0)文法の<span class="ltx_text" style="color:#0000FF;">厳密な</span>定義を与える．</p>
+</div>
+</dd>
+<dt id="S0.I1.i27.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i27.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i28" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">28.</span> 
+<div id="S0.I1.i28.p1" class="ltx_para">
+<p class="ltx_p">69ページ 20行目</p>
+<dl id="S0.I1.i28.I1" class="ltx_description">
+<dt id="S0.I1.i28.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i28.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text" style="color:#FF0000;">この性質を仮定しても一般性を失わない．</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i28.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i28.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text" style="color:#0000FF;">不要な非終端記号は除去可能であり，除去しても生成する言語は変化しない．</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i28.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i28.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i29" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">29.</span> 
+<div id="S0.I1.i29.p1" class="ltx_para">
+<p class="ltx_p">69ページ 21,22行目</p>
+<dl id="S0.I1.i29.I1" class="ltx_description">
+<dt id="S0.I1.i29.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i29.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i29.I1.ix1.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi mathcolor="#FF0000">G</mi></math><span class="ltx_text" style="color:#FF0000;">に対して，
+<math id="S0.I1.i29.I1.ix1.p1.m2" class="ltx_Math" alttext="C_{G}" display="inline"><mrow><mi mathcolor="#FF0000">C</mi><msub><mi></mi><mi mathcolor="#FF0000">G</mi></msub></mrow></math>を受理する決定性有限状態オートマトンを構築することによって，定理5.1を証明する．</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i29.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i29.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text" style="color:#0000FF;">決定性有限状態オートマトンが受理する言語はすべて正規言語であることが知られている．
+そこで，定理5.1を，<math id="S0.I1.i29.I1.ix2.p1.m1" class="ltx_Math" alttext="C_{G}" display="inline"><mrow><mi mathcolor="#0000FF">C</mi><msub><mi></mi><mi mathcolor="#0000FF">G</mi></msub></mrow></math>を受理する決定性有限状態オートマトンを構築することによって示す．</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i29.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i29.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i30" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">30.</span> 
+<div id="S0.I1.i30.p1" class="ltx_para">
+<p class="ltx_p">69ページ 22行目</p>
+<dl id="S0.I1.i30.I1" class="ltx_description">
+<dt id="S0.I1.i30.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i30.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p">すでに<span class="ltx_text" style="color:#FF0000;">5.5</span>節で</p>
+</div>
+</dd>
+<dt id="S0.I1.i30.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i30.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p">すでに<span class="ltx_text" style="color:#FF0000;">4.2</span>節で</p>
+</div>
+</dd>
+<dt id="S0.I1.i30.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i30.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i31" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">31.</span> 
+<div id="S0.I1.i31.p1" class="ltx_para">
+<p class="ltx_p">71ページ 8行目</p>
+<dl id="S0.I1.i31.I1" class="ltx_description">
+<dt id="S0.I1.i31.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i31.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p">もし
+<math id="S0.I1.i31.I1.ix1.p1.m1" class="ltx_Math" alttext="S{\color[rgb]{1,0,0}\stackrel{{\scriptstyle*}}{{\Longrightarrow}}}\alpha Aw_{0%
+}{\color[rgb]{1,0,0}\Longrightarrow}\alpha\beta w_{0}" display="inline"><mrow><mi>S</mi><mover><mo mathcolor="#FF0000" movablelimits="false">⟹</mo><mo mathcolor="#FF0000">*</mo></mover><mi>α</mi><mi>A</mi><mi>w</mi><msub><mi></mi><mn>0</mn></msub><mo mathcolor="#FF0000">⟹</mo><mi>α</mi><mi>β</mi><mi>w</mi><msub><mi></mi><mn>0</mn></msub></mrow></math>なら
+<math id="S0.I1.i31.I1.ix1.p1.m2" class="ltx_Math" alttext="s\xrightarrow{\ \alpha\beta\ }[A\rightarrow{\color[rgb]{1,0,0}\alpha}\beta\cdot]" display="inline"><mrow><mi>s</mi><mover accent="true"><mo>→</mo><mrow><mspace width="5.0pt"></mspace><mi>α</mi><mi>β</mi><mspace width="5.0pt"></mspace></mrow></mover><mo stretchy="false">[</mo><mi>A</mi><mo>→</mo><mi mathcolor="#FF0000">α</mi><mi>β</mi><mo>⋅</mo><mo stretchy="false">]</mo></mrow></math>である．</p>
+</div>
+</dd>
+<dt id="S0.I1.i31.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i31.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p">もし
+<math id="S0.I1.i31.I1.ix2.p1.m1" class="ltx_Math" alttext="S{\color[rgb]{0,0,1}\stackrel{{\scriptstyle*}}{{\mathrel{\mathop{%
+\Longrightarrow}\limits_{{rm}}}}}}\alpha Aw_{0}{\color[rgb]{0,0,1}\mathrel{%
+\mathop{\Longrightarrow}\limits_{{rm}}}}\alpha\beta w_{0}" display="inline"><mrow><mi>S</mi><mover><mrow><mo mathcolor="#0000FF" movablelimits="false">⟹</mo><msub><mi></mi><mrow><mi mathcolor="#0000FF">r</mi><mi mathcolor="#0000FF">m</mi></mrow></msub></mrow><mo mathcolor="#0000FF">*</mo></mover><mi>α</mi><mi>A</mi><mi>w</mi><msub><mi></mi><mn>0</mn></msub><mrow><mo mathcolor="#0000FF" movablelimits="false">⟹</mo><msub><mi></mi><mrow><mi mathcolor="#0000FF">r</mi><mi mathcolor="#0000FF">m</mi></mrow></msub></mrow><mi>α</mi><mi>β</mi><mi>w</mi><msub><mi></mi><mn>0</mn></msub></mrow></math>なら
+<math id="S0.I1.i31.I1.ix2.p1.m2" class="ltx_Math" alttext="s\xrightarrow{\ \alpha\beta\ }[A\rightarrow\beta\cdot]" display="inline"><mrow><mi>s</mi><mover accent="true"><mo>→</mo><mrow><mspace width="5.0pt"></mspace><mi>α</mi><mi>β</mi><mspace width="5.0pt"></mspace></mrow></mover><mo stretchy="false">[</mo><mi>A</mi><mo>→</mo><mi>β</mi><mo>⋅</mo><mo stretchy="false">]</mo></mrow></math>である．</p>
+</div>
+</dd>
+<dt id="S0.I1.i31.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i31.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i32" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">32.</span> 
+<div id="S0.I1.i32.p1" class="ltx_para">
+<p class="ltx_p">71ページ 9行目</p>
+<dl id="S0.I1.i32.I1" class="ltx_description">
+<dt id="S0.I1.i32.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i32.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i32.I1.ix1.p1.m1" class="ltx_Math" alttext="S{\color[rgb]{1,0,0}\stackrel{{\scriptstyle*}}{{\Longrightarrow}}}\alpha Aw_{0}" display="inline"><mrow><mi>S</mi><mover><mo mathcolor="#FF0000" movablelimits="false">⟹</mo><mo mathcolor="#FF0000">*</mo></mover><mi>α</mi><mi>A</mi><mi>w</mi><msub><mi></mi><mn>0</mn></msub></mrow></math>の繰り返し</p>
+</div>
+</dd>
+<dt id="S0.I1.i32.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i32.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i32.I1.ix2.p1.m1" class="ltx_Math" alttext="S{\color[rgb]{0,0,1}\stackrel{{\scriptstyle*}}{{\mathrel{\mathop{%
+\Longrightarrow}\limits_{{rm}}}}}}\alpha Aw_{0}" display="inline"><mrow><mi>S</mi><mover><mrow><mo mathcolor="#0000FF" movablelimits="false">⟹</mo><msub><mi></mi><mrow><mi mathcolor="#0000FF">r</mi><mi mathcolor="#0000FF">m</mi></mrow></msub></mrow><mo mathcolor="#0000FF">*</mo></mover><mi>α</mi><mi>A</mi><mi>w</mi><msub><mi></mi><mn>0</mn></msub></mrow></math>の繰り返し</p>
+</div>
+</dd>
+<dt id="S0.I1.i32.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i32.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i33" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">33.</span> 
+<div id="S0.I1.i33.p1" class="ltx_para">
+<p class="ltx_p">72ページ 1行目</p>
+<dl id="S0.I1.i33.I1" class="ltx_description">
+<dt id="S0.I1.i33.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i33.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i33.I1.ix1.p1.m1" class="ltx_Math" alttext="{\color[rgb]{1,0,0}\beta_{1}}" display="inline"><mrow><mi mathcolor="#FF0000">β</mi><msub><mi></mi><mn mathcolor="#FF0000">1</mn></msub></mrow></math>を<math id="S0.I1.i33.I1.ix1.p1.m2" class="ltx_Math" alttext="\epsilon" display="inline"><mi>ϵ</mi></math>ととると．</p>
+</div>
+</dd>
+<dt id="S0.I1.i33.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i33.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i33.I1.ix2.p1.m1" class="ltx_Math" alttext="{\color[rgb]{0,0,1}\beta_{2}}" display="inline"><mrow><mi mathcolor="#0000FF">β</mi><msub><mi></mi><mn mathcolor="#0000FF">2</mn></msub></mrow></math>を<math id="S0.I1.i33.I1.ix2.p1.m2" class="ltx_Math" alttext="\epsilon" display="inline"><mi>ϵ</mi></math>ととると．</p>
+</div>
+</dd>
+<dt id="S0.I1.i33.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i33.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i34" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">34.</span> 
+<div id="S0.I1.i34.p1" class="ltx_para">
+<p class="ltx_p">73ページ 6行目</p>
+<dl id="S0.I1.i34.I1" class="ltx_description">
+<dt id="S0.I1.i34.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i34.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p">受理<span class="ltx_text" style="color:#FF0000;">態状</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i34.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i34.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p">受理<span class="ltx_text" style="color:#0000FF;">状態</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i34.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i34.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i35" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">35.</span> 
+<div id="S0.I1.i35.p1" class="ltx_para">
+<p class="ltx_p">76ページ 14行目</p>
+<dl id="S0.I1.i35.I1" class="ltx_description">
+<dt id="S0.I1.i35.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i35.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text" style="color:#FF0000;">生成規則<math id="S0.I1.i35.I1.ix1.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi mathcolor="black">S</mi></math></span>を左辺とする</p>
+</div>
+</dd>
+<dt id="S0.I1.i35.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i35.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text" style="color:#0000FF;">開始記号<math id="S0.I1.i35.I1.ix2.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi mathcolor="black">S</mi></math></span>を左辺とする</p>
+</div>
+</dd>
+<dt id="S0.I1.i35.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i35.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i36" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">36.</span> 
+<div id="S0.I1.i36.p1" class="ltx_para">
+<p class="ltx_p">77ページ 10行目</p>
+<dl id="S0.I1.i36.I1" class="ltx_description">
+<dt id="S0.I1.i36.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i36.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text" style="color:#FF0000;">言語</span>クラスLR(0)<span class="ltx_text" style="color:#FF0000;">言語</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i36.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i36.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text" style="color:#0000FF;">文法</span>クラスLR(0)<span class="ltx_text" style="color:#0000FF;">文法</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i36.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i36.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i37" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">37.</span> 
+<div id="S0.I1.i37.p1" class="ltx_para">
+<p class="ltx_p">78ページ 1行目(図5.3の1行目)</p>
+<dl id="S0.I1.i37.I1" class="ltx_description">
+<dt id="S0.I1.i37.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i37.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i37.I1.ix1.p1.m1" class="ltx_Math" alttext="v" display="inline"><mi mathcolor="#FF0000">v</mi></math></p>
+</div>
+</dd>
+<dt id="S0.I1.i37.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i37.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i37.I1.ix2.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi mathcolor="#0000FF">x</mi></math></p>
+</div>
+</dd>
+<dt id="S0.I1.i37.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i37.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i38" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">38.</span> 
+<div id="S0.I1.i38.p1" class="ltx_para">
+<p class="ltx_p">80ページ (節タイトル)</p>
+<dl id="S0.I1.i38.I1" class="ltx_description">
+<dt id="S0.I1.i38.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i38.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">5.9</span> 先読み文字による<span class="ltx_text" style="color:#FF0000;">アリゴリズム</span>の改良</p>
+</div>
+</dd>
+<dt id="S0.I1.i38.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i38.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">5.9</span> 先読み文字による<span class="ltx_text" style="color:#0000FF;">アルゴリズム</span>の改良</p>
+</div>
+</dd>
+<dt id="S0.I1.i38.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i38.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i39" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">39.</span> 
+<div id="S0.I1.i39.p1" class="ltx_para">
+<p class="ltx_p">81ページ 3行目</p>
+<dl id="S0.I1.i39.I1" class="ltx_description">
+<dt id="S0.I1.i39.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i39.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i39.I1.ix1.p1.m1" class="ltx_Math" alttext="{\color[rgb]{1,0,0}\mbox{\frenchspacing A}}\rightarrow\mbox{\frenchspacing AA}" display="inline"><mrow><mtext mathcolor="#FF0000">𝙰</mtext><mo>→</mo><mtext>𝙰𝙰</mtext></mrow></math>の各生成規則</p>
+</div>
+</dd>
+<dt id="S0.I1.i39.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i39.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i39.I1.ix2.p1.m1" class="ltx_Math" alttext="{\color[rgb]{1,0,0}\mbox{\frenchspacing S}}\rightarrow\mbox{\frenchspacing AA}" display="inline"><mrow><mtext mathcolor="#FF0000">𝚂</mtext><mo>→</mo><mtext>𝙰𝙰</mtext></mrow></math>の各生成規則</p>
+</div>
+</dd>
+<dt id="S0.I1.i39.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i39.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i40" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">40.</span> 
+<div id="S0.I1.i40.p1" class="ltx_para">
+<p class="ltx_p">81ページ (ページヘッダ)</p>
+<dl id="S0.I1.i40.I1" class="ltx_description">
+<dt id="S0.I1.i40.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i40.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">5.9</span> 先読み文字による<span class="ltx_text" style="color:#FF0000;">アリゴリズム</span>の改良</p>
+</div>
+</dd>
+<dt id="S0.I1.i40.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i40.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">5.9</span> 先読み文字による<span class="ltx_text" style="color:#0000FF;">アルゴリズム</span>の改良</p>
+</div>
+</dd>
+<dt id="S0.I1.i40.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i40.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i41" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">41.</span> 
+<div id="S0.I1.i41.p1" class="ltx_para">
+<p class="ltx_p">84ページ 9行目</p>
+<dl id="S0.I1.i41.I1" class="ltx_description">
+<dt id="S0.I1.i41.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i41.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter" style="color:#FF0000;">prim</span><span class="ltx_text" style="color:#FF0000;"> (<math id="S0.I1.i41.I1.ix1.p1.m1" class="ltx_Math" alttext="\langle\mathit{prim}\rangle" display="inline"><mrow><mo mathcolor="#FF0000" stretchy="false">⟨</mo><mi mathcolor="#FF0000">p</mi><mi mathcolor="#FF0000">r</mi><mi mathcolor="#FF0000">i</mi><mi mathcolor="#FF0000">m</mi><mo mathcolor="#FF0000" stretchy="false">⟩</mo></mrow></math>, <math id="S0.I1.i41.I1.ix1.p1.m2" class="ltx_Math" alttext="\langle\mathit{exp}\rangle" display="inline"><mrow><mo mathcolor="#FF0000" stretchy="false">⟨</mo><mi mathcolor="#FF0000">e</mi><mi mathcolor="#FF0000">x</mi><mi mathcolor="#FF0000">p</mi><mo mathcolor="#FF0000" stretchy="false">⟩</mo></mrow></math>, <math id="S0.I1.i41.I1.ix1.p1.m3" class="ltx_Math" alttext="\langle\mathit{exp}\rangle" display="inline"><mrow><mo mathcolor="#FF0000" stretchy="false">⟨</mo><mi mathcolor="#FF0000">e</mi><mi mathcolor="#FF0000">x</mi><mi mathcolor="#FF0000">p</mi><mo mathcolor="#FF0000" stretchy="false">⟩</mo></mrow></math>)
+</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i41.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i41.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter" style="color:#0000FF;">prim</span><span class="ltx_text" style="color:#0000FF;"> <span class="ltx_text ltx_font_typewriter">(</span><math id="S0.I1.i41.I1.ix2.p1.m1" class="ltx_Math" alttext="\langle\mathit{prim}\rangle" display="inline"><mrow><mo mathcolor="#0000FF" stretchy="false">⟨</mo><mi mathcolor="#0000FF">p</mi><mi mathcolor="#0000FF">r</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">m</mi><mo mathcolor="#0000FF" stretchy="false">⟩</mo></mrow></math><span class="ltx_text ltx_font_typewriter">,</span> <math id="S0.I1.i41.I1.ix2.p1.m2" class="ltx_Math" alttext="\langle\mathit{exp}\rangle" display="inline"><mrow><mo mathcolor="#0000FF" stretchy="false">⟨</mo><mi mathcolor="#0000FF">e</mi><mi mathcolor="#0000FF">x</mi><mi mathcolor="#0000FF">p</mi><mo mathcolor="#0000FF" stretchy="false">⟩</mo></mrow></math><span class="ltx_text ltx_font_typewriter">,</span> <math id="S0.I1.i41.I1.ix2.p1.m3" class="ltx_Math" alttext="\langle\mathit{exp}\rangle" display="inline"><mrow><mo mathcolor="#0000FF" stretchy="false">⟨</mo><mi mathcolor="#0000FF">e</mi><mi mathcolor="#0000FF">x</mi><mi mathcolor="#0000FF">p</mi><mo mathcolor="#0000FF" stretchy="false">⟩</mo></mrow></math><span class="ltx_text ltx_font_typewriter">)</span>
+</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i41.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i41.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i42" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">42.</span> 
+<div id="S0.I1.i42.p1" class="ltx_para">
+<p class="ltx_p">85ページ 6行目(図5.8)</p>
+<dl id="S0.I1.i42.I1" class="ltx_description">
+<dt id="S0.I1.i42.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i42.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">= EXPID of  string</span>   (<span class="ltx_text ltx_font_typewriter" style="color:#FF0000;">of<span class="ltx_text ltx_font_serif">の後に余分な空白</span></span>)</p>
+</div>
+</dd>
+<dt id="S0.I1.i42.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i42.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">= EXPID of string</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i42.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i42.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i43" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">43.</span> 
+<div id="S0.I1.i43.p1" class="ltx_para">
+<p class="ltx_p">85ページ 10行目(図5.8)</p>
+<dl id="S0.I1.i43.I1" class="ltx_description">
+<dt id="S0.I1.i43.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i43.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">| EXPPRIM of prim *  exp * exp</span>   (<span class="ltx_text" style="color:#FF0000;">１つ目の<span class="ltx_text ltx_font_typewriter">*</span>の後に余分な空白</span>)</p>
+</div>
+</dd>
+<dt id="S0.I1.i43.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i43.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">| EXPPRIM of prim * exp * exp</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i43.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i43.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i44" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">44.</span> 
+<div id="S0.I1.i44.p1" class="ltx_para">
+<p class="ltx_p">87ページ 4行目</p>
+<dl id="S0.I1.i44.I1" class="ltx_description">
+<dt id="S0.I1.i44.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i44.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text" style="color:#FF0000;"><math id="S0.I1.i44.I1.ix1.p1.m1" class="ltx_Math" alttext="\langle\mathit{const}\rangle" display="inline"><mrow><mo mathcolor="#FF0000" stretchy="false">⟨</mo><mi mathcolor="#FF0000">c</mi><mi mathcolor="#FF0000">o</mi><mi mathcolor="#FF0000">n</mi><mi mathcolor="#FF0000">s</mi><mi mathcolor="#FF0000">t</mi><mo mathcolor="#FF0000" stretchy="false">⟩</mo></mrow></math></span></p>
+</div>
+</dd>
+<dt id="S0.I1.i44.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i44.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text" style="color:#0000FF;"><math id="S0.I1.i44.I1.ix2.p1.m1" class="ltx_Math" alttext="\langle\mathit{n}\rangle" display="inline"><mrow><mo mathcolor="#0000FF" stretchy="false">⟨</mo><mi mathcolor="#0000FF">n</mi><mo mathcolor="#0000FF" stretchy="false">⟩</mo></mrow></math></span><span class="ltx_text" style="color:#0000FF;"> | <math id="S0.I1.i44.I1.ix2.p1.m2" class="ltx_Math" alttext="\langle\mathit{s}\rangle" display="inline"><mrow><mo mathcolor="#0000FF" stretchy="false">⟨</mo><mi mathcolor="#0000FF">s</mi><mo mathcolor="#0000FF" stretchy="false">⟩</mo></mrow></math> | <span class="ltx_text ltx_markedasmath ltx_font_typewriter">true</span> | <span class="ltx_text ltx_font_typewriter">false</span></span></p>
+</div>
+</dd>
+<dt id="S0.I1.i44.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i44.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i45" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">45.</span> 
+<div id="S0.I1.i45.p1" class="ltx_para">
+<p class="ltx_p">87ページ 5行目</p>
+<dl id="S0.I1.i45.I1" class="ltx_description">
+<dt id="S0.I1.i45.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i45.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter" style="color:#FF0000;">(</span><span class="ltx_text" style="color:#FF0000;"> <math id="S0.I1.i45.I1.ix1.p1.m1" class="ltx_Math" alttext="\langle\mathit{exp}\rangle" display="inline"><mrow><mo mathcolor="#FF0000" stretchy="false">⟨</mo><mi mathcolor="#FF0000">e</mi><mi mathcolor="#FF0000">x</mi><mi mathcolor="#FF0000">p</mi><mo mathcolor="#FF0000" stretchy="false">⟩</mo></mrow></math> <span class="ltx_text ltx_font_typewriter">,</span> <math id="S0.I1.i45.I1.ix1.p1.m2" class="ltx_Math" alttext="\langle\mathit{exp}\rangle" display="inline"><mrow><mo mathcolor="#FF0000" stretchy="false">⟨</mo><mi mathcolor="#FF0000">e</mi><mi mathcolor="#FF0000">x</mi><mi mathcolor="#FF0000">p</mi><mo mathcolor="#FF0000" stretchy="false">⟩</mo></mrow></math> <span class="ltx_text ltx_font_typewriter">)</span>  | <span class="ltx_text ltx_font_typewriter">(</span> <math id="S0.I1.i45.I1.ix1.p1.m3" class="ltx_Math" alttext="\langle\mathit{exp}\rangle" display="inline"><mrow><mo mathcolor="#FF0000" stretchy="false">⟨</mo><mi mathcolor="#FF0000">e</mi><mi mathcolor="#FF0000">x</mi><mi mathcolor="#FF0000">p</mi><mo mathcolor="#FF0000" stretchy="false">⟩</mo></mrow></math><span class="ltx_text ltx_font_typewriter">)</span>
+ | <math id="S0.I1.i45.I1.ix1.p1.m4" class="ltx_Math" alttext="\langle\mathit{op}\rangle" display="inline"><mrow><mo mathcolor="#FF0000" stretchy="false">⟨</mo><mi mathcolor="#FF0000">o</mi><mi mathcolor="#FF0000">p</mi><mo mathcolor="#FF0000" stretchy="false">⟩</mo></mrow></math> <span class="ltx_text ltx_font_typewriter">(</span> <math id="S0.I1.i45.I1.ix1.p1.m5" class="ltx_Math" alttext="\langle\mathit{exp}\rangle" display="inline"><mrow><mo mathcolor="#FF0000" stretchy="false">⟨</mo><mi mathcolor="#FF0000">e</mi><mi mathcolor="#FF0000">x</mi><mi mathcolor="#FF0000">p</mi><mo mathcolor="#FF0000" stretchy="false">⟩</mo></mrow></math> <span class="ltx_text ltx_font_typewriter">,</span> <math id="S0.I1.i45.I1.ix1.p1.m6" class="ltx_Math" alttext="\langle\mathit{exp}\rangle" display="inline"><mrow><mo mathcolor="#FF0000" stretchy="false">⟨</mo><mi mathcolor="#FF0000">e</mi><mi mathcolor="#FF0000">x</mi><mi mathcolor="#FF0000">p</mi><mo mathcolor="#FF0000" stretchy="false">⟩</mo></mrow></math> <span class="ltx_text ltx_font_typewriter">)</span>
+</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i45.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i45.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter" style="color:#0000FF;">(</span><span class="ltx_text" style="color:#0000FF;"><math id="S0.I1.i45.I1.ix2.p1.m1" class="ltx_Math" alttext="\langle\mathit{exp}\rangle" display="inline"><mrow><mo mathcolor="#0000FF" stretchy="false">⟨</mo><mi mathcolor="#0000FF">e</mi><mi mathcolor="#0000FF">x</mi><mi mathcolor="#0000FF">p</mi><mo mathcolor="#0000FF" stretchy="false">⟩</mo></mrow></math></span><span class="ltx_text ltx_font_typewriter" style="color:#0000FF;">,</span><span class="ltx_text" style="color:#0000FF;"> <math id="S0.I1.i45.I1.ix2.p1.m2" class="ltx_Math" alttext="\langle\mathit{exp}\rangle" display="inline"><mrow><mo mathcolor="#0000FF" stretchy="false">⟨</mo><mi mathcolor="#0000FF">e</mi><mi mathcolor="#0000FF">x</mi><mi mathcolor="#0000FF">p</mi><mo mathcolor="#0000FF" stretchy="false">⟩</mo></mrow></math><span class="ltx_text ltx_font_typewriter">)</span>  | <span class="ltx_text ltx_font_typewriter">(</span><math id="S0.I1.i45.I1.ix2.p1.m3" class="ltx_Math" alttext="\langle\mathit{exp}\rangle" display="inline"><mrow><mo mathcolor="#0000FF" stretchy="false">⟨</mo><mi mathcolor="#0000FF">e</mi><mi mathcolor="#0000FF">x</mi><mi mathcolor="#0000FF">p</mi><mo mathcolor="#0000FF" stretchy="false">⟩</mo></mrow></math><span class="ltx_text ltx_font_typewriter">)</span>
+ | <span class="ltx_text ltx_font_typewriter">prim</span> <span class="ltx_text ltx_font_typewriter">(</span><math id="S0.I1.i45.I1.ix2.p1.m4" class="ltx_Math" alttext="\langle\mathit{prim}\rangle" display="inline"><mrow><mo mathcolor="#0000FF" stretchy="false">⟨</mo><mi mathcolor="#0000FF">p</mi><mi mathcolor="#0000FF">r</mi><mi mathcolor="#0000FF">i</mi><mi mathcolor="#0000FF">m</mi><mo mathcolor="#0000FF" stretchy="false">⟩</mo></mrow></math><span class="ltx_text ltx_font_typewriter">,</span> <math id="S0.I1.i45.I1.ix2.p1.m5" class="ltx_Math" alttext="\langle\mathit{exp}\rangle" display="inline"><mrow><mo mathcolor="#0000FF" stretchy="false">⟨</mo><mi mathcolor="#0000FF">e</mi><mi mathcolor="#0000FF">x</mi><mi mathcolor="#0000FF">p</mi><mo mathcolor="#0000FF" stretchy="false">⟩</mo></mrow></math><span class="ltx_text ltx_font_typewriter">,</span> <math id="S0.I1.i45.I1.ix2.p1.m6" class="ltx_Math" alttext="\langle\mathit{exp}\rangle" display="inline"><mrow><mo mathcolor="#0000FF" stretchy="false">⟨</mo><mi mathcolor="#0000FF">e</mi><mi mathcolor="#0000FF">x</mi><mi mathcolor="#0000FF">p</mi><mo mathcolor="#0000FF" stretchy="false">⟩</mo></mrow></math><span class="ltx_text ltx_font_typewriter">)</span>
+</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i45.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i45.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i46" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">46.</span> 
+<div id="S0.I1.i46.p1" class="ltx_para">
+<p class="ltx_p">89ページ 16行目</p>
+<dl id="S0.I1.i46.I1" class="ltx_description">
+<dt id="S0.I1.i46.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i46.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter" style="color:#FF0000;">arg: arg (カンマヌケ)</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i46.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i46.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter" style="color:#0000FF;">arg:arg,</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i46.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i46.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i47" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">47.</span> 
+<div id="S0.I1.i47.p1" class="ltx_para">
+<p class="ltx_p">90ページ 10行目</p>
+<dl id="S0.I1.i47.I1" class="ltx_description">
+<dt id="S0.I1.i47.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i47.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text" style="color:#FF0000;">関数である．このように，</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i47.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i47.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text" style="color:#0000FF;">関数集合を定義する．</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i47.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i47.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+</ol>
 </div>
 </section>
 </div>
@@ -69,7 +658,7 @@ head: |
 <div>
 <a href="Ch4.html" title="第 4 章 字句解析 ‣ コンパイラ – 原理と構造 – 初版 正誤表" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>字句解析</span></a><a href="Ch6.html" title="第 6 章 型の解析と型推論 ‣ コンパイラ – 原理と構造 – 初版 正誤表" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>型の解析と型推論</span></a>
 </div>
-<div class="ltx_page_logo">Generated  on Sun Dec 12 15:23:44 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+<div class="ltx_page_logo">Generated  on Thu Oct 13 10:18:38 2022 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
 </div></footer>
 </div>
 {% endraw %}

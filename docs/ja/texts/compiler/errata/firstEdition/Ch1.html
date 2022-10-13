@@ -4,22 +4,23 @@ permalink: /ja/texts/compiler/errata/firstEdition/Ch1.html
 translated: true
 lang: ja
 head: |
- <!--Generated on Sun Dec 12 15:23:44 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
- <!--Document created on 令和3年12月12日.-->
+ <!--Generated on Thu Oct 13 10:18:38 2022 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Document created on 令和4年10月13日.-->
  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <link rel="stylesheet" href="LaTeXML.css" type="text/css">
  <link rel="stylesheet" href="ltx-book.css" type="text/css">
- <link rel="stylesheet" href="ltx-ulem.css" type="text/css">
  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
  <link rel="up" href="./" title="コンパイラ – 原理と構造 – 初版 正誤表">
  <link rel="start" href="./" title="コンパイラ – 原理と構造 – 初版 正誤表">
  <link rel="prev" href="./" title="コンパイラ – 原理と構造 – 初版 正誤表">
  <link rel="next" href="Ch2.html" title="第 2 章 SML#チュートリアル ‣ コンパイラ – 原理と構造 – 初版 正誤表">
  <link rel="chapter" href="Ch2.html" title="第 2 章 SML#チュートリアル ‣ コンパイラ – 原理と構造 – 初版 正誤表">
+ <link rel="chapter" href="Ch3.html" title="第 3 章 文字列の性質と文字列処理 ‣ コンパイラ – 原理と構造 – 初版 正誤表">
  <link rel="chapter" href="Ch4.html" title="第 4 章 字句解析 ‣ コンパイラ – 原理と構造 – 初版 正誤表">
  <link rel="chapter" href="Ch5.html" title="第 5 章 構文解析 ‣ コンパイラ – 原理と構造 – 初版 正誤表">
  <link rel="chapter" href="Ch6.html" title="第 6 章 型の解析と型推論 ‣ コンパイラ – 原理と構造 – 初版 正誤表">
  <link rel="chapter" href="Ch7.html" title="第 7 章 インタープリタ ‣ コンパイラ – 原理と構造 – 初版 正誤表">
+ <link rel="chapter" href="Ch8.html" title="第 8 章 機械語コードへのコンパイル ‣ コンパイラ – 原理と構造 – 初版 正誤表">
  <link rel="chapter" href="Chx1.html" title="参考文献 ‣ コンパイラ – 原理と構造 – 初版 正誤表">
 ---
 {% raw %}
@@ -34,9 +35,9 @@ head: |
 <span class="ltx_tag ltx_tag_chapter">第 1 章 </span>計算とプログラミング言語</h1>
 
 <div id="p1" class="ltx_para">
-<ul id="S0.I1" class="ltx_itemize">
+<ol id="S0.I1" class="ltx_enumerate">
 <li id="S0.I1.i1" class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_item">•</span> 
+<span class="ltx_tag ltx_tag_item">1.</span> 
 <div id="S0.I1.i1.p1" class="ltx_para">
 <p class="ltx_p">5ページ (18行)</p>
 <dl id="S0.I1.i1.I1" class="ltx_description">
@@ -62,7 +63,7 @@ head: |
 </div>
 </li>
 <li id="S0.I1.i2" class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_item">•</span> 
+<span class="ltx_tag ltx_tag_item">2.</span> 
 <div id="S0.I1.i2.p1" class="ltx_para">
 <p class="ltx_p">5ページ (20行)</p>
 <dl id="S0.I1.i2.I1" class="ltx_description">
@@ -88,7 +89,7 @@ head: |
 </div>
 </li>
 <li id="S0.I1.i3" class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_item">•</span> 
+<span class="ltx_tag ltx_tag_item">3.</span> 
 <div id="S0.I1.i3.p1" class="ltx_para">
 <p class="ltx_p">8ページ (18行目)</p>
 <dl id="S0.I1.i3.I1" class="ltx_description">
@@ -114,7 +115,7 @@ head: |
 </div>
 </li>
 <li id="S0.I1.i4" class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_item">•</span> 
+<span class="ltx_tag ltx_tag_item">4.</span> 
 <div id="S0.I1.i4.p1" class="ltx_para">
 <p class="ltx_p">14ページ (図1.2)</p>
 <dl id="S0.I1.i4.I1" class="ltx_description">
@@ -140,7 +141,7 @@ head: |
 </div>
 </li>
 <li id="S0.I1.i5" class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_item">•</span> 
+<span class="ltx_tag ltx_tag_item">5.</span> 
 <div id="S0.I1.i5.p1" class="ltx_para">
 <p class="ltx_p">15ページ (図1.3)</p>
 <dl id="S0.I1.i5.I1" class="ltx_description">
@@ -166,9 +167,9 @@ head: |
 </div>
 </li>
 <li id="S0.I1.i6" class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_item">•</span> 
+<span class="ltx_tag ltx_tag_item">6.</span> 
 <div id="S0.I1.i6.p1" class="ltx_para">
-<p class="ltx_p">18ページ (16行目)</p>
+<p class="ltx_p">18ページ 16行目</p>
 <dl id="S0.I1.i6.I1" class="ltx_description">
 <dt id="S0.I1.i6.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
 <dd class="ltx_item">
@@ -192,9 +193,9 @@ head: |
 </div>
 </li>
 <li id="S0.I1.i7" class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_item">•</span> 
+<span class="ltx_tag ltx_tag_item">7.</span> 
 <div id="S0.I1.i7.p1" class="ltx_para">
-<p class="ltx_p">18ページ (22行目，問1.1の３行目)</p>
+<p class="ltx_p">18ページ 22行目，問1.1の３行目</p>
 <dl id="S0.I1.i7.I1" class="ltx_description">
 <dt id="S0.I1.i7.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
 <dd class="ltx_item">
@@ -218,7 +219,7 @@ head: |
 </div>
 </li>
 <li id="S0.I1.i8" class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_item">•</span> 
+<span class="ltx_tag ltx_tag_item">8.</span> 
 <div id="S0.I1.i8.p1" class="ltx_para">
 <p class="ltx_p">18ページ (問1.1 3; 26行目，27行目)</p>
 <dl id="S0.I1.i8.I1" class="ltx_description">
@@ -243,7 +244,7 @@ head: |
 </dl>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 </section>
 </div>
@@ -251,7 +252,7 @@ head: |
 <div>
 <a href="./" title="コンパイラ – 原理と構造 – 初版 正誤表" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title">コンパイラ – 原理と構造 – 初版 正誤表<span class="ltx_text"> </span></span></a><a href="Ch2.html" title="第 2 章 SML#チュートリアル ‣ コンパイラ – 原理と構造 – 初版 正誤表" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span><span class="ltx_text ltx_markedasmath">SML<span class="ltx_text ltx_font_typewriter">#</span></span>チュートリアル</span></a>
 </div>
-<div class="ltx_page_logo">Generated  on Sun Dec 12 15:23:44 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+<div class="ltx_page_logo">Generated  on Thu Oct 13 10:18:38 2022 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
 </div></footer>
 </div>
 {% endraw %}

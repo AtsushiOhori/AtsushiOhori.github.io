@@ -4,8 +4,8 @@ permalink: /ja/texts/compiler/errata/e-pubEdition/Ch6.html
 translated: true
 lang: ja
 head: |
- <!--Generated on Sun Dec 12 15:23:47 2021 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
- <!--Document created on 令和3年12月12日.-->
+ <!--Generated on Thu Oct 13 10:18:44 2022 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
+ <!--Document created on 令和4年10月13日.-->
  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <link rel="stylesheet" href="LaTeXML.css" type="text/css">
  <link rel="stylesheet" href="ltx-book.css" type="text/css">
@@ -14,18 +14,21 @@ head: |
  <link rel="up" href="./" title="コンパイラ – 原理と構造 – 電子版 正誤表">
  <link rel="start" href="./" title="コンパイラ – 原理と構造 – 電子版 正誤表">
  <link rel="prev" href="Ch5.html" title="第 5 章 構文解析 ‣ コンパイラ – 原理と構造 – 電子版 正誤表">
- <link rel="next" href="Chx1.html" title="参考文献 ‣ コンパイラ – 原理と構造 – 電子版 正誤表">
+ <link rel="next" href="Ch7.html" title="第 7 章 インタープリタ ‣ コンパイラ – 原理と構造 – 電子版 正誤表">
  <link rel="chapter" href="Ch1.html" title="第 1 章 計算とプログラミング言語 ‣ コンパイラ – 原理と構造 – 電子版 正誤表">
  <link rel="chapter" href="Ch2.html" title="第 2 章 SML#チュートリアル ‣ コンパイラ – 原理と構造 – 電子版 正誤表">
+ <link rel="chapter" href="Ch3.html" title="第 3 章 文字列の性質と文字列処理 ‣ コンパイラ – 原理と構造 – 電子版 正誤表">
  <link rel="chapter" href="Ch4.html" title="第 4 章 字句解析 ‣ コンパイラ – 原理と構造 – 電子版 正誤表">
  <link rel="chapter" href="Ch5.html" title="第 5 章 構文解析 ‣ コンパイラ – 原理と構造 – 電子版 正誤表">
+ <link rel="chapter" href="Ch7.html" title="第 7 章 インタープリタ ‣ コンパイラ – 原理と構造 – 電子版 正誤表">
+ <link rel="chapter" href="Ch8.html" title="第 8 章 機械語コードへのコンパイル ‣ コンパイラ – 原理と構造 – 電子版 正誤表">
  <link rel="chapter" href="Chx1.html" title="参考文献 ‣ コンパイラ – 原理と構造 – 電子版 正誤表">
 ---
 {% raw %}
 <div class="ltx_page_main">
 <header class="ltx_page_header"><div class="ltx_document_title">コンパイラ – 原理と構造 – 電子版 正誤表</div>
 <div>
-<a href="./" title="コンパイラ – 原理と構造 – 電子版 正誤表" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title">コンパイラ – 原理と構造 – 電子版 正誤表<span class="ltx_text"> </span></span></a><a href="Ch5.html" title="第 5 章 構文解析 ‣ コンパイラ – 原理と構造 – 電子版 正誤表" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>構文解析</span></a><a href="Chx1.html" title="参考文献 ‣ コンパイラ – 原理と構造 – 電子版 正誤表" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title">参考文献</span></a>
+<a href="./" title="コンパイラ – 原理と構造 – 電子版 正誤表" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title">コンパイラ – 原理と構造 – 電子版 正誤表<span class="ltx_text"> </span></span></a><a href="Ch5.html" title="第 5 章 構文解析 ‣ コンパイラ – 原理と構造 – 電子版 正誤表" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>構文解析</span></a><a href="Ch7.html" title="第 7 章 インタープリタ ‣ コンパイラ – 原理と構造 – 電子版 正誤表" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>インタープリタ</span></a>
 </div></header>
 <div class="ltx_page_content">
 <section class="ltx_chapter ltx_authors_1line">
@@ -33,157 +36,511 @@ head: |
 <span class="ltx_tag ltx_tag_chapter">第 6 章 </span>型の解析と型推論</h1>
 
 <div id="p1" class="ltx_para">
-<ul id="S0.I1" class="ltx_itemize">
-<li id="S0.I1.i1" class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_item">•</span> 
-<div id="S0.I1.i1.p1" class="ltx_para">
-<p class="ltx_p">113ページ 下から2行目</p>
-<dl id="S0.I1.i1.I1" class="ltx_description">
-<dt id="S0.I1.i1.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<ol id="S0.I1" class="ltx_enumerate">
+<li id="S0.I1.i40" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">40.</span> 
+<div id="S0.I1.i40.p1" class="ltx_para">
+<p class="ltx_p">103ページ 4行目</p>
+<dl id="S0.I1.i40.I1" class="ltx_description">
+<dt id="S0.I1.i40.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
 <dd class="ltx_item">
-<div id="S0.I1.i1.I1.ix1.p1" class="ltx_para">
-<p class="ltx_p">ある型代入<math id="S0.I1.i1.I1.ix1.p1.m1" class="ltx_Math" alttext="S_{3}" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>3</mn></msub></mrow></math>があって<math id="S0.I1.i1.I1.ix1.p1.m2" class="ltx_Math" alttext="S_{2}={\color[rgb]{1,0,0}S_{1}S_{3}}" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mo>=</mo><mi mathcolor="#FF0000">S</mi><msub><mi></mi><mn mathcolor="#FF0000">1</mn></msub><mi mathcolor="#FF0000">S</mi><msub><mi></mi><mn mathcolor="#FF0000">3</mn></msub></mrow></math>となるとき</p>
+<div id="S0.I1.i40.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text" style="color:#FF0000;">式を表すメタ変数<math id="S0.I1.i40.I1.ix1.p1.m1" class="ltx_Math" alttext="e" display="inline"><mi mathcolor="#FF0000">e</mi></math></span></p>
 </div>
 </dd>
-<dt id="S0.I1.i1.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dt id="S0.I1.i40.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
 <dd class="ltx_item">
-<div id="S0.I1.i1.I1.ix2.p1" class="ltx_para">
-<p class="ltx_p">ある型代入<math id="S0.I1.i1.I1.ix2.p1.m1" class="ltx_Math" alttext="S_{3}" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>3</mn></msub></mrow></math>があって<math id="S0.I1.i1.I1.ix2.p1.m2" class="ltx_Math" alttext="S_{2}={\color[rgb]{0,0,1}S_{3}S_{1}}" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mo>=</mo><mi mathcolor="#0000FF">S</mi><msub><mi></mi><mn mathcolor="#0000FF">3</mn></msub><mi mathcolor="#0000FF">S</mi><msub><mi></mi><mn mathcolor="#0000FF">1</mn></msub></mrow></math>となるとき</p>
+<div id="S0.I1.i40.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text" style="color:#0000FF;">式，定数，演算を表すメタ変数<math id="S0.I1.i40.I1.ix2.p1.m1" class="ltx_Math" alttext="e" display="inline"><mi mathcolor="#0000FF">e</mi></math>，<math id="S0.I1.i40.I1.ix2.p1.m2" class="ltx_Math" alttext="c" display="inline"><mi mathcolor="#0000FF">c</mi></math>，<math id="S0.I1.i40.I1.ix2.p1.m3" class="ltx_Math" alttext="p" display="inline"><mi mathcolor="#0000FF">p</mi></math></span></p>
 </div>
 </dd>
-<dt id="S0.I1.i1.I1.ix3" class="ltx_item"></dt>
+<dt id="S0.I1.i40.I1.ix3" class="ltx_item"></dt>
 <dd class="ltx_item">
-<div id="S0.I1.i1.I1.ix3.p1" class="ltx_para">
+<div id="S0.I1.i40.I1.ix3.p1" class="ltx_para">
 <br class="ltx_break">
 </div>
 </dd>
 </dl>
 </div>
 </li>
-<li id="S0.I1.i2" class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_item">•</span> 
-<div id="S0.I1.i2.p1" class="ltx_para">
-<p class="ltx_p">117ページ 下から3行目</p>
-<dl id="S0.I1.i2.I1" class="ltx_description">
-<dt id="S0.I1.i2.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<li id="S0.I1.i41" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">41.</span> 
+<div id="S0.I1.i41.p1" class="ltx_para">
+<p class="ltx_p">103ページ 7行目</p>
+<dl id="S0.I1.i41.I1" class="ltx_description">
+<dt id="S0.I1.i41.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
 <dd class="ltx_item">
-<div id="S0.I1.i2.I1.ix1.p1" class="ltx_para">
-<p class="ltx_p"><math id="S0.I1.i2.I1.ix1.p1.m1" class="ltx_Math" alttext="{\cal U}(matches(\Gamma_{1},\Gamma_{2})\cup matches(\Gamma_{1},\Gamma{{}_{2}})%
+<div id="S0.I1.i41.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text" style="color:#FF0000;">n</span>  | <span class="ltx_text" style="color:#FF0000;">s</span>  | <span class="ltx_text ltx_markedasmath ltx_font_typewriter">true</span> | <span class="ltx_text ltx_markedasmath ltx_font_typewriter">false</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i41.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i41.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text" style="color:#0000FF;"><math id="S0.I1.i41.I1.ix2.p1.m1" class="ltx_Math" alttext="\langle\mathit{n}\rangle" display="inline"><mrow><mo mathcolor="#0000FF" stretchy="false">⟨</mo><mi mathcolor="#0000FF">n</mi><mo mathcolor="#0000FF" stretchy="false">⟩</mo></mrow></math></span>  | <span class="ltx_text" style="color:#0000FF;"><math id="S0.I1.i41.I1.ix2.p1.m2" class="ltx_Math" alttext="\langle\mathit{s}\rangle" display="inline"><mrow><mo mathcolor="#0000FF" stretchy="false">⟨</mo><mi mathcolor="#0000FF">s</mi><mo mathcolor="#0000FF" stretchy="false">⟩</mo></mrow></math></span>  | <span class="ltx_text ltx_markedasmath ltx_font_typewriter">true</span> | <span class="ltx_text ltx_markedasmath ltx_font_typewriter">false</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i41.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i41.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i42" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">42.</span> 
+<div id="S0.I1.i42.p1" class="ltx_para">
+<p class="ltx_p">103ページ 12行目</p>
+<dl id="S0.I1.i42.I1" class="ltx_description">
+<dt id="S0.I1.i42.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">追加：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i42.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p">されている．<span class="ltx_text" style="color:#0000FF;">以降，メタ変数<math id="S0.I1.i42.I1.ix1.p1.m1" class="ltx_Math" alttext="c" display="inline"><mi mathcolor="#0000FF">c</mi></math>と<math id="S0.I1.i42.I1.ix1.p1.m2" class="ltx_Math" alttext="p" display="inline"><mi mathcolor="#0000FF">p</mi></math>を文法の非終端記号としても使用する．</span>
+
+<br class="ltx_break"></p>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i43" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">43.</span> 
+<div id="S0.I1.i43.p1" class="ltx_para">
+<p class="ltx_p">109ページ 15行目</p>
+<dl id="S0.I1.i43.I1" class="ltx_description">
+<dt id="S0.I1.i43.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i43.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p">規則(var)，<span class="ltx_text" style="color:#FF0000;">(int)，(true)，(false)</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i43.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i43.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p">規則(var)，<span class="ltx_text" style="color:#0000FF;">(const)</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i43.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i43.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i44" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">44.</span> 
+<div id="S0.I1.i44.p1" class="ltx_para">
+<p class="ltx_p">110ページ 4行目</p>
+<dl id="S0.I1.i44.I1" class="ltx_description">
+<dt id="S0.I1.i44.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i44.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i44.I1.ix1.p1.m1" class="ltx_Math" alttext="\Gamma_{1}" display="inline"><mrow><mi mathvariant="normal">Γ</mi><msub><mi></mi><mn>1</mn></msub></mrow></math>と<math id="S0.I1.i44.I1.ix1.p1.m2" class="ltx_Math" alttext="\Gamma_{1}" display="inline"><mrow><mi mathcolor="#FF0000" mathvariant="normal">Γ</mi><msub><mi></mi><mn mathcolor="#FF0000">1</mn></msub></mrow></math>が等しく</p>
+</div>
+</dd>
+<dt id="S0.I1.i44.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i44.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i44.I1.ix2.p1.m1" class="ltx_Math" alttext="\Gamma_{1}" display="inline"><mrow><mi mathvariant="normal">Γ</mi><msub><mi></mi><mn>1</mn></msub></mrow></math>と<math id="S0.I1.i44.I1.ix2.p1.m2" class="ltx_Math" alttext="\Gamma_{2}" display="inline"><mrow><mi mathcolor="#0000FF" mathvariant="normal">Γ</mi><msub><mi></mi><mn mathcolor="#0000FF">2</mn></msub></mrow></math>が等しく</p>
+</div>
+</dd>
+<dt id="S0.I1.i44.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i44.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i45" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">45.</span> 
+<div id="S0.I1.i45.p1" class="ltx_para">
+<p class="ltx_p">114ページ 1行目</p>
+<dl id="S0.I1.i45.I1" class="ltx_description">
+<dt id="S0.I1.i45.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i45.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_align_left" style="width:25.8pt;">(u-i)</span><math id="S0.I1.i45.I1.ix1.p1.m1" class="ltx_Math" alttext="(\{(\tau,\tau)\uplus E{\color[rgb]{1,0,0}\}},\ S)\Longrightarrow(E,\ S)" display="inline"><mrow><mo stretchy="false">(</mo><mo stretchy="false">{</mo><mo stretchy="false">(</mo><mi>τ</mi><mo>,</mo><mi>τ</mi><mo stretchy="false">)</mo><mo>⊎</mo><mi>E</mi><mo mathcolor="#FF0000" stretchy="false">}</mo><mo>,</mo><mspace width="5.0pt"></mspace><mi>S</mi><mo stretchy="false">)</mo><mo>⟹</mo><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi>S</mi><mo stretchy="false">)</mo></mrow></math></p>
+</div>
+</dd>
+<dt id="S0.I1.i45.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i45.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_align_left" style="width:25.8pt;">(u-i)</span><math id="S0.I1.i45.I1.ix2.p1.m1" class="ltx_Math" alttext="(\{(\tau,\tau){\color[rgb]{0,0,1}\}}\uplus E,\ S)\Longrightarrow(E,\ S)" display="inline"><mrow><mo stretchy="false">(</mo><mo stretchy="false">{</mo><mo stretchy="false">(</mo><mi>τ</mi><mo>,</mo><mi>τ</mi><mo stretchy="false">)</mo><mo mathcolor="#0000FF" stretchy="false">}</mo><mo>⊎</mo><mi>E</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi>S</mi><mo stretchy="false">)</mo><mo>⟹</mo><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi>S</mi><mo stretchy="false">)</mo></mrow></math></p>
+</div>
+</dd>
+<dt id="S0.I1.i45.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i45.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i46" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">46.</span> 
+<div id="S0.I1.i46.p1" class="ltx_para">
+<p class="ltx_p">114ページ 2行目</p>
+<dl id="S0.I1.i46.I1" class="ltx_description">
+<dt id="S0.I1.i46.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i46.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_align_left" style="width:25.8pt;">(u-ii)</span><math id="S0.I1.i46.I1.ix1.p1.m1" class="ltx_Math" alttext="(\{(t,\tau)\}\uplus E{\color[rgb]{1,0,0}\}},\ S)\Longrightarrow(\{t:\tau\}(E),%
+\ \{(t,\tau)\}\cup\{t:\tau\}(S))" display="inline"><mrow><mo stretchy="false">(</mo><mo stretchy="false">{</mo><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mi>τ</mi><mo stretchy="false">)</mo><mo stretchy="false">}</mo><mo>⊎</mo><mi>E</mi><mo mathcolor="#FF0000" stretchy="false">}</mo><mo>,</mo><mspace width="5.0pt"></mspace><mi>S</mi><mo stretchy="false">)</mo><mo>⟹</mo><mo stretchy="false">(</mo><mo stretchy="false">{</mo><mi>t</mi><mo>:</mo><mi>τ</mi><mo stretchy="false">}</mo><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo><mo>,</mo><mspace width="5.0pt"></mspace><mo stretchy="false">{</mo><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mi>τ</mi><mo stretchy="false">)</mo><mo stretchy="false">}</mo><mo>∪</mo><mo stretchy="false">{</mo><mi>t</mi><mo>:</mo><mi>τ</mi><mo stretchy="false">}</mo><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow></math></p>
+</div>
+</dd>
+<dt id="S0.I1.i46.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i46.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_align_left" style="width:25.8pt;">(u-ii)</span><math id="S0.I1.i46.I1.ix2.p1.m1" class="ltx_Math" alttext="(\{(t,\tau)\}\uplus E,\ S)\Longrightarrow(\{t:\tau\}(E),\ \{(t,\tau)\}\cup\{t:%
+\tau\}(S))" display="inline"><mrow><mo stretchy="false">(</mo><mo stretchy="false">{</mo><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mi>τ</mi><mo stretchy="false">)</mo><mo stretchy="false">}</mo><mo>⊎</mo><mi>E</mi><mo>,</mo><mspace width="5.0pt"></mspace><mi>S</mi><mo stretchy="false">)</mo><mo>⟹</mo><mo stretchy="false">(</mo><mo stretchy="false">{</mo><mi>t</mi><mo>:</mo><mi>τ</mi><mo stretchy="false">}</mo><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo><mo>,</mo><mspace width="5.0pt"></mspace><mo stretchy="false">{</mo><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mi>τ</mi><mo stretchy="false">)</mo><mo stretchy="false">}</mo><mo>∪</mo><mo stretchy="false">{</mo><mi>t</mi><mo>:</mo><mi>τ</mi><mo stretchy="false">}</mo><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow></math></p>
+</div>
+</dd>
+<dt id="S0.I1.i46.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i46.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i47" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">47.</span> 
+<div id="S0.I1.i47.p1" class="ltx_para">
+<p class="ltx_p">114ページ 3行目</p>
+<dl id="S0.I1.i47.I1" class="ltx_description">
+<dt id="S0.I1.i47.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">追加：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i47.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p">(ただし<math id="S0.I1.i47.I1.ix1.p1.m1" class="ltx_Math" alttext="t\not\in FTV(\tau)" display="inline"><mrow><mi>t</mi><mo>∉</mo><mi>F</mi><mi>T</mi><mi>V</mi><mo stretchy="false">(</mo><mi>τ</mi><mo stretchy="false">)</mo></mrow></math>のとき．<math id="S0.I1.i47.I1.ix1.p1.m2" class="ltx_Math" alttext="(\tau,t)" display="inline"><mrow><mo mathcolor="#0000FF" stretchy="false">(</mo><mi mathcolor="#0000FF">τ</mi><mo mathcolor="#0000FF">,</mo><mi mathcolor="#0000FF">t</mi><mo mathcolor="#0000FF" stretchy="false">)</mo></mrow></math><span class="ltx_text" style="color:#0000FF;">に対しても同様の規則を仮定．)</span>
+
+<br class="ltx_break"></p>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i48" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">48.</span> 
+<div id="S0.I1.i48.p1" class="ltx_para">
+<p class="ltx_p">114ページ 下から2行目</p>
+<dl id="S0.I1.i48.I1" class="ltx_description">
+<dt id="S0.I1.i48.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i48.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p">ある型代入<math id="S0.I1.i48.I1.ix1.p1.m1" class="ltx_Math" alttext="S_{3}" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>3</mn></msub></mrow></math>があって<math id="S0.I1.i48.I1.ix1.p1.m2" class="ltx_Math" alttext="S_{2}={\color[rgb]{1,0,0}S_{1}S_{3}}" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mo>=</mo><mi mathcolor="#FF0000">S</mi><msub><mi></mi><mn mathcolor="#FF0000">1</mn></msub><mi mathcolor="#FF0000">S</mi><msub><mi></mi><mn mathcolor="#FF0000">3</mn></msub></mrow></math>となるとき</p>
+</div>
+</dd>
+<dt id="S0.I1.i48.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i48.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p">ある型代入<math id="S0.I1.i48.I1.ix2.p1.m1" class="ltx_Math" alttext="S_{3}" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>3</mn></msub></mrow></math>があって<math id="S0.I1.i48.I1.ix2.p1.m2" class="ltx_Math" alttext="S_{2}={\color[rgb]{0,0,1}S_{3}S_{1}}" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mo>=</mo><mi mathcolor="#0000FF">S</mi><msub><mi></mi><mn mathcolor="#0000FF">3</mn></msub><mi mathcolor="#0000FF">S</mi><msub><mi></mi><mn mathcolor="#0000FF">1</mn></msub></mrow></math>となるとき</p>
+</div>
+</dd>
+<dt id="S0.I1.i48.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i48.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i49" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">49.</span> 
+<div id="S0.I1.i49.p1" class="ltx_para">
+<p class="ltx_p">116ページ 下から3行目</p>
+<dl id="S0.I1.i49.I1" class="ltx_description">
+<dt id="S0.I1.i49.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i49.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i49.I1.ix1.p1.m1" class="ltx_Math" alttext="{\cal U}(matches(\Gamma_{1},\Gamma_{2})\cup matches(\Gamma_{1},\Gamma{{}_{2}})%
 \cup matches(\Gamma{{}_{1}},\Gamma{{}_{2}})\ {\color[rgb]{1,0,0}(\mbox{$\cup$ヌ%
 ケ})}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo stretchy="false">(</mo><mi>m</mi><mi>a</mi><mi>t</mi><mi>c</mi><mi>h</mi><mi>e</mi><mi>s</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">Γ</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo>∪</mo><mi>m</mi><mi>a</mi><mi>t</mi><mi>c</mi><mi>h</mi><mi>e</mi><mi>s</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">Γ</mi><msub><mi></mi><mn mathcolor="#FF0000">2</mn></msub><mo stretchy="false">)</mo><mo>∪</mo><mi>m</mi><mi>a</mi><mi>t</mi><mi>c</mi><mi>h</mi><mi>e</mi><mi>s</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><msub><mi></mi><mn mathcolor="#FF0000">1</mn></msub><mo>,</mo><mi mathvariant="normal">Γ</mi><msub><mi></mi><mn mathcolor="#FF0000">2</mn></msub><mo stretchy="false">)</mo><mspace width="5.0pt"></mspace><mo mathcolor="#FF0000" stretchy="false">(</mo><mrow><mo mathcolor="#FF0000">∪</mo><mtext mathcolor="#FF0000">ヌケ</mtext></mrow><mo mathcolor="#FF0000" stretchy="false">)</mo></mrow></math></p>
 </div>
 </dd>
-<dt id="S0.I1.i2.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dt id="S0.I1.i49.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
 <dd class="ltx_item">
-<div id="S0.I1.i2.I1.ix2.p1" class="ltx_para">
-<p class="ltx_p"><math id="S0.I1.i2.I1.ix2.p1.m1" class="ltx_Math" alttext="{\cal U}(matches(\Gamma_{1},\Gamma_{2})\cup matches(\Gamma_{1},\Gamma{{}_{3}})%
+<div id="S0.I1.i49.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i49.I1.ix2.p1.m1" class="ltx_Math" alttext="{\cal U}(matches(\Gamma_{1},\Gamma_{2})\cup matches(\Gamma_{1},\Gamma{{}_{3}})%
 \cup matches(\Gamma{{}_{2}},\Gamma{{}_{3}})\ {\color[rgb]{0,0,1}\cup}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo stretchy="false">(</mo><mi>m</mi><mi>a</mi><mi>t</mi><mi>c</mi><mi>h</mi><mi>e</mi><mi>s</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">Γ</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo>∪</mo><mi>m</mi><mi>a</mi><mi>t</mi><mi>c</mi><mi>h</mi><mi>e</mi><mi>s</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">Γ</mi><msub><mi></mi><mn mathcolor="#0000FF">3</mn></msub><mo stretchy="false">)</mo><mo>∪</mo><mi>m</mi><mi>a</mi><mi>t</mi><mi>c</mi><mi>h</mi><mi>e</mi><mi>s</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><msub><mi></mi><mn mathcolor="#0000FF">2</mn></msub><mo>,</mo><mi mathvariant="normal">Γ</mi><msub><mi></mi><mn mathcolor="#0000FF">3</mn></msub><mo stretchy="false">)</mo><mspace width="5.0pt"></mspace><mo mathcolor="#0000FF">∪</mo></mrow></math></p>
 </div>
 </dd>
-<dt id="S0.I1.i2.I1.ix3" class="ltx_item"></dt>
+<dt id="S0.I1.i49.I1.ix3" class="ltx_item"></dt>
 <dd class="ltx_item">
-<div id="S0.I1.i2.I1.ix3.p1" class="ltx_para">
+<div id="S0.I1.i49.I1.ix3.p1" class="ltx_para">
 <br class="ltx_break">
 </div>
 </dd>
 </dl>
 </div>
 </li>
-<li id="S0.I1.i3" class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_item">•</span> 
-<div id="S0.I1.i3.p1" class="ltx_para">
-<p class="ltx_p">132ページ (19行目，<math id="S0.I1.i3.p1.m1" class="ltx_Math" alttext="{\cal W}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒲</mi></math>定義の7番目)</p>
-<dl id="S0.I1.i3.I1" class="ltx_description">
-<dt id="S0.I1.i3.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<li id="S0.I1.i50" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">50.</span> 
+<div id="S0.I1.i50.p1" class="ltx_para">
+<p class="ltx_p">117ページ 9行目</p>
+<dl id="S0.I1.i50.I1" class="ltx_description">
+<dt id="S0.I1.i50.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
 <dd class="ltx_item">
-<div id="S0.I1.i3.I1.ix1.p1" class="ltx_para ltx_minipage ltx_align_top" style="width:303.5pt;">
+<div id="S0.I1.i50.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i50.I1.ix1.p1.m1" class="ltx_Math" alttext="\mbox{$\mathit{PTS}$}(\mbox{\frenchspacing 1})=\emptyset\vdash{\color[rgb]{%
+1,0,0}x}:\mbox{\frenchspacing int}" display="inline"><mrow><mrow><mi>P</mi><mi>T</mi><mi>S</mi></mrow><mo stretchy="false">(</mo><mtext>𝟷</mtext><mo stretchy="false">)</mo><mo>=</mo><mi mathvariant="normal">∅</mi><mo>⊢</mo><mi mathcolor="#FF0000">x</mi><mo>:</mo><mtext>𝚒𝚗𝚝</mtext></mrow></math></p>
+</div>
+</dd>
+<dt id="S0.I1.i50.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i50.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i50.I1.ix2.p1.m1" class="ltx_Math" alttext="\mbox{$\mathit{PTS}$}(\mbox{\frenchspacing 1})=\emptyset\vdash{\color[rgb]{%
+0,0,1}\mbox{\frenchspacing 1}}:\mbox{\frenchspacing int}" display="inline"><mrow><mrow><mi>P</mi><mi>T</mi><mi>S</mi></mrow><mo stretchy="false">(</mo><mtext>𝟷</mtext><mo stretchy="false">)</mo><mo>=</mo><mi mathvariant="normal">∅</mi><mo>⊢</mo><mtext mathcolor="#0000FF">𝟷</mtext><mo>:</mo><mtext>𝚒𝚗𝚝</mtext></mrow></math></p>
+</div>
+</dd>
+<dt id="S0.I1.i50.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i50.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i51" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">51.</span> 
+<div id="S0.I1.i51.p1" class="ltx_para">
+<p class="ltx_p">124ページ 16行目</p>
+<dl id="S0.I1.i51.I1" class="ltx_description">
+<dt id="S0.I1.i51.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i51.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter" style="color:#FF0000;">let val (tyEnv, ty) =
+<br class="ltx_break">          case dec of Syntax.VAL (id, exp) =&gt; PTS exp
+<br class="ltx_break">                    | Syntax.FUN (f, x, exp) =&gt; PTS exp
+</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i51.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i51.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter" style="color:#0000FF;">let val exp = case dec of
+<br class="ltx_break">                    Syntax.VAL (id, exp) =&gt; exp
+<br class="ltx_break">        val (tyEnv, ty) = PTS exp
+</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i51.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i51.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i52" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">52.</span> 
+<div id="S0.I1.i52.p1" class="ltx_para">
+<p class="ltx_p">124ページ 26行目</p>
+<dl id="S0.I1.i52.I1" class="ltx_description">
+<dt id="S0.I1.i52.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i52.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">handle UnifyTy.<span class="ltx_text" style="color:#FF0000;">Unify</span> =&gt;</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i52.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i52.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">handle UnifyTy.<span class="ltx_text" style="color:#0000FF;">UnifyTy</span> =&gt;</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i52.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i52.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i53" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">53.</span> 
+<div id="S0.I1.i53.p1" class="ltx_para">
+<p class="ltx_p">131ページ 6行目(図6.8のラベル)</p>
+<dl id="S0.I1.i53.I1" class="ltx_description">
+<dt id="S0.I1.i53.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i53.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text" style="color:#FF0000;">(int)</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i53.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i53.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text" style="color:#0000FF;">(const)</span></p>
+</div>
+</dd>
+<dt id="S0.I1.i53.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i53.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i54" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">54.</span> 
+<div id="S0.I1.i54.p1" class="ltx_para">
+<p class="ltx_p">132ページ 13行目</p>
+<dl id="S0.I1.i54.I1" class="ltx_description">
+<dt id="S0.I1.i54.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i54.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i54.I1.ix1.p1.m1" class="ltx_Math" alttext="S_{2}={\cal U}(\{(\tau,t_{1}*t_{2})\}" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo stretchy="false">(</mo><mo stretchy="false">{</mo><mo stretchy="false">(</mo><mi>τ</mi><mo>,</mo><mi>t</mi><msub><mi></mi><mn>1</mn></msub><mo>*</mo><mi>t</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo stretchy="false">}</mo></mrow></math> <span class="ltx_text" style="color:#FF0000;">“)”ヌケ</span>    (<math id="S0.I1.i54.I1.ix1.p1.m2" class="ltx_Math" alttext="t_{1},t_{2}" display="inline"><mrow><mi>t</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi>t</mi><msub><mi></mi><mn>2</mn></msub></mrow></math> fresh)</p>
+</div>
+</dd>
+<dt id="S0.I1.i54.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i54.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i54.I1.ix2.p1.m1" class="ltx_Math" alttext="S_{2}={\cal U}(\{(\tau,t_{1}*t_{2})\}{\color[rgb]{0,0,1})}" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo stretchy="false">(</mo><mo stretchy="false">{</mo><mo stretchy="false">(</mo><mi>τ</mi><mo>,</mo><mi>t</mi><msub><mi></mi><mn>1</mn></msub><mo>*</mo><mi>t</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo stretchy="false">}</mo><mo mathcolor="#0000FF" stretchy="false">)</mo></mrow></math>    (<math id="S0.I1.i54.I1.ix2.p1.m2" class="ltx_Math" alttext="t_{1},t_{2}" display="inline"><mrow><mi>t</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi>t</mi><msub><mi></mi><mn>2</mn></msub></mrow></math> fresh)</p>
+</div>
+</dd>
+<dt id="S0.I1.i54.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i54.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i55" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">55.</span> 
+<div id="S0.I1.i55.p1" class="ltx_para">
+<p class="ltx_p">132ページ 15行目</p>
+<dl id="S0.I1.i55.I1" class="ltx_description">
+<dt id="S0.I1.i55.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i55.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_markedasmath ltx_font_typewriter">if <math id="S0.I1.i55.I1.ix1.p1.m1.m1" class="ltx_Math" alttext="e_{1}" display="inline"><mrow><mi>e</mi><msub><mi></mi><mn mathvariant="normal">1</mn></msub></mrow></math> then <math id="S0.I1.i55.I1.ix1.p1.m1.m2" class="ltx_Math" alttext="e_{1}" display="inline"><mrow><mi mathcolor="#FF0000">e</mi><msub><mi></mi><mn mathcolor="#FF0000" mathvariant="normal">1</mn></msub></mrow></math> else <math id="S0.I1.i55.I1.ix1.p1.m1.m3" class="ltx_Math" alttext="e_{3}" display="inline"><mrow><mi>e</mi><msub><mi></mi><mn mathvariant="normal">3</mn></msub></mrow></math></span></p>
+</div>
+</dd>
+<dt id="S0.I1.i55.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i55.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_markedasmath ltx_font_typewriter">if <math id="S0.I1.i55.I1.ix2.p1.m1.m1" class="ltx_Math" alttext="e_{1}" display="inline"><mrow><mi>e</mi><msub><mi></mi><mn mathvariant="normal">1</mn></msub></mrow></math> then <math id="S0.I1.i55.I1.ix2.p1.m1.m2" class="ltx_Math" alttext="e_{2}" display="inline"><mrow><mi mathcolor="#0000FF">e</mi><msub><mi></mi><mn mathcolor="#0000FF" mathvariant="normal">2</mn></msub></mrow></math> else <math id="S0.I1.i55.I1.ix2.p1.m1.m3" class="ltx_Math" alttext="e_{3}" display="inline"><mrow><mi>e</mi><msub><mi></mi><mn mathvariant="normal">3</mn></msub></mrow></math></span></p>
+</div>
+</dd>
+<dt id="S0.I1.i55.I1.ix3" class="ltx_item"></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i55.I1.ix3.p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li id="S0.I1.i56" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">56.</span> 
+<div id="S0.I1.i56.p1" class="ltx_para">
+<p class="ltx_p">132ページ 19行目(<math id="S0.I1.i56.p1.m1" class="ltx_Math" alttext="{\cal W}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒲</mi></math>定義の7番目)</p>
+<dl id="S0.I1.i56.I1" class="ltx_description">
+<dt id="S0.I1.i56.I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#FF0000;">誤：</span></span></dt>
+<dd class="ltx_item">
+<div id="S0.I1.i56.I1.ix1.p1" class="ltx_para ltx_minipage ltx_align_top" style="width:303.5pt;">
 <table class="ltx_tabular">
 <tr class="ltx_tr">
-<td class="ltx_td ltx_align_left"><math id="S0.I1.i3.I1.ix1.p1.m1" class="ltx_Math" alttext="{\cal W}(\Gamma,\mbox{\frenchspacing if $e_{1}$ then $e_{1}$ else $e_{3}$})=" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒲</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo>,</mo><mrow><mtext mathvariant="monospace">if </mtext><mrow><mi>e</mi><msub><mi></mi><mn>1</mn></msub></mrow><mtext mathvariant="monospace"> then </mtext><mrow><mi>e</mi><msub><mi></mi><mn>1</mn></msub></mrow><mtext mathvariant="monospace"> else </mtext><mrow><mi>e</mi><msub><mi></mi><mn>3</mn></msub></mrow></mrow><mo stretchy="false">)</mo><mo>=</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="S0.I1.i56.I1.ix1.p1.m1" class="ltx_Math" alttext="{\cal W}(\Gamma,\mbox{\frenchspacing if $e_{1}$ then $e_{1}$ else $e_{3}$})=" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒲</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo>,</mo><mrow><mtext mathvariant="monospace">if </mtext><mrow><mi>e</mi><msub><mi></mi><mn>1</mn></msub></mrow><mtext mathvariant="monospace"> then </mtext><mrow><mi>e</mi><msub><mi></mi><mn>1</mn></msub></mrow><mtext mathvariant="monospace"> else </mtext><mrow><mi>e</mi><msub><mi></mi><mn>3</mn></msub></mrow></mrow><mo stretchy="false">)</mo><mo>=</mo></mrow></math></td>
 </tr>
 <tr class="ltx_tr">
 <td class="ltx_td"></td>
 <td class="ltx_td ltx_align_left">let</td>
-<td class="ltx_td ltx_align_left"><math id="S0.I1.i3.I1.ix1.p1.m2" class="ltx_Math" alttext="(S_{1},\tau_{1})={\cal W}(\Gamma,e_{1})" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi>τ</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒲</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo>,</mo><mi>e</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="S0.I1.i56.I1.ix1.p1.m2" class="ltx_Math" alttext="(S_{1},\tau_{1})={\cal W}(\Gamma,e_{1})" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi>τ</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒲</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo>,</mo><mi>e</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></math></td>
 </tr>
 <tr class="ltx_tr">
 <td class="ltx_td"></td>
 <td class="ltx_td"></td>
-<td class="ltx_td ltx_align_left"><math id="S0.I1.i3.I1.ix1.p1.m3" class="ltx_Math" alttext="(S_{2},\tau_{2})={\cal W}(S_{1}(\Gamma),e_{2})" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mo>,</mo><mi>τ</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒲</mi><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo stretchy="false">)</mo><mo>,</mo><mi>e</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="S0.I1.i56.I1.ix1.p1.m3" class="ltx_Math" alttext="(S_{2},\tau_{2})={\cal W}(S_{1}(\Gamma),e_{2})" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mo>,</mo><mi>τ</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒲</mi><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo stretchy="false">)</mo><mo>,</mo><mi>e</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></math></td>
 </tr>
 <tr class="ltx_tr">
 <td class="ltx_td"></td>
 <td class="ltx_td"></td>
-<td class="ltx_td ltx_align_left"><math id="S0.I1.i3.I1.ix1.p1.m4" class="ltx_Math" alttext="(S_{3},\tau_{3})={\cal W}(S_{2}S_{1}(\Gamma),e_{3})" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>3</mn></msub><mo>,</mo><mi>τ</mi><msub><mi></mi><mn>3</mn></msub><mo stretchy="false">)</mo><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒲</mi><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo stretchy="false">)</mo><mo>,</mo><mi>e</mi><msub><mi></mi><mn>3</mn></msub><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="S0.I1.i56.I1.ix1.p1.m4" class="ltx_Math" alttext="(S_{3},\tau_{3})={\cal W}(S_{2}S_{1}(\Gamma),e_{3})" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>3</mn></msub><mo>,</mo><mi>τ</mi><msub><mi></mi><mn>3</mn></msub><mo stretchy="false">)</mo><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒲</mi><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo stretchy="false">)</mo><mo>,</mo><mi>e</mi><msub><mi></mi><mn>3</mn></msub><mo stretchy="false">)</mo></mrow></math></td>
 </tr>
 <tr class="ltx_tr">
 <td class="ltx_td"></td>
 <td class="ltx_td"></td>
-<td class="ltx_td ltx_align_left"><math id="S0.I1.i3.I1.ix1.p1.m5" class="ltx_Math" alttext="S_{4}={\cal U}(\{(S_{3}S_{2}(\tau_{1}),\mbox{\frenchspacing bool}),(\mbox{{%
+<td class="ltx_td ltx_align_left"><math id="S0.I1.i56.I1.ix1.p1.m5" class="ltx_Math" alttext="S_{4}={\cal U}(\{(S_{3}S_{2}(\tau_{1}),\mbox{\frenchspacing bool}),(\mbox{{%
 \color[rgb]{1,0,0}$S_{2}$}}(\tau_{2}),\tau_{3})\})" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>4</mn></msub><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo stretchy="false">(</mo><mo stretchy="false">{</mo><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>3</mn></msub><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">(</mo><mi>τ</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo>,</mo><mtext>𝚋𝚘𝚘𝚕</mtext><mo stretchy="false">)</mo><mo>,</mo><mo stretchy="false">(</mo><mrow><mi mathcolor="#FF0000">S</mi><msub><mi></mi><mn mathcolor="#FF0000">2</mn></msub></mrow><mo stretchy="false">(</mo><mi>τ</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo>,</mo><mi>τ</mi><msub><mi></mi><mn>3</mn></msub><mo stretchy="false">)</mo><mo stretchy="false">}</mo><mo stretchy="false">)</mo></mrow></math></td>
 </tr>
 <tr class="ltx_tr">
 <td class="ltx_td"></td>
-<td class="ltx_td ltx_align_left">in <math id="S0.I1.i3.I1.ix1.p1.m6" class="ltx_Math" alttext="(S_{4}S_{3}S_{2}S_{1},S_{4}(\tau_{3}))" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>4</mn></msub><mi>S</mi><msub><mi></mi><mn>3</mn></msub><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi>S</mi><msub><mi></mi><mn>4</mn></msub><mo stretchy="false">(</mo><mi>τ</mi><msub><mi></mi><mn>3</mn></msub><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow></math>
+<td class="ltx_td ltx_align_left">in <math id="S0.I1.i56.I1.ix1.p1.m6" class="ltx_Math" alttext="(S_{4}S_{3}S_{2}S_{1},S_{4}(\tau_{3}))" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>4</mn></msub><mi>S</mi><msub><mi></mi><mn>3</mn></msub><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi>S</mi><msub><mi></mi><mn>4</mn></msub><mo stretchy="false">(</mo><mi>τ</mi><msub><mi></mi><mn>3</mn></msub><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow></math>
 </td>
 </tr>
 </table>
 </div>
 </dd>
-<dt id="S0.I1.i3.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
+<dt id="S0.I1.i56.I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold" style="color:#0000FF;">正：</span></span></dt>
 <dd class="ltx_item">
-<div id="S0.I1.i3.I1.ix2.p1" class="ltx_para ltx_minipage ltx_align_top" style="width:303.5pt;">
+<div id="S0.I1.i56.I1.ix2.p1" class="ltx_para ltx_minipage ltx_align_top" style="width:303.5pt;">
 <table class="ltx_tabular">
 <tr class="ltx_tr">
-<td class="ltx_td ltx_align_left"><math id="S0.I1.i3.I1.ix2.p1.m1" class="ltx_Math" alttext="{\cal W}(\Gamma,\mbox{\frenchspacing if $e_{1}$ then $e_{1}$ else $e_{3}$})=" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒲</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo>,</mo><mrow><mtext mathvariant="monospace">if </mtext><mrow><mi>e</mi><msub><mi></mi><mn>1</mn></msub></mrow><mtext mathvariant="monospace"> then </mtext><mrow><mi>e</mi><msub><mi></mi><mn>1</mn></msub></mrow><mtext mathvariant="monospace"> else </mtext><mrow><mi>e</mi><msub><mi></mi><mn>3</mn></msub></mrow></mrow><mo stretchy="false">)</mo><mo>=</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="S0.I1.i56.I1.ix2.p1.m1" class="ltx_Math" alttext="{\cal W}(\Gamma,\mbox{\frenchspacing if $e_{1}$ then $e_{1}$ else $e_{3}$})=" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒲</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo>,</mo><mrow><mtext mathvariant="monospace">if </mtext><mrow><mi>e</mi><msub><mi></mi><mn>1</mn></msub></mrow><mtext mathvariant="monospace"> then </mtext><mrow><mi>e</mi><msub><mi></mi><mn>1</mn></msub></mrow><mtext mathvariant="monospace"> else </mtext><mrow><mi>e</mi><msub><mi></mi><mn>3</mn></msub></mrow></mrow><mo stretchy="false">)</mo><mo>=</mo></mrow></math></td>
 </tr>
 <tr class="ltx_tr">
 <td class="ltx_td"></td>
 <td class="ltx_td ltx_align_left">let</td>
-<td class="ltx_td ltx_align_left"><math id="S0.I1.i3.I1.ix2.p1.m2" class="ltx_Math" alttext="(S_{1},\tau_{1})={\cal W}(\Gamma,e_{1})" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi>τ</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒲</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo>,</mo><mi>e</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="S0.I1.i56.I1.ix2.p1.m2" class="ltx_Math" alttext="(S_{1},\tau_{1})={\cal W}(\Gamma,e_{1})" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi>τ</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒲</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo>,</mo><mi>e</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></math></td>
 </tr>
 <tr class="ltx_tr">
 <td class="ltx_td"></td>
 <td class="ltx_td"></td>
-<td class="ltx_td ltx_align_left"><math id="S0.I1.i3.I1.ix2.p1.m3" class="ltx_Math" alttext="(S_{2},\tau_{2})={\cal W}(S_{1}(\Gamma),e_{2})" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mo>,</mo><mi>τ</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒲</mi><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo stretchy="false">)</mo><mo>,</mo><mi>e</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="S0.I1.i56.I1.ix2.p1.m3" class="ltx_Math" alttext="(S_{2},\tau_{2})={\cal W}(S_{1}(\Gamma),e_{2})" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mo>,</mo><mi>τ</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒲</mi><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo stretchy="false">)</mo><mo>,</mo><mi>e</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></math></td>
 </tr>
 <tr class="ltx_tr">
 <td class="ltx_td"></td>
 <td class="ltx_td"></td>
-<td class="ltx_td ltx_align_left"><math id="S0.I1.i3.I1.ix2.p1.m4" class="ltx_Math" alttext="(S_{3},\tau_{3})={\cal W}(S_{2}S_{1}(\Gamma),e_{3})" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>3</mn></msub><mo>,</mo><mi>τ</mi><msub><mi></mi><mn>3</mn></msub><mo stretchy="false">)</mo><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒲</mi><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo stretchy="false">)</mo><mo>,</mo><mi>e</mi><msub><mi></mi><mn>3</mn></msub><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="S0.I1.i56.I1.ix2.p1.m4" class="ltx_Math" alttext="(S_{3},\tau_{3})={\cal W}(S_{2}S_{1}(\Gamma),e_{3})" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>3</mn></msub><mo>,</mo><mi>τ</mi><msub><mi></mi><mn>3</mn></msub><mo stretchy="false">)</mo><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒲</mi><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi mathvariant="normal">Γ</mi><mo stretchy="false">)</mo><mo>,</mo><mi>e</mi><msub><mi></mi><mn>3</mn></msub><mo stretchy="false">)</mo></mrow></math></td>
 </tr>
 <tr class="ltx_tr">
 <td class="ltx_td"></td>
 <td class="ltx_td"></td>
-<td class="ltx_td ltx_align_left"><math id="S0.I1.i3.I1.ix2.p1.m5" class="ltx_Math" alttext="S_{4}={\cal U}(\{(S_{3}S_{2}(\tau_{1}),\mbox{\frenchspacing bool}),({\color[%
+<td class="ltx_td ltx_align_left"><math id="S0.I1.i56.I1.ix2.p1.m5" class="ltx_Math" alttext="S_{4}={\cal U}(\{(S_{3}S_{2}(\tau_{1}),\mbox{\frenchspacing bool}),({\color[%
 rgb]{0,0,1}S_{3}}(\tau_{2}),\tau_{3})\})" display="inline"><mrow><mi>S</mi><msub><mi></mi><mn>4</mn></msub><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo stretchy="false">(</mo><mo stretchy="false">{</mo><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>3</mn></msub><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">(</mo><mi>τ</mi><msub><mi></mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo>,</mo><mtext>𝚋𝚘𝚘𝚕</mtext><mo stretchy="false">)</mo><mo>,</mo><mo stretchy="false">(</mo><mi mathcolor="#0000FF">S</mi><msub><mi></mi><mn mathcolor="#0000FF">3</mn></msub><mo stretchy="false">(</mo><mi>τ</mi><msub><mi></mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo>,</mo><mi>τ</mi><msub><mi></mi><mn>3</mn></msub><mo stretchy="false">)</mo><mo stretchy="false">}</mo><mo stretchy="false">)</mo></mrow></math></td>
 </tr>
 <tr class="ltx_tr">
 <td class="ltx_td"></td>
-<td class="ltx_td ltx_align_left">in <math id="S0.I1.i3.I1.ix2.p1.m6" class="ltx_Math" alttext="(S_{4}S_{3}S_{2}S_{1},S_{4}(\tau_{3}))" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>4</mn></msub><mi>S</mi><msub><mi></mi><mn>3</mn></msub><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi>S</mi><msub><mi></mi><mn>4</mn></msub><mo stretchy="false">(</mo><mi>τ</mi><msub><mi></mi><mn>3</mn></msub><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow></math>
+<td class="ltx_td ltx_align_left">in <math id="S0.I1.i56.I1.ix2.p1.m6" class="ltx_Math" alttext="(S_{4}S_{3}S_{2}S_{1},S_{4}(\tau_{3}))" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><msub><mi></mi><mn>4</mn></msub><mi>S</mi><msub><mi></mi><mn>3</mn></msub><mi>S</mi><msub><mi></mi><mn>2</mn></msub><mi>S</mi><msub><mi></mi><mn>1</mn></msub><mo>,</mo><mi>S</mi><msub><mi></mi><mn>4</mn></msub><mo stretchy="false">(</mo><mi>τ</mi><msub><mi></mi><mn>3</mn></msub><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow></math>
 </td>
 </tr>
 </table>
 </div>
 </dd>
-<dt id="S0.I1.i3.I1.ix3" class="ltx_item"></dt>
+<dt id="S0.I1.i56.I1.ix3" class="ltx_item"></dt>
 <dd class="ltx_item">
-<div id="S0.I1.i3.I1.ix3.p1" class="ltx_para">
+<div id="S0.I1.i56.I1.ix3.p1" class="ltx_para">
 <br class="ltx_break">
 </div>
 </dd>
 </dl>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 </section>
 </div>
 <footer class="ltx_page_footer">
 <div>
-<a href="Ch5.html" title="第 5 章 構文解析 ‣ コンパイラ – 原理と構造 – 電子版 正誤表" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>構文解析</span></a><a href="Chx1.html" title="参考文献 ‣ コンパイラ – 原理と構造 – 電子版 正誤表" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title">参考文献</span></a>
+<a href="Ch5.html" title="第 5 章 構文解析 ‣ コンパイラ – 原理と構造 – 電子版 正誤表" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>構文解析</span></a><a href="Ch7.html" title="第 7 章 インタープリタ ‣ コンパイラ – 原理と構造 – 電子版 正誤表" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>インタープリタ</span></a>
 </div>
-<div class="ltx_page_logo">Generated  on Sun Dec 12 15:23:47 2021 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+<div class="ltx_page_logo">Generated  on Thu Oct 13 10:18:44 2022 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
 </div></footer>
 </div>
 {% endraw %}
