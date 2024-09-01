@@ -1,0 +1,15 @@
+---
+title: "情報の表現と計算の原理"
+
+url: /ja/videos/playlist/hyougen/
+menuText: 概要
+
+menu:
+- text: ビデオリスト
+  url: /ja/videos/playlist/hyougen/contents/
+
+super:
+- text: 大堀淳ホーム/
+  url: /ja/
+- text: ビデオ教材/
+  url: /ja/videos/

@@ -1,7 +1,7 @@
 ---
 translated: true
 ---
-目次は，[共立出版株式会社](https://www.kyoritsu-pub.co.jp/)の[本書紹介ページ](https://www.kyoritsu-pub.co.jp/bookdetail/9784320124783)を参照．
+目次は，[共立出版株式会社](https://www.kyoritsu-pub.co.jp/)の[本書紹介ページ](https://www.kyoritsu-pub.co.jp/bookdetail/9784320124783){:target="_blank"}を参照．
 本サイトでは，各章の狙いやポイントを紹介する．
 
 * **まえがき**\\

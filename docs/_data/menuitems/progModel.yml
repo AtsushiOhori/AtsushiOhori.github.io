@@ -1,0 +1,17 @@
+---
+title: "プログラミング言語のモデル"
+
+url: /ja/videos/playlist/progModel/
+menuText: 概要
+
+menu:
+- text: ビデオリスト
+  url: /ja/videos/playlist/progModel/contents/
+
+super:
+- text: 大堀淳ホーム/
+  url: /ja/
+- text: ビデオ講義/
+  url: /ja/videos/
+
+

@@ -1,0 +1,17 @@
+---
+title: "関数型言語SML# とCで始める本格的プログラミング入門"
+
+url: /ja/videos/playlist/smlsharpAndC/
+menuText: 概要
+
+menu:
+- text: ビデオリスト
+  url: /ja/videos/playlist/smlsharpAndC/contents/
+
+super:
+- text: 大堀淳ホーム/
+  url: /ja/
+- text: ビデオ講義/
+  url: /ja/videos/
+
+

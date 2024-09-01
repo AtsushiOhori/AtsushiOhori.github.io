@@ -4,9 +4,11 @@ title: "教科書"
 url: /ja/texts/
 menuText: 教科書一覧
 
-menu: []
+menu: 
+- text: 著者プロフィール
+  url: /ja/texts/authorProfile
 
 super:
-- text: ホーム/
+- text: 大堀淳ホーム/
   url: /ja/
 

@@ -1,7 +1,7 @@
 ---
 translated: true
 ---
-大堀　淳（2021年9月）[共立出版](https://www.kyoritsu-pub.co.jp/) （[本書紹介ページ](https://www.kyoritsu-pub.co.jp/bookdetail/9784320124783)）
+大堀　淳（2021年9月）[共立出版](https://www.kyoritsu-pub.co.jp/){:target="_blank"}（[本書紹介ページ](https://www.kyoritsu-pub.co.jp/bookdetail/9784320124783){:target="_blank"}）
 
 本書は、プログラミングやコンピュータに興味を持つ方が、コンパイラの原理と構造を基礎から理解するための教科書です。著者が２００６年から２０２１年までの間担当した東北大学工学部の学部専門科目「コンパイラ」の講義内容を基にしています。
 

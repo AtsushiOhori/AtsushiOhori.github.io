@@ -1,0 +1,17 @@
+---
+title: "「型推論」特別講義"
+
+url: /ja/videos/playlist/typeInf/
+menuText: 概要
+
+menu:
+- text: ビデオリスト
+  url: /ja/videos/playlist/typeInf/contents/
+
+super:
+- text: 大堀淳ホーム/
+  url: /ja/
+- text: ビデオ講義/
+  url: /ja/videos/
+
+

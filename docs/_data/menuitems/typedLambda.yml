@@ -1,0 +1,17 @@
+---
+title: "型付ラムダ計算"
+
+url: /ja/videos/playlist/typedLambda/
+menuText: 概要
+
+menu:
+- text: ビデオリスト
+  url: /ja/videos/playlist/typedLambda/contents/
+
+super:
+- text: 大堀淳ホーム/
+  url: /ja/
+- text: ビデオ講義/
+  url: /ja/videos/
+
+

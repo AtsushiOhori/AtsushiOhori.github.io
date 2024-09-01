@@ -1,4 +1,4 @@
-url: https://localhost:4000
+url: https://AtsushiOhori.github.io
 permalink: pretty
 highlighter: rouge
 relative_links:
@@ -22,6 +22,12 @@ defaults:
   -
     scope:
       path: ja/texts
+    values:
+      menuScope: texts
+      lang: ja
+  -
+    scope:
+      path: ja/texts/authorProfile
     values:
       menuScope: texts
       lang: ja
@@ -66,4 +72,70 @@ defaults:
       path: ja/videos
     values:
       menuScope: videos
+      lang: ja
+  -
+    scope:
+      path: ja/videos/instructorProfile
+    values:
+      menuScope: videos
+      lang: ja
+  -
+    scope:
+      path: ja/videos/playlist
+    values:
+      menuScope: playlist
+      lang: ja
+  -
+    scope:
+      path: ja/videos/playlist/hyougen
+    values:
+      menuScope: hyougen
+      lang: ja
+  -
+    scope:
+      path: ja/videos/playlist/gairon
+    values:
+      menuScope: gairon
+      lang: ja
+  -
+    scope:
+      path: ja/videos/playlist/smlsharpAndC
+    values:
+      menuScope: smlsharpAndC
+      lang: ja
+  -
+    scope:
+      path: ja/videos/playlist/compilerVideo
+    values:
+      menuScope: compilerVideo
+      lang: ja
+  -
+    scope:
+      path: ja/videos/playlist/progModel
+    values:
+      menuScope: progModel
+      lang: ja
+  -
+    scope:
+      path: ja/videos/playlist/typeInf
+    values:
+      menuScope: typeInf
+      lang: ja
+  -
+    scope:
+      path: ja/videos/playlist/progEnv
+    values:
+      menuScope: progEnv
+      lang: ja
+  -
+    scope:
+      path: ja/videos/playlist/typedLambda
+    values:
+      menuScope: typedLambda
+      lang: ja
+  -
+    scope:
+      path: ja/videos/playlist/saisyuKougi
+    values:
+      menuScope: saisyuKougi
       lang: ja
