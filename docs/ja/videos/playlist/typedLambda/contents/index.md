@@ -8,5 +8,6 @@ translated: true
 5. [Λの公理的意味論とその健全性](https://youtu.be/D6j35WvrD7U){:target="_blank"} 
 6. [等式の導出に関する問の解答例(「Λの公理的意味論とその健全性」の付録）](https://youtu.be/dS575igdaJs){:target="_blank"} 
 7. [完全性定理と項モデルの存在補題](https://youtu.be/5Pwk3GTaxlk){:target="_blank"} 
+8. [モデル間の論理関係](https://youtu.be/3jSsHXS1Kso){:target="_blank"} 
 
 順次追加予定…
