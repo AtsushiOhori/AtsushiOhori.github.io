@@ -8,6 +8,8 @@ menu:
   url: /ja/texts/
 - text: ビデオ教材
   url: /ja/videos/
+- text: プロフィール
+  url: /ja/profile
 
 super:
 - text: English/
