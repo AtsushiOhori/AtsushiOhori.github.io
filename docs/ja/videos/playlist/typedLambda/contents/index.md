@@ -10,5 +10,6 @@ translated: true
 7. [完全性定理と項モデルの存在補題](https://youtu.be/5Pwk3GTaxlk){:target="_blank"} 
 8. [モデル間の論理関係](https://youtu.be/3jSsHXS1Kso){:target="_blank"} 
 9. [βη同値関係のモデル](https://youtu.be/qe_fJ6KYuCQ){:target="_blank"} 
+10. [式の構文論的性質のモデル論的証明](https://youtu.be/QW0uCNMArIE){:target="_blank"} 
 
 順次追加予定…
