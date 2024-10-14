@@ -12,5 +12,6 @@ translated: true
 9. [βη同値関係のモデル](https://youtu.be/qe_fJ6KYuCQ){:target="_blank"} 
 10. [式の構文論的性質のモデル論的証明](https://youtu.be/QW0uCNMArIE){:target="_blank"} 
 11. [Λの簡約システム](https://youtu.be/EBHMUgmyLDw){:target="_blank"} 
+12. [強正規化定理の証明](https://youtu.be/3wz4GlbqV7s){:target="_blank"} 
 
-順次追加予定…
+コンテンツを順次追加中．
