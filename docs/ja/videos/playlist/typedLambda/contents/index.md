@@ -13,5 +13,6 @@ translated: true
 10. [式の構文論的性質のモデル論的証明](https://youtu.be/QW0uCNMArIE){:target="_blank"} 
 11. [Λの簡約システム](https://youtu.be/EBHMUgmyLDw){:target="_blank"} 
 12. [強正規化定理の証明](https://youtu.be/3wz4GlbqV7s){:target="_blank"} 
+13. [Λの操作的意味論(1) 評価文脈](https://youtu.be/UfBYznSIqKE){:target="_blank"} 
 
 コンテンツを順次追加中．
