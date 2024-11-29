@@ -14,5 +14,6 @@ translated: true
 11. [Λの簡約システム](https://youtu.be/EBHMUgmyLDw){:target="_blank"} 
 12. [強正規化定理の証明](https://youtu.be/3wz4GlbqV7s){:target="_blank"} 
 13. [Λの操作的意味論(1) 評価文脈](https://youtu.be/UfBYznSIqKE){:target="_blank"} 
+14. [Λの操作的意味論(2) 自然意味論](https://youtu.be/qipTyIsfixY){:target="_blank"} 
 
-コンテンツを順次追加中．
+
