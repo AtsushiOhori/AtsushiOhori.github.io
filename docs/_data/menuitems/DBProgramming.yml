@@ -1,0 +1,17 @@
+---
+title: "SML＃ で学ぶデータベースプログラミング"
+
+url: /ja/videos/playlist/DBProgramming/
+menuText: 概要
+
+menu:
+- text: ビデオリスト
+  url: /ja/videos/playlist/DBProgramming/contents/
+
+super:
+- text: 大堀淳ホーム/
+  url: /ja/
+- text: ビデオ講義/
+  url: /ja/videos/
+
+

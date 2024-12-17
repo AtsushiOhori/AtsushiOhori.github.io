@@ -105,6 +105,12 @@ defaults:
       lang: ja
   -
     scope:
+      path: ja/videos/playlist/DBProgramming
+    values:
+      menuScope: DBProgramming
+      lang: ja
+  -
+    scope:
       path: ja/videos/playlist/compilerVideo
     values:
       menuScope: compilerVideo
@@ -132,6 +138,12 @@ defaults:
       path: ja/videos/playlist/typedLambda
     values:
       menuScope: typedLambda
+      lang: ja
+  -
+    scope:
+      path: ja/videos/playlist/appliedLambda
+    values:
+      menuScope: appliedLambda
       lang: ja
   -
     scope:
