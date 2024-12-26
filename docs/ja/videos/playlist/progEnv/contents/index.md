@@ -9,4 +9,4 @@ translated: true
 6. [Linux システム管理の初歩（２）ファイルのパーミッション](https://youtu.be/YHkRAX9e8Lg){:target="_blank"} 
 7. [WindowsへのEmacsの導入](https://youtu.be/DH38ol6396k){:target="_blank"} 
 8. [Ubuntu24.04へ移行](https://youtu.be/7CAAl7vgx4Y){:target="_blank"} 
-9. [Ubuntu 24.03LTSでのSML# 4.1.0ビルド（SML# 4.1.0リリースに伴う特別編）](https://youtu.be/_WbMZTApbJc){:target="_blank"} 
+9. [Ubuntu 24.04LTSでのSML# 4.1.0ビルド（SML# 4.1.0リリースに伴う特別編）](https://youtu.be/_WbMZTApbJc){:target="_blank"} 
