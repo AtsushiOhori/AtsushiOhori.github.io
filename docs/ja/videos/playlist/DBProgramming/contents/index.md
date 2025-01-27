@@ -7,3 +7,4 @@ translated: true
 4. [関係データベース（３）・関係代数の選択と直積](https://youtu.be/Uv-EbMrwB90){:target="_blank"} 
 5. [関係データベース（４）・関係代数の結合と自然結合](https://youtu.be/3ZM7F0GZn_w){:target="_blank"} 
 6. [SQLのエッセンス](https://youtu.be/wzvuaD5vWyw){:target="_blank"} 
+7. [PostgreSQLの導入](https://youtu.be/VSOeHQAmmCw){:target="_blank"} 
