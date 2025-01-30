@@ -8,3 +8,4 @@ translated: true
 5. [関係データベース（４）・関係代数の結合と自然結合](https://youtu.be/3ZM7F0GZn_w){:target="_blank"} 
 6. [SQLのエッセンス](https://youtu.be/wzvuaD5vWyw){:target="_blank"} 
 7. [PostgreSQLの導入](https://youtu.be/VSOeHQAmmCw){:target="_blank"} 
+8. [SML＃ のSQL統合](https://youtu.be/wjXUu_y8gwU){:target="_blank"} 
